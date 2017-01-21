@@ -1,0 +1,8 @@
+{{> header }}
+{{#each posts }}
+  <li>
+    <div class="title"><a href="{{ path }}">{{ title }}</a></div>
+    <div class="date">{{ date }}</div>
+  </li>
+{{/each}}
+{{> footer }}
