@@ -1,7 +1,5 @@
 URLs to blog posts containing dates
 - metalsmith-permalinks
-title - just domain on main page, on others include title
-- https://github.com/hellatan/metalsmith-page-titles
 re-enable GA
 RSS
 - and meta tag
@@ -12,5 +10,6 @@ go over styles.css again
 tags
 - slug vs display case
 - index pages
+- title is tag name
 "read more"
 comments
