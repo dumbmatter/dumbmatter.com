@@ -17,7 +17,13 @@ Metalsmith(__dirname)
         },
     }))
     .use(markdown())
-    .use(permalinks())
+    .use(permalinks({
+        linksets: [{
+            date: 'YYYY/MM',
+            match: {collection: 'posts'},
+            pattern: ':date/:title',
+        }],
+    }))
     .use(layouts({
         engine: 'handlebars',
         partials: 'layouts/partials',
