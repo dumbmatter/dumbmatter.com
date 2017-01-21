@@ -11,3 +11,4 @@ tags
 - title is tag name
 "read more"
 comments
+displayed post dates off by one - time zone thing?
