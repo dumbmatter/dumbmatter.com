@@ -1,0 +1,16 @@
+blog post design
+- need to run JS to format tags, dates. metalsmith plugin, or template that allows logic (Jade?)
+URLs to blog posts containing dates
+- metalsmith-permalinks
+title - just domain on main page, on others include title
+- https://github.com/hellatan/metalsmith-page-titles
+re-enable GA
+RSS
+- and meta tag
+drafts
+index page, pagination
+- metalsmith-collections
+go over styles.css again
+tags
+"read more"
+comments
