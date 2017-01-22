@@ -1,4 +1,5 @@
 comments
+- inline and archive, like matlab post
 RSS
 - and meta tag
 index page pagination
@@ -10,6 +11,12 @@ tags
 Replace characters in blog posts:
 - ’
 PHP stuff in header, elsewhere?
+skipped 1 (or 2?) posts for BBGM
+- keep in htaccess
 
-re-enable 
+re-enable GA
 go over styles.css again
+responsive
+- code blocks - see matlab progress monitor post for overflow scenario
+- tags fucked up
+really need jquery on every page? if so, move to footer?

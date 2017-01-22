@@ -275,6 +275,10 @@ ul, ol {
 .post-date-year {
   font-size: 11px;
 }
+.post-tags {
+  margin-bottom: 1em;
+  margin-top: -1em;
+}
 
 .find-me-on {
   -moz-column-width: 200px;
