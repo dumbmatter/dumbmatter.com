@@ -8,7 +8,6 @@ const processData = require('./plugins/processData');
 Metalsmith(__dirname)
     .source('./src')
     .destination('./build')
-    .use(processData())
     .use(collections({
         posts: {
             pattern: 'posts/*.md',
@@ -17,6 +16,7 @@ Metalsmith(__dirname)
         },
     }))
     .use(markdown())
+    .use(processData())
     .use(permalinks({
         linksets: [{
             date: 'YYYY/MM',

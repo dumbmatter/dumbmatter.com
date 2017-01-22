@@ -1,18 +1,17 @@
-re-enable GA
+displayed post dates off by one - time zone thing?
+comments
 RSS
 - and meta tag
 drafts
-index page, pagination
+index page pagination
 - metalsmith-collections
-go over styles.css again
 tags
 - slug vs display case
 - index pages
 - title is tag name
-"read more"
-comments
-displayed post dates off by one - time zone thing?
 Replace characters in blog posts:
 - ’
-Responsive
-- shrink dates, pre, li
+PHP stuff in header, elsewhere?
+
+re-enable 
+go over styles.css again
