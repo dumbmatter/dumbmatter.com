@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Barbarian Conquest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Germania One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="barbconq.css">
+
+    <script>
+      if (location.host.indexOf("dumbmatter.com") >= 0) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-52338599-1', 'auto');
+        ga('send', 'pageview');
+      }
+    </script>
+  </head>
+  <body>
+    <div id="splash-background">
+      <div id="splash-wrapper">
+        <h1 id="splash-title"><img src="assets/units/black/battle-axe.png">Barbarian Conquest<img src="assets/units/black/horse-head.png"></h1>
+
+        <h2 id="splash-subtitle">Find and capture the barbarian capital!</h2>
+
+        <ul id="splash-menu">
+          <li><a href="" id="start-easy">Easy</a></li>
+          <li><a href="" id="start-medium">Medium</a></li>
+          <li><a href="" id="start-hard">Hard</a></li>
+        </ul>
+        <p><a href="" id="splash-close">Return to Previous Game</a></p>
+
+        <p id="splash-footer">From the maker of <a href="http://basketball-gm.com/">Basketball GM</a>, a free single-player basketball simulation game.</p>
+
+        <a href="https://github.com/dumbmatter/barbconq"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+      </div>
+    </div>
+
+    <div id="hover-box"></div>
+    <div id="top-right-box">
+      <p>BarbConq v0.0.1 - Turn <span id="turn">0</span></p>
+      <p><a href="" id="new-game">New Game</a> - <a href="" id="show-modal-instructions">Instructions</a> - <a href="" id="show-modal-about">About</a></p>
+    </div>
+    <ul id="events"></ul>
+    <div id="bottom-text"></div>
+    <div id="bottom-units"></div>
+    <div id="bottom-info"></div>
+    <div id="bottom-actions"></div>
+    <div id="bottom-minimap">
+      <canvas id="minimap"></canvas>
+    </div>
+    <div id="end-turn-button" class="moves-not-done"></div>
+    <canvas id="map"></canvas>
+
+    <div id="modal-background" class="modal-inactive">
+      <div id="modal-wrapper">
+        <div id="modal-close">&times;</div>
+
+        <div id="intro" class="modal modal-inactive">
+          <h1>Your troops are ready to invade!</h1>
+          <p>Your goal is to find and capture the barbarian city. You have several different units to help you achieve that goal.</p>
+          <p>Move units by <b>right clicking with your mouse</b> or by <b>using the numpad on your keyboard</b>.</p>
+        </div>
+
+        <div id="instructions" class="modal modal-inactive">
+          <h1>Barbarian Conquest - Instructions</h1>
+          <p>Your goal is to find and capture the barbarian city. You lose if all your units are killed by barbarians.</p>
+          <p>There are six types of units in the game:</p>
+          <table>
+            <tr>
+              <td class="instructions-unit">
+                <div class="instructions-unit-icon">
+                  <img src="assets/units/white/tread.png" width="50" height="50">
+                </div>
+                <div class="type">
+                  <b>Scout</b><br>
+                  Recon Unit
+                </div>
+                <div class="instructions-unit-desc">
+                  <p>Strength: 1<br>
+                  Movement: 2</p>
+                  <p>Scouts can't attack.</p>
+                </div>
+              </td>
+              <td class="instructions-unit">
+                <div class="instructions-unit-icon">
+                  <img src="assets/units/white/stone-axe.png" width="50" height="50">
+                </div>
+                <div class="type">
+                  <b>Warrior</b><br>
+                  Melee Unit
+                </div>
+                <div class="instructions-unit-desc">
+                  <p>Strength: 2<br>
+                  Movement: 1</p>
+                </div>
+              </td>
+              <td class="instructions-unit">
+                <div class="instructions-unit-icon">
+                  <img src="assets/units/white/high-shot.png" width="50" height="50">
+                </div>
+                <div class="type">
+                  <b>Archer</b><br>
+                  Archery Unit
+                </div>
+                <div class="instructions-unit-desc">
+                  <p>Strength: 3<br>
+                  Movement: 1</p>
+                  <p>Archers get bonuses defending hills and cities.</p>
+                </div>
+              </td>
+                </tr><tr>
+              <td class="instructions-unit">
+                <div class="instructions-unit-icon">
+                  <img src="assets/units/white/horse-head.png" width="50" height="50">
+                </div>
+                <div class="type">
+                  <b>Chariot</b><br>
+                  Mounted Unit
+                </div>
+                <div class="instructions-unit-desc">
+                  <p>Strength: 4<br>
+                  Movement: 2</p>
+                  <p>Chariots get bonuses attacking axemen.</p>
+                </div>
+              </td>
+              <td class="instructions-unit">
+                <div class="instructions-unit-icon">
+                  <img src="assets/units/white/spears.png" width="50" height="50">
+                </div>
+                <div class="type">
+                  <b>Spearman</b><br>
+                  Melee Unit
+                </div>
+                <div class="instructions-unit-desc">
+                  <p>Strength: 4<br>
+                  Movement: 1</p>
+                  <p>Spearmen get bonuses against chariots.</p>
+                </div>
+              </td>
+              <td class="instructions-unit">
+                <div class="instructions-unit-icon">
+                  <img src="assets/units/white/battle-axe.png" width="50" height="50">
+                </div>
+                <div class="type">
+                  <b>Axeman</b><br>
+                  Melee Unit
+                </div>
+                <div class="instructions-unit-desc">
+                  <p>Strength: 5<br>
+                  Movement: 1</p>
+                  <p>Axemen get bonuses against warriors and spearmen.</p>
+                </div>
+              </td>
+            </tr>
+          </table>
+          <p>In addition to the strengths and weaknesses of the units listed above, there are also bonuses depending on the terrain: hills and forests provide defensive bonuses.</p>
+
+          <h2>Controls</h2>
+          <p>Each turn, every one of your units can move. Move the active unit by <b>right clicking with your mouse</b> or by <b>using the numpad on your keyboard</b>.</p>
+          <p>To fight a barbarian unit, move onto its tile (or wait for it to move onto yours).</p>
+          <p>There are a number of other keyboard shortcuts, mostly copied from Civilization 4.</p>
+          <h3>Map</h3>
+          <ul>
+            <li>Arrow keys: pan map</li>
+            <li>C: center screen on the active unit</li>
+          </ul>
+          <h3>Unit Actions</h3>
+          <ul>
+            <li>Numpad: move active unit any direction (N/NE/E/SE/S/SW/W/NW)</li>
+            <li>G or Right Click: enter "go to" mode for the active unit</li>
+            <li>F: fortify/wake active unit</li>
+            <li>H: fortify active unit until it's healed</li>
+            <li>Space Bar: skip active unit's movement this turn</li>
+          </ul>
+          <h3>Unit Grouping</h3>
+          <p>By clicking on the unit icons at the bottom of the screen, you can create and modify groups of units that all move together.</p>
+          <ul>
+            <li>Shift+Click on unit icon: add to or remove from group</li>
+            <li>Ctrl+Click on unit icon: select all units of same type (use Shift too to add them to a group)</li>
+            <li>Alt+Click on unit icon: select all units (use Shift too to add them to a group)</li>
+          </ul>
+          <h3>Turn</h3>
+          <ul>
+            <li>Enter: end turn, only after all units have moved</li>
+            <li>Shift+Enter: end turn early</li>
+          </ul>
+
+          <h2>Strategy</h2>
+          <p>You can stack your units in the same tile and move them together. This provides better defense, since when a stack is attacked, the best defender against the attacking unit is chosen for battle.</p>
+          <p>But if you keep your units together all the time, you won't be able to explore the island and find the barbarian capital quickly. And the barbarians are constantly training new units to fight you, especially in areas out of sight of your troops. The longer it takes you to find the capital, the better defenses it will have.</p>
+        </div>
+
+        <div id="about" class="modal modal-inactive">
+          <h1>Barbarian Conquest - About</h1>
+          <p>Barbarian Conquest is a free game built on a browser-based reimplementation of the combat system of Civilization 4 (a.k.a. The Greatest Video Game of All Time). I have this completely crazy idea of completely reimplementing Civ4 in a similar manner. If you're interested in helping, please <a href="mailto:jdscheff@gmail.com">email me</a>.</p>
+          <p>Barbarian Conquest is open source! <a href="https://github.com/dumbmatter/barbconq" target="_blank">Get the code on GitHub.</a> Contributions are very welcome!</p>
+          <p>I want to thank the following open source projects that Barbarian Conquest relies on:</p>
+          <ul>
+            <li><a href="http://www.typescriptlang.org/" target="_blank">TypeScript</a> for automatically finding bugs before I even notice them</li>
+            <li><a href="http://easystarjs.com/" target="_blank">EasyStar.js</a> for a very easy-to-use pathfinding library</li>
+            <li><a href="http://howlerjs.com/" target="_blank">howler.js</a> for playing sound effects in any browser</li>
+            <li><a href="http://game-icons.net/" target="_blank">Game-icons.net</a> for the unit icons, made by <a href="http://lorcblog.blogspot.com/" target="_blank">Lorc</a></li>
+            <li><a href="http://www.freesound.org/people/mistorcaveman/sounds/154684/">mistorcaveman</a> for the sound that plays when a battle starts</li>
+            <li><a href="https://www.mozilla.org/firefox/" target="_blank">Firefox</a> and <a href="http://www.chromium.org/Home" target="_blank">Chromium</a> for pushing the web forward</li>
+          </ul>
+          <p>And finally, if you like basketball, check out my other video game <a href="http://basketball-gm.com/" target="_blank">Basketball GM</a>. It is also completely free to play from your web browser.</p>
+        </div>
+
+        <div id="won" class="modal modal-inactive">
+          <h1>You won!</h1>
+          <p>Your troops are ravaging the city. Killing the men, raping the women, and taking the children as slaves.</p>
+          <p><a href="">Start a new game</a> or close this dialog and see how long you can hold the city.</p>
+        </div>
+
+        <div id="lost" class="modal modal-inactive">
+          <h1>You lost!</h1>
+          <p>All your troops are dead. Good job.</p>
+          <p><a href="">Start a new game</a> and try to do better next time.</p>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="node_modules/easystarjs/bin/easystar-0.1.6.js"></script>
+    <script type="text/javascript" src="node_modules/howler/howler.js"></script>
+    <script type="text/javascript" src="gen/app.js"></script>
+  </body>
+</html>

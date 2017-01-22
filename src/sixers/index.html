@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Jeremy's Draft Prospect Analysis</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <style type="text/css">
+.container {
+  max-width: 970px;
+}
+
+h1 {
+  color: #A94442;
+  text-align: center;
+}
+
+.contact-block {
+  margin: 0 auto;
+  width: 300px;
+}
+
+.player-table-wrapper {
+  height: 300px;
+  overflow: auto;
+}
+#tweets-histogram {
+  height: 300px;
+}
+
+.caption {
+  font-style: italic;
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+.histogram-bar rect {
+  fill: #3071A9;
+  shape-rendering: crispEdges;
+}
+.histogram-bar text, .histogram-black {
+  fill: #333;
+}
+.axis path, .axis line {
+  fill: none;
+  stroke: #333;
+  shape-rendering: crispEdges;
+}
+
+
+#sentiment-analysis-scatter {
+  height: 300px;
+  margin: 2.5em 0 1em 0;
+  position: relative;
+}
+.tooltip {
+    position: absolute;
+    padding: 4px;
+    font: 12px sans-serif;
+    background: HotPink;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+h2.categorizer {
+  margin-bottom: 1em;
+  margin-top: 0;
+}
+.categorizer-button button {
+  height: 100px;
+}
+.categorizer-button-header {
+  font-size: 20px;
+  font-weight: bold;
+}
+.categorizer-footer {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+#basketball-girls-scatter, #basketball-other-scatter, #girls-other-scatter {
+  height: 250px;
+}
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <h1>Jeremy's Draft Prospect Analysis</h1>
+
+      <div class="contact-block">
+        <p class="pull-right">
+          <span class="glyphicon glyphicon-envelope"></span> <a href="mailto:jdscheff@gmail.com">jdscheff@gmail.com</a><br>
+          <span class="glyphicon glyphicon-earphone"></span> ???-???-????<br>
+          <span class="glyphicon glyphicon-globe"></span> <a href="http://dumbmatter.com/">dumbmatter.com</a>
+        </p>
+
+        <p style="padding-top: 6px">by <b>Jeremy Scheff</b></p>
+
+        <p>October 12, 2014</p>
+      </div>
+
+      <h2>The Big Picture</h2>
+
+      <p>The most important things about a player are his basketball skills and his physical tools. But ignoring those areas, there still are some important factors that influence a player's success: work ethic, character, goals, etc. It's not clear if those things can be reliably predicted using just publicly available information accessed in a mostly automated manner, but it's worth a try. So that's the goal: come up with metrics for a player's character that can be generated through automated analysis of public data.</p>
+
+      <p>The challenge is, the data is messy. My current job involves working with clinical trial data, which comes from highly trained professionals in standardized formats - and still I complain that it's too messy. For this project, I certainly didn't anticipate to find any grand conclusions, and I didn't. But it was still fun and could lead to some interesting insights down the road.</p>
+
+      <h2>Data</h2>
+
+      <p>For the list of players to analyze, I used <a href="http://www.draftexpress.com/rankings/Top-100-Prospects/">DraftExpress's list of top 100 prospects</a> accessed on September 20, 2014.</p>
+
+      <p>I had a lot of ideas for different types of analyses that could be run. The main problem for all of them is the data: how do we get it and how do we make a computer understand it? Due to time constraints, I decided to focus on data from Twitter because the data comes in a structured format and there is an easy API that allows access to a relatively large amount of data.</p>
+
+      <p>First, with the help of a Python script to provide me with some hints, I collected the Twitter usernames of the top 100 prospects. Almost all of the very top prospects had public Twitter accounts (Emmanuel Mudiay is the exception, as he seems to have recently deleted his). In total, 78/100 prospects had public Twitter accounts that I could find. Twitter's API makes it difficult to retrieve more than ~3000 Tweets per user, so I decided to just download the ~3000 most recent Tweets for the 78 prospects on Twitter. Most users had around 3000 tweets but there are some who only lightly use Twitter. In total, I constructed a database of 164,546 Tweets.</p>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="player-table-wrapper">
+            <table class="table table-striped">
+              <thead>
+                <tr><th>#</th><th>Name</th><th>Twitter</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td><a href="http://www.draftexpress.com/profile/Jahlil-Okafor-6469/">Jahlil Okafor</a></td><td><a href="https://twitter.com/BigJah15">@BigJah15</a></td></tr>
+                <tr><td>2</td><td><a href="http://www.draftexpress.com/profile/Emmanuel-Mudiay-6472/">Emmanuel Mudiay</a></td><td>None</td></tr>
+                <tr><td>3</td><td><a href="http://www.draftexpress.com/profile/Karl-Towns-61831/">Karl Towns</a></td><td><a href="https://twitter.com/KATis32">@KATis32</a></td></tr>
+                <tr><td>4</td><td><a href="http://www.draftexpress.com/profile/Kelly-Oubre-70215/">Kelly Oubre</a></td><td><a href="https://twitter.com/K_Ctmd22">@K_Ctmd22</a></td></tr>
+                <tr><td>5</td><td><a href="http://www.draftexpress.com/profile/Cliff-Alexander-7138/">Cliff Alexander</a></td><td><a href="https://twitter.com/HumbleKid_2">@HumbleKid_2</a></td></tr>
+                <tr><td>6</td><td><a href="http://www.draftexpress.com/profile/Mario-Hezonja-6392/">Mario Hezonja</a></td><td><a href="https://twitter.com/MarioHezonja">@MarioHezonja</a></td></tr>
+                <tr><td>7</td><td><a href="http://www.draftexpress.com/profile/Kristaps-Porzingis-7119/">Kristaps Porzingis</a></td><td><a href="https://twitter.com/kporzee">@kporzee</a></td></tr>
+                <tr><td>8</td><td><a href="http://www.draftexpress.com/profile/Justise-Winslow-7190/">Justise Winslow</a></td><td><a href="https://twitter.com/Chief_Justise">@Chief_Justise</a></td></tr>
+                <tr><td>9</td><td><a href="http://www.draftexpress.com/profile/Stanley-Johnson-46065/">Stanley Johnson</a></td><td><a href="https://twitter.com/StanMan_5">@StanMan_5</a></td></tr>
+                <tr><td>10</td><td><a href="http://www.draftexpress.com/profile/Willie-Cauley-Stein-6441/">Willie Cauley-Stein</a></td><td><a href="https://twitter.com/THEwillieCS15">@THEwillieCS15</a></td></tr>
+                <tr><td>11</td><td><a href="http://www.draftexpress.com/profile/Sam-Dekker-6438/">Sam Dekker</a></td><td><a href="https://twitter.com/samdek1">@samdek1</a></td></tr>
+                <tr><td>12</td><td><a href="http://www.draftexpress.com/profile/Montrezl-Harrell-7019/">Montrezl Harrell</a></td><td><a href="https://twitter.com/MONSTATREZZ">@MONSTATREZZ</a></td></tr>
+                <tr><td>13</td><td><a href="http://www.draftexpress.com/profile/Chris-Walker-6457/">Chris Walker</a></td><td><a href="https://twitter.com/kingsky23">@kingsky23</a></td></tr>
+                <tr><td>14</td><td><a href="http://www.draftexpress.com/profile/Tyus-Jones-46062/">Tyus Jones</a></td><td><a href="https://twitter.com/Tyusjones06">@Tyusjones06</a></td></tr>
+                <tr><td>15</td><td><a href="http://www.draftexpress.com/profile/Rondae-Hollis-Jefferson-6466/">Rondae Hollis-Jefferson</a></td><td><a href="https://twitter.com/RondaeHJ23">@RondaeHJ23</a></td></tr>
+                <tr><td>16</td><td><a href="http://www.draftexpress.com/profile/Marc-Garcia-62915/">Marc Garcia</a></td><td>None</td></tr>
+                <tr><td>17</td><td><a href="http://www.draftexpress.com/profile/Myles-Turner-72850/">Myles Turner</a></td><td><a href="https://twitter.com/Original_Turner">@Original_Turner</a></td></tr>
+                <tr><td>18</td><td><a href="http://www.draftexpress.com/profile/Caris-LeVert-66377/">Caris LeVert</a></td><td><a href="https://twitter.com/CarisLeVert">@CarisLeVert</a></td></tr>
+                <tr><td>19</td><td><a href="http://www.draftexpress.com/profile/Ilimane-Diop-6427/">Ilimane Diop</a></td><td><a href="https://twitter.com/eliimane">@eliimane</a></td></tr>
+                <tr><td>20</td><td><a href="http://www.draftexpress.com/profile/Bobby-Portis-7167/">Bobby Portis</a></td><td><a href="https://twitter.com/BPortistime">@BPortistime</a></td></tr>
+                <tr><td>21</td><td><a href="http://www.draftexpress.com/profile/Dakari-Johnson-6470/">Dakari Johnson</a></td><td><a href="https://twitter.com/SafariDakari44">@SafariDakari44</a></td></tr>
+                <tr><td>22</td><td><a href="http://www.draftexpress.com/profile/Egemen-Guven-62830/">Egemen Guven</a></td><td><a href="https://twitter.com/egemengven1">@egemengven1</a></td></tr>
+                <tr><td>23</td><td><a href="http://www.draftexpress.com/profile/Jarell-Martin-7159/">Jarell Martin</a></td><td><a href="https://twitter.com/JarellMartin22">@JarellMartin22</a></td></tr>
+                <tr><td>24</td><td><a href="http://www.draftexpress.com/profile/Frank-Kaminsky-41066/">Frank Kaminsky</a></td><td><a href="https://twitter.com/FSKPart3">@FSKPart3</a></td></tr>
+                <tr><td>25</td><td><a href="http://www.draftexpress.com/profile/Rashad-Vaughn-71472/">Rashad Vaughn</a></td><td><a href="https://twitter.com/ShowtimeMr1">@ShowtimeMr1</a></td></tr>
+                <tr><td>26</td><td><a href="http://www.draftexpress.com/profile/Amida-Brimah-7286/">Amida Brimah</a></td><td><a href="https://twitter.com/amidabrimah">@amidabrimah</a></td></tr>
+                <tr><td>27</td><td><a href="http://www.draftexpress.com/profile/Wayne-Selden-6473/">Wayne Selden</a></td><td><a href="https://twitter.com/WayneSeldenJr">@WayneSeldenJr</a></td></tr>
+                <tr><td>28</td><td><a href="http://www.draftexpress.com/profile/Andrew-Harrison-6456/">Andrew Harrison</a></td><td><a href="https://twitter.com/DrewRoc5">@DrewRoc5</a></td></tr>
+                <tr><td>29</td><td><a href="http://www.draftexpress.com/profile/Norman-Powell-6268/">Norman Powell</a></td><td>None</td></tr>
+                <tr><td>30</td><td><a href="http://www.draftexpress.com/profile/Marcus-Lee-7212/">Marcus Lee</a></td><td><a href="https://twitter.com/SuperKingMe">@SuperKingMe</a></td></tr>
+                <tr><td>31</td><td><a href="http://www.draftexpress.com/profile/Brice-Johnson-6437/">Brice Johnson</a></td><td><a href="https://twitter.com/bjohnson_23">@bjohnson_23</a></td></tr>
+                <tr><td>32</td><td><a href="http://www.draftexpress.com/profile/R.J.-Hunter-65208/">R.J. Hunter</a></td><td><a href="https://twitter.com/RJH_22">@RJH_22</a></td></tr>
+                <tr><td>33</td><td><a href="http://www.draftexpress.com/profile/Aaron-Harrison-6459/">Aaron Harrison</a></td><td><a href="https://twitter.com/AaronICE2">@AaronICE2</a></td></tr>
+                <tr><td>34</td><td><a href="http://www.draftexpress.com/profile/Jabari-Bird-6467/">Jabari Bird</a></td><td>None</td></tr>
+                <tr><td>35</td><td><a href="http://www.draftexpress.com/profile/Delon-Wright-78507/">Delon Wright</a></td><td>None</td></tr>
+                <tr><td>36</td><td><a href="http://www.draftexpress.com/profile/Mouhammadou-Jaiteh-6366/">Mouhammadou Jaiteh</a></td><td><a href="https://twitter.com/mamjaiteh14">@mamjaiteh14</a></td></tr>
+                <tr><td>37</td><td><a href="http://www.draftexpress.com/profile/Theo-Pinson-6468/">Theo Pinson</a></td><td><a href="https://twitter.com/tpinsonn">@tpinsonn</a></td></tr>
+                <tr><td>38</td><td><a href="http://www.draftexpress.com/profile/Kevon-Looney-7156/">Kevon Looney</a></td><td><a href="https://twitter.com/Loon_Rebel5">@Loon_Rebel5</a></td></tr>
+                <tr><td>39</td><td><a href="http://www.draftexpress.com/profile/Devin-Booker-7216/">Devin Booker</a></td><td><a href="https://twitter.com/DevinBook">@DevinBook</a></td></tr>
+                <tr><td>40</td><td><a href="http://www.draftexpress.com/profile/Justin-Jackson-7083/">Justin Jackson</a></td><td><a href="https://twitter.com/JJacks_44">@JJacks_44</a></td></tr>
+                <tr><td>41</td><td><a href="http://www.draftexpress.com/profile/Trey-Lyles-7157/">Trey Lyles</a></td><td><a href="https://twitter.com/TreyMambaLyles">@TreyMambaLyles</a></td></tr>
+                <tr><td>42</td><td><a href="http://www.draftexpress.com/profile/Devin-Robinson-72830/">Devin Robinson</a></td><td>None</td></tr>
+                <tr><td>43</td><td><a href="http://www.draftexpress.com/profile/Alex-Poythress-6286/">Alex Poythress</a></td><td><a href="https://twitter.com/AlexTheGreat22">@AlexTheGreat22</a></td></tr>
+                <tr><td>44</td><td><a href="http://www.draftexpress.com/profile/Branden-Dawson-6246/">Branden Dawson</a></td><td><a href="https://twitter.com/219MadeMe">@219MadeMe</a></td></tr>
+                <tr><td>45</td><td><a href="http://www.draftexpress.com/profile/Marcus-Paige-6279/">Marcus Paige</a></td><td><a href="https://twitter.com/marcuspaige5">@marcuspaige5</a></td></tr>
+                <tr><td>46</td><td><a href="http://www.draftexpress.com/profile/Domantas-Sabonis-62889/">Domantas Sabonis</a></td><td><a href="https://twitter.com/Dsabonis11">@Dsabonis11</a></td></tr>
+                <tr><td>47</td><td><a href="http://www.draftexpress.com/profile/Damian-Jones-7211/">Damian Jones</a></td><td>None</td></tr>
+                <tr><td>48</td><td><a href="http://www.draftexpress.com/profile/Shawn-Long-41514/">Shawn Long</a></td><td>None</td></tr>
+                <tr><td>49</td><td><a href="http://www.draftexpress.com/profile/E.C.-Matthews-7162/">E.C. Matthews</a></td><td>None</td></tr>
+                <tr><td>50</td><td><a href="http://www.draftexpress.com/profile/Jordan-Mickey-7104/">Jordan Mickey</a></td><td><a href="https://twitter.com/Jmickey_02">@Jmickey_02</a></td></tr>
+                <tr><td>51</td><td><a href="http://www.draftexpress.com/profile/Nigel-Williams-Goss-7093/">Nigel Williams-Goss</a></td><td><a href="https://twitter.com/nigelpah">@nigelpah</a></td></tr>
+                <tr><td>52</td><td><a href="http://www.draftexpress.com/profile/Moses-Kingsley-7080/">Moses Kingsley</a></td><td><a href="https://twitter.com/KingMoses_">@KingMoses_</a></td></tr>
+                <tr><td>53</td><td><a href="http://www.draftexpress.com/profile/Michael-Qualls-59353/">Michael Qualls</a></td><td><a href="https://twitter.com/Mr_WALKONAIR">@Mr_WALKONAIR</a></td></tr>
+                <tr><td>54</td><td><a href="http://www.draftexpress.com/profile/Terry-Rozier-58730/">Terry Rozier</a></td><td><a href="https://twitter.com/GodsGift_3">@GodsGift_3</a></td></tr>
+                <tr><td>55</td><td><a href="http://www.draftexpress.com/profile/Sindarius-Thornwell-7178/">Sindarius Thornwell</a></td><td><a href="https://twitter.com/Sin_City_803">@Sin_City_803</a></td></tr>
+                <tr><td>56</td><td><a href="http://www.draftexpress.com/profile/Marcus-Foster-72612/">Marcus Foster</a></td><td><a href="https://twitter.com/MF2_KSU">@MF2_KSU</a></td></tr>
+                <tr><td>57</td><td><a href="http://www.draftexpress.com/profile/Juwan-Staten-20264/">Juwan Staten</a></td><td><a href="https://twitter.com/JuwanStaten3">@JuwanStaten3</a></td></tr>
+                <tr><td>58</td><td><a href="http://www.draftexpress.com/profile/Andzejs-Pasecniks-65023/">Andzejs Pasecniks</a></td><td><a href="https://twitter.com/AnzejsP">@AnzejsP</a></td></tr>
+                <tr><td>59</td><td><a href="http://www.draftexpress.com/profile/Timothe-Luwanu-68219/">Timothe Luwanu</a></td><td>None</td></tr>
+                <tr><td>60</td><td><a href="http://www.draftexpress.com/profile/Isaiah-Taylor-70440/">Isaiah Taylor</a></td><td><a href="https://twitter.com/Zay_Ctmd11">@Zay_Ctmd11</a></td></tr>
+                <tr><td>61</td><td><a href="http://www.draftexpress.com/profile/Austin-Nichols-7166/">Austin Nichols</a></td><td><a href="https://twitter.com/a_nichols33">@a_nichols33</a></td></tr>
+                <tr><td>62</td><td><a href="http://www.draftexpress.com/profile/Terran-Petteway-42040/">Terran Petteway</a></td><td>None</td></tr>
+                <tr><td>63</td><td><a href="http://www.draftexpress.com/profile/Guillermo-Hernangomez-7204/">Guillermo Hernangomez</a></td><td>None</td></tr>
+                <tr><td>64</td><td><a href="http://www.draftexpress.com/profile/Nikola-Milutinov-7116/">Nikola Milutinov</a></td><td><a href="https://twitter.com/NMilutinov">@NMilutinov</a></td></tr>
+                <tr><td>65</td><td><a href="http://www.draftexpress.com/profile/A.J.-Hammons-7070/">A.J. Hammons</a></td><td>None</td></tr>
+                <tr><td>66</td><td><a href="http://www.draftexpress.com/profile/Kenan-Sipahi-16110/">Kenan Sipahi</a></td><td><a href="https://twitter.com/KenanSpahi">@KenanSpahi</a></td></tr>
+                <tr><td>67</td><td><a href="http://www.draftexpress.com/profile/Michael-Frazier-58736/">Michael Frazier</a></td><td><a href="https://twitter.com/mfrazier20">@mfrazier20</a></td></tr>
+                <tr><td>68</td><td><a href="http://www.draftexpress.com/profile/Boris-Dallo-7206/">Boris Dallo</a></td><td><a href="https://twitter.com/BorisDalloidol">@BorisDalloidol</a></td></tr>
+                <tr><td>69</td><td><a href="http://www.draftexpress.com/profile/Joel-James-7124/">Joel James</a></td><td>None</td></tr>
+                <tr><td>70</td><td><a href="http://www.draftexpress.com/profile/Ron-Baker-42146/">Ron Baker</a></td><td><a href="https://twitter.com/RDB_sh31ox">@RDB_sh31ox</a></td></tr>
+                <tr><td>71</td><td><a href="http://www.draftexpress.com/profile/Buddy-Hield-58749/">Buddy Hield</a></td><td><a href="https://twitter.com/buddyhield">@buddyhield</a></td></tr>
+                <tr><td>72</td><td><a href="http://www.draftexpress.com/profile/Georges-Niang-7017/">Georges Niang</a></td><td><a href="https://twitter.com/GeorgesNiang20">@GeorgesNiang20</a></td></tr>
+                <tr><td>73</td><td><a href="http://www.draftexpress.com/profile/Yogi-Ferrell-6442/">Yogi Ferrell</a></td><td><a href="https://twitter.com/YogiFerrell">@YogiFerrell</a></td></tr>
+                <tr><td>74</td><td><a href="http://www.draftexpress.com/profile/Kennedy-Meeks-7089/">Kennedy Meeks</a></td><td><a href="https://twitter.com/Ksmoove03">@Ksmoove03</a></td></tr>
+                <tr><td>75</td><td><a href="http://www.draftexpress.com/profile/Nedim-Buza-46607/">Nedim Buza</a></td><td>None</td></tr>
+                <tr><td>76</td><td><a href="http://www.draftexpress.com/profile/Rysheed-Jordan-72535/">Rysheed Jordan</a></td><td><a href="https://twitter.com/RysheedJordan">@RysheedJordan</a></td></tr>
+                <tr><td>77</td><td><a href="http://www.draftexpress.com/profile/Moussa-Diagne-7126/">Moussa Diagne</a></td><td>None</td></tr>
+                <tr><td>78</td><td><a href="http://www.draftexpress.com/profile/Kaleb-Tarczewski-6290/">Kaleb Tarczewski</a></td><td><a href="https://twitter.com/Tarczewski35">@Tarczewski35</a></td></tr>
+                <tr><td>79</td><td><a href="http://www.draftexpress.com/profile/Aleksandar-Vezenkov-6429/">Aleksandar Vezenkov</a></td><td>None</td></tr>
+                <tr><td>80</td><td><a href="http://www.draftexpress.com/profile/Cedi-Osman-7133/">Cedi Osman</a></td><td><a href="https://twitter.com/cedi_osman">@cedi_osman</a></td></tr>
+                <tr><td>81</td><td><a href="http://www.draftexpress.com/profile/Briante-Weber-42102/">Briante Weber</a></td><td><a href="https://twitter.com/VCU_Bandit2">@VCU_Bandit2</a></td></tr>
+                <tr><td>82</td><td><a href="http://www.draftexpress.com/profile/Fred-VanVleet-58750/">Fred VanVleet</a></td><td><a href="https://twitter.com/CooFredVanVleet">@CooFredVanVleet</a></td></tr>
+                <tr><td>83</td><td><a href="http://www.draftexpress.com/profile/Rasmus-Larsen-6399/">Rasmus Larsen</a></td><td><a href="https://twitter.com/rasmusglarbjerg">@rasmusglarbjerg</a></td></tr>
+                <tr><td>84</td><td><a href="http://www.draftexpress.com/profile/Guillem-Vives-42559/">Guillem Vives</a></td><td><a href="https://twitter.com/Vives16">@Vives16</a></td></tr>
+                <tr><td>85</td><td><a href="http://www.draftexpress.com/profile/LeBryan-Nash-5721/">LeBryan Nash</a></td><td><a href="https://twitter.com/LotBuckets02">@LotBuckets02</a></td></tr>
+                <tr><td>86</td><td><a href="http://www.draftexpress.com/profile/Brandon-Ashley-6151/">Brandon Ashley</a></td><td><a href="https://twitter.com/_Bash21">@_Bash21</a></td></tr>
+                <tr><td>87</td><td><a href="http://www.draftexpress.com/profile/Perry-Ellis-6288/">Perry Ellis</a></td><td><a href="https://twitter.com/PElliz">@PElliz</a></td></tr>
+                <tr><td>88</td><td><a href="http://www.draftexpress.com/profile/Jerian-Grant-18095/">Jerian Grant</a></td><td><a href="https://twitter.com/ThatGrant22">@ThatGrant22</a></td></tr>
+                <tr><td>89</td><td><a href="http://www.draftexpress.com/profile/Joseph-Young-41330/">Joseph Young</a></td><td><a href="https://twitter.com/JoeyBuckets3">@JoeyBuckets3</a></td></tr>
+                <tr><td>90</td><td><a href="http://www.draftexpress.com/profile/Cameron-Ridley-6281/">Cameron Ridley</a></td><td><a href="https://twitter.com/cam_ctmd55">@cam_ctmd55</a></td></tr>
+                <tr><td>91</td><td><a href="http://www.draftexpress.com/profile/Alan-Williams-42069/">Alan Williams</a></td><td><a href="https://twitter.com/alantwilliams">@alantwilliams</a></td></tr>
+                <tr><td>92</td><td><a href="http://www.draftexpress.com/profile/Adin-Vrabac-47271/">Adin Vrabac</a></td><td>None</td></tr>
+                <tr><td>93</td><td><a href="http://www.draftexpress.com/profile/Winston-Shepard-6292/">Winston Shepard</a></td><td><a href="https://twitter.com/WinnShepard_35">@WinnShepard_35</a></td></tr>
+                <tr><td>94</td><td><a href="http://www.draftexpress.com/profile/Mike-Tobey-58740/">Mike Tobey</a></td><td><a href="https://twitter.com/miketobey10">@miketobey10</a></td></tr>
+                <tr><td>95</td><td><a href="http://www.draftexpress.com/profile/Josh-Scott-7187/">Josh Scott</a></td><td>None</td></tr>
+                <tr><td>96</td><td><a href="http://www.draftexpress.com/profile/Dejan-Todorovic-48923/">Dejan Todorovic</a></td><td><a href="https://twitter.com/ToDeki94">@ToDeki94</a></td></tr>
+                <tr><td>97</td><td><a href="http://www.draftexpress.com/profile/Dorian-Finney-Smith-6249/">Dorian Finney-Smith</a></td><td><a href="https://twitter.com/doedoe_10">@doedoe_10</a></td></tr>
+                <tr><td>98</td><td><a href="http://www.draftexpress.com/profile/Zak-Irvin-72475/">Zak Irvin</a></td><td><a href="https://twitter.com/zirvin21">@zirvin21</a></td></tr>
+                <tr><td>99</td><td><a href="http://www.draftexpress.com/profile/Karlo-Zganec-61997/">Karlo Zganec</a></td><td>None</td></tr>
+                <tr><td>100</td><td><a href="http://www.draftexpress.com/profile/Emircan-Kosut-66876/">Emircan Kosut</a></td><td>None</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="caption">Top 100 Prospects</p>
+        </div>
+        <div class="col-sm-6">
+          <div id="tweets-histogram"></div>
+          <p class="caption">Players without Twitter accounts not shown.</p>
+        </div>
+      </div>
+
+      <h2>Fun Tidbit #1</h2>
+
+      <p>Karl Towns (@KATis32) retweeted <a href="https://twitter.com/AndreBandre__/status/263398050188365824">this</a> in 2012:</p>
+
+      <blockquote>Piscataway looks awful . I feel like I'm in a movie . It's sad and cool at the same time</blockquote>
+
+      <p>I guess that wasn't a good sign for <a href="http://en.wikipedia.org/wiki/Rutgers%E2%80%93New_Brunswick">my alma mater</a> in the recruiting game. But his other Tweets made me realize that he's actually from Piscataway, and his other Piscataway-related Tweets are positive. Yet another reminder that "RT" doesn't mean "I agree that...", which is one of many factors complicating analysis of Twitter data.</p>
+
+      <h2>Common Words, Hashtags, and Usernames</h2>
+
+      <p>Top basketball prospects form a pretty highly connected community. They very frequently Tweet to each other. There is probably some network analysis to be done here, but my eyes have glazed over at far too many protein-protein interaction networks for me to want to do that in my spare time. Instead, here is a quick summary of some common words, hashtags, and Twitter usernames Tweeted by the top 100 prospects. And no, I didn't know what all of those hashtags meant without looking them up :)</p>
+
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">Most Common Words</div>
+            <ul class="list-group">
+              <li class="list-group-item">thanks</li>
+              <li class="list-group-item">tonight</li>
+              <li class="list-group-item">birthday</li>
+              <li class="list-group-item">people</li>
+              <li class="list-group-item">congrats</li>
+              <li class="list-group-item">really</li>
+              <li class="list-group-item">better</li>
+              <li class="list-group-item">morning</li>
+              <li class="list-group-item">school</li>
+              <li class="list-group-item">follow</li>
+            </ul>
+          </div>
+          <p class="caption">Well that is boring...</p>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">Most Common Hashtags</div>
+            <ul class="list-group">
+              <li class="list-group-item">#blessed</li>
+              <li class="list-group-item"><abbr title="Throwback Thursday">#tbt</abbr></li>
+              <li class="list-group-item">#1</li>
+              <li class="list-group-item"><abbr title="Woo Pig Sooie, a cheer for Arkansas that Bobby Portis and Michael Qualls tweet frequently">#wps</abbr></li>
+              <li class="list-group-item">#riseandgrind</li>
+              <li class="list-group-item"><abbr title="Arizona chant, mainly from Rondae Hollis-Jefferson">#beardown</abbr></li>
+              <li class="list-group-item"><abbr title="One Of My Followers">#oomf</abbr></li>
+              <li class="list-group-item"><abbr title="You really need an explanation for UNC?">#unc</abbr></li>
+              <li class="list-group-item">#respect</li>
+              <li class="list-group-item"><abbr title="Another one almost entirely by Rondae Hollis-Jefferson, seems to be a reference to his hometown of Chester, Pennsylvania">#chap</abbr></li>
+            </ul>
+          </div>
+          <p class="caption">No #whitegirlwednesday? Marshall Henderson would have made this more interesting. I hope he's doing okay these days.</p>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">Most Common Usernames</div>
+            <ul class="list-group">
+              <li class="list-group-item"><abbr title="Tyus Jones">@tyusjones06</abbr></li>
+              <li class="list-group-item"><abbr title="Jahlil Okafor's old account">@bigjah22</abbr></li>
+              <li class="list-group-item"><abbr title="Rashad Vaughn">@showtimemr</abbr></li>
+              <li class="list-group-item"><abbr title="Aaron Harrison, slightly better at basketball and social media than his brother?">@aaronice2</abbr></li>
+              <li class="list-group-item"><abbr title="Kelly Oubre">@k_ctmd22</abbr></li>
+              <li class="list-group-item"><abbr title="Andrew Harrison">@drewroc5</abbr></li>
+              <li class="list-group-item"><abbr title="Chris Walker's old account, now Tweeting in Russian">@cwalkertime23</abbr></li>
+              <li class="list-group-item"><abbr title="Theo Pinson">@tpinsonn</abbr></li>
+              <li class="list-group-item"><abbr title="Dakari Johnson's old account, now also Tweeting in Russian. Is this a thing?">@dslowmotion22</abbr></li>
+              <li class="list-group-item"><abbr title="Austin Nichols">@a_nichols33</abbr></li>
+            </ul>
+          </div>
+          <p class="caption">The most common username not in the top 100 prospects list belongs to Gary Harris, who was recently drafted.</p>
+        </div>
+      </div>
+
+      <h2>Automated Sentiment Analysis</h2>
+
+      <p>Sentiment analysis. It's a thing. I've heard about it. That was the extent of my knowledge going into this project, and I decided to change that.</p>
+
+      <p>Sentiment analysis is determining how positive or negative statements are, and then typically results are combined to provide some insight (<i>e.g.</i> what percentage of people feel positively about Pepsi?). It can be done manually or automatically. Obviously "manual" sounds old and boring, so I decided to try automatic sentiment analysis. My goal was to find if certain players can be deemed more "positive" than others based solely on the contents of their Tweets.</p>
+
+      <p>To do automated sentiment analysis, I used <a href="https://github.com/sloria/TextBlob">TextBlob</a>, a very user-friendly Python library. Basically I just pump in the data and it gives me two scores for each tweet:</p>
+
+      <ol>
+        <li><b>Polarity</b>: -1 to 1, negative to positive</li>
+        <li><b>Subjectivity</b>: 0 to 1, objective to subjective</li>
+      </ol>
+
+      <p>I ran every Tweet through there and averaged across players, in the hope that some signal would be revealed when the data was aggregated.</p>
+
+      <div id="sentiment-analysis-scatter"></div>
+      <p class="caption">Hover over the points to see player names.</p>
+
+      <p>I guess it's not surprising that averaging together the sentiments of a ton of tweets tends to create one big cluster in the middle. The biggest outlier is Guillem Vives who Tweets in Spanish, so that is probably just noise (same for Ilimane Diop). Dorian Finney-Smith is a bit more positive and subjective than normal. Cliff Alexander is a bit more negative and objective than normal. The rest seems to be a blob.</p>
+
+      <p>But is there value in that blob, if we zoom in? I'm not so sure. Looking at the most negative Tweets finds things like, "LaMarcus Aldridge is too nasty smh!" But in general, the classifier seems to get more right than wrong. So maybe this could be used as a metric of... something... but I would need to do some more research into studies on the value of this type of analysis. What I did read was mostly people saying that automated analysis is not accurate enough to be particularly useful.</p>
+
+      <h2>Fun Tidbit #2</h2>
+
+      <div class="pull-left" style="margin-right: 1em">
+        <img src="img/grant-hill.jpg" width="240" alt="Did this actually work?">
+        <p class="caption">Did this actually work?</p>
+      </div>
+
+      <p>A few years back, after a couple rather unfortunate incidents, Grant Hill and Jared Dudley starred in a commercial attempting to decrease the usage of anti-gay slurs as slang. What does our Tweet database say about that?</p>
+
+      <p>I was surprised to see that only 18 out of 164,546 Tweets contained the word "fag" or "faggot". Is that because the culture has changed and it's no longer seen as acceptable to use those words? Or is it that even mid-level 17 year old NBA prospects know better than to say the wrong words in public? You need more than an SQL query to answer that question.</p>
+
+      <h2 style="clear: both">Manual Content Analysis</h2>
+
+      <p>If automated sentiment analysis isn't good enough, what are the alternatives? Manual annotation is one. In additon to being more accurate, a critical advantage of manual sentiment analysis is that you can actually expand it to things besides just sentiment. You can categorize text into arbitrary categories. This more broad analysis is called "content analysis".</p>
+
+      <p>Content analysis has been applied to athletes' Tweets previously <a href="http://journals.humankinetics.com/ijsc-back-issues/ijsc-volume-3-issue-4-december-/understanding-professional-athletes-use-of-twitter-a-content-analysis-of-athlete-tweets">[1]</a>, although the results don't seem particularly insightful. Tweets were divided into categories like "Tweets about their own team", "interactions with fans", "marketing/promotion", etc. Through this, some information can be gained about the priorities, motivations, and interests of athletes.</p>
+
+      <p>I decided to do something similar. After some thought, I narrowed my analysis down to four categories:</p>
+
+      <ul>
+        <li><b>Basketball</b>: Anything remotely basketball-related</li>
+        <li><b>Girls</b>: Tweets to or about women</li>
+        <li><b>Other</b>: Everything else</li>
+        <li><b>N/A</b>: For completely unintelligible Tweets, such as foreign language Tweets</li>
+      </ul>
+
+      <p>The problem with manual content analysis is that it's a ton of work to manually categorize 164,546 Tweets. Amazon Mechanical Turk could make short work of it, but I don't really want to spend money on this project. So I took a three-pronged approach to the annotation problem:</p>
+
+      <ol>
+      <li>I bulk-categorized several thousand Tweets if they had easy-to-identify categories (such as Tweets with a hashtag about the McDonald's All American game).</li>
+      <li>I built a web interface I could use to easily categorize Tweets.</li>
+      <li>Since I am semi-famous in a very small basketball-related part of the Internet, <a href="http://www.reddit.com/r/BasketballGM/comments/2hu9hu/want_to_do_me_a_favor_help_me_with_a_weird/">I recruited some of my acolytes to help categorize Tweets</a>.</li>
+      </ol>
+
+      <p>Let's look at an example. Going to my web interface, you might see something like this:</p>
+
+      <div class="well">
+        <h2 class="categorizer">RT @23the_King: Rewatching the Howard Pulley vs. BABC game, @Tyusjones06 is too smooth! #FavPG</h2>
+
+        <div class="row">
+          <div class="col-md-3">
+            <form action="" method="POST" class="categorizer-button" id="basketball">
+              <input type="hidden" name="key" value="{{ key }}">
+              <input type="hidden" name="category" value="basketball">
+              <button type="submit" class="btn btn-block btn-success"><span class="categorizer-button-header">Basketball (b)</span></button>
+            </form>
+          </div>
+
+          <div class="col-md-3">
+            <form action="" method="POST" class="categorizer-button" id="girls">
+              <input type="hidden" name="key" value="{{ key }}">
+              <input type="hidden" name="category" value="girls">
+              <button type="submit" class="btn btn-block btn-danger"><span class="categorizer-button-header">Girls (g)</span><br>To or about women</button>
+            </form>
+          </div>
+
+          <div class="col-md-3">
+            <form action="" method="POST" class="categorizer-button" id="other">
+              <input type="hidden" name="key" value="{{ key }}">
+              <input type="hidden" name="category" value="other">
+              <button type="submit" class="btn btn-block btn-primary"><span class="categorizer-button-header">Other (o)</span><br>Anything else.</button>
+            </form>
+          </div>
+
+          <div class="col-md-3">
+            <form action="" method="POST" class="categorizer-button" id="na">
+              <input type="hidden" name="key" value="{{ key }}">
+              <input type="hidden" name="category" value="na">
+              <button type="submit" class="btn btn-block btn-default"><span class="categorizer-button-header">N/A (n)</span><br>Foreign language<br>or unintelligible</button>
+            </form>
+          </div>
+        </div>
+
+        <p class="categorizer-footer">23054 completed, 141492 remaining.</p>
+      </div>
+
+      <p>That Tweet you would categorize as "Basketball".</p>
+
+      <p>But there is trouble. "23054 completed, 141492 remaining"?? Even though I sat through an entire long boring wedding categorizing Tweets on my phone? That is not very good. With more time/money/effort, more Tweets could be categorized. But for now, 23054 is actually a lot of data.</p>
+
+      <p>One big problem with the categorization: a significant number were done by method #1 above, automatic bulk categorization. That could bias the results. The manually annotated ones were all sampled randomly so you could argue that it is an unbiased sample, but I didn't track which ones were manually and automatically annotated. Oh well. All I have to work with now is the pooled, biased categorizations.</p>
+
+      <p>There are many other problems too. Different players use Twitter differnetly. Tweet frequencies are different, so for some 3000 Tweets might be a month and for others it might be years. Some players use foreign languages. And if anything too controversial is said, Twitter accounts can be deleted (I wasn't even looking for this, but I couldn't help but notice that Jahlil Okafor, Emmanuel Mudiay, Dakari Johnson, and Chris Walker all deleted their accounts at some point - probably others did too).</p>
+
+      <p>But let's ignore all those drawbacks for now and look at the results of the content analysis. Unsurprisingly, basketball was a popular topic for Tweeting amongst the top 100 prospects.</p>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <table class="table table-striped">
+            <thead>
+              <tr><th>Category</th><th>Count</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Basketball</td><td>12563</td></tr>
+              <tr><td>Girls</td><td>2416</td></tr>
+              <tr><td>Other</td><td>7630</td></tr>
+              <tr><td>N/A</td><td>445</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-sm-6">
+          <img src="img/basketball-girls.png" class="img-responsive">
+        </div>
+        <div class="col-sm-12">
+          <p class="caption">There was a 5:1 ratio of Tweets about basketball to Tweets about girls.</p>
+        </div>
+      </div>
+
+      <p>However, players exhibited heterogeneity in their propensities to Tweet about different subjects. After filtering out the players with less than 100 categorized Tweets, I was left with 52 players with decent sample sizes, an average of 426 categorized Tweets/player. The players with the highest percentages of Tweets falling into each category are shown in the following tables and scatter plots.</p>
+
+      <div class="row">
+        <div class="col-sm-4">
+          <table class="table table-striped">
+            <thead>
+              <tr><th>Name</th><th>Basketball %</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Justin Jackson</td><td>83.1%</td></tr>
+              <tr><td>Theo Pinson</td><td>80.5%</td></tr>
+              <tr><td>Stanley Johnson</td><td>77.0%</td></tr>
+              <tr><td>Dakari Johnson</td><td>76.7%</td></tr>
+              <tr><td>Karl Towns</td><td>74.1%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-sm-4">
+          <table class="table table-striped">
+            <thead>
+              <tr><th>Name</th><th>Girls %</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Montrezl Harrell</td><td>52.0%</td></tr>
+              <tr><td>Briante Weber</td><td>50.2%</td></tr>
+              <tr><td>Buddy Hield</td><td>37.3%</td></tr>
+              <tr><td>Terry Rozier</td><td>34.8%</td></tr>
+              <tr><td>Marcus Lee</td><td>30.8%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-sm-4">
+          <table class="table table-striped">
+            <thead>
+              <tr><th>Name</th><th>Other %</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Austin Nichols</td><td>59.3%</td></tr>
+              <tr><td>Amida Brimah</td><td>57.1%</td></tr>
+              <tr><td>Kennedy Meeks</td><td>54.4%</td></tr>
+              <tr><td>Zak Irvin</td><td>52.4%</td></tr>
+              <tr><td>Brice Johnson</td><td>52.3%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="clearfix hidden-xs"></div>
+        <div class="col-sm-4">
+          <table class="table table-striped">
+            <thead>
+              <tr><th>Name</th><th>Basketball %</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Briante Weber</td><td>21.7%</td></tr>
+              <tr><td>Montrezl Harrell</td><td>26.5%</td></tr>
+              <tr><td>Terry Rozier</td><td>27.6%</td></tr>
+              <tr><td>Rondae Hollis-Jefferson</td><td>30.2%</td></tr>
+              <tr><td>Amida Brimah</td><td>34.3%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-sm-4">
+          <table class="table table-striped">
+            <thead>
+              <tr><th>Name</th><th>Girls %</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Justin Jackson</td><td>0.3%</td></tr>
+              <tr><td>Stanley Johnson</td><td>0.6%</td></tr>
+              <tr><td>Dakari Johnson</td><td>0.6%</td></tr>
+              <tr><td>Theo Pinson</td><td>1.1%</td></tr>
+              <tr><td>Tyus Jones</td><td>1.3%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-sm-4">
+          <table class="table table-striped">
+            <thead>
+              <tr><th>Name</th><th>Other %</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Karl Towns</td><td>13.8%</td></tr>
+              <tr><td>Justin Jackson</td><td>15.7%</td></tr>
+              <tr><td>Theo Pinson</td><td>18.1%</td></tr>
+              <tr><td>Montrezl Harrell</td><td>21.2%</td></tr>
+              <tr><td>Aaron Harrison</td><td>21.9%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4">
+          <div id="basketball-girls-scatter"></div>
+        </div>
+        <div class="col-sm-4">
+          <div id="basketball-other-scatter"></div>
+        </div>
+        <div class="col-sm-4">
+          <div id="girls-other-scatter"></div>
+        </div>
+      </div>
+      <p class="caption">Hover over the points to see player names.</p>
+
+      <p>Just from glancing at the tables, it seems that there are some big names near the top for Basketball %. Is there a correlation between prospect rank and Tweet content, maybe due to self-censoring or self-promotion? Actually, no. The highest correlation coefficient between prospect ranks and one of these percentages is 0.26 between rank and Other %, which is not very large. The correlation for rank and Basketball % is slightly negative.</p>
+
+      <p>Speaking of correlations, Andrew and Aaron Harrison have almost identical Tweet category percentages. Which I guess should be expected.</p>
+
+      <p>Especially in light of Fun Tidbit #2, I can't help but wonder if the NBA's Michael Sam could be found through techniques like this. I imagine his Girls % would be quite low. I'm not sure how that makes me feel.</p>
+
+      <h2>If I Had More Time...</h2>
+
+      <p>It is difficult to derive much insight from the type of analysis presented here because there is no validation. To build a predictive model, you need some type of "gold standard" for comparison, so you can confirm that your model actually works. For instance, in my current job I am trying to automatically detect errors in clinical trial data, so my gold standard is datasets before and after they were manually checked for errors by domain experts. If I can reproduce those results, then I have something. Rather than just gathering some data and jumping in with some generic analysis like I presented here, the real challenge is to define how we can be confident that any of these techniques are actually working and providing value. After that, I could imagine myriad sophisticated analytical techniques that could be applied. But a solid grounding in reality is the most important factor, and that is likely one of the largest challenges you face in data analysis.</p>
+
+      <p>One idea along those lines would be to look at historical data. That might not be available, of course. Twitter is pretty new. But at a minimum, you could start gathering data now on current prospects, which could then serve as historical data in the future. Maybe something like "percentage of Tweets about basketball" correlates well with how much a player improves after they enter the NBA. The only way to know is to do the grunt work of collecting, annotating, and (finally) analyzing that data.</p>
+
+      <h2>Conclusions</h2>
+
+      <div class="row">
+        <div class="col-sm-4">
+          <h3>Basketball</h3>
+          <ul>
+            <li>The vast majority of prospects have a rich history of tweets publicly available</li>
+            <li>Tweet content varies a lot across players and might deserve some more attention</li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <h3>Technical</h3>
+
+          <ul>
+            <li>Automated sentiment analysis might not be too useful</li>
+            <li>Manual content analysis is better, but more time consuming</li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <h3>Overall</h3>
+
+          <ul>
+            <li>I kind of feel like a stalker</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Boring Programming Details</h2>
+
+      <p>I did almost all my analysis in Python because it's an incredibly elegant language and it makes me happy. The libraries I used are TextBlob (sentiment analysis), Beautiful Soup (screen scraping), Requests (downloading crap), Tweepy (easy Twitter API access), Flask (content analysis web UI), and sqlite3 (plenty fast for data storage and manipulation at this scale).</p>
+
+      <p>For this document, I used D3 to make the charts. I'm pretty new to D3, but somehow I managed to scrape something together.</p> 
+    </div>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+  <script src="ui.js"></script>
+
+</html>

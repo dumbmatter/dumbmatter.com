@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>#VoteAndDie</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="site-wrapper">
+      <div class="cover-container">
+        <h1 class="overall-header">#VoteAndDie</h1>
+        <div class="inner cover">
+          <h1 class="cover-heading">Are you more likely to <span class="text-highlight">cast the deciding vote in the election</span> or <span class="text-highlight">die on your way to the polling booth?</span></h1>
+          <form>
+            <div class="row lead">
+              <div class="col-sm-4">
+                <label><br class="hidden-xs"><div class="form-header">State</div>
+                  <select id="state" class="form-control">
+                    <option value="Alabama">Alabama</option>
+                    <option value="Alaska">Alaska</option>
+                    <option value="Arizona">Arizona</option>
+                    <option value="Arkansas">Arkansas</option>
+                    <option value="California">California</option>
+                    <option value="Colorado">Colorado</option>
+                    <option value="Connecticut">Connecticut</option>
+                    <option value="Delaware">Delaware</option>
+                    <option value="District of Columbia">District of Columbia</option>
+                    <option value="Florida">Florida</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Hawaii">Hawaii</option>
+                    <option value="Idaho">Idaho</option>
+                    <option value="Illinois">Illinois</option>
+                    <option value="Indiana">Indiana</option>
+                    <option value="Iowa">Iowa</option>
+                    <option value="Kansas">Kansas</option>
+                    <option value="Kentucky">Kentucky</option>
+                    <option value="Louisiana">Louisiana</option>
+                    <option value="Maine">Maine</option>
+                    <option value="Maryland">Maryland</option>
+                    <option value="Massachusetts">Massachusetts</option>
+                    <option value="Michigan">Michigan</option>
+                    <option value="Minnesota">Minnesota</option>
+                    <option value="Mississippi">Mississippi</option>
+                    <option value="Missouri">Missouri</option>
+                    <option value="Montana">Montana</option>
+                    <option value="Nebraska">Nebraska</option>
+                    <option value="Nevada">Nevada</option>
+                    <option value="New Hampshire">New Hampshire</option>
+                    <option value="New Jersey" selected="selected">New Jersey</option>
+                    <option value="New Mexico">New Mexico</option>
+                    <option value="New York">New York</option>
+                    <option value="North Carolina">North Carolina</option>
+                    <option value="North Dakota">North Dakota</option>
+                    <option value="Ohio">Ohio</option>
+                    <option value="Oklahoma">Oklahoma</option>
+                    <option value="Oregon">Oregon</option>
+                    <option value="Pennsylvania">Pennsylvania</option>
+                    <option value="Rhode Island">Rhode Island</option>
+                    <option value="South Carolina">South Carolina</option>
+                    <option value="South Dakota">South Dakota</option>
+                    <option value="Tennessee">Tennessee</option>
+                    <option value="Texas">Texas</option>
+                    <option value="Utah">Utah</option>
+                    <option value="Vermont">Vermont</option>
+                    <option value="Virginia">Virginia</option>
+                    <option value="Washington">Washington</option>
+                    <option value="West Virginia">West Virginia</option>
+                    <option value="Wisconsin">Wisconsin</option>
+                    <option value="Wyoming">Wyoming</option>
+                  </select>
+                </label>
+              </div>
+              <div class="col-sm-4">
+                <label><div class="form-header">Distance to <br class="hidden-xs">Polling Place</div>
+                  <div class="input-group">
+                    <input id="distance" type="number" class="form-control" value="2">
+                    <span class="input-group-addon">miles</span>
+                  </div>
+                </label>
+              </div>
+              <div class="col-sm-4">
+                <label><div class="form-header">Mode of <br class="hidden-xs">Transportation</div>
+                  <select id="transportation" class="form-control">
+                    <option value="Bicycle">Bicycle</option>
+                    <option value="Car" selected="selected">Car</option>
+                    <option value="Motorcycle">Motorcycle</option>
+                    <option value="Public Transportation">Public Transportation</option>
+                    <option value="Walk">Walk</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+            <p class="lead">
+              <button class="btn btn-lg btn-primary" id="calculate">What are my odds?</button>
+            </p>
+          </form>
+          <div id="result">
+            <p id="result-text" class="lead">
+              Oh no! If you live in New Jersey and ride a bike 4 miles to your polling place, you are <span class="text-highlight">59.4 times more likely to die</span> on your way to the polling booth than you are to cast a meaningful vote in the 2016 presidential election.
+            </p>
+            <div class="clearfix">
+            </div>
+            <p class="lead footer" id="twitter-button2"></p>
+            <p class="lead footer">
+              <a href="#" id="show-explanation">More Information</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="explanation">
+        <div class="cover-container">
+          <p>So, how was this estimate made? Well, just think about what rare confluence of events would have to occur for your vote to swing the election.</p>
+
+          <p>First, think about the concept of a <a href="http://fivethirtyeight.com/features/arizona-is-probably-not-a-swing-state/">tipping point state</a>. The tipping point state is the state that provides the decisive electoral vote in an election. For example, imagine a Republican wins the election and manages to carry my home state of New Jersey. Did New Jersey really matter?</p>
+
+          <p>Probably not. New Jersey is so liberal that, if a Republcian wins New Jersey, it's almost guaranteed that he also has enough electoral votes from states he won by larger margins, so swapping the results in New Jersey wouldn't have changed the result of the election.</p>
+
+          <p>Even in a landslide election there is a tipping point state, a state that lies at the center of the electoral vote distribution. So what are the odds that New Jersey will be the tipping point state <i>and</i> the election will be decided by only the tipping point state? Far lower than the odds that it is the tipping point state alone.</p>
+
+          <p>We all remember the tipping point state in 2000: Florida, <a href="http://en.wikipedia.org/wiki/U.S._presidential_election,_2000">decided by a margin of 537 votes</a>. We don't all remember New Mexico in 2000, which <a href="http://en.wikipedia.org/wiki/U.S._presidential_election,_2000">actually had a smaller margin of 366 votes</a> but didn't get much publicity because it was not the tipping point state - no matter which way New Mexico voted, the outcome was the same. But still, New Mexico in 2000 was the closest result ever in a US presidential election.</p>
+
+          <p>But even 366 is far greater than 1. If a single extra New Mexican decided to vote that day, then Gore would have won New Mexico by 365 or 367 instead of 366. Big deal. What are the odds that a state will be the tipping point state <i>and</i> also have a single vote decide its result?</p>
+
+          <p><a href="http://papers.nber.org/papers/w15220">This question has been investigated by by Andrew Gelman <i>et al.</i></a>. They found that, for the 2008 election, there was roughly a 1 in 150 million chance that New Jersey would decide the entire national election by a single vote. Given that the 2016 election is probably going to be similar to the 2008 election, I'll use this value.</p>
+
+          <p>However, those 1 in 150 million odds don't necessarily factor in what actually happens in close elections like the 2000 presidential election. <a href="http://www.nytimes.com/2005/11/06/magazine/06freak.html?pagewanted=all">"It is true that the outcome of that election came down to a handful of voters; but their names were Kennedy, O'Connor, Rehnquist, Scalia and Thomas. And it was only the votes they cast while wearing their robes that mattered, not the ones they may have cast in their home precincts."</a> So even if your vote is truly the deciding vote in the election, the inherent error in counting ballots will likely make it such that a somewhat arbitrary legal process will decide the election. And in that case, does it really matter what your vote was?</p>
+
+          <p>That line of reasoning is refuted by <a href="http://www.stat.columbia.edu/~gelman/research/published/gelmankatzbafumi.pdf">another paper by Andrew Gelman <i>et al.</i> (see the appendix)</a>. Basically, just as a single vote can change the outcome of an election that is exactly 50-50, you can also imagine a vote moving the outcome from inside to outside the range of closeness needed to instigate an arbitrary legal resolution to the election. So I'm going to stick with the 1 in 150 million estimate.</p>
+
+          <p>I drive to get around. <a href="http://books.google.com/books?id=YeNe2vBFdzIC&pg=PA100&lpg=PA100&dq=rate+of+death+per+mile+by+mode+of+transportation&source=bl&ots=rUVuhWSZ8l&sig=bK4-amX77W2Ro2QYewMIDlHGYHs&hl=en#v=onepage&q=rate%20of%20death%20per%20mile%20by%20mode%20of%20transportation&f=false">There is about one death per 81 million miles driven.</a> My polling place is a 2 mile drive from home (4 miles round trip). That means that the odds of me dying in an accident on the way to vote are roughly 1 in 20 million - that's 7 times the odds of my vote swinging the election!</p>
+
+          <p>Repeat: <i>I am roughly 7 times more likely to die on my way to the polling booth than I am to cast a meaningful vote in the Presidential election</i>. Similar odds probably hold true for you. Try the calculator above to find out.</p>
+
+          <h3>References</h3>
+
+          <p>The death rates for various modes of transportation come from a <a href="http://www-nrd.nhtsa.dot.gov/Pubs/810968.pdf">few</a> <a href="http://bicycleuniverse.info/transpo/almanac-safety.html">different</a> <a href="http://books.google.com/books?id=YeNe2vBFdzIC&pg=PA100&lpg=PA100&dq=rate+of+death+per+mile+by+mode+of+transportation&source=bl&ots=rUVuhWSZ8l&sig=bK4-amX77W2Ro2QYewMIDlHGYHs&hl=en#v=onepage&q=rate%20of%20death%20per%20mile%20by%20mode%20of%20transportation&f=false">sources</a>. Let me know if you find a better source.</p>
+
+          <p>The data on the odds of swinging a presidential election come from <a href="http://papers.nber.org/papers/w15220">"What is the probability your vote will make a difference?" by Andrew Gelman, Nate Silver, Aaron Edlin</a>. These estimates are from the 2008 election, but they are the most recent ones available (AFAIK) and they are probably pretty similar to the 2016 values.</p>
+
+          <p class="footer real-footer">Made by <a href="http://dumbmatter.com/">dumbmatter.com</a></p>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </body>
+</html>

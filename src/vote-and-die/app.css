@@ -1,0 +1,177 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #b00;
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .cover-container {
+    width: 700px;
+  }
+}
+
+/* Custom for vote-and-die */
+.input-group-addon {
+  text-shadow: none;
+  margin-top: 4px;
+}
+.form-header {
+  margin-bottom: 6px;
+  margin-top: 20px;
+}
+.overall-header {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .overall-header {
+    font-size: 60px;
+    margin-bottom: 40px;
+  }
+}
+h1 {
+  font-size: 24px;
+}
+.cover-heading {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .form-header {
+    margin-bottom: 6px;
+    margin-top: 0;
+  }
+  h1 {
+    font-size: 36px;
+  }
+  .cover-heading {
+    margin-bottom: 20px;
+  }
+}
+.text-highlight {
+  color: #000;
+}
+@media (max-width: 767px) {
+  select#state,
+  select#transportation,
+  .input-group {
+    width: 300px;
+  }
+}
+.footer {
+  font-size: 16px;
+  margin-top: 20px;
+}
+.footer a,
+.footer a:focus {
+  color: #ccc;
+  text-decoration: underline;
+}
+.footer a:hover {
+  color: #aaa;
+}
+#explanation {
+  background-color: #fff;
+  color: #333;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: left;
+  text-shadow: none;
+  display: none;
+  width: 100%;
+}
+#explanation a {
+  color: #666;
+  text-decoration: underline;
+}
+#explanation a:focus,
+#explanation a:hover {
+  color: #333;
+}
+#result {
+  display: none;
+}
+#twitter-button2 {
+  height: 32.2px;
+}
+.real-footer {
+  text-align: center;
+}

@@ -14,7 +14,6 @@ Replace characters in blog posts:
 - <img - look for inappropraite ones, like in comments
 PHP stuff in header, elsewhere?
 trailing slash in URLs - permalink gets rid of it in links, but then appears in browser with trailing slash
-other subfolders (flockas, etc)
 blog post about switch (or about lack of blog post)
 
 re-enable GA
@@ -26,3 +25,4 @@ more margin between top HR and h2, for balance with paragraph spacing
 test htaccess
 - redirect to bbgm
 - www
+post about sixers

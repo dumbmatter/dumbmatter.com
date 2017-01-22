@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Flockas</title>
+  </head>
+  <body>
+<button id="pause">Pause Flockas</button>
+<button id="add">Add One Flocka</button>
+<button id="remove">Remove One Flocka</button>
+<p>
+<div id="flockas"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script>
+var flockas = [];
+
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+function onPlayerReady(event) {
+  event.target.playVideo();
+}
+
+function add() {
+  var start = Math.round(Math.random() * 80);
+
+  $("#flockas").append('<div id="flocka' + flockas.length + '" class="flocka"></div>');
+
+  flockas.push(new YT.Player('flocka' + flockas.length, {
+    height: '105',
+    width: '140',
+    videoId: 'yOc-MXGuKgs',
+    playerVars: {
+      autoplay: 1,
+      loop: 1,
+      playlist: 'yOc-MXGuKgs',
+      start: start
+    },
+    events: {
+      'onReady': onPlayerReady
+    }
+  }));
+}
+
+function remove() {
+  var divs = $(".flocka");
+  $(divs[divs.length - 1]).remove();
+  flockas.splice(flockas.length - 1)
+}
+
+function pause() {
+  var pauseEl = $("#pause");
+  if (pauseEl.html() === "Pause Flockas") {
+    for (var i = 0; i < flockas.length; i++) {
+      flockas[i].pauseVideo();
+    }
+    pauseEl.html("Play Flockas");
+  } else {
+    for (var i = 0; i < flockas.length; i++) {
+      flockas[i].playVideo();
+    }
+    pauseEl.html("Pause Flockas");
+  }
+}
+
+function onYouTubeIframeAPIReady() {
+  for (var i = 0; i < 5; i++) {
+    add();
+  }
+}
+
+$("#add").click(add);
+$("#remove").click(remove);
+$("#pause").click(pause);
+</script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23918822-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+  </body>
+</html>
