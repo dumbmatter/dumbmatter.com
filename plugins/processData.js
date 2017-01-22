@@ -7,11 +7,11 @@ const plugin = (options) => {
 
             // Date processing
             if (file.date) {
-                const date = new Date(file.date);
+                const dateParts = file.date.toISOString().split('T')[0].split('-');
                 file.dateParts = {
-                    year: String(date.getFullYear()),
-                    month: months[date.getMonth()],
-                    day: ('0' + date.getDate()).slice(-2),
+                    year: dateParts[0],
+                    month: months[parseInt(dateParts[1]) - 1],
+                    day: dateParts[2],
                 };
             }
 
