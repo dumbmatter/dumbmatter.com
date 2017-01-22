@@ -21,3 +21,4 @@ responsive
 - code blocks - see matlab progress monitor post for overflow scenario
 - tags fucked up
 really need jquery on every page? if so, move to footer?
+more margin between top HR and h2, for balance with paragraph spacing
