@@ -1,16 +1,25 @@
 {{> header}}
 {{{contents}}}
-{{#each posts}}
+{{#each pagination.files}}
   <div class="post">
-    <h2><a href="{{path}}">{{title}}</a></h2>
+    <h2><a href="/{{path}}">{{title}}</a></h2>
     {{> date}}
     <div class="post-tags">{{tags}}</div>
 
     {{{teaser}}}
 
-    <p><a href="{{path}}">Read more...</a></p>
+    <p><a href="/{{path}}">Read more...</a></p>
 
     <hr>
   </div>
 {{/each}}
+<div style="margin-top: 1em">
+  {{#if pagination.previous}}
+    <div style="float: left"><a href="/{{pagination.previous.path}}">&laquo; Newer</a></div>
+  {{/if}}
+  {{#if pagination.next}}
+    <div style="float: right"><a href="/{{pagination.next.path}}">Older &raquo;</a></div>
+  {{/if}}
+</div>
+<div style="clear: both; height: 0.5em"></div>
 {{> footer}}
