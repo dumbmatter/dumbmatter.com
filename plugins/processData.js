@@ -1,9 +1,13 @@
+const path = require('path');
+
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 const plugin = (options) => {
     return (files, metalsmith, done) => {
         for (const key of Object.keys(files)) {
             const file = files[key];
+
+            file.filename = path.basename(key, '.html');
 
             // Date processing
             if (file.date) {

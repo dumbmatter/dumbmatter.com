@@ -31,7 +31,7 @@ Metalsmith(__dirname)
         linksets: [{
             date: 'YYYY/MM',
             match: {collection: 'posts'},
-            pattern: ':date/:title',
+            pattern: ':date/:filename',
         }],
     }))
     .use(layouts({
