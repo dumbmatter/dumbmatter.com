@@ -2,7 +2,8 @@
   "name": "dumbmatter.com",
   "private": true,
   "scripts": {
-    "build": "node index.js"
+    "build": "node index.js",
+    "start": "http-server build"
   },
   "author": "Jeremy Scheff <jdscheff@gmail.com>",
   "dependencies": {
@@ -12,5 +13,8 @@
     "metalsmith-layouts": "^1.7.0",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-permalinks": "git://github.com/arccoza/metalsmith-permalinks.git#be003e106b042ed6691dfca8d8d85d9fbef8b0da"
+  },
+  "devDependencies": {
+    "http-server": "^0.9.0"
   }
 }
