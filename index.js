@@ -8,6 +8,7 @@ const processData = require('./plugins/processData');
 Metalsmith(__dirname)
     .source('./src')
     .destination('./build')
+    .ignore('drafts')
     .use(collections({
         posts: {
             pattern: 'posts/*.md',
