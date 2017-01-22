@@ -1,3 +1,4 @@
+URLs comiong from post titles, not md file names. causing problem mplaape
 comments
 - inline and archive, like matlab post
 RSS
@@ -13,6 +14,7 @@ PHP stuff in header, elsewhere?
 skipped 1 (or 2?) posts for BBGM
 - keep in htaccess
 trailing slash in URLs - permalink gets rid of it in links, but then appears in browser with trailing slash
+other subfolders (flockas, etc)
 
 re-enable GA
 go over styles.css again
