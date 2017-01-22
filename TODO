@@ -19,7 +19,6 @@ skipped 1 (or 2?) posts for BBGM
 - keep in htaccess
 trailing slash in URLs - permalink gets rid of it in links, but then appears in browser with trailing slash
 other subfolders (flockas, etc)
-only include "read more" link if there actually is more. set flag in processData. test with Large Hardon Collider, flockas
 blog post about switch (or about lack of blog post)
 
 check links on index.html text at top

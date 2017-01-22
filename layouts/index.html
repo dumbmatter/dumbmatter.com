@@ -8,7 +8,9 @@
 
     {{{teaser}}}
 
-    <p><a href="/{{path}}">Read more...</a></p>
+    {{#if hasMore}}
+      <p><a href="/{{path}}">Read more...</a></p>
+    {{/if}}
 
     <hr>
   </div>

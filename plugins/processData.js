@@ -21,7 +21,9 @@ const plugin = (options) => {
 
             // Create teasers from blog posts
             if (file.layout === 'post.html') {
-                file.teaser = file.contents.toString().split('<!--more-->')[0];
+                const splitContents = file.contents.toString().split('<!--more-->');
+                file.teaser = splitContents[0];
+                file.hasMore = splitContents.length > 1 ? true : false;
             }
         }
         done();
