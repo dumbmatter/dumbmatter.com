@@ -2,7 +2,7 @@
 date: 2011-07-17
 layout: post.html
 tags: programming, pygtk
-title:  Tooltips when hovering over a PyGTK TreeView column header
+title: Tooltips when hovering over a PyGTK TreeView column header
 ---
 
 If you search for information about showing tooltips in a PyGTK TreeView, most of what you find is about tooltips for <a href="http://faq.pygtk.org/index.py?req=show&file=faq13.046.htp">hovering over rows</a>. Here, I'll explain how to show a tooltip when you hover over a column header in a PyGTK TreeView.

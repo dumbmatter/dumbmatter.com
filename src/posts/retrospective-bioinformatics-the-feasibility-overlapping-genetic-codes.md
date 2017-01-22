@@ -2,7 +2,7 @@
 date: 2011-06-02
 layout: post.html
 tags: programming, research-blogging, science
-title:  "Retrospective bioinformatics: the feasibility overlapping genetic codes"
+title: "Retrospective bioinformatics: the feasibility overlapping genetic codes"
 ---
 
 <div style="float:right; padding: 0 0 5px 5px;"><a href="http://www.researchblogging.org"><img style="border:0;" src="/files/icons/rb2_large_gray.png" alt="ResearchBlogging.org" /></a><br>

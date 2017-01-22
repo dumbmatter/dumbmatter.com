@@ -2,7 +2,7 @@
 date: 2011-06-11
 layout: post.html
 tags: matlab, programming
-title:  Progress monitor (or progress bar) within a MATLAB parfor loop
+title: Progress monitor (or progress bar) within a MATLAB parfor loop
 ---
 
 In MATLAB, it is really easy to do parallel processing of trivially parallelizable problems with a <a href="http://www.mathworks.com/help/toolbox/distcomp/parfor.html">`parfor`</a> loop. I do it all the time. It's great. A problem with this is that, if you need to parallelize something in the first place, it's typically something that takes a really long time to run. Some type of progress monitor is normally easier to make, but because `parfor` does not iterate in order and the workers cannot communicate with one another, it's a little tricky to do in the parallel case.

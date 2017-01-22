@@ -2,7 +2,7 @@
 date: 2011-08-22
 layout: post.html
 tags: avatic, mplaape, seo
-title:  "My previous life as a programmer/entrepreneur - Part 3: First steps into the dirty underworld of search engine optimization"
+title: "My previous life as a programmer/entrepreneur - Part 3: First steps into the dirty underworld of search engine optimization"
 ---
 
 <p><em>This is part 3 of a series of articles. If you missed the previous articles, you should <a href="/2011/08/my-previous-life-as-a-programmerentrepreneur-part-1-origins/">start at the beginning</a>.</em></p>

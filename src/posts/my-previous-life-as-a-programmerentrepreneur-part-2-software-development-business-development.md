@@ -2,7 +2,7 @@
 date: 2011-08-21
 layout: post.html
 tags: avatic, mplaape
-title:  "My previous life as a programmer/entrepreneur - Part 2: Software development, business development"
+title: "My previous life as a programmer/entrepreneur - Part 2: Software development, business development"
 ---
 
 <p><em>This is part 2 of a series of articles. If you missed the previous article, you should <a href="/2011/08/my-previous-life-as-a-programmerentrepreneur-part-1-origins/">start at the beginning</a>.</em></p>

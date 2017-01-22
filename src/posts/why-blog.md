@@ -2,7 +2,7 @@
 date: 2011-04-26
 layout: post.html
 tags: meta
-title:  Why blog?
+title: Why blog?
 ---
 
 It's hard to deal with introversion. Even [a scientific approach](http://xkcd.com/55/) doesn't offer many solutions. Sure, you can observe extroverts in their native habitats, but it often seems as if much of their power derives from some combination of status and network effects. No status, no network, no effects.

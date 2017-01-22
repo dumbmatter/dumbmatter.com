@@ -2,7 +2,7 @@
 date: 2011-08-20
 layout: post.html
 tags: avatic, mplaape
-title:  "My previous life as a programmer/entrepreneur - Part 1: Origins"
+title: "My previous life as a programmer/entrepreneur - Part 1: Origins"
 ---
 
 <p>This is the first in a series of articles about (broadly) my experiences as a web developer. I plan on having the whole series range from my adolescence, where I began building websites and learning how to program, and ending as an undergrad in college when I decided to try to sell as much of my stuff as possible and move on to other things. So, I don't know if anyone will find this series of articles interesting; maybe I'm just writing them to reminisce more than anything.</p>
