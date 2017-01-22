@@ -12,3 +12,7 @@ tags
 "read more"
 comments
 displayed post dates off by one - time zone thing?
+Replace characters in blog posts:
+- ’
+Responsive
+- shrink dates, pre, li

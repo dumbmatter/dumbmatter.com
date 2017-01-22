@@ -132,6 +132,8 @@ pre {
   font-size: 85%;
   font-weight: bold;
   overflow: auto;
+  padding: 1em;
+  margin: 1em -1em;
 }
 pre code {
   background: rgba(0, 0, 0, 0);
