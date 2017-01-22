@@ -10,6 +10,7 @@ tags
 - title is tag name
 Replace characters in blog posts:
 - ’
+- —
 PHP stuff in header, elsewhere?
 skipped 1 (or 2?) posts for BBGM
 - keep in htaccess
