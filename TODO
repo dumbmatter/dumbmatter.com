@@ -4,6 +4,7 @@ tags
 - slug vs display case
 - index pages
 - title is tag name
+- links on top of main page
 Replace characters in blog posts:
 - ’ or &#8217;
 - &#8220; and &#8221; => "
@@ -12,16 +13,16 @@ Replace characters in blog posts:
 - —
 - <img - look for inappropraite ones, like in comments
 PHP stuff in header, elsewhere?
-skipped 1 (or 2?) posts for BBGM
-- keep in htaccess
 trailing slash in URLs - permalink gets rid of it in links, but then appears in browser with trailing slash
 other subfolders (flockas, etc)
 blog post about switch (or about lack of blog post)
 
-check links on index.html text at top
 re-enable GA
 go over styles.css again
 responsive
 - code blocks - see matlab progress monitor post for overflow scenario
 - tags fucked up
 more margin between top HR and h2, for balance with paragraph spacing
+test htaccess
+- redirect to bbgm
+- www
