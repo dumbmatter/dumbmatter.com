@@ -1,6 +1,4 @@
 tags
-- index pages top conent hide
-- title is tag name
 - post order desc
 PHP stuff in header, elsewhere?
 trailing slash in URLs - permalink gets rid of it in links, but then appears in browser with trailing slash
