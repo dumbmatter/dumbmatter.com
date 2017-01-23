@@ -5,7 +5,7 @@ tags: Research Blogging, Science
 title: Model predictive control of the hypothalamic-pituitary-adrenal axis
 ---
 
-<div style="float:right; padding: 0 0 5px 5px;"><a href="http://www.researchblogging.org"><img style="border:0;" src="/wp-content/themes/jeremy2/images/icons/rb2_large_gray.png" alt="ResearchBlogging.org" /></a></a></div>
+<div style="float:right; padding: 0 0 5px 5px;"><a href="http://www.researchblogging.org"><img style="border:0;" src="/files/icons/rb2_large_gray.png" alt="ResearchBlogging.org" /></a></a></div>
 
 <p>Very recently, I've been intrigued by control theory applied to systems biology. This strategy seems to often produce insightful and unintuitive results. In this blog post, I'm going to take a look at <a href="http://dx.doi.org/10.1371/journal.pcbi.1000273">a very cool article by Ben-Zvi and coworkers</a> that applies control theory to a mathematical model of the hypothalamic-pituitary-adrenal (HPA) axis, and hopefully put it in a bit of a broader context.</p>
 

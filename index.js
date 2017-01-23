@@ -1,4 +1,5 @@
 const Metalsmith  = require('metalsmith');
+const brokenLinkChecker = require('metalsmith-broken-link-checker')
 const cleanCss = require('metalsmith-clean-css');
 const collections = require('metalsmith-collections');
 const feed = require('metalsmith-feed');
@@ -61,6 +62,10 @@ Metalsmith(__dirname)
     }))
     .use(cleanCss({
         files: 'style.css',
+    }))
+    .use(brokenLinkChecker({
+        allowRegex: /^$/,
+        warn: true,
     }))
     .build((err) => {
         if (err) { throw err; }

@@ -15,14 +15,14 @@
 {{/unless}}
 {{#each pagination.files}}
   <div class="post">
-    <h2><a href="/{{path}}">{{title}}</a></h2>
+    <h2><a href="/{{path}}/">{{title}}</a></h2>
     {{> date}}
     {{> tag-list}}
 
     {{{teaser}}}
 
     {{#if hasMore}}
-      <p><a href="/{{path}}">Read more...</a></p>
+      <p><a href="/{{path}}/">Read more...</a></p>
     {{/if}}
 
     <hr>
@@ -30,10 +30,10 @@
 {{/each}}
 <div style="margin-top: 1em">
   {{#if pagination.previous}}
-    <div style="float: left"><a href="/{{pagination.previous.path}}">&laquo; Newer</a></div>
+    <div style="float: left"><a href="/{{pagination.previous.path}}{{#if pagination.previous.path}}/{{/if}}">&laquo; Newer</a></div>
   {{/if}}
   {{#if pagination.next}}
-    <div style="float: right"><a href="/{{pagination.next.path}}">Older &raquo;</a></div>
+    <div style="float: right"><a href="/{{pagination.next.path}}/">Older &raquo;</a></div>
   {{/if}}
 </div>
 <div style="clear: both; height: 0.5em"></div>
