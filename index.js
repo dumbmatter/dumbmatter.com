@@ -42,6 +42,7 @@ Metalsmith(__dirname)
     }))
     .use(feed({
         collection: 'posts',
+        destination: 'feed/index.html',
         limit: 10,
     }))
     .use(layouts({
