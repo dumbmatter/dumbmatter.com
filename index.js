@@ -48,6 +48,7 @@ Metalsmith(__dirname)
             match: {collection: 'posts'},
             pattern: ':date/:filename',
         }],
+        relative: false,
     }))
     .use(feed({
         collection: 'posts',

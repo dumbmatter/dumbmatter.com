@@ -126,7 +126,7 @@ ul, ol {
   left: -60px;
   position: absolute;
   text-align: center;
-  top: -2px;
+  top: -1px;
   width: 60px;
 }
 .post-date-month {
@@ -159,6 +159,10 @@ ul, ol {
 /* RESPONSIVE STUFF! DESKTOP FIRST, FUCK MOBILE FIRST!! */
 
 @media (max-width: 767px) {
+  pre {
+    margin: 0 -0.5em;
+  }
+
   div#name {
     float: inherit;
     text-align: center;
@@ -198,6 +202,9 @@ ul, ol {
   }
   .post-date-year {
     font-size: inherit;
+  }
+  .post-tags {
+    margin: 1em 0;
   }
 
   .find-me-on {
