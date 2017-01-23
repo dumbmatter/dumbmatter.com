@@ -1,7 +1,7 @@
 ---
 date: 2012-01-17
 layout: post.html
-tags: music
+tags: Music
 title: The genius of Hieronymus Bosch
 ---
 

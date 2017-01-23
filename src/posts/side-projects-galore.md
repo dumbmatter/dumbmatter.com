@@ -1,7 +1,7 @@
 ---
 date: 2016-06-18
 layout: post.html
-tags: basketball-gm, foss, programming, statistics, web-development
+tags: Basketball GM, FOSS, Programming, Statistics, Web Development
 title: Side projects galore
 ---
 

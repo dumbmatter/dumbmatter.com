@@ -1,7 +1,7 @@
 ---
 date: 2013-03-25
 layout: post.html
-tags: humor, mlp, science
+tags: Humor, MLP, Science
 title: The Large Hardon Collider
 ---
 

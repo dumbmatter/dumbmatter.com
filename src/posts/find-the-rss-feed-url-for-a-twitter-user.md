@@ -1,7 +1,7 @@
 ---
 date: 2012-04-19
 layout: post.html
-tags: open-standards, rss, twitter
+tags: Open Standards, RSS, Twitter
 title: Find the RSS feed URL for a Twitter user
 ---
 

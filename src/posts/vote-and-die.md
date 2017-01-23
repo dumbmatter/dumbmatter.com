@@ -1,7 +1,7 @@
 ---
 date: 2012-09-13
 layout: post.html
-tags: politics, statistics
+tags: Politics, Statistics
 title: "Vote and die: are you more likely to cast the deciding vote in the election, or to die on your way to your polling place?"
 ---
 

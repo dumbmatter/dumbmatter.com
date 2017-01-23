@@ -1,7 +1,7 @@
 ---
 date: 2013-04-28
 layout: post.html
-tags: humor
+tags: Humor
 title: Reminiscing about troublemaking
 ---
 

@@ -1,7 +1,7 @@
 ---
 date: 2011-05-02
 layout: post.html
-tags: literature, mlp
+tags: Literature, MLP
 title:  Bitcoin and crypto-anarchist sloths
 ---
 

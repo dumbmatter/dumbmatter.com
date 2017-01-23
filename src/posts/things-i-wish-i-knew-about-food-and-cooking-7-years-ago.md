@@ -1,7 +1,7 @@
 ---
 date: 2013-01-09
 layout: post.html
-tags: cooking, food
+tags: Cooking, Food
 title: Things I wish I knew about food and cooking 7 years ago
 ---
 

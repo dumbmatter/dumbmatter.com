@@ -1,7 +1,7 @@
 ---
 date: 2011-09-13
 layout: post.html
-tags: science
+tags: Science
 title: "QR codes in academic poster presentations: A case study at ICCAI 2011"
 ---
 

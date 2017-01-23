@@ -1,7 +1,7 @@
 ---
 date: 2011-07-17
 layout: post.html
-tags: programming, pygtk
+tags: Programming, PyGTK
 title: Tooltips when hovering over a PyGTK TreeView column header
 ---
 

@@ -1,7 +1,7 @@
 ---
 date: 2012-02-01
 layout: post.html
-tags: basketball-gm, programming, pygobject, pygtk
+tags: Basketball GM, Programming, PyGObject, PyGTK
 title: Some notes on porting from PyGTK to PyGObject
 ---
 

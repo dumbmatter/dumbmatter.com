@@ -1,7 +1,7 @@
 ---
 date: 2011-08-13
 layout: post.html
-tags: matlab, politics, programming, statistics
+tags: MATLAB, Politics, Programming, Statistics
 title: Relationship between Ames Straw Poll and Iowa Caucuses results
 ---
 

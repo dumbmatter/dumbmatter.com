@@ -1,7 +1,7 @@
 ---
 date: 2011-08-20
 layout: post.html
-tags: avatic, mplaape
+tags: Avatic, MPLaaPE
 title: "My previous life as a programmer/entrepreneur - Part 1: Origins"
 ---
 

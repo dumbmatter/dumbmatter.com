@@ -1,7 +1,7 @@
 ---
 date: 2013-01-14
 layout: post.html
-tags: football, programming, sports, statistics
+tags: Football, Programming, Sports, Statistics
 title: Did Adrian Peterson actually rush for more yards than Eric Dickerson but have it go unnoticed due to measurement error?
 ---
 

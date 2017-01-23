@@ -1,7 +1,7 @@
 ---
 date: 2011-08-15
 layout: post.html
-tags: meta
+tags: Meta
 title: What is dumb matter?
 ---
 

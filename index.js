@@ -34,14 +34,6 @@ Metalsmith(__dirname)
             path: 'page/:num/index.html',
         },
     }))
-    .use(tags({
-        // path for result pages
-        path:'tag/:tag/index.html',
-        pathPage: "tag/:tag/:num/index.html",
-        perPage: 10,
-        layout: 'index.html',
-//        slug: {mode: 'rfc3986'}
-    }))
     .use(permalinks({
         linksets: [{
             date: 'YYYY/MM',
@@ -53,6 +45,13 @@ Metalsmith(__dirname)
         collection: 'posts',
         destination: 'feed/index.html',
         limit: 10,
+    }))
+    .use(tags({
+        // path for result pages
+        path:'tag/:tag/index.html',
+        pathPage: "tag/:tag/:num/index.html",
+        perPage: 10,
+        layout: 'index.html',
     }))
     .use(layouts({
         engine: 'handlebars',

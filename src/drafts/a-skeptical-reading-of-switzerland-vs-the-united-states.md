@@ -1,7 +1,7 @@
 ---
 date: 2015-07-25
 layout: post.html
-tags: politics
+tags: Politics
 title: A skeptical reading of Switzerland vs. the United States
 ---
 

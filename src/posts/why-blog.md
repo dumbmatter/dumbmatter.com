@@ -1,7 +1,7 @@
 ---
 date: 2011-04-26
 layout: post.html
-tags: meta
+tags: Meta
 title: Why blog?
 ---
 

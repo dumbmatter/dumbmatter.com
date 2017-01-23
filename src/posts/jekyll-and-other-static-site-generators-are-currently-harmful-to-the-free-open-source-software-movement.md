@@ -1,7 +1,7 @@
 ---
 date: 2011-08-29
 layout: post.html
-tags: foss, programming
+tags: FOSS, Programming
 title: Jekyll and other static site generators are, currently, harmful to the free, open source software movement
 ---
 

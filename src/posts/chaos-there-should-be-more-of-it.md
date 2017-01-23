@@ -1,7 +1,7 @@
 ---
 date: 2011-04-28
 layout: post.html
-tags: literature, mlp
+tags: Literature, MLP
 title: "Chaos: There should be more of it"
 ---
 

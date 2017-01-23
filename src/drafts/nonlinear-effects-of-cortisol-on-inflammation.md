@@ -1,7 +1,7 @@
 ---
 date: 2011-06-04
 layout: post.html
-tags: science
+tags: Science
 title:  Nonlinear effects of cortisol on inflammation?
 ---
 

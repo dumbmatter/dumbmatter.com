@@ -1,7 +1,7 @@
 ---
 date: 2012-10-12
 layout: post.html
-tags: science
+tags: Science
 title: Two types of models
 ---
 

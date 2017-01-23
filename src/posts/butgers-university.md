@@ -1,7 +1,7 @@
 ---
 date: 2012-04-12
 layout: post.html
-tags: butgers, humor, rutgers
+tags: Butgers, Humor, Rutgers
 title: Butgers University
 ---
 

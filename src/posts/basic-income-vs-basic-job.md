@@ -1,7 +1,7 @@
 ---
 date: 2013-11-13
 layout: post.html
-tags: politics, programming, statistics
+tags: Politics, Programming, Statistics
 title: Basic income vs. basic job
 ---
 

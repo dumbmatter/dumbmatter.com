@@ -1,7 +1,7 @@
 ---
 date: 2011-06-11
 layout: post.html
-tags: matlab, programming
+tags: MATLAB, Programming
 title: Progress monitor (or progress bar) within a MATLAB parfor loop
 ---
 

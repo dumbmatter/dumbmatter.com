@@ -1,7 +1,7 @@
 ---
 date: 2011-12-17
 layout: post.html
-tags: avatic, mplaape, seo
+tags: Avatic, MPLaaPE, SEO
 title: "My previous life as a programmer/entrepreneur - Part 7: SEO mercenary for hire"
 ---
 

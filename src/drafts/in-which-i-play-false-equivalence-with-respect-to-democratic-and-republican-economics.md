@@ -1,7 +1,7 @@
 ---
 date: 2011-09-13
 layout: post.html
-tags: politics
+tags: Politics
 title: In which I play false equivalence with respect to Democratic and Republican economics
 ---
 

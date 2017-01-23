@@ -1,7 +1,7 @@
 ---
 date: 2013-03-05
 layout: post.html
-tags: research-blogging, science
+tags: Research Blogging, Science
 title: Model-based insights into distinguishing cortisol profiles in depression and post-traumatic stress disorder (PTSD)
 ---
 

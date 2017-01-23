@@ -1,7 +1,7 @@
 ---
 date: 2011-09-22
 layout: post.html
-tags: research-blogging, science
+tags: Research Blogging, Science
 title: Model predictive control of the hypothalamic-pituitary-adrenal axis
 ---
 

@@ -1,7 +1,7 @@
 ---
 date: 2013-05-07
 layout: post.html
-tags: humor, mlp, music
+tags: Humor, MLP, Music
 title: Flockas
 ---
 

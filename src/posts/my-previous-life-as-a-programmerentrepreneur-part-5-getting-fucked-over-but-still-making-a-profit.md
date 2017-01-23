@@ -1,7 +1,7 @@
 ---
 date: 2011-12-13
 layout: post.html
-tags: avatic, mplaape
+tags: Avatic, MPLaaPE
 title: "My previous life as a programmer/entrepreneur - Part 5: Getting fucked over, but still making a profit"
 ---
 

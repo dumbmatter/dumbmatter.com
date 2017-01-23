@@ -1,7 +1,7 @@
 ---
 date: 2012-01-27
 layout: post.html
-tags: linux
+tags: Linux
 title: A preliminary review of Cinnamon 1.2
 ---
 

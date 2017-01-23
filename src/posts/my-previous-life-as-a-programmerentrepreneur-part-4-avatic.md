@@ -1,7 +1,7 @@
 ---
 date: 2011-11-12
 layout: post.html
-tags: avatic, mplaape, seo, web-development
+tags: Avatic, MPLaaPE, SEO, Web Development
 title: "My previous life as a programmer/entrepreneur - Part 4: Avatic"
 ---
 

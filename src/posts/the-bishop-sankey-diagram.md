@@ -1,7 +1,7 @@
 ---
 date: 2015-01-07
 layout: post.html
-tags: humor, sports, statistics
+tags: Humor, Sports, Statistics
 title: The Bishop Sankey Diagram
 ---
 
