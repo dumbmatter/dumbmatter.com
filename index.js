@@ -20,19 +20,26 @@ Metalsmith(__dirname)
     .use(collections({
         posts: {
             pattern: 'posts/*.md',
-            sortBy: 'date',
             reverse: true,
+            sortBy: 'date',
         },
     }))
     .use(markdown())
     .use(processData())
     .use(pagination({
         'collections.posts': {
-            perPage: 10,
-            layout: 'index.html',
             first: 'index.html',
+            layout: 'index.html',
             path: 'page/:num/index.html',
+            perPage: 10,
         },
+    }))
+    .use(tags({
+        layout: 'index.html',
+        path: 'tag/:tag/index.html',
+        pathPage: 'tag/:tag/:num.html',
+        perPage: 10,
+        reverse: true,
     }))
     .use(permalinks({
         linksets: [{
@@ -46,17 +53,10 @@ Metalsmith(__dirname)
         destination: 'feed/index.html',
         limit: 10,
     }))
-    .use(tags({
-        // path for result pages
-        path:'tag/:tag/index.html',
-        pathPage: "tag/:tag/:num/index.html",
-        perPage: 10,
-        layout: 'index.html',
-    }))
     .use(layouts({
         engine: 'handlebars',
         partials: 'layouts/partials',
     }))
-    .build((err, files) => {
+    .build((err) => {
         if (err) { throw err; }
     });

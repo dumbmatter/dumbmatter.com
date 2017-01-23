@@ -1,6 +1,3 @@
-tags
-- post order desc
-PHP stuff in header, elsewhere?
 trailing slash in URLs - permalink gets rid of it in links, but then appears in browser with trailing slash
 blog post about switch (or about lack of blog post)
 
