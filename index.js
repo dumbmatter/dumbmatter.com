@@ -1,4 +1,5 @@
 const Metalsmith  = require('metalsmith');
+const cleanCss = require('metalsmith-clean-css');
 const collections = require('metalsmith-collections');
 const feed = require('metalsmith-feed');
 const layouts = require('metalsmith-layouts');
@@ -56,6 +57,9 @@ Metalsmith(__dirname)
     .use(layouts({
         engine: 'handlebars',
         partials: 'layouts/partials',
+    }))
+    .use(cleanCss({
+        files: 'style.css',
     }))
     .build((err) => {
         if (err) { throw err; }

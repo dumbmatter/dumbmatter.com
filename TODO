@@ -2,7 +2,6 @@ trailing slash in URLs - permalink gets rid of it in links, but then appears in 
 blog post about switch (or about lack of blog post)
 
 re-enable GA
-go over styles.css again
 responsive
 - code blocks - see matlab progress monitor post for overflow scenario
 - tags fucked up
@@ -12,3 +11,4 @@ test htaccess
 - www
 post about sixers
 test newsblur rss
+why is there about-me/styles.css and others too?
