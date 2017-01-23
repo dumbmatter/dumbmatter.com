@@ -35,12 +35,12 @@ title: A preliminary review of Cinnamon 1.2
 <ol id="commentlist">
 
     <li class="comment even thread-even depth-1" id="comment-1991">
-    <p>Have you tried xubuntu? It uses xfce, an elegant and lightweight environment. It&#8217;s my personal favorite by far.</p>
+    <p>Have you tried xubuntu? It uses xfce, an elegant and lightweight environment. It's my personal favorite by far.</p>
     <p><cite>Comment by jordan &#8212; February 1, 2012 @ <a href="#comment-1991">2:36 am</a></cite> </p>
     </li>
 
     <li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-1997">
-    <p>jordan: XFCE is okay, but it suffers from the same general problem as Cinnamon: a lack of polish, relative to GNOME 2. In addition, XFCE development seems very slow moving (they&#8217;re not even going to switch to GTK+ 3 for a while). So, I see Cinnamon as more promising for the future.</p>
+    <p>jordan: XFCE is okay, but it suffers from the same general problem as Cinnamon: a lack of polish, relative to GNOME 2. In addition, XFCE development seems very slow moving (they're not even going to switch to GTK+ 3 for a while). So, I see Cinnamon as more promising for the future.</p>
     <p><cite>Comment by <a href='http://www.jeremyscheff.com/' rel='external nofollow' class='url'>Jeremy Scheff</a> &#8212; February 1, 2012 @ <a href="#comment-1997">9:15 am</a></cite> </p>
     </li>
 
@@ -52,7 +52,7 @@ title: A preliminary review of Cinnamon 1.2
     </li>
 
     <li class="comment odd alt thread-odd thread-alt depth-1" id="comment-2412">
-    <p>Mint 12 was the first I installed on my Hard Drive, and I miss it now that I replaced it with the Debian Edition. I like all the Mints, and now am experinmenting with Mint 10 from a flash drive. While I was trying Mint 7, I noticed it was virtually impossible to get authentication to add software. Maybe that was peculiar to Mint 7 and has since been resolved, but that alone would be enough to steer me away from any OS. It took me a long time to overcome obstacles to installing downloaded programs in Windows 7, and also using some programs I had used in earlier editions of Windows. I tried following the advice in forums, but unfortunately nothing worked. I expect that one of these editions of Mint will be my last OS; perhaps 13 will be the one. Windows still has some proprietary programs that can&#8217;t be used in any other program, and has plans to altogether drop one that I have used extensively in the past. For a long time I had to use the program in Safe Mode, then it finally started working. So I have a project to convert tons of files to an open source format. The best programs I see myself using in the future have come from Open Source. Thanks for the great work in Linux Mint and keep it up.</p>
+    <p>Mint 12 was the first I installed on my Hard Drive, and I miss it now that I replaced it with the Debian Edition. I like all the Mints, and now am experinmenting with Mint 10 from a flash drive. While I was trying Mint 7, I noticed it was virtually impossible to get authentication to add software. Maybe that was peculiar to Mint 7 and has since been resolved, but that alone would be enough to steer me away from any OS. It took me a long time to overcome obstacles to installing downloaded programs in Windows 7, and also using some programs I had used in earlier editions of Windows. I tried following the advice in forums, but unfortunately nothing worked. I expect that one of these editions of Mint will be my last OS; perhaps 13 will be the one. Windows still has some proprietary programs that can't be used in any other program, and has plans to altogether drop one that I have used extensively in the past. For a long time I had to use the program in Safe Mode, then it finally started working. So I have a project to convert tons of files to an open source format. The best programs I see myself using in the future have come from Open Source. Thanks for the great work in Linux Mint and keep it up.</p>
     <p><cite>Comment by Ron Dupler &#8212; February 28, 2012 @ <a href="#comment-2412">8:19 pm</a></cite> </p>
     </li>
 

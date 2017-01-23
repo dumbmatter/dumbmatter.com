@@ -191,7 +191,7 @@ mark</p>
 
     <li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-383">
     <p>mvanveen: You are correct, but in practice, most people just use Disqus and forget it. Free software isn't just about writing some arcane lisp software that solves everything for you and only you.</p>
-<p>david: I don't think you read the article. It concludes with "So I guess what I’m saying is that we need an open source (preferably AGPL) Disqus." I am aware that it is technically possible to do damn near anything, but the point is that nobody's sufficiently done it yet so in practice content is being locked up in proprietary systems. This is a step back relative to things like WordPress.</p>
+<p>david: I don't think you read the article. It concludes with "So I guess what I'm saying is that we need an open source (preferably AGPL) Disqus." I am aware that it is technically possible to do damn near anything, but the point is that nobody's sufficiently done it yet so in practice content is being locked up in proprietary systems. This is a step back relative to things like WordPress.</p>
     <p><cite>Comment by admin &#8212; September 4, 2011 @ <a href="#comment-383">10:07 pm</a></cite> </p>
     </li>
 

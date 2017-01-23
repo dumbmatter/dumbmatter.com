@@ -48,12 +48,12 @@ title: "My previous life as a programmer/entrepreneur - Part 2: Software develop
 
     <li class="comment even thread-even depth-1" id="comment-326527">
     <p>Wow!<br />
-Having a lot of fun reading your journey. I found you from the Basketball GM game you posted on Reddit and now I can&#8217;t bring myself to stop reading. LOL</p>
+Having a lot of fun reading your journey. I found you from the Basketball GM game you posted on Reddit and now I can't bring myself to stop reading. LOL</p>
     <p><cite>Comment by <a href='http://iballup.com' rel='external nofollow' class='url'>Nelly</a> &#8212; October 14, 2016 @ <a href="#comment-326527">2:23 pm</a></cite> </p>
     </li>
 
     <li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-326549">
-    <p>Thanks for your comments 🙂 it&#8217;s cool that someone is reading this after so long!</p>
+    <p>Thanks for your comments 🙂 it's cool that someone is reading this after so long!</p>
     <p><cite>Comment by <a href='http://www.jeremyscheff.com/' rel='external nofollow' class='url'>Jeremy Scheff</a> &#8212; October 14, 2016 @ <a href="#comment-326549">11:34 pm</a></cite> </p>
     </li>
 

@@ -45,14 +45,14 @@ title: "My previous life as a programmer/entrepreneur - Part 4: Avatic"
 <ol id="commentlist">
 
     <li class="comment even thread-even depth-1" id="comment-978">
-     <p>hey Jeremy, thanks for sharing this insight into your web career, I&#8217;ve been following your development for years and in essence I owe my current career as a freelance developer to what you have contributed.  Sounds strange I know, but the right ingredients at the right time and place can bring surprising results.  </p>
+     <p>hey Jeremy, thanks for sharing this insight into your web career, I've been following your development for years and in essence I owe my current career as a freelance developer to what you have contributed.  Sounds strange I know, but the right ingredients at the right time and place can bring surprising results.  </p>
 <p>To elaborate on what happened at iTopsites after you sold it, the site ran nice for a couple years with some new spam prevention and a bigger server, but was eventually blocked from Google adsense program due to adult content being posted.   Google refused to lift the block after the offending content was removed, after trying (and failing) with nearly every other ad program, the decision was made to 301 itopsites.com to iranksites.com and return to using Google adsense.  Income has severely dropped over the past couple of years but the site does continue to grow with zero intervention and is able to remain in the black.   That said, it really could use a week or 2 worth of cosmetic updates and modernization.</p>
-<p>anyway, kudos for sharing, not just this post&#8230; but everything you have contributed in the past, it has had a profound effect on my life&#8230; and for that I thank you.</p>
+<p>anyway, kudos for sharing, not just this post... but everything you have contributed in the past, it has had a profound effect on my life... and for that I thank you.</p>
     <p><cite>Comment by Mark &#8212; November 15, 2011 @ <a href="#comment-978">2:18 pm</a></cite> </p>
     </li>
 
     <li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-983">
-    <p>Mark, thanks for filling in some of the details. And thanks even more for the kind words. itopsites/iranksites is definitely in need of modernization, but even lacking that, I still don&#8217;t think there is a competitor better than it.</p>
+    <p>Mark, thanks for filling in some of the details. And thanks even more for the kind words. itopsites/iranksites is definitely in need of modernization, but even lacking that, I still don't think there is a competitor better than it.</p>
     <p><cite>Comment by <a href='http://www.jeremyscheff.com/' rel='external nofollow' class='url'>Jeremy Scheff</a> &#8212; November 15, 2011 @ <a href="#comment-983">11:36 pm</a></cite> </p>
     </li>
 

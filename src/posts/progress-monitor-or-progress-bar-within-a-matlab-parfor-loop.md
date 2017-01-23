@@ -118,35 +118,35 @@ You should thank commenter <a href="#comment-773">Ben Aernouts</a> for helping m
     </li>
 
     <li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-693">
-    <p>Kevin: I have used this script extensively with no problems, although due to its hacky nature, it&#8217;s not surprising that some version of MATLAB on some operating system might fail. Your solution is similarly hacky, but as long as you&#8217;re not nearing the limit of the number of files in a directory, it sounds like it should work. You should share your version with others in case someone else has the same problem: <a href="https://gist.github.com/" rel="nofollow">https://gist.github.com/</a></p>
+    <p>Kevin: I have used this script extensively with no problems, although due to its hacky nature, it's not surprising that some version of MATLAB on some operating system might fail. Your solution is similarly hacky, but as long as you're not nearing the limit of the number of files in a directory, it sounds like it should work. You should share your version with others in case someone else has the same problem: <a href="https://gist.github.com/" rel="nofollow">https://gist.github.com/</a></p>
     <p><cite>Comment by <a href='http://www.jeremyscheff.com/' rel='external nofollow' class='url'>Jeremy Scheff</a> &#8212; October 12, 2011 @ <a href="#comment-693">10:31 am</a></cite></p>
     </li>
 
     <li class="comment even thread-even depth-1" id="comment-773">
     <p>Dear Jeremy Scheff,</p>
-<p>I found a solution to your &#8216;pretty text progress bar&#8217; problem:</p>
+<p>I found a solution to your &#8216;pretty text progress bar' problem:</p>
 <p>%Parameters<br />
 length_waitbar = 50;<br />
 nr_loops = 100;</p>
 <p>%Parfor loop<br />
-if matlabpool(&#8216;size&#8217;) ==0; matlabpool; end<br />
+if matlabpool(&#8216;size') ==0; matlabpool; end<br />
 parfor_progress(nr_loops);<br />
-disp([&#8216;Progress:&#8217; char(10) repmat(&#8216; &#8216;,1,length_waitbar)]);<br />
+disp([&#8216;Progress:' char(10) repmat(&#8216; &#8216;,1,length_waitbar)]);<br />
 parfor i = 1:nr_loops<br />
     pause(rand) % Calculations<br />
     percent = parfor_progress;<br />
-    disp([repmat(char(8),1,(length_waitbar+2)) char(10) repmat(&#8216;.&#8217;,1,round(percent*length_waitbar/100))&#8230;<br />
-        repmat(&#8216;*&#8217;,1,length_waitbar-round(percent*length_waitbar/100))]);<br />
+    disp([repmat(char(8),1,(length_waitbar+2)) char(10) repmat(&#8216;.',1,round(percent*length_waitbar/100))...<br />
+        repmat(&#8216;*',1,length_waitbar-round(percent*length_waitbar/100))]);<br />
 end<br />
 parfor_progress(0);</p>
-<p>Thanks for your &#8216;parfor_progress.m&#8217; file.</p>
+<p>Thanks for your &#8216;parfor_progress.m' file.</p>
 <p>Best regards,</p>
 <p>Ben Aernouts</p>
     <p><cite>Comment by <a href='http://www.kuleuven.be/wieiswie/en/person/u0072735' rel='external nofollow' class='url'>Ben Aernouts</a> &#8212; October 20, 2011 @ <a href="#comment-773">10:59 am</a></cite></p>
     </li>
 
     <li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-817">
-    <p>Ben: Thanks for your pretty progress bar. I swear I tried something very similar and couldn&#8217;t get it to work. But yours does seem to work. I prettied it up even further, integrated it into the main function, and updated my blog post. If someone wants to do even better, an estimate of time remaining could still be added&#8230;</p>
+    <p>Ben: Thanks for your pretty progress bar. I swear I tried something very similar and couldn't get it to work. But yours does seem to work. I prettied it up even further, integrated it into the main function, and updated my blog post. If someone wants to do even better, an estimate of time remaining could still be added...</p>
     <p><cite>Comment by <a href='http://www.jeremyscheff.com/' rel='external nofollow' class='url'>Jeremy Scheff</a> &#8212; October 25, 2011 @ <a href="#comment-817">11:50 pm</a></cite></p>
     </li>
 
@@ -169,7 +169,7 @@ parfor_progress(0);</p>
     </li>
 
     <li class="comment odd alt thread-odd thread-alt depth-1" id="comment-38023">
-    <p>Oops, fixed a bug. Here&#8217;s the new url: <a href="http://cl.ly/1D2x3F0r0u2L0q293u2h" rel="nofollow">http://cl.ly/1D2x3F0r0u2L0q293u2h</a></p>
+    <p>Oops, fixed a bug. Here's the new url: <a href="http://cl.ly/1D2x3F0r0u2L0q293u2h" rel="nofollow">http://cl.ly/1D2x3F0r0u2L0q293u2h</a></p>
     <p><cite>Comment by <a href='http://www.aonicc.com' rel='external nofollow' class='url'>Albert Wu</a> &#8212; July 16, 2012 @ <a href="#comment-38023">4:46 pm</a></cite></p>
     </li>
 

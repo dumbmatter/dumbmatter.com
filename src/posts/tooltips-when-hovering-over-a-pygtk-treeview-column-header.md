@@ -120,8 +120,8 @@ If you're setting the tooltip in a different place in your code than right where
     <li class="comment odd alt thread-odd thread-alt depth-1" id="comment-14745">
     <p>In the meanwhile you can use widget.set_tooltip_text(aString) for setting a tooltip text for all widgets, as it inherits from class gtk.Widget:</p>
 <p>column = gtk.TreeViewColumn()<br />
-column_header = gtk.Label(&#8216;Column Header&#8217;)<br />
-column_header.set_tooltip_text(&#8216;TOOLTIP TEXT&#8217;)<br />
+column_header = gtk.Label(&#8216;Column Header')<br />
+column_header.set_tooltip_text(&#8216;TOOLTIP TEXT')<br />
 column_header.show()<br />
 column.set_widget(column_header)</p>
     <p><cite>Comment by Chris X. &#8212; April 2, 2012 @ <a href="#comment-14745">4:52 pm</a></cite> </p>

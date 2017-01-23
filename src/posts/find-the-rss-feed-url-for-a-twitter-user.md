@@ -26,9 +26,9 @@ title: Find the RSS feed URL for a Twitter user
     </li>
 
     <li class="comment even thread-even depth-1" id="comment-51737">
-    <p>Thanks! I&#8217;m using this twitter rss generator with IFTTT.com in a recipe to email me if a specific word is used.</p>
+    <p>Thanks! I'm using this twitter rss generator with IFTTT.com in a recipe to email me if a specific word is used.</p>
 <p>One change I had to make though:<br />
-take off the s in &#8220;https&#8221; so that it doesn&#8217;t think it&#8217;s a secure site feed or else the recipe can&#8217;t be created.</p>
+take off the s in "https" so that it doesn't think it's a secure site feed or else the recipe can't be created.</p>
     <p><cite>Comment by Ben &#8212; October 20, 2012 @ <a href="#comment-51737">1:06 pm</a></cite> </p>
     </li>
 

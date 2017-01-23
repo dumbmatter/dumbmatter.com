@@ -42,36 +42,36 @@ title: Some notes on porting from PyGTK to PyGObject
     <p>Try compiling the introspection code on ANY version of Xcode shipped in the last 2+ YEARS.  The second that GIR so-called lexer hits  it explodes on the blocking code.</p>
 <p>The blocking code has beed submitted to the standards bodies as a proposed extension to the C/C++/Objective-C standards.</p>
 <p>This would take a couple of productions in the lexer/parser to deal with.</p>
-<p>The so-called &#8220;maintainers&#8221; of the lexer couldn&#8217;t get around to adding things like &#8220;__asm__&#8221;, &#8220;__attribute__&#8221;, etc, well-documented in the &#8220;ansi&#8221; paragraph of the GCC &#8220;man page&#8221;. added to the lexer until users yelled.</p>
-<p>Do those &#8220;miracle people&#8221; even READ the FM?</p>
+<p>The so-called "maintainers" of the lexer couldn't get around to adding things like "__asm__", "__attribute__", etc, well-documented in the "ansi" paragraph of the GCC "man page". added to the lexer until users yelled.</p>
+<p>Do those "miracle people" even READ the FM?</p>
 <p>RTFM!!</p>
-<p>My biggest frustration is that is has been so many years since &#8220;The Red Dragon Book&#8221; or I&#8217;d just write the damned things myself.</p>
-<p>And we are ALL supposed to be falling all over ourselves to make ourselves totally dependant on &#8220;developers&#8221; who can not/will not RTFM?</p>
+<p>My biggest frustration is that is has been so many years since "The Red Dragon Book" or I'd just write the damned things myself.</p>
+<p>And we are ALL supposed to be falling all over ourselves to make ourselves totally dependant on "developers" who can not/will not RTFM?</p>
     <p><cite>Comment by Bob Maynard &#8212; October 26, 2012 @ <a href="#comment-52393">6:56 pm</a></cite> </p>
     </li>
 
     <li class="comment odd alt thread-odd thread-alt depth-1" id="comment-52891">
     <p>The problem, Bob, is that the FM seems to change way too often.  To which particular version of the FM do you refer?  I would love to R the FM, if you would point me at a version that is stable and trustworthy.</p>
-<p>In PyGObject, the FM is produced from the code itself, via an apparently partially written and unsupported tool that seems to want to introspect everything via gobject and magically produce decent reliable documents.  This FM will change whenever the code does; &#8216;a good idea!&#8217; I hear the shouts- and it might have been, except that right now, three years after the decision to abandon PyGTK, there is still no usable FM for PyGObject at all.</p>
+<p>In PyGObject, the FM is produced from the code itself, via an apparently partially written and unsupported tool that seems to want to introspect everything via gobject and magically produce decent reliable documents.  This FM will change whenever the code does; &#8216;a good idea!' I hear the shouts- and it might have been, except that right now, three years after the decision to abandon PyGTK, there is still no usable FM for PyGObject at all.</p>
 <p>Compared to commercial solutions, PyGObject is a joke.  The API specification is continuously in flux, and not stable long enough for anyone to seriously consider adopting it.  But hey, who cares?  at least the devs are having loads of fun!</p>
     <p><cite>Comment by Paul Sephton &#8212; October 31, 2012 @ <a href="#comment-52891">6:56 am</a></cite> </p>
     </li>
 
     <li class="comment even thread-even depth-1" id="comment-291275">
     <p>This will weirdly sound like spam, but thanks for great notes.</p>
-<p>I&#8217;m in the process of porting an app for pygtk2 -&gt; pygobect3 and found<br />
+<p>I'm in the process of porting an app for pygtk2 -&gt; pygobect3 and found<br />
 these notes useful on multiple occasions. I actually ended up doing in<br />
 a few phases, since that app previously had to support back to gtk2-2.10<br />
 and libglade. really old gtk2 -&gt; recent ish gtk2, libglade -&gt; builder,<br />
 recent gtk -&gt; gtk3 via pygtkcompat, then pygi-convert to pure gtk3. </p>
 <p>Some of my notes:</p>
-<p>1. importing from gtk into a module (ie, &#8216;from gtk import Widget&#8217;) confuses pygi-convert.sh, so fix that first.</p>
+<p>1. importing from gtk into a module (ie, &#8216;from gtk import Widget') confuses pygi-convert.sh, so fix that first.</p>
 <p>2, If still using libglade, that needs to be ported. <a href="https://developer.gnome.org/gtk2/stable/gtk-migrating-GtkBuilder.html" rel="nofollow">https://developer.gnome.org/gtk2/stable/gtk-migrating-GtkBuilder.html</a> has reasonable notes on that. gtk-builder-convert takes care of most of it.</p>
 <p>3. Any objects that subclass gobject.GObject need to be updated to not use self.__gobject_init__(), but normal python super class init (either GObject.GObject.__init__ or super($classnamehere).__init__())</p>
 <p>4. If using threads but not for the gui, gdk.threads_init() -&gt; GObject.threads_init()</p>
-<p>5. Gtk.TextBuffer.get_text takes an additional required arg &#8216;include_hidden_chars&#8217;</p>
-<p>6. Make sure your test cases aren&#8217;t quietly doing an &#8216;import gtk&#8217; to get the constants, otherwise nosetests etc will segfault in unhelpful ways. (That may have caused an undue amount of cursing).</p>
-<p>7. Replace get_parent_window() with get_toplevel() [for most cases&#8230;] Especially if you used gdkWindow.window. Also read the get_toplevel notes about multiple top level windows.</p>
+<p>5. Gtk.TextBuffer.get_text takes an additional required arg &#8216;include_hidden_chars'</p>
+<p>6. Make sure your test cases aren't quietly doing an &#8216;import gtk' to get the constants, otherwise nosetests etc will segfault in unhelpful ways. (That may have caused an undue amount of cursing).</p>
+<p>7. Replace get_parent_window() with get_toplevel() [for most cases...] Especially if you used gdkWindow.window. Also read the get_toplevel notes about multiple top level windows.</p>
     <p><cite>Comment by Adrian Likins &#8212; May 7, 2015 @ <a href="#comment-291275">10:10 am</a></cite> </p>
     </li>
 

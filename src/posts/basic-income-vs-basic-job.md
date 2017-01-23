@@ -50,27 +50,27 @@ title: Basic income vs. basic job
 
     <li class="comment even thread-even depth-1" id="comment-153214">
     <p>direct_costs = num_adults * basic_income / 2</p>
-<p>Milton Friedman&#8217;s proposal looks similar to this, but he proposed the cutoff would be at twice subsistence level, assuming a 50% claw-back. So &#8216;basic income&#8217; in that formula has to be twice as high as &#8216;existential/socio-cultural minimum&#8217;</p>
+<p>Milton Friedman's proposal looks similar to this, but he proposed the cutoff would be at twice subsistence level, assuming a 50% claw-back. So &#8216;basic income' in that formula has to be twice as high as &#8216;existential/socio-cultural minimum'</p>
     <p><cite>Comment by Raoul &#8212; July 29, 2014 @ <a href="#comment-153214">12:58 pm</a></cite> </p>
     </li>
 
     <li class="comment odd alt thread-odd thread-alt depth-1" id="comment-153216">
-    <p>Where&#8217;s the edit button I phrased that quite poorly.</p>
+    <p>Where's the edit button I phrased that quite poorly.</p>
 <p>Oh well. All I mean is, a NIT model proposes a cutoff point above the subsistence level, in correlation to the clawback rate. So the assumption remains, that anyone at any point in time can claim a check of at least subsistence level, and if they earn money on the market, the check diminishes at clawback rate.</p>
-<p>So I don&#8217;t quite understand how to interpret</p>
+<p>So I don't quite understand how to interpret</p>
 <p>direct_costs = num_adults * basic_income / 2</p>
     <p><cite>Comment by Raoul &#8212; July 29, 2014 @ <a href="#comment-153216">1:03 pm</a></cite> </p>
     </li>
 
     <li class="comment even thread-even depth-1" id="comment-153219">
     <p>An alternative thing to keep in mind for keeping cost in check though, is to stop excluding existential minimum from taxation.</p>
-<p>I only know the German numbers but there I know for a fact, that we&#8217;re already giving the poor and middle class here tax exemptions that alone could nearly cover the supposed financing gap of basic income models.</p>
-<p>I mean over 8000 euro per year per adult and nearly 8000 euro per year per child, tax free, plus income taxation starting in the low 20%s past that. plus lower rates if you have a partner for life, for one of the partners. It&#8217;s a triple digit billion deal in Germany.</p>
+<p>I only know the German numbers but there I know for a fact, that we're already giving the poor and middle class here tax exemptions that alone could nearly cover the supposed financing gap of basic income models.</p>
+<p>I mean over 8000 euro per year per adult and nearly 8000 euro per year per child, tax free, plus income taxation starting in the low 20%s past that. plus lower rates if you have a partner for life, for one of the partners. It's a triple digit billion deal in Germany.</p>
     <p><cite>Comment by Raoul &#8212; July 29, 2014 @ <a href="#comment-153219">1:10 pm</a></cite> </p>
     </li>
 
     <li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-153256">
-    <p>Raoul, it&#8217;s just a rough estimate. The upper bound for no clawback would be num_adults*basic_income. Add clawback and you get something less than that. I just arbitrarily picked 1/2 as a factor to represent &#8220;there is some clawback going on&#8221;. Change the 1/2 to 3/4 and it doesn&#8217;t substantially change the conclusions, it just shifts the Basic Income cost curve to the right by about 1e12.</p>
+    <p>Raoul, it's just a rough estimate. The upper bound for no clawback would be num_adults*basic_income. Add clawback and you get something less than that. I just arbitrarily picked 1/2 as a factor to represent "there is some clawback going on". Change the 1/2 to 3/4 and it doesn't substantially change the conclusions, it just shifts the Basic Income cost curve to the right by about 1e12.</p>
     <p><cite>Comment by <a href='http://www.jeremyscheff.com/' rel='external nofollow' class='url'>Jeremy Scheff</a> &#8212; July 29, 2014 @ <a href="#comment-153256">6:31 pm</a></cite> </p>
     </li>
 

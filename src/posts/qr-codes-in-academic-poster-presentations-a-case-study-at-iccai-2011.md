@@ -64,8 +64,8 @@ Oh, and I also wouldn't mind if this helped me improve as a writer. As with most
 <ol id="commentlist">
 
     <li class="comment even thread-even depth-1" id="comment-913">
-    <p>Jeremy, I&#8217;m hearing you. Nice write up; And thx for linking.<br />
-The interactive web app for your data is a brilliant idea, sorry to read that you had the same somewhat disappointing experience; but I agree, it&#8217;s fun. It still is.<br />
+    <p>Jeremy, I'm hearing you. Nice write up; And thx for linking.<br />
+The interactive web app for your data is a brilliant idea, sorry to read that you had the same somewhat disappointing experience; but I agree, it's fun. It still is.<br />
 Science is just not there yet, go iPoster 2021!</p>
     <p><cite>Comment by <a href='http://hiact.info' rel='external nofollow' class='url'>Gregor</a> &#8212; November 9, 2011 @ <a href="#comment-913">6:54 am</a></cite> </p>
     </li>

@@ -51,7 +51,7 @@ title: "My previous life as a programmer/entrepreneur - Part 3: First steps into
 <ol id="commentlist">
 
     <li class="comment even thread-even depth-1" id="comment-702">
-    <p>Took a look around the site and found this series. Interesting. I&#8217;ll probably check for future installments.</p>
+    <p>Took a look around the site and found this series. Interesting. I'll probably check for future installments.</p>
     <p><cite>Comment by Crow &#8212; October 13, 2011 @ <a href="#comment-702">2:46 am</a></cite> </p>
     </li>
 

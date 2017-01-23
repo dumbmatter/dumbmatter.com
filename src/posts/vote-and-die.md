@@ -167,12 +167,12 @@ vote_and_die_update();
 <ol id="commentlist">
 
     <li class="pingback even thread-even depth-1" id="comment-108520">
-        <p>[&#8230;] via Hacker News <a href="http://www.jeremyscheff.com/2012/09/vote-and-die/" rel="nofollow">http://www.jeremyscheff.com/2012/09/vote-and-die/</a> [&#8230;]</p>
+        <p>[...] via Hacker News <a href="http://www.jeremyscheff.com/2012/09/vote-and-die/" rel="nofollow">http://www.jeremyscheff.com/2012/09/vote-and-die/</a> [...]</p>
     <p><cite>Pingback by <a href='http://jeremiahtillman.wordpress.com/2013/11/14/are-you-more-likely-to-cast-the-deciding-vote-or-die-on-your-way-to-the-polls/' rel='external nofollow' class='url'>Are you more likely to cast the deciding vote or die on your way to the polls? | Enjoying The Moment</a> &#8212; November 13, 2013 @ <a href="#comment-108520">7:13 pm</a></cite> </p>
     </li>
 
     <li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-327412">
-        <p>[&#8230;] decide the presidential election is effectively nil, regardless of how close the polls are. You are more likely to die while traveling to or from the polling place than you are to cast a decisive vote in most cases. [&#8230;]</p>
+        <p>[...] decide the presidential election is effectively nil, regardless of how close the polls are. You are more likely to die while traveling to or from the polling place than you are to cast a decisive vote in most cases. [...]</p>
     <p><cite>Pingback by <a href='https://reece.liberty.me/vote-swapping-rebuttal-penn-jillette/' rel='external nofollow' class='url'>Against Vote Swapping: A Rebuttal to Penn Jillette - Zeroth Position - Liberty.me</a> &#8212; November 8, 2016 @ <a href="#comment-327412">7:33 am</a></cite> </p>
     </li>
 

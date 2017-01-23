@@ -3,13 +3,6 @@ tags
 - index pages
 - title is tag name
 - links on top of main page
-Replace characters in blog posts:
-- ’ or &#8217;
-- &#8220; and &#8221; => "
-- &#8230; => ...
-- &#8211; => -
-- —
-- <img - look for inappropraite ones, like in comments
 PHP stuff in header, elsewhere?
 trailing slash in URLs - permalink gets rid of it in links, but then appears in browser with trailing slash
 blog post about switch (or about lack of blog post)
@@ -24,3 +17,4 @@ test htaccess
 - redirect to bbgm
 - www
 post about sixers
+test newsblur rss

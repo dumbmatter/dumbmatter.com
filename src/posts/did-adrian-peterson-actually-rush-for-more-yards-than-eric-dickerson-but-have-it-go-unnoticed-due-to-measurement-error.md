@@ -62,7 +62,7 @@ title: Did Adrian Peterson actually rush for more yards than Eric Dickerson but 
 <ol id="commentlist">
 
     <li class="pingback even thread-even depth-1" id="comment-97094">
-        <p>[&#8230;] According to Jeremy Scheff, a graduate student at Rutgers University who specializes in data analysis, Peterson might have actually beat Eric Dickerson&#8217;s record. [&#8230;]</p>
+        <p>[...] According to Jeremy Scheff, a graduate student at Rutgers University who specializes in data analysis, Peterson might have actually beat Eric Dickerson's record. [...]</p>
     <p><cite>Pingback by <a href='http://sportingsota.com/2013/02/27/there-is-a-chance-adrian-peterson-actually-beat-eric-dickersons-rushing-record/' rel='external nofollow' class='url'>There is a chance Adrian Peterson actually beat Eric Dickerson&#039;s rushing record - Sporting Sota - A Minnesota Sports Site - Vikings, Twins, Grizzlies, Wild, and Golden Gophers</a> &#8212; August 9, 2013 @ <a href="#comment-97094">11:28 pm</a></cite> </p>
     </li>
 

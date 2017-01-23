@@ -56,7 +56,7 @@ title: The genius of Hieronymus Bosch
 <ol id="commentlist">
 
     <li class="comment even thread-even depth-1" id="comment-18801">
-    <p>Nice article, heard about these guys ages and ages ago but could never find anything other than youtube clips&#8230;really liked what I heard though, what you say about them here seems to match the memories I have of the music. Thanks for reminding me!</p>
+    <p>Nice article, heard about these guys ages and ages ago but could never find anything other than youtube clips...really liked what I heard though, what you say about them here seems to match the memories I have of the music. Thanks for reminding me!</p>
     <p><cite>Comment by Arcticus &#8212; May 1, 2012 @ <a href="#comment-18801">1:16 am</a></cite> </p>
     </li>
 
