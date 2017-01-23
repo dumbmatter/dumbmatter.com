@@ -1,5 +1,6 @@
 const Metalsmith  = require('metalsmith');
 const collections = require('metalsmith-collections');
+const feed = require('metalsmith-feed');
 const layouts = require('metalsmith-layouts');
 const markdown = require('metalsmith-markdown');
 const pagination = require('metalsmith-pagination');
@@ -7,6 +8,11 @@ const permalinks = require('metalsmith-permalinks');
 const processData = require('./plugins/processData');
 
 Metalsmith(__dirname)
+    .metadata({
+        site: {
+            url: 'http://dumbmatter.com/',
+        },
+    })
     .source('./src')
     .destination('./build')
     .ignore('drafts')
@@ -33,6 +39,10 @@ Metalsmith(__dirname)
             match: {collection: 'posts'},
             pattern: ':date/:filename',
         }],
+    }))
+    .use(feed({
+        collection: 'posts',
+        limit: 10,
     }))
     .use(layouts({
         engine: 'handlebars',
