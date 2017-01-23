@@ -5,6 +5,7 @@ const layouts = require('metalsmith-layouts');
 const markdown = require('metalsmith-markdown');
 const pagination = require('metalsmith-pagination');
 const permalinks = require('metalsmith-permalinks');
+const tags = require('metalsmith-tags');
 const processData = require('./plugins/processData');
 
 Metalsmith(__dirname)
@@ -32,6 +33,14 @@ Metalsmith(__dirname)
             first: 'index.html',
             path: 'page/:num/index.html',
         },
+    }))
+    .use(tags({
+        // path for result pages
+        path:'tag/:tag/index.html',
+        pathPage: "tag/:tag/:num/index.html",
+        perPage: 10,
+        layout: 'index.html',
+//        slug: {mode: 'rfc3986'}
     }))
     .use(permalinks({
         linksets: [{
