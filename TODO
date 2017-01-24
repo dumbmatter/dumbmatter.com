@@ -1,6 +1,2 @@
-re-enable GA
-test htaccess
-- redirect to bbgm
-- www
-- trailing slashes
+test GA
 test newsblur rss
