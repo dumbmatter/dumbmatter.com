@@ -2,7 +2,7 @@
 date: 2017-01-24
 layout: post.html
 tags: Basketball, Basketball GM, NBA, Sixers, Twitter
-title: How I almost got a job with the Sixers, and a Twitter analysis of the 2015 NBA Draft Class
+title: How I almost got a job with the Sixers, and a Twitter analysis of the 2015 NBA draft class
 ---
 
 As you may know, I [wrote this cool basketball video game](https://basketball-gm.com/) and [work as a data scientist](https://www.linkedin.com/in/jeremy-scheff-99987b28/). A couple years ago, back in the Hinkie era when the Sixers were a forward-thinking organization, someone in the Sixers front office noticed those two things about me and asked me to apply for a job. It was a somewhat long and unclear process. They didn't seem to know what they were hiring for or what their criteria were (or maybe they did and I was just a bad fit). Regardless, eventually I didn't get the job, but as part of the application I did a mini analysis project, and 2 years out, I figure I might as well share that.
