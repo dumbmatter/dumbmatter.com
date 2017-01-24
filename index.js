@@ -13,7 +13,9 @@ const processData = require('./plugins/processData');
 Metalsmith(__dirname)
     .metadata({
         site: {
+            description: 'Online home of Jeremy Scheff',
             url: 'http://dumbmatter.com/',
+            title: 'dumbmatter.com',
         },
     })
     .source('./src')

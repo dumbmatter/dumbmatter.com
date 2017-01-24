@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>{{#if title}}{{title}} &laquo; {{else if tag}}{{tag}} &laquo; {{/if}}dumbmatter.com</title>
+  <title>{{#if title}}{{title}} &laquo; {{else if tag}}{{tag}} &laquo; {{/if}}{{site.title}}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='http://fonts.googleapis.com/css?family=OFL+Sorts+Mill+Goudy+TT|Ubuntu' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/style.css">
-  <link rel="alternate" type="application/rss+xml" title="dumbmatter.com" href="http://dumbmatter.com/feed/" />
-
-<?php if (is_single()): ?>
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-<?php endif; ?>
+  <link rel="alternate" type="application/rss+xml" title="{{site.title}}" href="http://dumbmatter.com/feed/" />
 </head>
 <body>
   <div id="wrapper">
     <div id="name">
-      <a href="/">dumbmatter.com</a><br>
-      <span id="name-subtitle">Online home of Jeremy Scheff</span>
+      <a href="/">{{site.title}}</a><br>
+      <span id="name-subtitle">{{site.description}}</span>
     </div>
     <div id="menu">
       <a href="/">Blog</a> (<a href="/feed/">RSS</a>) | 
