@@ -3,9 +3,11 @@ layout: page.html
 title: About Me
 ---
 
-Hello. My name is Jeremy. Some of my interests are basketball, programming, and science.
+Hello. My name is Jeremy.
 
-I am currently a data scientist at <a href="http://www.covance.com/">Covance</a> trying to make clinical trials run a bit more smoothly. Before that, I was a research scientist at <a href="http://bhsai.org/">BHSAI</a> studying the heat shock response. Before that (this list is getting too long) I got a PhD from the <a href="http://biomedical.rutgers.edu/">Department of Biomedical Engineering</a> at Rutgers University, where I worked in the lab of <a href="http://rci.rutgers.edu/~yannis/">Dr. Ioannis P. Androulakis</a> on computational systems biology of inflammation. If you're curious about more work-related stuff, <a href="/files/cv.pdf">here is my full CV</a>.
+I am currently a data scientist at <a href="http://www.covance.com/">Covance</a> trying to make clinical trials run a bit more smoothly. Before that, I was a research scientist at <a href="http://bhsai.org/">BHSAI</a> studying the heat shock response. Before that (this list is getting too long), I got a PhD from the <a href="http://biomedical.rutgers.edu/">Department of Biomedical Engineering</a> at Rutgers University, where I worked with <a href="http://rci.rutgers.edu/~yannis/">Dr. Ioannis P. Androulakis</a> on computational systems biology of inflammation. If you're curious about more work-related stuff, <a href="/files/cv.pdf">here is my full CV (a few years out of date now)</a>.
+
+In my free time, I like creating things. My most notable creation is <a href="https://basketball-gm.com/">Basketball GM</a>, the Internet's premier basketball management simulation video game. But I've done <a href="/projects/">some other cool stuff</a> too, and probably at least a few of <a href="/">my blog posts</a> and <a href="https://github.com/dumbmatter">GitHub projects</a> are interesting.
 
 You can find me all over the Internet:
 
@@ -13,8 +15,6 @@ You can find me all over the Internet:
 <p><a href="https://www.facebook.com/jdscheff"><img src="/files/icons/facebook.ico" width="16" height="16" alt="" /> Facebook</a></p>
 
 <p><a href="https://github.com/dumbmatter"><img src="/files/icons/github.ico" width="16" height="16" alt="" /> GitHub</a></p>
-
-<p><a href="https://plus.google.com/102882450819458945741"><img src="/files/icons/googleplus.ico" width="16" height="16" alt="" /> Google Plus</a></p>
 
 <p><a href="https://scholar.google.com/citations?user=1y7uO8kAAAAJ&hl=en"><img src="/files/icons/googlescholar.ico" width="16" height="16" alt="" /> Google Scholar</a></p>
 
@@ -28,5 +28,3 @@ You can find me all over the Internet:
 </div>
 
 Or just <a href="mailto:jdscheff@gmail.com">email me</a>.
-
-Also, check out <a href="/">my blog</a> and <a href="/projects/">some of my projects</a>.
