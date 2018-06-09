@@ -43,6 +43,7 @@ Metalsmith(__dirname)
         path: 'tag/:tag/index.html',
         pathPage: 'tag/:tag/:num.html',
         perPage: 10,
+        sortBy: 'date',
         reverse: true,
     }))
     .use(permalinks({

@@ -1,7 +1,7 @@
 ---
 date: 2018-05-29
 layout: post.html
-tags: ads, programming
+tags: Ads, Programming
 title: Upgrading Prebid.js from 0.34 to 1.x when using the Index Exchange adapter
 ---
 
