@@ -11,6 +11,8 @@ title: Projects
 
 <h2>Mini Online Projects</h2>
 
+<a href="/csv-sql-live/">CSV SQL Live</a> - Run SQL queries on CSV files in your web browser.
+
 <a href="/sas7bdat/">SAS7BDAT Web Viewer</a> - Open SAS files in your web browser. Because you always wanted to do that, right?
 
 <a href="/screw/">Screw</a> - Alter the pitch and tempo of MP3s.
