@@ -156,7 +156,7 @@ vote_and_die_update();
 
 <p>There is only one thing we say to the God of Death: <a href="http://www.youtube.com/watch?v=BqihaEPq_lY">not today</a>. So I'll skip that 4 mile death ride and let the rest of you guys decide which neocon wins the presidency.</p>
 
-<h3>References</h3>
+<h2>References</h2>
 
 <p>The death rates for various modes of transportation come from a <a href="http://www-nrd.nhtsa.dot.gov/Pubs/810968.pdf">few</a> <a href="http://bicycleuniverse.info/transpo/almanac-safety.html">different</a> <a href="http://books.google.com/books?id=YeNe2vBFdzIC&pg=PA100&lpg=PA100&dq=rate+of+death+per+mile+by+mode+of+transportation&source=bl&ots=rUVuhWSZ8l&sig=bK4-amX77W2Ro2QYewMIDlHGYHs&hl=en#v=onepage&q=rate%20of%20death%20per%20mile%20by%20mode%20of%20transportation&f=false">sources</a>. Let me know if you find a better source.</p>
 

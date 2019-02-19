@@ -37,7 +37,7 @@ title: Model predictive control of the hypothalamic-pituitary-adrenal axis
 
 <p>But I don't want to seem too negative, which the past few paragraphs may be. This is still a very cool result, and the criticisms I gave are par for the course in systems biology. That doesn't mean that computational studies are useless. To the contrary, they are often quite useful, despite their inherent simplifications and uncertainties. The application of model predictive control to systems biology models to determine unintuitive and creative potential therapies is an excellent idea, and the techniques used in this paper should be more broadly applied in other fields.</p>
 
-<h3>References</h3>
+<h2>References</h2>
 
 <p>
 <span class="Z3988" title="ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.jtitle=PLoS+Computational+Biology&rft_id=info%3Adoi%2F10.1371%2Fjournal.pcbi.1000273&rfr_id=info%3Asid%2Fresearchblogging.org&rft.atitle=Model-Based+Therapeutic+Correction+of+Hypothalamic-Pituitary-Adrenal+Axis+Dysfunction&rft.issn=1553-7358&rft.date=2009&rft.volume=5&rft.issue=1&rft.spage=0&rft.epage=&rft.artnum=http%3A%2F%2Fdx.plos.org%2F10.1371%2Fjournal.pcbi.1000273&rft.au=Ben-Zvi%2C+A.&rft.au=Vernon%2C+S.&rft.au=Broderick%2C+G.&rfe_dat=bpr3.included=1;bpr3.tags=Biology%2CBiomedical+Engineering%2C+Computational+Biology%2C+Systems+Biology">Ben-Zvi, A., Vernon, S., & Broderick, G. (2009). Model-Based Therapeutic Correction of Hypothalamic-Pituitary-Adrenal Axis Dysfunction <span style="font-style: italic;">PLoS Computational Biology, 5</span> (1) DOI: <a rev="review" href="http://dx.doi.org/10.1371/journal.pcbi.1000273">10.1371/journal.pcbi.1000273</a></span>

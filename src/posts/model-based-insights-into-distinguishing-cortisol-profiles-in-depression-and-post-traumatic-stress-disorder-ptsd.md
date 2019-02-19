@@ -35,7 +35,7 @@ title: Model-based insights into distinguishing cortisol profiles in depression 
 
 <p><em>Some of the content in this post was based on discussions with my friend <a href="http://www.linkedin.com/pub/panteleimon-mavroudis/31/407/a66/">Pantelis Mavroudis</a>.</em></p>
 
-<h3>References</h3>
+<h2>References</h2>
 
 <p>
 <span class="Z3988" title="ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.jtitle=PLoS+Computational+Biology&rft_id=info%3Adoi%2F10.1371%2Fjournal.pcbi.1002379&rfr_id=info%3Asid%2Fresearchblogging.org&rft.atitle=Modeling+Cortisol+Dynamics+in+the+Neuro-endocrine+Axis+Distinguishes+Normal%2C+Depression%2C+and+Post-traumatic+Stress+Disorder+%28PTSD%29+in+Humans&rft.issn=1553-7358&rft.date=2012&rft.volume=8&rft.issue=2&rft.spage=0&rft.epage=&rft.artnum=http%3A%2F%2Fdx.plos.org%2F10.1371%2Fjournal.pcbi.1002379&rft.au=Sriram%2C+K.&rft.au=Rodriguez-Fernandez%2C+M.&rft.au=Doyle%2C+F.&rfe_dat=bpr3.included=1;bpr3.tags=Biology%2CComputational+Biology%2C+Systems+Biology">Sriram, K., Rodriguez-Fernandez, M., & Doyle, F. (2012). Modeling Cortisol Dynamics in the Neuro-endocrine Axis Distinguishes Normal, Depression, and Post-traumatic Stress Disorder (PTSD) in Humans <span style="font-style: italic;">PLoS Computational Biology, 8</span> (2) DOI: <a rev="review" href="http://dx.doi.org/10.1371/journal.pcbi.1002379">10.1371/journal.pcbi.1002379</a></span>
