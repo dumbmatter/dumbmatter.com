@@ -24,7 +24,7 @@ You can find me all over the Internet:
 
 <p><a href="/project-euler/"><img src="/files/icons/projecteuler.ico" width="16" height="16" alt="" /> Project Euler</a></p>
 
-<p><a href="http://stackexchange.com/users/a9a80d69-5e85-4643-8794-1de00bb1a2b4"><img src="/files/icons/stackexchange.ico" width="16" height="16" alt="" /> Stack Exchange</a></p>
+<p><a href="https://stackexchange.com/users/413166/dumbmatter"><img src="/files/icons/stackexchange.ico" width="16" height="16" alt="" /> Stack Exchange</a></p>
 </div>
 
 Or just <a href="mailto:jdscheff@gmail.com">email me</a>.
