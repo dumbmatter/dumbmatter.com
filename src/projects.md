@@ -29,18 +29,9 @@ title: Projects
 
 <a href="/hrv-interactive/">Interactive HRV Figures</a> - Reproduce results from <a href="http://www.ncbi.nlm.nih.gov/pubmed/24680646">one of my papers</a> in your web browser.
 
-<h2>Academic Publications</h2>
+<h2>My Favorite Academic Publications</h2>
 
 <ol>
-<li>
-<p>
-<a href="/files/papers/2019-stochastic.pdf">The impact of stochasticity and its control on a model of the inflammatory response</a><br />
-Mavroudis PD, Scheff JD, Doyle JC, Vodovotz Y, Androulakis IP<br />
-<em>Computation</em> 2019, 7(1):3<br />
-<span class="publinks"><a href="https://doi.org/10.3390/computation7010003">doi:10.3390/computation7010003</a> | <a href="/files/papers/2019-stochastic.pdf">Paper (PDF)</a></span>
-</p>
-</li>
-
 <li>
 <p>
 <a href="/files/papers/2015-heat-shock-response.pdf">Mathematical modeling of the heat-shock response in HeLa cells</a><br />
@@ -56,6 +47,29 @@ Scheff JD, Stallings JD, Reifman J, Rakesh V<br />
 Scheff JD, Griffel B, Corbett  SA, Calvano SE, Androulakis IP<br />
 <em>Math Biosc</em> 2014, 252:36-44<br />
 <span class="publinks"><a href="http://www.ncbi.nlm.nih.gov/pubmed/24680646">PMID: 24680646</a> | <a href="https://doi.org/10.1016/j.mbs.2014.03.010">doi:10.1016/j.mbs.2014.03.010</a> | <a href="/files/papers/2014-on-heart-rate-variability.pdf">Paper (PDF)</a></span>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://doi.org/10.1152/physiolgenomics.00128.2011">Transcriptional implications of ultradian glucocorticoid secretion, in homeostasis and in the acute stress response</a><br />
+Scheff JD, Calvano SE, Lowry SF, Androulakis IP<br />
+<em>Physiol Genomics</em> 2012, 44(2):121-129<br />
+<span class="publinks"><a href="http://www.ncbi.nlm.nih.gov/pubmed/22128089">PMID: 22128089</a> | <a href="https://doi.org/10.1152/physiolgenomics.00128.2011">doi:10.1152/physiolgenomics.00128.2011</a></span>
+</p>
+</li>
+
+</ol>
+
+<h2>My Other Academic Publications</h2>
+
+<ol>
+<li>
+<p>
+<a href="/files/papers/2019-stochastic.pdf">The impact of stochasticity and its control on a model of the inflammatory response</a><br />
+Mavroudis PD, Scheff JD, Doyle JC, Vodovotz Y, Androulakis IP<br />
+<em>Computation</em> 2019, 7(1):3<br />
+<span class="publinks"><a href="https://doi.org/10.3390/computation7010003">doi:10.3390/computation7010003</a> | <a href="/files/papers/2019-stochastic.pdf">Paper (PDF)</a></span>
 </p>
 </li>
 
@@ -89,20 +103,19 @@ Scheff JD, Mavroudis PD, Foteinou PT, An G, Calvano SE, Doyle J, Dick TE, Lowry 
 
 <li>
 <p>
-<a href="https://doi.org/10.1615/CritRevBiomedEng.v40.i4.60">Modeling physiologic vari-
-ability in human endotoxemia</a><br />
-Scheff JD, Mavroudis PD, Foteinou PT, Calvano SE, Androulakis IP<br />
-<em>Crit Rev Biomed Eng</em> 2012, 40(4):313-322<br />
-<span class="publinks"><a href="http://www.ncbi.nlm.nih.gov/pubmed/23140122">PMID: 23140122</a> | <a href="https://doi.org/10.1615/CritRevBiomedEng.v40.i4.60">doi:10.1615/CritRevBiomedEng.v40.i4.60</a></span>
+<a href="/files/papers/2012-systems-biology-circadian.pdf">Systems biology of circadian-immune interactions</a><br />
+Mavroudis PD, Scheff JD, Calvano SE, Androulakis IP<br />
+<em>J Innate Immun</em>, 2013, 5:153-162<br />
+<span class="publinks"><a href="http://www.ncbi.nlm.nih.gov/pubmed/23006670">PMID: 23006670</a> | <a href="https://doi.org/10.1159/000342427">doi:10.1159/000342427</a> | <a href="/files/papers/2012-systems-biology-circadian.pdf">Postprint (PDF)</a></span>
 </p>
 </li>
 
 <li>
 <p>
-<a href="/files/papers/2012-systems-biology-circadian.pdf">Systems biology of circadian-immune interactions</a><br />
-Mavroudis PD, Scheff JD, Calvano SE, Androulakis IP<br />
-<em>J Innate Immun</em>, in press<br />
-<span class="publinks"><a href="http://www.ncbi.nlm.nih.gov/pubmed/23006670">PMID: 23006670</a> | <a href="https://doi.org/10.1159/000342427">doi:10.1159/000342427</a> | <a href="/files/papers/2012-systems-biology-circadian.pdf">Postprint (PDF)</a></span>
+<a href="https://doi.org/10.1615/CritRevBiomedEng.v40.i4.60">Modeling physiologic variability in human endotoxemia</a><br />
+Scheff JD, Mavroudis PD, Foteinou PT, Calvano SE, Androulakis IP<br />
+<em>Crit Rev Biomed Eng</em> 2012, 40(4):313-322<br />
+<span class="publinks"><a href="http://www.ncbi.nlm.nih.gov/pubmed/23140122">PMID: 23140122</a> | <a href="https://doi.org/10.1615/CritRevBiomedEng.v40.i4.60">doi:10.1615/CritRevBiomedEng.v40.i4.60</a></span>
 </p>
 </li>
 
@@ -121,15 +134,6 @@ Dick TE, Molkov YI, Nieman G, Hsieh YH, Jacono FJ, Doyle J, Scheff JD, Calvano S
 Mavroudis PD, Scheff JD, Calvano SE, Lowry SF, Androulakis IP<br />
 <em>Physiol Genomics</em> 2012, 44(11):607-621<br />
 <span class="publinks"><a href="http://www.ncbi.nlm.nih.gov/pubmed/22510707">PMID: 22510707</a> | <a href="https://doi.org/10.1152/physiolgenomics.00001.2012">doi:10.1152/physiolgenomics.00001.2012</a></span>
-</p>
-</li>
-
-<li>
-<p>
-<a href="https://doi.org/10.1152/physiolgenomics.00128.2011">Transcriptional implications of ultradian glucocorticoid secretion, in homeostasis and in the acute stress response</a><br />
-Scheff JD, Calvano SE, Lowry SF, Androulakis IP<br />
-<em>Physiol Genomics</em> 2012, 44(2):121-129<br />
-<span class="publinks"><a href="http://www.ncbi.nlm.nih.gov/pubmed/22128089">PMID: 22128089</a> | <a href="https://doi.org/10.1152/physiolgenomics.00128.2011">doi:10.1152/physiolgenomics.00128.2011</a></span>
 </p>
 </li>
 

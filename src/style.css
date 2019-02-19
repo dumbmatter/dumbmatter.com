@@ -61,7 +61,7 @@ td, th {
 }
 
 span.publinks {
-  font-size: 85%;
+  font-size: smaller;
 }
 
 h1, h2, h3, h4 {
@@ -118,7 +118,7 @@ div#menu {
 }
 
 p#footer {
-  font-size: 12px;
+  font-size: smaller;
   text-align: center;
 }
 
