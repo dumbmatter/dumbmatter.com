@@ -66,6 +66,11 @@ Scheff JD, Calvano SE, Lowry SF, Androulakis IP<br />
 <ol>
 <li>
 <p>
+A late binding, distributed, NoSQL warehouse for integrating patient data from clinical trials<br />
+Yang E, Scheff JD, Shen SC, Farnum MA, Sefton J, Lobanov VS, Agrafiotis DK<br />
+<em>Database</em> 2019, in press<br />
+<li>
+<p>
 <a href="/files/papers/2019-stochastic.pdf">The impact of stochasticity and its control on a model of the inflammatory response</a><br />
 Mavroudis PD, Scheff JD, Doyle JC, Vodovotz Y, Androulakis IP<br />
 <em>Computation</em> 2019, 7(1):3<br />
@@ -105,7 +110,7 @@ Scheff JD, Mavroudis PD, Foteinou PT, An G, Calvano SE, Doyle J, Dick TE, Lowry 
 <p>
 <a href="/files/papers/2012-systems-biology-circadian.pdf">Systems biology of circadian-immune interactions</a><br />
 Mavroudis PD, Scheff JD, Calvano SE, Androulakis IP<br />
-<em>J Innate Immun</em>, 2013, 5:153-162<br />
+<em>J Innate Immun</em> 2013, 5:153-162<br />
 <span class="publinks"><a href="http://www.ncbi.nlm.nih.gov/pubmed/23006670">PMID: 23006670</a> | <a href="https://doi.org/10.1159/000342427">doi:10.1159/000342427</a> | <a href="/files/papers/2012-systems-biology-circadian.pdf">Postprint (PDF)</a></span>
 </p>
 </li>
