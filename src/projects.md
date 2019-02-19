@@ -29,7 +29,7 @@ title: Projects
 
 <a href="/hrv-interactive/">Interactive HRV Figures</a> - Reproduce results from <a href="http://www.ncbi.nlm.nih.gov/pubmed/24680646">one of my papers</a> in your web browser.
 
-<h2>Academic Research Projects</h2>
+<h2>Academic Publications</h2>
 
 <ol>
 <li>
