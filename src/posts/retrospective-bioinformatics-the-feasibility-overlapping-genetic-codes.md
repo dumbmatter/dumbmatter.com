@@ -124,6 +124,6 @@ Clearly, this is overkill. Rather than a sparsely populated grid like Brenner's 
 
 One striking aspect of Brenner's paper is that it is written incredibly confidently. In my own writing, I struggle to convey such confidence (sometimes for good reason). But it is interesting that Brenner does not 100% conclusively prove what he claims, given that <a href="http://en.wikipedia.org/wiki/Posttranslational_modification">posttranslational modification</a> could account for some anomalies in protein sequence data.
 
-### References
+## References
 
 <span class="Z3988" title="ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.jtitle=Proceedings+of+the+National+Academy+of+Sciences&rft_id=info%3Adoi%2F10.1073%2Fpnas.43.8.687&rfr_id=info%3Asid%2Fresearchblogging.org&rft.atitle=On+the+Impossibility+of+all+Overlapping+Triplet+Codes+in+Information+Transfer+from+Nucleic+Acid+to+Proteins&rft.issn=0027-8424&rft.date=1957&rft.volume=43&rft.issue=8&rft.spage=687&rft.epage=694&rft.artnum=http%3A%2F%2Fwww.pnas.org%2Fcgi%2Fdoi%2F10.1073%2Fpnas.43.8.687&rft.au=Brenner%2C+S.&rfe_dat=bpr3.included=1;bpr3.tags=Biology%2CBioinformatics%2C+Computational+Biology">Brenner, S. (1957). On the Impossibility of all Overlapping Triplet Codes in Information Transfer from Nucleic Acid to Proteins <span style="font-style: italic;">Proceedings of the National Academy of Sciences, 43</span> (8), 687-694 DOI: <a rev="review" href="http://dx.doi.org/10.1073/pnas.43.8.687">10.1073/pnas.43.8.687</a></span>

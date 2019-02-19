@@ -41,7 +41,7 @@ pre code {
 body {
   background-color: #fafafa;
   font-family: 'Ubuntu', sans-serif;
-  font-size: 11pt;
+  font-size: 16px;
 }
 
 a {
@@ -53,11 +53,11 @@ a:hover {
 }
 
 p, ol, ul {
-  font-size: 11pt;
+  font-size: 16px;
   line-height: 160%;
 }
 td, th {
-  font-size: 11pt;
+  font-size: 16px;
 }
 
 span.publinks {
@@ -139,7 +139,7 @@ ul, ol {
   left: -60px;
   position: absolute;
   text-align: center;
-  top: -3px;
+  top: 0;
   width: 60px;
 }
 .post-date-month {
