@@ -27,7 +27,7 @@ title: Did Adrian Peterson actually rush for more yards than Eric Dickerson but 
 
 <p><em>There is approximately a 15% chance that Adrian Peterson actually broke Dickerson's record, but it was not noticed due errors accumulated by rounding the lengths of rushes to integer values.</em></p>
 
-<p><a href="http://www.youtube.com/watch?v=istPbwEfVZs">Nine yards what?</a> Indeed.</p>
+<p><a href="https://www.sbnation.com/nfl/2012/12/30/3819520/adrian-peterson-pam-oliver-reaction">Nine yards what?</a> Indeed.</p>
 
 <p>For completeness, here is the MATLAB code I used to run the simulations, generate the plot, and estimate the probabilities.</p>
 
