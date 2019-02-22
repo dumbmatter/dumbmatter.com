@@ -21,7 +21,7 @@ And some of these figures are quite condescending. "Mt. Stupid", haha, imagine a
 
 But before being too condescending, we should take a look at the evidence behind the Dunning-Kruger effect. In the [original paper](https://doi.org/10.1037%2F0022-3514.77.6.1121) as well as [follow-up publications](https://doi.org/10.1037%2F0022-3514.90.1.60), the data looks like this:
 
-<img src="/files/dunning-kruger-2.png">
+<img src="/files/dunning-kruger-2.png" class="img-responsive">
 
 That's Figure 1 from the original Dunning-Kruger paper, and others are similar.
 
@@ -31,7 +31,7 @@ Most notably, Mt. Stupid is gone. People with low skill do overestimate their ab
 
 Additionally, the Wikipiedia article also includes discussion of [a skeptical viewpoint](https://doi.org/10.5038%2F1936-4660.9.1.4) which suggests that even the original Dunning-Kruger result may largely be a mathematical artifact rather than a genuine effect.
 
-This is all quite hilarious, because from what I've seen, the main reason the Dunning-Kruger effect is referenced is to say something like "look at all those idiots on Mt. Stupid". When in reality Mt. Stupid doesn't exist. Oh, the beautiful irony.
+This is all quite hilarious, because from what I've seen, the main reason the Dunning-Kruger effect is referenced is to say something like "look at all those idiots who are too stupid to realize they are on Mt. Stupid". When in reality Mt. Stupid doesn't exist. Oh, the beautiful irony.
 
 I hope I'm not making some elementary mistake here, but if I am, please write a blog post about how doubly ironic that is.
 
