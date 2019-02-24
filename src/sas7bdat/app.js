@@ -27762,6 +27762,7 @@ var App = function (_React$Component) {
                                     { className: 'text-danger' },
                                     'This is not perfectly accurate.'
                                 ),
+                                ' ',
                                 'Some files will not parse correctly. If your too file is large, it might freeze your browser.'
                             )
                         ),
