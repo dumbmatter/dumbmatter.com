@@ -66,9 +66,13 @@ Scheff JD, Calvano SE, Lowry SF, Androulakis IP<br />
 <ol>
 <li>
 <p>
-A late binding, distributed, NoSQL warehouse for integrating patient data from clinical trials<br />
+<a href="/files/papers/2019-cdw.pdf">A late binding, distributed, NoSQL warehouse for integrating patient data from clinical trials</a><br />
 Yang E, Scheff JD, Shen SC, Farnum MA, Sefton J, Lobanov VS, Agrafiotis DK<br />
-<em>Database</em> 2019, in press<br />
+<em>Database</em> 2019, baz032<br />
+<span class="publinks"><a href="https://doi.org/10.1093/database/baz032">doi:10.1093/database/baz032</a> | <a href="/files/papers/2019-cdw.pdf">Paper (PDF)</a></span>
+</p>
+</li>
+
 <li>
 <p>
 <a href="/files/papers/2019-stochastic.pdf">The impact of stochasticity and its control on a model of the inflammatory response</a><br />
