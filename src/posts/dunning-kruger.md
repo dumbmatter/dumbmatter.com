@@ -25,7 +25,7 @@ But before being too condescending, we should take a look at the evidence behind
 
 That's Figure 1 from the original Dunning-Kruger paper, and others are similar.
 
-It's quite a bit different than the sylized results from Google Images, isn't it?
+It's quite a bit different than the stylized results from Google Images, isn't it?
 
 Most notably, Mt. Stupid is gone. People with low skill do overestimate their abilities, but not to the point where they exceed high skill people, and there is no dropoff in confidence as ability increases.
 
