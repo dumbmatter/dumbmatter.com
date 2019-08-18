@@ -3,16 +3,60 @@
     <p id="footer">
       Generated with <a href="http://www.metalsmith.io/">Metalsmith</a>
     </p>
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-23918822-2', 'auto');
-      ga('send', 'pageview');
-    </script>
   </div>
+
+  <script>
+    const bars = Array.from(document.getElementById("top").children);
+
+    // Initialize bubbles
+    const colorMap = {
+      0: 3,
+      1: 4,
+      2: 5,
+      3: 0,
+      4: 1,
+      5: 2,
+    };
+    const bubbles = bars.map((bar, i) => {
+      const bubble = document.createElement("div");
+      bubble.classList.add("bubble");
+      bubble.classList.add(`top-${colorMap[i]}`);
+      bubble.style.left = "0px";
+      bar.appendChild(bubble);
+      return bubble;
+    });
+
+    const getDuration = () => 1000 + Math.random() * 4000;
+
+    const animate = (bubbles) => {
+      let duration = bubbles.map(getDuration);
+      let start = Array(bubbles.length).fill(performance.now());
+
+      requestAnimationFrame(function animate2(time) {
+        for (let i = 0; i < bubbles.length; i++) {
+          let timeFraction = (time - start[i]) / duration[i];
+          if (timeFraction > 1) {
+            duration[i] = getDuration();
+            start[i] = time;
+            timeFraction = 0;
+          };
+
+          const progress = Math.pow(timeFraction, 2);
+
+          bubbles[i].style.left = `${progress * 100}%`;
+        }
+        requestAnimationFrame(animate2);
+      });
+    }
+
+    animate(bubbles);
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-23918822-2', 'auto');
+    ga('send', 'pageview');
+  </script>
 </body>
 </html>
