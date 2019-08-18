@@ -65,19 +65,20 @@ span.publinks {
 }
 
 h1, h2, h3, h4 {
-  color: #a15131;
+  color: #d44911;
   font-family: 'Lato', serif;
   font-weight: normal;
 }
 h1 {
   font-size: 120%;
+  margin: 16px 0;
 }
 h2 {
   font-size: 100%;
   padding-top: 0.75em;
 }
 h1 a {
-  color: #a15131;
+  color: #d44911;
 }
 
 hr {
@@ -91,39 +92,42 @@ hr.thick {
 }
 
 div#wrapper {
+  background-color: #4c22c8;
+  color: #fff;
+  margin: 0 auto;
+  padding-top: 5px;
+  max-width: 638px;
+}
+
+div#wrapper2 {
   margin: 0 auto;
   max-width: 638px;
   padding: 0 0.5em;
 }
 
-div#wrapper2 {
-  margin: 0.5em auto;
-  max-width: 638px;
-  padding: 0 0.5em;
-}
-
 div#top div {
+  clear: both;
   height: 0.75em;
   display: flex;
   align-items: center;
 }
 div#top div.top-0 {
-  background-color: #4c22c8
+  background-color: #4c22c8;
 }
 div#top div.top-1 {
-  background-color: #6c49d1
+  background-color: #6c49d1;
 }
 div#top div.top-2 {
-  background-color: #8b70da
+  background-color: #8b70da;
 }
 div#top div.top-3 {
-  background-color: #aa97e3
+  background-color: #aa97e3;
 }
 div#top div.top-4 {
-  background-color: #cabeec
+  background-color: #cabeec;
 }
 div#top div.top-5 {
-  background-color: #e9e5f5
+  background-color: #e9e5f5;
 }
 @keyframes move-bubble {
   0% {
@@ -143,9 +147,9 @@ div#top div.bubble {
 
 div#name {
   float: left;
+  padding-left: 8px;
 }
 div#name a {
-  color: #a15131;
   font-family: 'Lato', serif;
   font-size: 22px;
   font-weight: Bold;
@@ -157,10 +161,14 @@ p#name-subtitle {
 div#menu {
   font-size: 16px;
   float: right;
-  margin-top: 27px;
-  margin-bottom: 7px;
+  margin-top: 29px;
+  margin-bottom: 0.5em;
+  padding-right: 0.5em;
   text-align: right;
   vertical-align: bottom;
+}
+div#wrapper a {
+  color: #ff8757;
 }
 
 p#footer {
@@ -224,34 +232,32 @@ ul, ol {
 
   div#wrapper {
     max-width: unset;
-    padding: 0;
   }
   @keyframes move-bubble {
     0% {
       transform: translateX(0);
     }
     100% {
+      /* This will cause scrollbar flicker if there is a vertical scroll bar, like in a desktop browser with a very narrow window. https://stackoverflow.com/a/44233700/786644 could fix it (and not require any media query change for keyframes) but performs worse. */
       transform: translateX(100vw);
     }
   }
-  div#top div.bar.top-1 {
+  div#top div.bar.top-2 {
     display: none;
   }
-  div#top div.bar.top-3 {
-    display: none;
-  }
-  div#top div.bar.top-5 {
+  div#top div.bar.top-4 {
     display: none;
   }
 
   div#name {
     float: inherit;
+    padding-left: 0;
     text-align: center;
   }
   div#menu {
     float: inherit;
     margin-top: 7px;
-    padding-bottom: 0.5em;
+    padding-right: 0;
     text-align: center;
   }
 

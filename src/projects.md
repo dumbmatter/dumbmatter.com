@@ -3,7 +3,7 @@ layout: page.html
 title: Projects
 ---
 
-<h2>Big Online Projects</h2>
+<h2 style="padding-top: 0">Big Online Projects</h2>
 
 <a href="https://basketball-gm.com/"><img src="/files/icons/basketballgm.png" width="16" height="16" alt="" /> Basketball GM</a> - Basketball simulation video game. It's written entirely in client-side JavaScript and you can play it right in your web browser.
 
