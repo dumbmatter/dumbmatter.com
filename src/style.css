@@ -91,13 +91,19 @@ hr.thick {
 }
 
 div#wrapper {
-  margin: 0.5em auto;
-  padding: 0 0.5em;
+  margin: 0 auto;
   max-width: 638px;
+  padding: 0 0.5em;
 }
+
+div#wrapper2 {
+  margin: 0.5em auto;
+  max-width: 638px;
+  padding: 0 0.5em;
+}
+
 div#top div {
   height: 0.75em;
-  position: relative;
   display: flex;
   align-items: center;
 }
@@ -119,11 +125,20 @@ div#top div.top-4 {
 div#top div.top-5 {
   background-color: #e9e5f5
 }
+@keyframes move-bubble {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(638px);
+  }
+}
 div#top div.bubble {
   border-radius: 50%;
   height: 4px;
-  position: absolute;
   width: 4px;
+  animation-timing-function: cubic-bezier(0.5, 0.0, 1, 0.75);
+  animation-name: move-bubble;
 }
 
 div#name {
@@ -207,6 +222,28 @@ ul, ol {
     margin: 0 -0.5em;
   }
 
+  div#wrapper {
+    max-width: unset;
+    padding: 0;
+  }
+  @keyframes move-bubble {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100vw);
+    }
+  }
+  div#top div.bar.top-1 {
+    display: none;
+  }
+  div#top div.bar.top-3 {
+    display: none;
+  }
+  div#top div.bar.top-5 {
+    display: none;
+  }
+
   div#name {
     float: inherit;
     text-align: center;
@@ -214,6 +251,7 @@ ul, ol {
   div#menu {
     float: inherit;
     margin-top: 7px;
+    padding-bottom: 0.5em;
     text-align: center;
   }
 
