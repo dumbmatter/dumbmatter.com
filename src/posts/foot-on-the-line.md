@@ -1,5 +1,5 @@
 ---
-date: 2019-08-18
+date: 2019-08-16
 layout: post.html
 tags: BBGM, Sports, Statistics
 title: Which NBA players take the most shots with their foot on the three point line?
