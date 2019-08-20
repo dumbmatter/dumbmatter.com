@@ -39,9 +39,9 @@ Favorite tracks: [Lean Got Me Fucked Up](https://www.youtube.com/watch?v=u8KsYVu
 
 ### Honorable mention
 
-* **Ethelwulf - The Wolf Gang's Rodolphe** - After a couple "influenced by Raider Klan" albums, here is an actual Raider Klan album! Great production, great rapping, and I love that it includes a good chopped and screwed version of every song. I'm not sure why Ethelwulf changed his name to Xavier Wulf after this, because Ethelwulf was a cooler name.
+* **Ethelwulf - The Wolf Gang's Rodolphe** - After a couple "influenced by Raider Klan" albums, here is an actual Raider Klan album! Great production, great rapping, and I love that it includes a good chopped and screwed version of every song. I'm not sure why Ethelwulf changed his name to Xavier Wulf after this, because Ethelwulf was a cooler name. At least he didn't go full Yasiin Bey.
 
-* **Flatbush Zombies - D.R.U.G.S.** - Excellent debut mixtape of the Flatbush Zombies.
+* **Flatbush Zombies - D.R.U.G.S.** - Excellent debut mixtape of the Flatbush Zombies. Speaking of the Flatbush Zombies, people always love Meech and Erick but hate on Juice, but I like Juice. He's just as good as the other two members, and they would be lacking without him.
 
 * **Nas - Life Is Good** - Another entry from an old school artist, but this is one of the best albums from one of the all time greats, so it deserves a mention here.
 
@@ -141,9 +141,9 @@ Favorite tracks: [Gummy](https://www.youtube.com/watch?v=vWhPimx07H0), [Junky](h
 
 ### Honorable mention
 
-* **$uicideboy$ & Germ - DirtierNastier$uicide** - The Boys have a lot of good tracks, but IMHO no cohesive great album. So I'm putting this LP here, because even though it's short, it's awesome. Especially [Here We Go Again](https://www.youtube.com/watch?v=MgxRLHmu2HA).
+* **$uicideboy$ & Germ - DirtierNastier$uicide** - The Boys have a lot of good tracks, but IMHO no cohesive great album. So I'm putting this EP here, because even though it's short, it's awesome. Especially [Here We Go Again](https://www.youtube.com/watch?v=MgxRLHmu2HA).
 
-* **Juicy J - Highly Intoxicated** - Related to above... my biggest problem with the $uicideboy$ is that they just aren't very good rappers. I love the production though. So here we have a mixtape by Juicy J produced, largely, by the $suicideboy$? That's my shit.
+* **Juicy J - Highly Intoxicated** - Related to above... my biggest problem with the $uicideboy$ is that they just aren't very good rappers. I love the production though. So here we have a mixtape by Juicy J produced largely by the $suicideboy$? That's my shit.
 
 * **Lil Peep - Come Over When You're Sober, Pt. 1** - Peep is another guy who I don't think has a great album, but has a ton of tracks I love. I'm listing this project rather than another because [Benz Truck](https://www.youtube.com/watch?v=3rkJ3L5Ce80) is what got me into Peep.
 
