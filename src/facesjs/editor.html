@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>faces.js editor</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <style>
+      .mb-lots {
+        margin-bottom: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mb-4">faces.js editor</h1>
+      <div class="row">
+        <div class="col">
+          <form>
+            <div class="row">
+              <div class="col">
+                <h4>Head</h4>
+                <div class="form-group">
+                  <select class="form-control" id="head-id"> </select>
+                </div>
+                <div class="form-group">
+                  <label for="head-color">Skin color</label>
+                  <input type="text" class="form-control" id="head-color" />
+                </div>
+                <div class="form-group mb-lots">
+                  <label for="fatness">Fatness</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="fatness"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                  />
+                </div>
+                <h4>Hair</h4>
+                <div class="form-group mb-lots">
+                  <select class="form-control" id="hair-id"> </select>
+                </div>
+                <h4>Eyebrows</h4>
+                <div class="form-group mb-lots">
+                  <select class="form-control" id="eyebrow-id"> </select>
+                </div>
+              </div>
+              <div class="col">
+                <h4>Eyes</h4>
+                <div class="form-group">
+                  <select class="form-control" id="eye-id"> </select>
+                </div>
+                <div class="form-group mb-lots">
+                  <label for="eye-angle">Angle</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="eye-angle"
+                    min="-20"
+                    max="30"
+                    step="1"
+                  />
+                </div>
+                <h4>Nose</h4>
+                <div class="form-group">
+                  <select class="form-control" id="nose-id"> </select>
+                </div>
+                <div class="form-group">
+                  <label for="nose-size">Size</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="nose-size"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                  />
+                </div>
+                <div class="form-group form-check mb-lots">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="nose-flip"
+                  />
+                  <label class="form-check-label" for="nose-flip">
+                    Flip
+                  </label>
+                </div>
+                <h4>Mouth</h4>
+                <div class="form-group mb-lots">
+                  <select class="form-control" id="mouth-id"> </select>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <div class="text-center">
+            <button
+              type="button"
+              class="btn btn-primary btn-lg mt-4"
+              id="randomize"
+            >
+              Randomize
+            </button>
+          </div>
+        </div>
+        <div class="col">
+          <div id="face"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="build/bundle.js"></script>
+  <script>
+    const faceWrapper = document.getElementById("face");
+    let face;
+    if (location.hash.length <= 1) {
+      face = faces.generate();
+    } else {
+      try {
+        face = JSON.parse(atob(location.hash.slice(1)));
+      } catch (error) {
+        console.error(error);
+        face = faces.generate();
+      }
+    }
+
+    const updateDisplay = () => {
+      console.log(face);
+      faces.display(faceWrapper, face);
+      history.replaceState(
+        undefined,
+        undefined,
+        `#${btoa(JSON.stringify(face))}`
+      );
+    };
+
+    const initializeSelectOptions = () => {
+      for (const feature of Object.keys(faces.svgsIndex)) {
+        const options = faces.svgsIndex[feature];
+        const selectElement = document.getElementById(`${feature}-id`);
+        for (const option of options) {
+          const optionElement = document.createElement("option");
+          optionElement.value = option;
+          optionElement.text = option;
+          selectElement.add(optionElement, null);
+        }
+      }
+    };
+
+    const isValue = obj =>
+      typeof obj === "boolean" ||
+      typeof obj === "number" ||
+      typeof obj === "string";
+
+    const initializeFormValue = (id, value) => {
+      const element = document.getElementById(id);
+      if (element.classList.contains("form-check-input")) {
+        element.checked = value;
+      } else {
+        element.value = value;
+      }
+    };
+
+    const initializeFormValues = () => {
+      for (const key of Object.keys(face)) {
+        if (isValue(face[key])) {
+          initializeFormValue(key, face[key]);
+        } else {
+          for (const key2 of Object.keys(face[key])) {
+            if (isValue(face[key][key2])) {
+              initializeFormValue(`${key}-${key2}`, face[key][key2]);
+            } else {
+              throw new Error(`wtf is in face.${key}.${key2}`);
+            }
+          }
+        }
+      }
+    };
+
+    const getValue = (oldValue, event) => {
+      if (typeof oldValue === "number") {
+        return parseFloat(event.target.value);
+      }
+      if (typeof oldValue === "boolean") {
+        return event.target.checked;
+      }
+      return event.target.value;
+    };
+    const listenForChanges = () => {
+      const textInputs = document.querySelectorAll("input.form-control");
+      const checkboxInputs = document.querySelectorAll(
+        "input.form-check-input"
+      );
+      const selects = document.querySelectorAll("select.form-control");
+
+      for (const input of [...textInputs, ...checkboxInputs, ...selects]) {
+        input.addEventListener("change", event => {
+          const parts = event.target.id.split("-");
+
+          if (parts.length === 1) {
+            face[parts[0]] = getValue(face[parts[0]], event);
+          } else if (parts.length === 2) {
+            face[parts[0]][parts[1]] = getValue(
+              face[parts[0]][parts[1]],
+              event
+            );
+          } else {
+            throw new Error(`Invalid ID ${event.target.id}`);
+          }
+
+          updateDisplay();
+        });
+      }
+
+      document.getElementById("randomize").addEventListener("click", () => {
+        face = faces.generate();
+        initializeFormValues();
+        updateDisplay();
+      });
+    };
+
+    updateDisplay();
+    initializeSelectOptions();
+    initializeFormValues();
+    listenForChanges();
+  </script>
+</html>
