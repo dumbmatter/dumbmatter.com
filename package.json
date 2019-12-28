@@ -7,7 +7,7 @@
   },
   "author": "Jeremy Scheff <jdscheff@gmail.com>",
   "dependencies": {
-    "handlebars": "^4.0.6",
+    "handlebars": "^4.3.0",
     "metalsmith": "^2.3.0",
     "metalsmith-broken-link-checker": "^0.1.11",
     "metalsmith-clean-css": "^5.0.1",
