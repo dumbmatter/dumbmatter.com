@@ -112,12 +112,12 @@ function updateResult() {
         var msgAfter, msgBefore, twitterMsg;
         if (odds > 1) {
             msgBefore = '<img src="gravesite-with-flowers-johnny-jay.svg" align="left" width="150" />Oh no! ';
-            msgAfter = Number(odds).toPrecision(3) + ' times more likely to die on your way to the polling booth</span> than you are to cast a meaningful vote in the 2016 presidential election.';
+            msgAfter = Number(odds).toPrecision(3) + ' times as likely to die on your way to the polling booth</span> as you are to cast a meaningful vote in the 2016 presidential election.';
             twitterMsg = 'I am ' + Number(odds).toPrecision(3) + ' times more likely to die on my way to vote than cast a meaningful vote for president';
         } else {
-            odds = swingOdds[state] / (distance * deathOdds[transportation]);
+            odds = 1 / odds;
             msgBefore = '<img src="thumbs_up.svg" align="left" width="130" style="margin-right: 20px" />Congratulations! ';
-            msgAfter = Number(odds).toPrecision(3) + ' times more likely to cast a meaningful vote</span> in the 2016 presidential election than you are to die on your way to the polling booth.';
+            msgAfter = Number(odds).toPrecision(3) + ' times as likely to cast a meaningful vote</span> in the 2016 presidential election as you are to die on your way to the polling booth.';
             twitterMsg = 'I am ' + Number(odds).toPrecision(3) + ' times more likely to cast a meaningful vote for president than die on my way to vote';
         }
 
