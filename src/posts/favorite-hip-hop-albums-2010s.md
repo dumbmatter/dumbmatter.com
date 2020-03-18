@@ -177,6 +177,10 @@ Favorite tracks: [Cataracts](https://www.youtube.com/watch?v=7AnyVmVGtns), [Crim
 
 None yet! Peggy, don't disappoint me!
 
+*Update from 2020:* Peggy did disappoint me a bit. All My Heroes Are Cornballs is fine, but it's not as good as Veteran and it doesn't quite deserve an honorable mention. Instead, another album came out of nowhere to earn honorable mention:
+
+* **Clipping - There Existed an Addiction to Blood** - I've listened to them a bit in the past, but never got hooked. This hooked me, hard. The concept of "the ghetto as a horror movie" is not new, but man they executed it flawlessly. [Just listen to this.](https://www.youtube.com/watch?v=fIrpLBShe1A) There's a few other incredible tracks too.
+
 ## Conclusions
 
 It definitely seems that the underground scene from the early 2010s has faded, which corresponds to the number of albums in the "honorable mentions" each year. Hopefully the 2020s has something new in store for us though!
