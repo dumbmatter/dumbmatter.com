@@ -1,7 +1,7 @@
 ---
 date: 2020-03-17
 layout: post.html
-tags: Epidemiology, Politics, Statistics
+tags: COVID-19, Epidemiology, Politics, Statistics
 title: My take on COVID-19
 ---
 
