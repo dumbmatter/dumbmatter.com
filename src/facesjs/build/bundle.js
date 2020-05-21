@@ -6,15 +6,13 @@ var faces = (function (exports) {
       return;
     }
 
-    for (const [key, value] of Object.entries(overrides)) {
-      if (
-        typeof value === "boolean" ||
-        typeof value === "string" ||
-        typeof value === "number" ||
-        Array.isArray(value)
-      ) {
+    for (var _i = 0, _Object$entries = Object.entries(overrides); _i < _Object$entries.length; _i++) {
+      const [key, value] = _Object$entries[_i];
+
+      if (typeof value === "boolean" || typeof value === "string" || typeof value === "number" || Array.isArray(value)) {
         obj[key] = value;
       } else {
+        // @ts-ignore
         override(obj[key], value);
       }
     }
@@ -22,65 +20,226 @@ var faces = (function (exports) {
 
   // THIS IS A GENERATED FILE, DO NOT EDIT BY HAND!
   // See tools/process-svgs.js
-
-  var svgs = {"accessories":{"headband-high":"<g stroke=\"#000\"><path d=\"M350 280c-10 0-30-90-150-90S60 280 50 280c-10-10-10-40 0-50 0 0 30-90 150-90s150 90 150 90c10 10 10 40 0 50z\" fill=\"$[primary]\" stroke-width=\"4\"/><path d=\"M45 260v-10s35-90 155-90 155 90 155 90v10c-5 0-35-90-155-90S50 260 45 260z\" fill=\"$[secondary]\"/></g>","headband":"<path class=\"headband\" d=\"M350 280c-10 0-30-50-150-50S60 280 50 280c-10-10-10-40 0-50 0 0 30-50 150-50s150 50 150 50c10 10 10 40 0 50z\" fill=\"$[primary]\" stroke=\"#000\" stroke-width=\"4\"/><path class=\"stripe\" d=\"M45 260v-10s35-50 155-50 155 50 155 50v10c-5 0-35-50-155-50S50 260 45 260z\" fill=\"$[secondary]\" stroke=\"#000\"/>","none":""},"body":{"body":"<path class=\"shp0\" d=\"M10 600s0-50 60-70 70-50 70-50l60-180 60 180s10 30 70 50 60 70 60 70\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/>"},"ear":{"ear1":"<path d=\"M43 13S23 3 13 3 3 23 3 33s3 20 13 30 27-10 27-10V13z\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/>","ear2":"<path d=\"M40 14S10-1 5 4s0 30 5 40-5 25 30 20V14z\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/>","ear3":"<path d=\"M43 8S3-12 3 28c0 45 40 30 40 30V8z\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/>"},"eye":{"eye1":"<style></style><g id=\"eye1\" stroke=\"#000\" stroke-width=\"5\"><path id=\"Shape 7\" d=\"M63 43s-5 10-35 10S3 43 3 43 3 3 33 3s30 40 30 40z\" fill=\"#fff\"/><path id=\"Shape 7\" d=\"M33 38c-10 0-10-20 0-20s10 20 0 20z\" fill=\"#000\"/></g>","eye2":"<style></style><g id=\"eye2\" stroke=\"#000\" stroke-width=\"5\"><path id=\"Shape 10\" d=\"M55.37 34.72S58.4 2.3 28.53 5.07C-1.35 7.83 7.21 35.16 7.21 35.16\" fill=\"#fff\"/><path id=\"Shape 10\" d=\"M30.74 28.97c-3.31.3-6.22-2.12-6.53-5.43a5.985 5.985 0 015.42-6.52 5.987 5.987 0 016.53 5.42c.3 3.3-2.12 6.22-5.42 6.53z\" fill=\"#000\"/></g>","eye3":"<style>.shp1{fill:#fff;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:5}</style><g id=\"eye3\"><path id=\"Shape 7\" d=\"M265 360c-13.83 0-25-11.18-25-25 0-13.83 11.17-25 25-25 13.82 0 25 11.17 25 25 0 13.82-11.18 25-25 25z\" fill=\"none\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"5\"/><path id=\"Shape 7\" class=\"shp1\" d=\"M265 360c-13.83 0-25-11.18-25-25v-5h50v5c0 13.82-11.18 25-25 25z\"/><path id=\"Shape 7\" d=\"M265 330c-10 0-10 15 0 15s10-15 0-15z\" fill=\"#000\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\"/></g>","eye4":"<style></style><g id=\"eye4\" stroke=\"#000\"><path id=\"Shape 9\" d=\"M68.08 23.19s1.89 14.88-27.87 18.67C15.41 45.02 6.66 15.89 6.03 10.93 25.87 8.4 65.55 3.35 68.08 23.19z\" fill=\"#fff\" stroke-width=\"5\"/><path id=\"Shape 7 copy\" d=\"M39.04 16.81c9.92-1.27 11.81 13.61 1.89 14.88-9.92 1.26-11.81-13.62-1.89-14.88z\" fill=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\"/></g>","eye5":"<style></style><g id=\"eye5\"><path id=\"White\" d=\"M73.67 39.73c3.92-10.47 2.35-25.38 2.35-25.38s-35.86-6.27-45.8-5.22c-9.95 1.04-24.34 7.59-24.34 7.59s-1.44 10.21 7.6 24.34l60.19-1.33z\" fill=\"#fff\"/><path id=\"Shape 9\" d=\"M45.8 37.65c-4.13.43-8.17-5.88-9.04-14.13-.87-8.25 1.76-15.27 5.89-15.71 4.12-.43 8.16 5.88 9.03 14.13.87 8.25-1.76 15.27-5.88 15.71z\" fill=\"#000\"/><path id=\"Outline\" d=\"M73.67 39.73c4.45-5.49 2.35-25.38 2.35-25.38s-35.86-6.27-45.8-5.22c-9.95 1.04-24.34 7.59-24.34 7.59s1.57 14.92 7.6 24.34\" fill=\"none\" stroke=\"#000\" stroke-width=\"5\"/></g>","eye6":"<style></style><g id=\"eye6\"><path id=\"Shape 9\" d=\"M73.63 30.14S62.25 5.74 32.3 7.42C12.33 8.54 7.9 18.8 7.9 18.8l5.83 14.7c30.23 3.31 59.9-3.36 59.9-3.36z\" fill=\"#fff\"/><path id=\"Shape 9\" d=\"M40.63 30.99a9.988 9.988 0 009.42-10.55 9.985 9.985 0 00-10.54-9.42 10 10 0 00-9.43 10.54c.31 5.52 5.03 9.74 10.55 9.43z\" fill=\"#000\"/><path id=\"Outline\" d=\"M73.63 30.14S72.51 10.17 32.3 7.42C12.33 8.54 7.9 18.8 7.9 18.8l5.83 14.7\" fill=\"none\" stroke=\"#000\" stroke-width=\"5\"/></g>","eye7":"<style></style><g id=\"eye7\" stroke=\"#000\" stroke-width=\"5\"><path id=\"White\" d=\"M74 18L69 3H4l5 15h65z\" fill=\"#fff\"/><path id=\"Shape 9\" d=\"M38.5 18a7.49 7.49 0 01-7.5-7.5C31 6.35 34.35 3 38.5 3S46 6.35 46 10.5 42.65 18 38.5 18z\" fill=\"#000\"/></g>","eye8":"<style></style><g id=\"eye8\" stroke=\"#000\" stroke-width=\"5\"><path id=\"Shape 10\" d=\"M67 35c0-4 6-32-24-32S3 15 3 23s12 20 24 20 40-4 40-8z\" fill=\"#fff\"/><path id=\"Shape 10\" d=\"M39 29c-3.32 0-6-2.68-6-6s2.68-6 6-6 6 2.68 6 6-2.68 6-6 6z\" fill=\"#000\"/></g>","eye9":"<style></style><g id=\"eye9\" stroke=\"#000\" stroke-width=\"5\"><path id=\"Shape 10\" d=\"M240 340c0-4-6-20 24-20 20 0 36 8 36 12s-12 12-20 12c-4 0-40 0-40-4z\" fill=\"#fff\"/><path id=\"Shape 10\" d=\"M268 340c-3.32 0-6-3.58-6-8s2.68-8 6-8 6 3.58 6 8-2.68 8-6 8z\" fill=\"#000\"/></g>"},"eyeLine":{"line1":"<path class=\"eyeline1\" d=\"M220 270s-10 0-10-20m-30 20s10 0 10-20\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>","line2":"<path class=\"eyeline2\" d=\"M300 320s5 5 10 5m-13.25-2.47S300 335 305 335m-205-15s-5 5-10 5m13.25-2.47S100 335 95 335\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>","line3":"<path class=\"eyeline3\" d=\"M240 340s10 10 25 10m-105-10s-10 10-25 10\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>","line4":"<path class=\"eyeline4\" d=\"M240 340s25 10 40 0m-120 0s-25 10-40 0\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>","line5":"<path class=\"eyeline5\" d=\"M240 355s20-10 45 0m-125 0s-20-10-45 0\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>","line6":"<path class=\"eyeline6\" d=\"M235 285s10-10 45-10m-115 10s-10-10-45-10\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>","none":""},"eyebrow":{"eyebrow1":"<path d=\"M83 13C83 3 73 3 73 3 48-2 17.46 8.36 3 18c40-5 50 5 75 5 0 0 5 0 5-10z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","eyebrow10":"<path d=\"M71 17c8-8 0-12 0-12S43 9 35 9C25 9 7 1 7 1S-5 5 7 17c8 8 8 8 28 8s33-5 36-8z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","eyebrow11":"<path d=\"M73 13c8-8 0-12 0-12S45 5 37 5H1s20 12 40 12c12 0 28 0 32-4z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","eyebrow12":"<path d=\"M66 13c4-4 0-8 0-8H30C14 5 2 1 2 1s-4 0 8 12l-4 8h32c20 0 24-4 28-8z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","eyebrow2":"<path d=\"M235 280l65 5-5-12.45-55 2.45-5 5z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","eyebrow3":"<path d=\"M73 13c4.85-1.21 0-10-10-10S3 8 3 8s50 10 70 5z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","eyebrow4":"<path d=\"M61 16V6L31 1 1 6v10l30-5 30 5z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","eyebrow5":"<path d=\"M65 16c3-3 0-10 0-10S45 1 35 1 3 11 3 11s-3 7 0 10 22-8 32-8 27 6 30 3z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","eyebrow6":"<path d=\"M67 17c3-3 0-12 0-12H39C29 5 3 1 3 1S0 14 3 17s26 0 36 0 25 3 28 0z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","eyebrow7":"<path d=\"M71 21c8-8 0-12 0-12S43 5 35 5C25 5 7 1 7 1S-5 5 7 17c16 4 8 0 28 0 32 0 33 7 36 4z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","eyebrow8":"<path d=\"M71 25c8-8 0-16 0-16S43 1 35 1C25 1 7 5 7 5s-12 8 0 20c16 8 16-4 36-4s24 8 28 4z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","eyebrow9":"<path d=\"M73 21c8-8 0-16 0-16S45 1 37 1C27 1 1 17 1 17s20-4 40-4c12 0 28 12 32 8z\" fill=\"$[hairColor]\" stroke=\"#000\"/>"},"facialHair":{"beard1":"<path fill-rule=\"evenodd\" class=\"shp0\" d=\"M200 410c45 0 50 10 50 10 30 0 90-15 90-120h10c0 130-30 150-40 160s-60 60-110 60-100-50-110-60-40-30-40-160h10c0 105 60 120 90 120 0 0 5-10 50-10zm-45 30c0 20 5 30 25 30 10 0 10-10 20-10s10 10 20 10c20 0 25-10 25-30s-15-20-45-20-45 0-45 20z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","beard2":"<path fill-rule=\"evenodd\" class=\"shp0\" d=\"M200 410c55 0 55 15 55 30 70 0 85-35 85-140h10c0 130-30 150-40 160s-60 60-110 60-100-50-110-60-40-30-40-160h10c0 105 15 140 85 140 0-15 0-30 55-30zm-45 30c0 20 5 30 25 30 10 0 10-10 20-10s10 10 20 10c20 0 25-10 25-30s-15-20-45-20-45 0-45 20z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","fullgoatee":"<path fill-rule=\"evenodd\" class=\"shp0\" d=\"M200 410c55 0 55 15 55 30 0 0 5 40-5 55-5 5-35 15-50 15s-46.67-10-50-15c-10-15-5-55-5-55 0-15 0-30 55-30zm-45 30c0 20 5 30 25 30 10 0 10-10 20-10s10 10 20 10c20 0 25-10 25-30s-15-20-45-20-45 0-45 20z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","goatee-thin":"<path class=\"shp0\" d=\"M165 470v25m10-30v35m10-40v40m10-40v40m10 0v-40m10 0v40m10-35v35m10-30v25\" stroke=\"#000\" stroke-width=\"3\"/>","goatee1-stache":"<path class=\"shp0\" d=\"M200 457.82l10 2.18s0 20 10 20 30-5 30 0c0 20-30 30-50 30s-50-10-50-30c0-5 20 0 30 0s10-20 10-20l10-2.18zM150 425c-5-5 25-20 35-20 5 0 10 5 15 5s10-5 15-5c10 0 40 15 35 20s-5-5-50-5-45 10-50 5z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","goatee1":"<path class=\"shp0\" d=\"M200 457.82l10 2.18s0 20 10 20 30-5 30 0c0 20-30 30-50 30s-50-10-50-30c0-5 20 0 30 0s10-20 10-20l10-2.18z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","goatee2":"<path class=\"shp0\" d=\"M200 458.02L190 460c-10 10-20 40-20 40s10 10 30 10 30-10 30-10-10-30-20-40l-10-1.98z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","goatee3":"<path class=\"shp0\" d=\"M175 485s10-5 25-5 25 5 25 5c-15 30-15 45-15 45l-5-10-5 20-5-20-5 10s0-15-15-45z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","goatee4":"<path class=\"shp0\" d=\"M220 480c10 0 30-5 30 0 0 20-30 30-50 30s-50-10-50-30c0-5 20 0 30 0h40z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","goatee5":"<path d=\"M200 460c10 0 10 20 20 20s20-20 20-20 10 0 10 5c0 40-10 50-50 50s-50-10-50-50c0-5 10-5 10-5s10 20 20 20 10-20 20-20z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","goatee6":"<path class=\"shp0\" d=\"M188 454c2-2 22-2 24 0s-8 16-12 16-14-14-12-16zm12 21c10 0 10 5 20 5s20-20 20-20 10 0 10 5c0 40-10 50-50 50s-50-10-50-50c0-5 10-5 10-5s10 20 20 20 10-5 20-5zm-50-50c-5-5 25-20 35-20 5 0 10 5 15 5s10-5 15-5c10 0 40 15 35 20s-5-5-50-5-45 10-50 5z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","goatee7":"<path class=\"shp0\" d=\"M250 485c-10 20-30 20-50 20s-40 0-50-20c5-5 10 10 50 10s45-15 50-10z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","goatee8":"<path class=\"shp0\" d=\"M188 454c2-2 22-2 24 0s-8 16-12 16-14-14-12-16zm62 31c-10 20-30 20-50 20s-40 0-50-20c5-5 10 10 50 10s45-15 50-10z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","handlebar":"<path d=\"M205 420c-4 0-5-5-.8-10 5.8-5 15.8-5 15.8-5 15 0 35 15 35 25 0 30 10 55 5 60s-15 5-20 0 5-40 5-55-15-15-40-15zm-10 0c4 0 5-5 0-10s-15-5-15-5c-16 0-35 15-35 25 0 30-10 55-5 60s15 5 20 0-5-40-5-55 15-15 40-15z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","honest-abe-stache":"<path d=\"M340 300c0 105-85 140-85 140s-5 30-15 30c-30 0-30-10-40-10s-10 10-40 10c-10 0-15-30-15-30s-85-35-85-140H50c0 105 20 140 20 140s55 80 130 80 130-80 130-80 20-35 20-140h-10zM150 425c-5-5 25-20 35-20 5 0 10 5 15 5s10-5 15-5c10 0 40 15 35 20s-5-5-50-5-45 10-50 5z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","honest-abe":"<path class=\"shp0\" d=\"M340 300c0 105-85 140-85 140s-5 30-15 30c-30 0-30-10-40-10s-10 10-40 10c-10 0-15-30-15-30s-85-35-85-140H50c0 105 20 140 20 140s55 80 130 80 130-80 130-80 20-35 20-140h-10z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","mustache-thin":"<style></style><path id=\"mustache_thin\" d=\"M205.17 408l-.17 12m10-15v16.28m10-13.26V420m10-10v11.28M194.83 408l.17 12m-10-15v16.28m-10-13.26V420m-10-10v11.53\" fill=\"red\" stroke=\"#000\" stroke-width=\"3\"/>","mustache1":"<path class=\"shp0\" d=\"M150 425c-5-5 25-20 35-20 5 0 10 5 15 5s10-5 15-5c10 0 40 15 35 20s-5-5-50-5-45 10-50 5z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","none":"","soul-stache":"<path class=\"shp0\" d=\"M188 458c2-2 22-2 24 0s-8 16-12 16-14-14-12-16z\" fill=\"$[hairColor]\" stroke=\"#000\"/>","soul":"<path class=\"shp0\" d=\"M188 458c2-2 22-2 24 0s-8 16-12 16-14-14-12-16zm-38-33c-5-5 25-20 35-20 5 0 10 5 15 5s10-5 15-5c10 0 40 15 35 20s-5-5-50-5-45 10-50 5z\" fill=\"$[hairColor]\" stroke=\"#000\"/>"},"glasses":{"facemask":"<path fill-rule=\"evenodd\" class=\"facemask\" d=\"M200 190c50 0 100 10 110 20s20 80 20 80 0 60-10 70-50 10-80 10c-10 0-20-10-40-10s-30 10-40 10c-30 0-70 0-80-10s-10-70-10-70 10-70 20-80 60-20 110-20zm-70 90c-30 0-45 10-45 30 0 25 15 30 45 30s60-5 60-30-30-30-60-30zm140 60c30 0 45-5 45-30 0-20-15-30-45-30s-60 5-60 30 30 30 60 30z\" fill=\"rgba(150,150,175,.5)\" stroke=\"#000\" stroke-width=\"2\"/><path class=\"straps\" d=\"M350 315v-30h-20v30h20zm-280 0v-30H50v30h20z\" fill=\"#333\" stroke=\"#000\" stroke-width=\"2\"/><path class=\"glare\" d=\"M260 270l10-30m0 35l10-30m-160 25l10-30m0 35l10-30m120 115l5-15m0 20l5-15m-150 10l5-15m0 20l5-15\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2\"/>","glasses1-primary":"<path class=\"frame\" d=\"M195 285h10s35-10 65-10 50 10 50 10 0 5 10 5v30c-10 0-10 5-10 5s-20 20-50 20c-60 0-65-35-65-35 0-5-10-5-10 0 0 0-5 35-65 35-30 0-50-20-50-20s0-5-10-5v-30c10 0 10-5 10-5s20-10 50-10 65 10 65 10zM90 295c0 20 0 40 40 40 50 0 50-30 50-30v-10s-20-10-50-10c-40 0-40 10-40 10zm130 10s0 30 50 30c40 0 40-20 40-40 0 0 0-10-40-10-30 0-50 10-50 10v10z\" fill=\"#333\" stroke=\"#000\" stroke-width=\"2\"/><path class=\"lens\" d=\"M90 295s0-10 40-10c30 0 50 10 50 10v10s0 30-50 30c-40 0-40-20-40-40zm180 40c-50 0-50-30-50-30v-10s20-10 50-10c40 0 40 10 40 10 0 20 0 40-40 40z\" fill=\"rgba(150,150,175,.5)\"/><path class=\"straps\" d=\"M350 320v-30h-20v30h20zm-280 0v-30H50v30h20z\" fill=\"$[primary]\" stroke=\"#000\" stroke-width=\"2\"/><path class=\"glare\" d=\"M280 315l10-20m0 20l10-20m-160 20l10-20m0 20l10-20\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2\"/>","glasses1-secondary":"<path class=\"frame\" d=\"M195 285h10s35-10 65-10 50 10 50 10 0 5 10 5v30c-10 0-10 5-10 5s-20 20-50 20c-60 0-65-35-65-35 0-5-10-5-10 0 0 0-5 35-65 35-30 0-50-20-50-20s0-5-10-5v-30c10 0 10-5 10-5s20-10 50-10 65 10 65 10zM90 295c0 20 0 40 40 40 50 0 50-30 50-30v-10s-20-10-50-10c-40 0-40 10-40 10zm130 10s0 30 50 30c40 0 40-20 40-40 0 0 0-10-40-10-30 0-50 10-50 10v10z\" fill=\"#333\" stroke=\"#000\" stroke-width=\"2\"/><path class=\"lens\" d=\"M90 295s0-10 40-10c30 0 50 10 50 10v10s0 30-50 30c-40 0-40-20-40-40zm180 40c-50 0-50-30-50-30v-10s20-10 50-10c40 0 40 10 40 10 0 20 0 40-40 40z\" fill=\"rgba(150,150,175,.5)\"/><path class=\"straps\" d=\"M350 320v-30h-20v30h20zm-280 0v-30H50v30h20z\" fill=\"$[secondary]\" stroke=\"#000\" stroke-width=\"2\"/><path class=\"glare\" d=\"M280 315l10-20m0 20l10-20m-160 20l10-20m0 20l10-20\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2\"/>","glasses2-black":"<path class=\"frame\" d=\"M50 285h30s20-10 50-10 65 10 65 10h10s35-10 65-10 50 10 50 10h30v10l-30 5s-20-15-50-15-60 10-60 10-5 15 0 25c0 0-5-10-10-10s-10 10-10 10c5-10 0-25 0-25s-30-10-60-10-50 15-50 15l-30-5v-10z\" fill=\"#333\" stroke=\"#000\" stroke-width=\"2\"/><path fill-rule=\"lens\" class=\"lens\" d=\"M155 340c35 0 35 5 35-20 5-10 0-25 0-25s-30-10-60-10-50 15-50 15-5 40 5 45 40-5 70-5zm160 5c10-5 5-45 5-45s-20-15-50-15-60 10-60 10-5 15 0 25c0 25 0 20 35 20 30 0 60 10 70 5z\" fill=\"rgba(150,150,175,.5)\"/><path class=\"glare\" d=\"M275 330l15-35m-5 35l15-35m-165 35l15-35m-5 35l15-35\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2\"/>","glasses2-primary":"<path class=\"frame\" d=\"M50 285h30s20-10 50-10 65 10 65 10h10s35-10 65-10 50 10 50 10h30v10l-30 5s-20-15-50-15-60 10-60 10-5 15 0 25c0 0-5-10-10-10s-10 10-10 10c5-10 0-25 0-25s-30-10-60-10-50 15-50 15l-30-5v-10z\" fill=\"$[primary]\" stroke=\"#000\" stroke-width=\"2\"/><path fill-rule=\"lens\" class=\"lens\" d=\"M155 340c35 0 35 5 35-20 5-10 0-25 0-25s-30-10-60-10-50 15-50 15-5 40 5 45 40-5 70-5zm160 5c10-5 5-45 5-45s-20-15-50-15-60 10-60 10-5 15 0 25c0 25 0 20 35 20 30 0 60 10 70 5z\" fill=\"rgba(150,150,175,.5)\"/><path class=\"glare\" d=\"M275 330l15-35m-5 35l15-35m-165 35l15-35m-5 35l15-35\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2\"/>","glasses2-secondary":"<path class=\"frame\" d=\"M50 285h30s20-10 50-10 65 10 65 10h10s35-10 65-10 50 10 50 10h30v10l-30 5s-20-15-50-15-60 10-60 10-5 15 0 25c0 0-5-10-10-10s-10 10-10 10c5-10 0-25 0-25s-30-10-60-10-50 15-50 15l-30-5v-10z\" fill=\"$[secondary]\" stroke=\"#000\" stroke-width=\"2\"/><path fill-rule=\"lens\" class=\"lens\" d=\"M155 340c35 0 35 5 35-20 5-10 0-25 0-25s-30-10-60-10-50 15-50 15-5 40 5 45 40-5 70-5zm160 5c10-5 5-45 5-45s-20-15-50-15-60 10-60 10-5 15 0 25c0 25 0 20 35 20 30 0 60 10 70 5z\" fill=\"rgba(150,150,175,.5)\"/><path class=\"glare\" d=\"M275 330l15-35m-5 35l15-35m-165 35l15-35m-5 35l15-35\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2\"/>","none":""},"hair":{"afro":"<path d=\"M60 310H50s-40 0-40-50C10 120 80 70 200 70s190 50 190 190c0 50-40 50-40 50h-10v-20c0-5-10-20-15-25s-10-45-15-55c-6.32-12.65-60-10-110-10s-103.68-2.65-110 10c-5 10-10 50-15 55s-15 20-15 25v20zM200 70\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>","bald":"","cornrows":"<defs><linearGradient id=\"grd1\" gradientUnits=\"userSpaceOnUse\" x1=\"200\" y1=\"100\" x2=\"200\" y2=\"310\"><stop offset=\"0\" stop-color=\"rgba(0,0,0,.3)\"/><stop offset=\"1\" stop-color=\"rgba(0,0,0,0)\"/></linearGradient></defs><style></style><g id=\"cornrows\"><path id=\"Short Fade\" d=\"M60 310H50v-10c0-140 50-200 150-200s150 60 150 200v10h-10v-20c0-5-10-20-15-25s-5-45-15-55-60 0-110 0-100-10-110 0-10 50-15 55-15 20-15 25v20z\" fill=\"url(#grd1)\" stroke=\"none\"/><path id=\"cornrows\" d=\"M195 200h-10V100h10v100zm10 0h10V100h-10v100m20 0h10V100h-10v100m20 0h10v-95h-10v95zm20-5h10v-85h-10v85zm20 0h10v-75h-10v75zm20-5h10v-50h-10v50zm20 5h10v-20h-10v20m-150 5h-10V100h10v100zm-20 0h-10v-95.13h10V200zm-20-5v-85.15h-10V195h10zm-20 0v-75h-10v75h10zm-20-5H85v-50h10v50zm-20 5H65v-20h10v20z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/></g>","crop":"<path d=\"M200 95c120 0 140 90 140 115-20 0-20 5-25 0s-15-15-50-15c-15 0-40 5-65 5s-50-5-65-5c-35 0-45 10-50 15s-5 0-25 0c0-25 25-115 140-115z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>","high":"<path d=\"M60 310H50v-10C50 110 40 90 60 90h280c20 0 10 20 10 210v10h-10v-20c0-5-10-20-15-25s-5-55-15-65-60 0-110 0-100-10-110 0-10 60-15 65-15 20-15 25v20z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>","juice":"<path d=\"M60 310H50s-.19-5 0-10C60 40-10 145 200 80c34.77-10.76 43.79-21.21 65 0 5 5 5 45 5 45s3.04-26.26 10-25c110 20 60-20 70 200 .23 4.99 0 10 0 10h-10v-20c0-5-10-20-15-25s-5-65-15-75-60 10-110 10-100-20-110-10-10 70-15 75-15 20-15 25v20z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>","messy-short":"<path d=\"M60 310H50v-10-65h-5l10-25-15 5 20-30H45l25-25-15-5 30-17.95L70 130l32.5-7.95L90 115l35-5-7.5-12.45L155 100l-15-15 40 7.55L175 75l30 15-5-20 25 20 35-10-15 15h30l-15 10 40 2.55-15 7.45 35 5-17.5 7.55L340 145l-17.5 5 27.5 20-15 10 25 35h-12.5l7.5 20h-5v75h-10v-20c0-5-10-20-15-25s-5-65.3-15-75.3l-6.33 11s-4.34-8.7-4.34-9c0-.29-11.66 12.67-11.66 12.67L285 189.7l-21 20.67.33-18-26.66 24.33 3.33-25-30.33 22 .33-20.33-27.33 28L187.5 195 166 213.7l1-15.66-23.33 19.33 4-23.33L123 208.37l2-16.67-23 21.67.33-21.67-12.66 8.34L90 190c-10 10-10 70-15 75s-15 20-15 25v20z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>","middle-part":"<path d=\"M60 310H50s-10-10-10-30c-10-90 10-130 20-140s30-20 50-40c21.21-21.21 50-20 60-20s30 20 30 20 20-20 30-20 38.79-1.21 60 20c20 20 40 30 50 40s30 52.05 20 140c0 20-10 30-10 30h-10v-20c0-5-10-20-15-25s-15-55-25-65-54.5-10-54.5-10-25.5-30 14.5 20c-20 0-60-20-60-20s-40 20-60 20c40-50 14.5-20 14.5-20s-44.5 0-54.5 10-20 60-25 65-15 20-15 25v20z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>","parted":"<path d=\"M60 310H50s-10-10-10-30C40 140 90 81.5 150 86.05l3.5 8.5S153 84.05 160 80c80-10 150 10 160 50 40 40 40 10 40 150 0 20-10 30-10 30h-10v-20c0-5-10-20-15-25s-5-55-15-65-70 0-110 0c-30 0-37-20-40-30 0 10-50 20-60 30s-20 60-25 65-15 20-15 25v20z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>","short-fade":"<defs><linearGradient id=\"shortfade\" gradientUnits=\"userSpaceOnUse\" x1=\"200\" y1=\"100\" x2=\"200\" y2=\"310\"><stop offset=\"0\" stop-color=\"rgba(0,0,0,.25)\"/><stop offset=\"1\" stop-color=\"rgba(0,0,0,0)\"/></linearGradient></defs><style></style><g id=\"short fade\"><path id=\"Short Fade\" d=\"M60 310H50v-10c0-140 50-200 150-200s150 60 150 200v10h-10v-20c0-5-10-20-15-25s-5-55-15-65c-40-40-60 0-110 0s-70-40-110 0c-10 10-10 60-15 65s-15 20-15 25v20z\" fill=\"url(#shortfade)\" stroke=\"none\"/></g>","short":"<path d=\"M60 310H50v-10c0-140 50-200 150-200s150 60 150 200v10h-10v-20c0-5-10-20-15-25s-5-50-15-60-60-5-110-5-100-5-110 5-10 55-15 60-15 20-15 25v20z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>","short2":"<path d=\"M60 310H50v-10c0-140 50-200 150-200s150 60 150 200v10h-10v-20c0-5-10-20-15-25s-5-55-15-65c-40-40-60 0-110 0s-70-40-110 0c-10 10-10 60-15 65s-15 20-15 25v20z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>","spike":"<path d=\"M60 310H50v-10c0-65-5-145-5-150 0-10 5-20 5-20l10 10 6-20 14 10 5-20 15 10 5-20 15 10 8-22 12 12 8-20 12 16 10-21 10 21 10-21 10 21 10-21 10 21 10-21 10 21 12-16 8 20 12-12 8 24.37L290 100l10 20 12-9.96 8 19.96 14-10 6 20 10-10s5 10 5 20c0 5-5 85-5 150v10h-10v-20c0-5-10-20-15-25s-5-55-15-65-60 0-110 0-100-10-110 0-10 60-15 65-15 20-15 25v20z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>","spike2":"<path d=\"M60 310H50v-35l-2-11 2-9-2-11 2-9-2-11 2-9-2-15 7-10-3-15.63L65 165l-1-17 16-3v-21h20l4-20 20 4 12-20 20 12 12-20 16 16 16-20 16 20 16-16 12 20 20-12 12 20 20-4 4 20h20v21l16 3-1 17 13 9.04-3 15.96 7 10-2 15 2 9-2 11 2 9-2 11 2 9-2 11v35h-10v-20c0-5-10-20-15-25s-5-50-15-60-60-5-110-5-100-5-110 5-10 55-15 60-15 20-15 25v20z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>"},"head":{"head1":"<path class=\"head\" d=\"M200 100c100 0 150 60 150 200 0 70-50 200-150 200S50 370 50 300c0-140 50-200 150-200z\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"faceShave\" d=\"M200 410c30 0 50 10 50 10 30 0 90-15 90-120h10c0 70-50 200-150 200S50 370 50 300h10c0 105 60 120 90 120 0 0 20-10 50-10z\" fill=\"$[faceShave]\"/><path class=\"headShave\" d=\"M60 300H50c0-140 50-200 150-200s150 60 150 200h-10v-10c0-5-10-20-15-25s-5-55-15-65c-40-40-60 0-110 0s-70-40-110 0c-10 10-10 60-15 65s-15 20-15 25v10z\" fill=\"$[headShave]\"/>","head2":"<path class=\"head\" d=\"M200 100c100 0 150 60 150 200 0 70-30 120-40 130l-60 60s-20 10-50 10-50-10-50-10l-60-60c-10-10-40-60-40-130 0-140 50-200 150-200z\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"faceShave\" d=\"M200 410c30 0 50 10 50 10 30 0 90-15 90-120h10c0 70-30 120-40 130l-60 60s-20 10-50 10-50-10-50-10l-60-60c-10-10-40-60-40-130h10c0 105 60 120 90 120 0 0 20-10 50-10z\" fill=\"$[faceShave]\"/><path class=\"headShave\" d=\"M60 300H50c0-140 50-200 150-200s150 60 150 200h-10v-10c0-5-10-20-15-25s-5-55-15-65c-40-40-60 0-110 0s-70-40-110 0c-10 10-10 60-15 65s-15 20-15 25v10z\" fill=\"$[headShave]\"/>","head3":"<path d=\"M200 100c100 0 150 60 150 200 0 20-20 130-20 130l-80 50c-20 20-40 20-50 20s-30 0-50-20l-80-50S50 320 50 300c0-140 50-200 150-200z\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"faceShave\" d=\"M200 410c30 0 50 10 50 10 30 0 90-15 90-120h10c0 20-20 130-20 130l-80 50c-20 20-40 20-50 20s-30 0-50-20l-80-50S50 320 50 300h10c0 105 60 120 90 120 0 0 20-10 50-10z\" fill=\"$[faceShave]\"/><path class=\"headShave\" d=\"M60 300H50c0-140 50-200 150-200s150 60 150 200h-10v-10c0-5-10-20-15-25s-5-55-15-65c-40-40-60 0-110 0s-70-40-110 0c-10 10-10 60-15 65s-15 20-15 25v10z\" fill=\"$[headShave]\"/>","head4":"<path class=\"head\" d=\"M200 100c100 0 150 60 150 200 0 70-10 90-30 130-10 20-60 50-70 60-20 20-20 10-50 10s-30 10-50-10c-10-10-60-40-70-60-20-40-30-60-30-130 0-140 50-200 150-200z\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"faceShave\" d=\"M200 410c30 0 50 10 50 10 30 0 90-15 90-120h10c0 70-10 90-30 130-10 20-60 50-70 60-20 20-20 10-50 10s-30 10-50-10c-10-10-60-40-70-60-20-40-30-60-30-130h10c0 105 60 120 90 120 0 0 20-10 50-10z\" fill=\"$[faceShave]\"/><path class=\"headShave\" d=\"M60 300H50c0-140 50-200 150-200s150 60 150 200h-10v-10c0-5-10-20-15-25s-5-55-15-65c-40-40-60 0-110 0s-70-40-110 0c-10 10-10 60-15 65s-15 20-15 25v10z\" fill=\"$[headShave]\"/>","head5":"<path class=\"head\" d=\"M200 100c100 0 150 60 150 200 0 50-.51 71.54-10 100-10 30-80 70-90 80s-20 20-50 20-40-10-50-20-80-50-90-80c-9.49-28.46-10-50-10-100 0-140 50-200 150-200z\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"faceShave\" d=\"M200 410c30 0 50 10 50 10 30 0 90-15 90-120h10c0 50-.51 71.54-10 100-10 30-80 70-90 80s-20 20-50 20-40-10-50-20-80-50-90-80c-9.49-28.46-10-50-10-100h10c0 105 60 120 90 120 0 0 20-10 50-10z\" fill=\"$[faceShave]\"/><path class=\"headShave\" d=\"M60 300H50c0-140 50-200 150-200s150 60 150 200h-10v-10c0-5-10-20-15-25s-5-55-15-65c-40-40-60 0-110 0s-70-40-110 0c-10 10-10 60-15 65s-15 20-15 25v10z\" fill=\"$[headShave]\"/>","head6":"<path class=\"head\" d=\"M200 100c100 0 150 60 150 200 0 70-30 150-40 160s-60 40-110 40-100-30-110-40-40-90-40-160c0-140 50-200 150-200z\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"faceShave\" d=\"M200 410c30 0 50 10 50 10 30 0 90-15 90-120h10c0 70-30 150-40 160s-60 40-110 40-100-30-110-40-40-90-40-160h10c0 105 60 120 90 120 0 0 20-10 50-10z\" fill=\"$[faceShave]\"/><path class=\"headShave\" d=\"M60 300H50c0-140 50-200 150-200s150 60 150 200h-10v-10c0-5-10-20-15-25s-5-55-15-65c-40-40-60 0-110 0s-70-40-110 0c-10 10-10 60-15 65s-15 20-15 25v10z\" fill=\"$[headShave]\"/>","head7":"<path class=\"head\" d=\"M200 100c100 0 150 60 150 200 0 20-20 120-25 130-4.47 8.94-105 70-105 70h-40s-98.29-56.58-105-70c-5-10-25-110-25-130 0-140 50-200 150-200z\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"faceShave\" d=\"M200 410c30 0 50 10 50 10 30 0 90-15 90-120h10c0 20-20 120-25 130-4.47 8.94-105 70-105 70h-40s-98.29-56.58-105-70c-5-10-25-110-25-130h10c0 105 60 120 90 120 0 0 20-10 50-10z\" fill=\"$[faceShave]\"/><path class=\"headShave\" d=\"M60 300H50c0-140 50-200 150-200s150 60 150 200h-10v-10c0-5-10-20-15-25s-5-55-15-65c-40-40-60 0-110 0s-70-40-110 0c-10 10-10 60-15 65s-15 20-15 25v10z\" fill=\"$[headShave]\"/>","head8":"<path class=\"head\" d=\"M200 100c100 0 150 60 150 200 0 20-5 100-25 130-10 20-45 50-85 55-5 5-15 15-40 15s-35-10-40-15c-35-5-75-35-85-55-20-30-25-110-25-130 0-140 50-200 150-200z\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"faceShave\" d=\"M200 410c30 0 50 10 50 10 30 0 90-15 90-120h10c0 20-5 100-25 130-10 20-45 50-85 55-5 5-15 15-40 15s-35-10-40-15c-35-5-75-35-85-55-20-30-25-110-25-130h10c0 105 60 120 90 120 0 0 20-10 50-10z\" fill=\"$[faceShave]\"/><path class=\"headShave\" d=\"M60 300H50c0-140 50-200 150-200s150 60 150 200h-10v-10c0-5-10-20-15-25s-5-55-15-65c-40-40-60 0-110 0s-70-40-110 0c-10 10-10 60-15 65s-15 20-15 25v10z\" fill=\"$[headShave]\"/>"},"jersey":{"football":"<path class=\"football\" d=\"M100 500s70 90 100 90 100-90 100-90 30 10 60 10c0 0 30 10 30 40s10 60 10 60H0s10-30 10-60 30-40 30-40c30 0 60-10 60-10\" fill=\"$[primary]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"shoulderpads\" d=\"M370 560s-61 7.89-70-10M30 560s61 7.89 70-10\" fill=\"none\" stroke=\"#000\" stroke-width=\"3\"/><path class=\"collar-outline\" d=\"M100 500s70 90 100 90 100-90 100-90\" fill=\"none\" stroke=\"#000\" stroke-width=\"16\"/><path class=\"collar-accent\" d=\"M100 500s70 90 100 90 100-90 100-90\" fill=\"none\" stroke=\"$[accent]\" stroke-width=\"12\"/><path class=\"collar-secondary\" d=\"M100 500s70 90 100 90 100-90 100-90\" fill=\"none\" stroke=\"$[secondary]\" stroke-width=\"6\"/>","jersey":"<path d=\"M80 610s10-30 10-90l20-10s10 80 90 80 90-80 90-80l20 10c0 60 10 90 10 90H80z\" fill=\"$[primary]\" stroke=\"#000\" stroke-width=\"6\"/>","jersey2":"<path class=\"jersey\" d=\"M80 610s10-30 10-90l20-10s10 80 90 80 90-80 90-80l20 10c0 60 10 90 10 90H80z\" fill=\"$[primary]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"outline\" d=\"M90 520c0 60-10 90-10 90m230-90c0 60 10 90 10 90M110 510s10 80 90 80 90-80 90-80\" fill=\"none\" stroke=\"#000\" stroke-width=\"16\"/><path class=\"accent\" d=\"M90 520c0 60-10 90-10 90m230-90c0 60 10 90 10 90M110 510s10 80 90 80 90-80 90-80\" fill=\"none\" stroke=\"$[accent]\" stroke-width=\"12\"/><path class=\"secondary\" d=\"M90 520c0 60-10 90-10 90m230-90c0 60 10 90 10 90M110 510s10 80 90 80 90-80 90-80\" fill=\"none\" stroke=\"$[secondary]\" stroke-width=\"6\"/>","jersey3":"<path class=\"primary\" d=\"M80 610s10-30 10-90l20-10s10 80 90 80 90-80 90-80l20 10c0 60 10 90 10 90H80z\" fill=\"$[primary]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"secondary\" d=\"M85 575v25h230v-25h-65s-20 15-50 15-50-15-50-15H85z\" fill=\"$[secondary]\"/><path class=\"outline\" d=\"M90 520c0 60-10 90-10 90m230-90c0 60 10 90 10 90M110 510s10 80 90 80 90-80 90-80\" fill=\"none\" stroke=\"#000\" stroke-width=\"16\"/><path class=\"stripe-primary\" d=\"M90 520c0 60-10 90-10 90m230-90c0 60 10 90 10 90M110 510s10 80 90 80 90-80 90-80\" fill=\"none\" stroke=\"$[primary]\" stroke-width=\"12\"/><path class=\"stripe-accent\" d=\"M90 520c0 60-10 90-10 90m230-90c0 60 10 90 10 90M110 510s10 80 90 80 90-80 90-80\" fill=\"none\" stroke=\"$[accent]\" stroke-width=\"6\"/>","jersey4":"<path class=\"jersey\" d=\"M80 610s10-30 10-90l20-10s10 80 90 80 90-80 90-80l20 10c0 60 10 90 10 90H80z\" fill=\"$[primary]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"outline\" d=\"M90 520c0 60-10 90-10 90m230-90c0 60 10 90 10 90M110 510s10 80 90 80 90-80 90-80\" fill=\"none\" stroke=\"#000\" stroke-width=\"16\"/><path class=\"stripe-accent\" d=\"M90 520c0 60-10 90-10 90m230-90c0 60 10 90 10 90m-210-98s15 78 90 78 90-78 90-78\" fill=\"none\" stroke=\"$[accent]\" stroke-width=\"8\"/><path class=\"stripe-primary\" d=\"M86 522c0 60-10 88-10 88m238-88c0 60 10 88 10 88M114 510s11 76 86 76 86-76 86-76\" fill=\"none\" stroke=\"$[primary]\" stroke-width=\"4\"/><path class=\"stripe-secondary\" d=\"M94 518c0 60-10 92-10 92m222-92c0 60 10 92 10 92m-210-96s12 80 94 80 94-80 94-80\" fill=\"none\" stroke=\"$[secondary]\" stroke-width=\"4\"/>","jersey5":"<path class=\"jersey\" d=\"M80 610s10-30 10-90l20-10s10 80 90 80 90-80 90-80l20 10c0 60 10 90 10 90H80z\" fill=\"$[primary]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"pinstripes\" d=\"M95 610v-92.45M105 610v-97.95m10 2.95v95m10-60v62.05M135 565v45m10-35v35m10-30v30m10-25v25m10-20v20m10-20v20m10-20v20m110 0v-92.45M295 610v-97.95M285 515v95m-10-60v62.05M265 565v45m-10-35v35m-10-30v30m-10-25v25m-10-20v20m-10-20v20m-10-20v20\" fill=\"none\" stroke=\"$[accent]\" stroke-width=\"2\"/><path class=\"outline\" d=\"M90 520c0 60-10 90-10 90m230-90c0 60 10 90 10 90M110 510s10 80 90 80 90-80 90-80\" fill=\"none\" stroke=\"#000\" stroke-width=\"16\"/><path class=\"stripe-accent\" d=\"M90 520c0 60-10 90-10 90m230-90c0 60 10 90 10 90m-210-98s15 78 90 78 90-78 90-78\" fill=\"none\" stroke=\"$[accent]\" stroke-width=\"8\"/><path class=\"stripe-primary\" d=\"M86 522c0 60-10 88-10 88m238-88c0 60 10 88 10 88M114 510s11 76 86 76 86-76 86-76\" fill=\"none\" stroke=\"$[primary]\" stroke-width=\"4\"/><path class=\"stripe-secondary\" d=\"M94 518c0 60-10 92-10 92m222-92c0 60 10 92 10 92m-210-96s12 80 94 80 94-80 94-80\" fill=\"none\" stroke=\"$[secondary]\" stroke-width=\"4\"/>"},"miscLine":{"chin1":"<path d=\"M180 465s10-5 20-5 20 5 20 5\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>","chin2":"<path d=\"M200 467.37V480\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>","forehead1":"<path d=\"M200 270v-15l5-5-5 5-5-5\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>","forehead2":"<path d=\"M170 235s15 0 30 5c15-5 30-5 30-5m-75-15s35 0 45 5c10-5 45-5 45-5\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>","forehead3":"<path d=\"M170 235s15 0 30 5c15-5 30-5 30-5\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>","forehead4":"<path d=\"M155 220s35 0 45 5c10-5 45-5 45-5\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>","forehead5":"<g fill=\"none\" stroke=\"#000\" stroke-width=\"2\"><path d=\"M200 270v-15l5-5-5 5-5-5M170 235s15 0 30 5c15-5 30-5 30-5M155 220s35 0 45 5c10-5 45-5 45-5\"/></g>","none":""},"mouth":{"angry":"<style></style><path id=\"angry\" d=\"M40 9C50 9 65-1 70 4s10 15 5 20-25 0-35 0-30 5-35 0S5 9 10 4s20 5 30 5z\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"5\"/>","closed":"<style></style><path id=\"closed\" d=\"M170 440l10-10h40l10 10\" fill=\"none\" stroke=\"#000\" stroke-width=\"5\"/>","mouth":"<style></style><path id=\"mouth\" d=\"M32 3c10 0 15 0 25 5 5 5 5 5 0 10s-15 0-25 0-20 5-25 0-5-5 0-10c10-5 15-5 25-5z\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"5\"/>","side":"<style></style><path id=\"side\" d=\"M1 22l60-10L51 2\" fill=\"none\" stroke=\"#000\" stroke-width=\"5\"/>","smile-closed":"<style></style><path id=\"smile-closed\" d=\"M170 430s10 10 30 10 30-10 30-10\" fill=\"none\" stroke=\"#000\" stroke-width=\"5\"/>","smile":"<style></style><path id=\"smile\" d=\"M170 430s10 20 30 20 30-20 30-20h-60z\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"5\"/>","smile2":"<style></style><path id=\"smile2\" d=\"M11 8S4.33 28 31 28 51 8 51 8 41 4.37 31 4.37 11 8 11 8zm50-5L51 8M1 3l10 5\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"5\"/>","smile3":"<style></style><path id=\"smile3\" d=\"M5 3s13.33 20 40 20S85 3 85 3 65 5.22 45 5.22 5 3 5 3z\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"5\"/>","straight":"<style></style><path id=\"straight\" d=\"M180 430h40\" fill=\"none\" stroke=\"#000\" stroke-width=\"5\"/>"},"nose":{"honker":"<path d=\"M50 50s-20 60 9 55c0 0 29 5 9-55\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"5\"/>","nose1":"<path d=\"M170 390s10-10 20 0 10 10 20 0 20 0 20 0\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"5\"/>","nose2":"<path class=\"nose\" d=\"M28 1l20 45s-5 20-25 20S3 46 3 46\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"5\"/>","nose3":"<path class=\"nose\" d=\"M175 380l25 20 25-20\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"5\"/>","nose4":"<path class=\"nose\" d=\"M11 1S6 31 21 41L1 51\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"5\"/>","nose5":"<path class=\"nose\" d=\"M175 370c-20 0-5 25 5 15 5-5 15 10 20 10s15-15 20-10c10 10 25-15 5-15\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"5\"/>","nose6":"<path class=\"nose\" d=\"M190 325s-5 20-5 45c-20-5-15 15-15 20 20 0 15 10 30 10s10-10 30-10c0-5 5-25-15-20 0-25-5-45-5-45\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"5\"/>","nose7":"<path class=\"nose\" d=\"M180 380s10-5 20-5 20 5 20 5m-20-5v-40\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"5\"/>","nose8":"<path class=\"nose\" d=\"M186.89 385.17s-4.71-14.11 14.11-14.11 14.11 14.11 14.11 14.11M201 371.06v-18.82\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"5\"/>","pinocchio":"<path d=\"M40 40s50-30 0 30\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"5\"/>"},"smileLine":{"line1":"<path class=\"shp0\" d=\"M9 2s-12.5 8.95-4 34\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>","line2":"<path class=\"shp0\" d=\"M17 2L2 12l5 15\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>","line3":"<path class=\"shp0\" d=\"M12.33 4.32s-10 3.29-10 13.18 10 13.18 10 13.18\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>","line4":"<path class=\"shp0\" d=\"M0 20l6-10-6-9\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>","none":""}};
+  var svgs = {
+    "accessories": {
+      "headband-high": "<g stroke=\"#000\"><path d=\"M350 280c-10 0-30-90-150-90S60 280 50 280c-10-10-10-40 0-50 0 0 30-90 150-90s150 90 150 90c10 10 10 40 0 50z\" fill=\"$[primary]\" stroke-width=\"4\"/><path d=\"M45 260v-10s35-90 155-90 155 90 155 90v10c-5 0-35-90-155-90S50 260 45 260z\" fill=\"$[secondary]\"/></g>",
+      "headband": "<path class=\"headband\" d=\"M350 280c-10 0-30-50-150-50S60 280 50 280c-10-10-10-40 0-50 0 0 30-50 150-50s150 50 150 50c10 10 10 40 0 50z\" fill=\"$[primary]\" stroke=\"#000\" stroke-width=\"4\"/><path class=\"stripe\" d=\"M45 260v-10s35-50 155-50 155 50 155 50v10c-5 0-35-50-155-50S50 260 45 260z\" fill=\"$[secondary]\" stroke=\"#000\"/>",
+      "none": ""
+    },
+    "body": {
+      "body": "<path class=\"shp0\" d=\"M10 600s0-50 60-70 70-50 70-50l60-180 60 180s10 30 70 50 60 70 60 70\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/>"
+    },
+    "ear": {
+      "ear1": "<path d=\"M43 13S23 3 13 3 3 23 3 33s3 20 13 30 27-10 27-10V13z\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/>",
+      "ear2": "<path d=\"M40 14S10-1 5 4s0 30 5 40-5 25 30 20V14z\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/>",
+      "ear3": "<path d=\"M43 8S3-12 3 28c0 45 40 30 40 30V8z\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/>"
+    },
+    "eye": {
+      "eye1": "<style></style><g id=\"eye1\" stroke=\"#000\" stroke-width=\"5\"><path id=\"Shape 7\" d=\"M63 43s-5 10-35 10S3 43 3 43 3 3 33 3s30 40 30 40z\" fill=\"#fff\"/><path id=\"Shape 7\" d=\"M33 38c-10 0-10-20 0-20s10 20 0 20z\" fill=\"#000\"/></g>",
+      "eye2": "<style></style><g id=\"eye2\" stroke=\"#000\" stroke-width=\"5\"><path id=\"Shape 10\" d=\"M55.37 34.72S58.4 2.3 28.53 5.07C-1.35 7.83 7.21 35.16 7.21 35.16\" fill=\"#fff\"/><path id=\"Shape 10\" d=\"M30.74 28.97c-3.31.3-6.22-2.12-6.53-5.43a5.985 5.985 0 015.42-6.52 5.987 5.987 0 016.53 5.42c.3 3.3-2.12 6.22-5.42 6.53z\" fill=\"#000\"/></g>",
+      "eye3": "<style>.shp1{fill:#fff;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:5}</style><g id=\"eye3\"><path id=\"Shape 7\" d=\"M265 360c-13.83 0-25-11.18-25-25 0-13.83 11.17-25 25-25 13.82 0 25 11.17 25 25 0 13.82-11.18 25-25 25z\" fill=\"none\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"5\"/><path id=\"Shape 7\" class=\"shp1\" d=\"M265 360c-13.83 0-25-11.18-25-25v-5h50v5c0 13.82-11.18 25-25 25z\"/><path id=\"Shape 7\" d=\"M265 330c-10 0-10 15 0 15s10-15 0-15z\" fill=\"#000\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\"/></g>",
+      "eye4": "<style></style><g id=\"eye4\" stroke=\"#000\"><path id=\"Shape 9\" d=\"M68.08 23.19s1.89 14.88-27.87 18.67C15.41 45.02 6.66 15.89 6.03 10.93 25.87 8.4 65.55 3.35 68.08 23.19z\" fill=\"#fff\" stroke-width=\"5\"/><path id=\"Shape 7 copy\" d=\"M39.04 16.81c9.92-1.27 11.81 13.61 1.89 14.88-9.92 1.26-11.81-13.62-1.89-14.88z\" fill=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\"/></g>",
+      "eye5": "<style></style><g id=\"eye5\"><path id=\"White\" d=\"M73.67 39.73c3.92-10.47 2.35-25.38 2.35-25.38s-35.86-6.27-45.8-5.22c-9.95 1.04-24.34 7.59-24.34 7.59s-1.44 10.21 7.6 24.34l60.19-1.33z\" fill=\"#fff\"/><path id=\"Shape 9\" d=\"M45.8 37.65c-4.13.43-8.17-5.88-9.04-14.13-.87-8.25 1.76-15.27 5.89-15.71 4.12-.43 8.16 5.88 9.03 14.13.87 8.25-1.76 15.27-5.88 15.71z\" fill=\"#000\"/><path id=\"Outline\" d=\"M73.67 39.73c4.45-5.49 2.35-25.38 2.35-25.38s-35.86-6.27-45.8-5.22c-9.95 1.04-24.34 7.59-24.34 7.59s1.57 14.92 7.6 24.34\" fill=\"none\" stroke=\"#000\" stroke-width=\"5\"/></g>",
+      "eye6": "<style></style><g id=\"eye6\"><path id=\"Shape 9\" d=\"M73.63 30.14S62.25 5.74 32.3 7.42C12.33 8.54 7.9 18.8 7.9 18.8l5.83 14.7c30.23 3.31 59.9-3.36 59.9-3.36z\" fill=\"#fff\"/><path id=\"Shape 9\" d=\"M40.63 30.99a9.988 9.988 0 009.42-10.55 9.985 9.985 0 00-10.54-9.42 10 10 0 00-9.43 10.54c.31 5.52 5.03 9.74 10.55 9.43z\" fill=\"#000\"/><path id=\"Outline\" d=\"M73.63 30.14S72.51 10.17 32.3 7.42C12.33 8.54 7.9 18.8 7.9 18.8l5.83 14.7\" fill=\"none\" stroke=\"#000\" stroke-width=\"5\"/></g>",
+      "eye7": "<style></style><g id=\"eye7\" stroke=\"#000\" stroke-width=\"5\"><path id=\"White\" d=\"M74 18L69 3H4l5 15h65z\" fill=\"#fff\"/><path id=\"Shape 9\" d=\"M38.5 18a7.49 7.49 0 01-7.5-7.5C31 6.35 34.35 3 38.5 3S46 6.35 46 10.5 42.65 18 38.5 18z\" fill=\"#000\"/></g>",
+      "eye8": "<style></style><g id=\"eye8\" stroke=\"#000\" stroke-width=\"5\"><path id=\"Shape 10\" d=\"M67 35c0-4 6-32-24-32S3 15 3 23s12 20 24 20 40-4 40-8z\" fill=\"#fff\"/><path id=\"Shape 10\" d=\"M39 29c-3.32 0-6-2.68-6-6s2.68-6 6-6 6 2.68 6 6-2.68 6-6 6z\" fill=\"#000\"/></g>",
+      "eye9": "<style></style><g id=\"eye9\" stroke=\"#000\" stroke-width=\"5\"><path id=\"Shape 10\" d=\"M240 340c0-4-6-20 24-20 20 0 36 8 36 12s-12 12-20 12c-4 0-40 0-40-4z\" fill=\"#fff\"/><path id=\"Shape 10\" d=\"M268 340c-3.32 0-6-3.58-6-8s2.68-8 6-8 6 3.58 6 8-2.68 8-6 8z\" fill=\"#000\"/></g>"
+    },
+    "eyeLine": {
+      "line1": "<path class=\"eyeline1\" d=\"M220 270s-10 0-10-20m-30 20s10 0 10-20\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>",
+      "line2": "<path class=\"eyeline2\" d=\"M300 320s5 5 10 5m-13.25-2.47S300 335 305 335m-205-15s-5 5-10 5m13.25-2.47S100 335 95 335\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>",
+      "line3": "<path class=\"eyeline3\" d=\"M240 340s10 10 25 10m-105-10s-10 10-25 10\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>",
+      "line4": "<path class=\"eyeline4\" d=\"M240 340s25 10 40 0m-120 0s-25 10-40 0\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>",
+      "line5": "<path class=\"eyeline5\" d=\"M240 355s20-10 45 0m-125 0s-20-10-45 0\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>",
+      "line6": "<path class=\"eyeline6\" d=\"M235 285s10-10 45-10m-115 10s-10-10-45-10\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>",
+      "none": ""
+    },
+    "eyebrow": {
+      "eyebrow1": "<path d=\"M83 13C83 3 73 3 73 3 48-2 17.46 8.36 3 18c40-5 50 5 75 5 0 0 5 0 5-10z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "eyebrow10": "<path d=\"M71 17c8-8 0-12 0-12S43 9 35 9C25 9 7 1 7 1S-5 5 7 17c8 8 8 8 28 8s33-5 36-8z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "eyebrow11": "<path d=\"M73 13c8-8 0-12 0-12S45 5 37 5H1s20 12 40 12c12 0 28 0 32-4z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "eyebrow12": "<path d=\"M66 13c4-4 0-8 0-8H30C14 5 2 1 2 1s-4 0 8 12l-4 8h32c20 0 24-4 28-8z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "eyebrow2": "<path d=\"M235 280l65 5-5-12.45-55 2.45-5 5z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "eyebrow3": "<path d=\"M73 13c4.85-1.21 0-10-10-10S3 8 3 8s50 10 70 5z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "eyebrow4": "<path d=\"M61 16V6L31 1 1 6v10l30-5 30 5z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "eyebrow5": "<path d=\"M65 16c3-3 0-10 0-10S45 1 35 1 3 11 3 11s-3 7 0 10 22-8 32-8 27 6 30 3z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "eyebrow6": "<path d=\"M67 17c3-3 0-12 0-12H39C29 5 3 1 3 1S0 14 3 17s26 0 36 0 25 3 28 0z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "eyebrow7": "<path d=\"M71 21c8-8 0-12 0-12S43 5 35 5C25 5 7 1 7 1S-5 5 7 17c16 4 8 0 28 0 32 0 33 7 36 4z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "eyebrow8": "<path d=\"M71 25c8-8 0-16 0-16S43 1 35 1C25 1 7 5 7 5s-12 8 0 20c16 8 16-4 36-4s24 8 28 4z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "eyebrow9": "<path d=\"M73 21c8-8 0-16 0-16S45 1 37 1C27 1 1 17 1 17s20-4 40-4c12 0 28 12 32 8z\" fill=\"$[hairColor]\" stroke=\"#000\"/>"
+    },
+    "facialHair": {
+      "beard1": "<path fill-rule=\"evenodd\" class=\"shp0\" d=\"M200 410c45 0 50 10 50 10 30 0 90-15 90-120h10c0 130-30 150-40 160s-60 60-110 60-100-50-110-60-40-30-40-160h10c0 105 60 120 90 120 0 0 5-10 50-10zm-45 30c0 20 5 30 25 30 10 0 10-10 20-10s10 10 20 10c20 0 25-10 25-30s-15-20-45-20-45 0-45 20z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "beard2": "<path fill-rule=\"evenodd\" class=\"shp0\" d=\"M200 410c55 0 55 15 55 30 70 0 85-35 85-140h10c0 130-30 150-40 160s-60 60-110 60-100-50-110-60-40-30-40-160h10c0 105 15 140 85 140 0-15 0-30 55-30zm-45 30c0 20 5 30 25 30 10 0 10-10 20-10s10 10 20 10c20 0 25-10 25-30s-15-20-45-20-45 0-45 20z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "fullgoatee": "<path fill-rule=\"evenodd\" class=\"shp0\" d=\"M200 410c55 0 55 15 55 30 0 0 5 40-5 55-5 5-35 15-50 15s-46.67-10-50-15c-10-15-5-55-5-55 0-15 0-30 55-30zm-45 30c0 20 5 30 25 30 10 0 10-10 20-10s10 10 20 10c20 0 25-10 25-30s-15-20-45-20-45 0-45 20z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "goatee-thin": "<path class=\"shp0\" d=\"M165 470v25m10-30v35m10-40v40m10-40v40m10 0v-40m10 0v40m10-35v35m10-30v25\" stroke=\"#000\" stroke-width=\"3\"/>",
+      "goatee1-stache": "<path class=\"shp0\" d=\"M200 457.82l10 2.18s0 20 10 20 30-5 30 0c0 20-30 30-50 30s-50-10-50-30c0-5 20 0 30 0s10-20 10-20l10-2.18zM150 425c-5-5 25-20 35-20 5 0 10 5 15 5s10-5 15-5c10 0 40 15 35 20s-5-5-50-5-45 10-50 5z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "goatee1": "<path class=\"shp0\" d=\"M200 457.82l10 2.18s0 20 10 20 30-5 30 0c0 20-30 30-50 30s-50-10-50-30c0-5 20 0 30 0s10-20 10-20l10-2.18z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "goatee2": "<path class=\"shp0\" d=\"M200 458.02L190 460c-10 10-20 40-20 40s10 10 30 10 30-10 30-10-10-30-20-40l-10-1.98z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "goatee3": "<path class=\"shp0\" d=\"M175 485s10-5 25-5 25 5 25 5c-15 30-15 45-15 45l-5-10-5 20-5-20-5 10s0-15-15-45z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "goatee4": "<path class=\"shp0\" d=\"M220 480c10 0 30-5 30 0 0 20-30 30-50 30s-50-10-50-30c0-5 20 0 30 0h40z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "goatee5": "<path d=\"M200 460c10 0 10 20 20 20s20-20 20-20 10 0 10 5c0 40-10 50-50 50s-50-10-50-50c0-5 10-5 10-5s10 20 20 20 10-20 20-20z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "goatee6": "<path class=\"shp0\" d=\"M188 454c2-2 22-2 24 0s-8 16-12 16-14-14-12-16zm12 21c10 0 10 5 20 5s20-20 20-20 10 0 10 5c0 40-10 50-50 50s-50-10-50-50c0-5 10-5 10-5s10 20 20 20 10-5 20-5zm-50-50c-5-5 25-20 35-20 5 0 10 5 15 5s10-5 15-5c10 0 40 15 35 20s-5-5-50-5-45 10-50 5z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "goatee7": "<path class=\"shp0\" d=\"M250 485c-10 20-30 20-50 20s-40 0-50-20c5-5 10 10 50 10s45-15 50-10z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "goatee8": "<path class=\"shp0\" d=\"M188 454c2-2 22-2 24 0s-8 16-12 16-14-14-12-16zm62 31c-10 20-30 20-50 20s-40 0-50-20c5-5 10 10 50 10s45-15 50-10z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "handlebar": "<path d=\"M205 420c-4 0-5-5-.8-10 5.8-5 15.8-5 15.8-5 15 0 35 15 35 25 0 30 10 55 5 60s-15 5-20 0 5-40 5-55-15-15-40-15zm-10 0c4 0 5-5 0-10s-15-5-15-5c-16 0-35 15-35 25 0 30-10 55-5 60s15 5 20 0-5-40-5-55 15-15 40-15z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "honest-abe-stache": "<path d=\"M340 300c0 105-85 140-85 140s-5 30-15 30c-30 0-30-10-40-10s-10 10-40 10c-10 0-15-30-15-30s-85-35-85-140H50c0 105 20 140 20 140s55 80 130 80 130-80 130-80 20-35 20-140h-10zM150 425c-5-5 25-20 35-20 5 0 10 5 15 5s10-5 15-5c10 0 40 15 35 20s-5-5-50-5-45 10-50 5z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "honest-abe": "<path class=\"shp0\" d=\"M340 300c0 105-85 140-85 140s-5 30-15 30c-30 0-30-10-40-10s-10 10-40 10c-10 0-15-30-15-30s-85-35-85-140H50c0 105 20 140 20 140s55 80 130 80 130-80 130-80 20-35 20-140h-10z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "mustache-thin": "<style></style><path id=\"mustache_thin\" d=\"M205.17 408l-.17 12m10-15v16.28m10-13.26V420m10-10v11.28M194.83 408l.17 12m-10-15v16.28m-10-13.26V420m-10-10v11.53\" fill=\"red\" stroke=\"#000\" stroke-width=\"3\"/>",
+      "mustache1": "<path class=\"shp0\" d=\"M150 425c-5-5 25-20 35-20 5 0 10 5 15 5s10-5 15-5c10 0 40 15 35 20s-5-5-50-5-45 10-50 5z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "none": "",
+      "soul-stache": "<path class=\"shp0\" d=\"M188 458c2-2 22-2 24 0s-8 16-12 16-14-14-12-16z\" fill=\"$[hairColor]\" stroke=\"#000\"/>",
+      "soul": "<path class=\"shp0\" d=\"M188 458c2-2 22-2 24 0s-8 16-12 16-14-14-12-16zm-38-33c-5-5 25-20 35-20 5 0 10 5 15 5s10-5 15-5c10 0 40 15 35 20s-5-5-50-5-45 10-50 5z\" fill=\"$[hairColor]\" stroke=\"#000\"/>"
+    },
+    "glasses": {
+      "facemask": "<path fill-rule=\"evenodd\" class=\"facemask\" d=\"M200 190c50 0 100 10 110 20s20 80 20 80 0 60-10 70-50 10-80 10c-10 0-20-10-40-10s-30 10-40 10c-30 0-70 0-80-10s-10-70-10-70 10-70 20-80 60-20 110-20zm-70 90c-30 0-45 10-45 30 0 25 15 30 45 30s60-5 60-30-30-30-60-30zm140 60c30 0 45-5 45-30 0-20-15-30-45-30s-60 5-60 30 30 30 60 30z\" fill=\"rgba(150,150,175,.5)\" stroke=\"#000\" stroke-width=\"2\"/><path class=\"straps\" d=\"M350 315v-30h-20v30h20zm-280 0v-30H50v30h20z\" fill=\"#333\" stroke=\"#000\" stroke-width=\"2\"/><path class=\"glare\" d=\"M260 270l10-30m0 35l10-30m-160 25l10-30m0 35l10-30m120 115l5-15m0 20l5-15m-150 10l5-15m0 20l5-15\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2\"/>",
+      "glasses1-primary": "<path class=\"frame\" d=\"M195 285h10s35-10 65-10 50 10 50 10 0 5 10 5v30c-10 0-10 5-10 5s-20 20-50 20c-60 0-65-35-65-35 0-5-10-5-10 0 0 0-5 35-65 35-30 0-50-20-50-20s0-5-10-5v-30c10 0 10-5 10-5s20-10 50-10 65 10 65 10zM90 295c0 20 0 40 40 40 50 0 50-30 50-30v-10s-20-10-50-10c-40 0-40 10-40 10zm130 10s0 30 50 30c40 0 40-20 40-40 0 0 0-10-40-10-30 0-50 10-50 10v10z\" fill=\"#333\" stroke=\"#000\" stroke-width=\"2\"/><path class=\"lens\" d=\"M90 295s0-10 40-10c30 0 50 10 50 10v10s0 30-50 30c-40 0-40-20-40-40zm180 40c-50 0-50-30-50-30v-10s20-10 50-10c40 0 40 10 40 10 0 20 0 40-40 40z\" fill=\"rgba(150,150,175,.5)\"/><path class=\"straps\" d=\"M350 320v-30h-20v30h20zm-280 0v-30H50v30h20z\" fill=\"$[primary]\" stroke=\"#000\" stroke-width=\"2\"/><path class=\"glare\" d=\"M280 315l10-20m0 20l10-20m-160 20l10-20m0 20l10-20\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2\"/>",
+      "glasses1-secondary": "<path class=\"frame\" d=\"M195 285h10s35-10 65-10 50 10 50 10 0 5 10 5v30c-10 0-10 5-10 5s-20 20-50 20c-60 0-65-35-65-35 0-5-10-5-10 0 0 0-5 35-65 35-30 0-50-20-50-20s0-5-10-5v-30c10 0 10-5 10-5s20-10 50-10 65 10 65 10zM90 295c0 20 0 40 40 40 50 0 50-30 50-30v-10s-20-10-50-10c-40 0-40 10-40 10zm130 10s0 30 50 30c40 0 40-20 40-40 0 0 0-10-40-10-30 0-50 10-50 10v10z\" fill=\"#333\" stroke=\"#000\" stroke-width=\"2\"/><path class=\"lens\" d=\"M90 295s0-10 40-10c30 0 50 10 50 10v10s0 30-50 30c-40 0-40-20-40-40zm180 40c-50 0-50-30-50-30v-10s20-10 50-10c40 0 40 10 40 10 0 20 0 40-40 40z\" fill=\"rgba(150,150,175,.5)\"/><path class=\"straps\" d=\"M350 320v-30h-20v30h20zm-280 0v-30H50v30h20z\" fill=\"$[secondary]\" stroke=\"#000\" stroke-width=\"2\"/><path class=\"glare\" d=\"M280 315l10-20m0 20l10-20m-160 20l10-20m0 20l10-20\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2\"/>",
+      "glasses2-black": "<path class=\"frame\" d=\"M50 285h30s20-10 50-10 65 10 65 10h10s35-10 65-10 50 10 50 10h30v10l-30 5s-20-15-50-15-60 10-60 10-5 15 0 25c0 0-5-10-10-10s-10 10-10 10c5-10 0-25 0-25s-30-10-60-10-50 15-50 15l-30-5v-10z\" fill=\"#333\" stroke=\"#000\" stroke-width=\"2\"/><path fill-rule=\"lens\" class=\"lens\" d=\"M155 340c35 0 35 5 35-20 5-10 0-25 0-25s-30-10-60-10-50 15-50 15-5 40 5 45 40-5 70-5zm160 5c10-5 5-45 5-45s-20-15-50-15-60 10-60 10-5 15 0 25c0 25 0 20 35 20 30 0 60 10 70 5z\" fill=\"rgba(150,150,175,.5)\"/><path class=\"glare\" d=\"M275 330l15-35m-5 35l15-35m-165 35l15-35m-5 35l15-35\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2\"/>",
+      "glasses2-primary": "<path class=\"frame\" d=\"M50 285h30s20-10 50-10 65 10 65 10h10s35-10 65-10 50 10 50 10h30v10l-30 5s-20-15-50-15-60 10-60 10-5 15 0 25c0 0-5-10-10-10s-10 10-10 10c5-10 0-25 0-25s-30-10-60-10-50 15-50 15l-30-5v-10z\" fill=\"$[primary]\" stroke=\"#000\" stroke-width=\"2\"/><path fill-rule=\"lens\" class=\"lens\" d=\"M155 340c35 0 35 5 35-20 5-10 0-25 0-25s-30-10-60-10-50 15-50 15-5 40 5 45 40-5 70-5zm160 5c10-5 5-45 5-45s-20-15-50-15-60 10-60 10-5 15 0 25c0 25 0 20 35 20 30 0 60 10 70 5z\" fill=\"rgba(150,150,175,.5)\"/><path class=\"glare\" d=\"M275 330l15-35m-5 35l15-35m-165 35l15-35m-5 35l15-35\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2\"/>",
+      "glasses2-secondary": "<path class=\"frame\" d=\"M50 285h30s20-10 50-10 65 10 65 10h10s35-10 65-10 50 10 50 10h30v10l-30 5s-20-15-50-15-60 10-60 10-5 15 0 25c0 0-5-10-10-10s-10 10-10 10c5-10 0-25 0-25s-30-10-60-10-50 15-50 15l-30-5v-10z\" fill=\"$[secondary]\" stroke=\"#000\" stroke-width=\"2\"/><path fill-rule=\"lens\" class=\"lens\" d=\"M155 340c35 0 35 5 35-20 5-10 0-25 0-25s-30-10-60-10-50 15-50 15-5 40 5 45 40-5 70-5zm160 5c10-5 5-45 5-45s-20-15-50-15-60 10-60 10-5 15 0 25c0 25 0 20 35 20 30 0 60 10 70 5z\" fill=\"rgba(150,150,175,.5)\"/><path class=\"glare\" d=\"M275 330l15-35m-5 35l15-35m-165 35l15-35m-5 35l15-35\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2\"/>",
+      "none": ""
+    },
+    "hair": {
+      "afro": "<path d=\"M60 310H50s-40 0-40-50C10 120 80 70 200 70s190 50 190 190c0 50-40 50-40 50h-10v-20c0-5-10-20-15-25s-10-45-15-55c-6.32-12.65-60-10-110-10s-103.68-2.65-110 10c-5 10-10 50-15 55s-15 20-15 25v20zM200 70\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>",
+      "bald": "",
+      "cornrows": "<defs><linearGradient id=\"grd1\" gradientUnits=\"userSpaceOnUse\" x1=\"200\" y1=\"100\" x2=\"200\" y2=\"310\"><stop offset=\"0\" stop-color=\"rgba(0,0,0,.3)\"/><stop offset=\"1\" stop-color=\"rgba(0,0,0,0)\"/></linearGradient></defs><style></style><g id=\"cornrows\"><path id=\"Short Fade\" d=\"M60 310H50v-10c0-140 50-200 150-200s150 60 150 200v10h-10v-20c0-5-10-20-15-25s-5-45-15-55-60 0-110 0-100-10-110 0-10 50-15 55-15 20-15 25v20z\" fill=\"url(#grd1)\" stroke=\"none\"/><path id=\"cornrows\" d=\"M195 200h-10V100h10v100zm10 0h10V100h-10v100m20 0h10V100h-10v100m20 0h10v-95h-10v95zm20-5h10v-85h-10v85zm20 0h10v-75h-10v75zm20-5h10v-50h-10v50zm20 5h10v-20h-10v20m-150 5h-10V100h10v100zm-20 0h-10v-95.13h10V200zm-20-5v-85.15h-10V195h10zm-20 0v-75h-10v75h10zm-20-5H85v-50h10v50zm-20 5H65v-20h10v20z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/></g>",
+      "crop-fade": "<defs><linearGradient id=\"shortfade\" gradientUnits=\"userSpaceOnUse\" x1=\"200\" y1=\"100\" x2=\"200\" y2=\"310\"><stop offset=\"0\" stop-color=\"rgba(0,0,0,.25)\"/><stop offset=\"1\" stop-color=\"rgba(0,0,0,0)\"/></linearGradient></defs><style></style><g id=\"short fade\"><path id=\"Short Fade\" d=\"M60 310H50v-10c0-140 50-200 150-200s150 60 150 200v10h-10v-20c0-5-10-20-15-25s-5-55-15-65c-40-40-60 0-110 0s-70-40-110 0c-10 10-10 60-15 65s-15 20-15 25v20z\" fill=\"url(#shortfade)\" stroke=\"none\"/></g><path id=\"crop\" d=\"M200 95c120 0 140 90 140 115-20 0-20 5-25 0s-15-15-50-15c-15 0-40 5-65 5s-50-5-65-5c-35 0-45 10-50 15s-5 0-25 0c0-25 25-115 140-115z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>",
+      "crop": "<path d=\"M200 95c120 0 140 90 140 115-20 0-20 5-25 0s-15-15-50-15c-15 0-40 5-65 5s-50-5-65-5c-35 0-45 10-50 15s-5 0-25 0c0-25 25-115 140-115z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>",
+      "curly": "<path d=\"M182.42 68.88c-.3 1.02-.72 3.3-.94 5.06-.4 3.11-.51 3.17-6.13 2.9-3.15-.15-6.6.2-7.67.78-1.06.58-1.89 1.75-1.84 2.62.05.87 1.47 2.86 3.15 4.43 1.68 1.57 3.91 4.48 4.97 6.46 1.05 1.97 1.94 4.27 1.99 5.11.05.98-1.1 1.63-3.2 1.82-1.8.17-3.81.86-4.48 1.51-.67.67-1.46.87-1.75.45-.3-.41-.15-2.23.31-4.05.45-1.82.75-4.35.66-5.62-.08-1.28-1.22-2.99-2.52-3.82-2.06-1.32-2.6-1.32-4.28 0-1.06.82-2.38 1.49-2.94 1.49-.55-.01-1.52-1.04-2.15-2.3-.76-1.56-2.47-2.58-5.21-3.15-3.71-.76-4.29-.56-6.67 2.27-2.29 2.71-3.14 3.03-6.69 2.56-2.83-.38-4.05-.15-4.03.75.01.71 1 2.56 2.2 4.11 1.19 1.54 2.21 3.16 2.25 3.57.03.42-.84 1.67-1.95 2.78-1.12 1.1-1.76 2.57-1.43 3.27.34.69-.4 1.93-1.63 2.76-1.23.82-2.81 1.47-3.52 1.47-.7-.02-1.07-.69-.82-1.52.26-.83-.16-2.88-.93-4.58-1.1-2.49-1.82-2.99-3.65-2.56-1.69.4-2.41.02-2.84-1.49-.34-1.19-1.42-2.04-2.61-2.06-1.11-.01-2.91.89-3.99 1.99-1.41 1.43-2.77 1.82-4.78 1.39-2.05-.46-3.34-.07-4.79 1.44-1.09 1.15-1.66 2.65-1.27 3.34.4.72-.76 2.86-2.7 4.97-1.88 2.02-3.42 4.13-3.41 4.67.01.55-.67.98-1.52.97-.85-.01-1.76-.47-2.06-1.02-.29-.55-1.33-1-2.31-.99-.98 0-2.34.76-3.01 1.68-.68.92-1.23 2.9-1.23 4.39 0 1.96-.72 2.98-2.56 3.66l-2.55.94c4.8 4.65 6.2 6.44 6.2 6.98 0 .53.93.99 2.06 1.01 1.13.02 2.3.81 2.6 1.75.29.94.3 1.82.01 1.95-.29.13-1.34-.16-2.33-.65-1.09-.53-2.83-.51-4.37.06-1.41.52-4.31.85-6.42.75-2.11-.11-3.85.24-3.84.78 0 .54-.81.72-1.8.38-1.3-.42-2.56.55-4.65 3.58-1.57 2.29-2.62 4.71-2.3 5.38.3.68 2.19 2.03 4.19 3 2.54 1.24 3.54 2.31 3.32 3.6-.17 1.01-1.09 2.3-2.05 2.88-1.33.8-2.21.64-3.84-.69-2-1.67-2.23-1.65-5.22.39-2.12 1.45-2.94 2.68-2.56 3.85.32.94-.13 2.24-1 2.89-.86.66-1.56 1.74-1.53 2.41.02.67.96 1.77 2.09 2.45 1.8 1.1 1.86 1.39.5 2.43-1.18.91-1.5 2.88-1.33 8.24.19 6.12-.09 7.4-2.16 9.88-1.79 2.19-3.24 2.89-6.01 2.97-2.56.07-4.18.78-5.46 2.39-1.27 1.6-1.63 3.16-1.21 5.2.33 1.6 1.36 3.48 2.3 4.18.94.69 1.56 2 1.39 2.91-.18.9-.07 2.61.24 3.81.3 1.19 1.21 2.17 2.03 2.16.87 0 1.47.89 1.47 2.17 0 1.2-.75 3.26-1.65 4.59-1.29 1.9-1.5 3.6-1 7.96.39 3.47.26 5.53-.35 5.54-.53 0-1.19 1.1-1.45 2.42-.32 1.62-1.13 2.42-2.4 2.44-1.54.02-1.84.54-1.54 2.67.21 1.45-.16 4.82-.82 7.48-.65 2.65-1.12 8.36-1.04 12.68.06 4.31.47 8.19.9 8.63.42.42 1.16.02 1.64-.91.46-.93 1.28-1.71 1.8-1.71.51-.01.95.95.95 2.14.01 1.19-.58 3.89-1.31 6.02-1.03 2.96-1.14 5.52-.52 11.03.45 3.95 1.34 9.05 1.98 11.34.65 2.3 1.69 4.55 2.32 5.01.78.57 1.47.13 2.15-1.33.68-1.49 1.63-2.07 3.02-1.85 1.65.27 2.39-.51 3.94-4.13 1.06-2.45 2.26-4.46 2.64-4.47.39-.01.92 1.08 1.15 2.39.24 1.33 1.07 2.4 1.86 2.4.78-.01 1.43-.35 1.45-.75.03-.39.7-1.6 1.49-2.67 1.44-1.94 1.46-1.93 2.82.21.76 1.19 1.91 2.17 2.57 2.18.66.02 1.74-1.2 2.42-2.69.67-1.49 1.66-5.57 2.19-9.03.52-3.45.96-10.08.94-14.71-.01-5.63.53-9.9 1.66-12.98.95-2.58 1.48-5.92 1.2-7.67-.27-1.7.04-4.93.71-7.17.67-2.24 1.64-4.83 2.16-5.75.53-.93.98-2.11.99-2.64.02-.52 1.97-3.44 4.34-6.48 3.87-4.92 4.27-5.92 3.77-9.3-.4-2.64-.16-3.99.79-4.48.75-.37 2.53-.47 3.95-.19 1.62.3 3.19-.07 4.19-1.01.88-.82 2.78-1.73 4.22-2.01 1.46-.29 4.56-2.22 6.91-4.31 3.95-3.49 4.75-3.8 10.09-3.86 3.21-.04 6.54-.46 7.42-.94 1.12-.6 1.98-.39 2.82.69 1.04 1.32 3.27 1.55 14.31 1.45 11.35-.11 13.53.12 16.23 1.7 2.25 1.33 5.18 1.88 10.59 1.98 4.1.09 9.37.22 11.7.29 2.33.08 12.07-.26 21.6-.76 9.48-.47 18.93-.82 21.05-.78 2.47.05 5.06-.68 7.2-2.03 2.94-1.87 4.7-2.13 15.95-2.36 9.32-.18 12.8-.58 13.89-1.59 1.16-1.08 3.12-1.23 9.46-.73 7.44.61 8.1.84 11.54 4.16 1.98 1.94 4.34 3.54 5.24 3.56.9 0 2.89.88 4.42 1.93 1.53 1.05 3.6 1.71 4.61 1.46 1.01-.25 2.65-.23 3.65.05 1.54.42 1.73 1.02 1.25 4.03-.53 3.2-.18 4.09 3.66 9.3 2.29 3.19 4.75 7.31 5.47 9.17.72 1.87 1.7 4.47 2.17 5.8s1.09 5.45 1.37 9.16c.25 3.71 1.13 8.08 1.97 9.71 1.1 2.13 1.38 4.68 1.04 9.24-.31 3.72.03 9.54.82 14.18.73 4.34 1.39 9.22 1.48 10.85.08 1.63.9 3.75 1.82 4.72 1.61 1.68 1.75 1.66 3.36-.68.91-1.33 1.96-2.41 2.34-2.4.37.01 1.28 1.35 2 2.99.72 1.61 1.76 2.73 2.3 2.47.53-.25 1.07-1.56 1.19-2.9.11-1.33.52-2.43.89-2.42.37.01 1.54 2.04 2.6 4.52 1.56 3.57 2.36 4.37 3.86 3.95 1.4-.38 2.15.16 2.96 2.15 1.07 2.53 1.16 2.57 2.19.74.58-1.05 1.47-7.51 1.94-14.35.67-10.34.58-12.98-.47-15.62-.7-1.76-1.22-4.49-1.17-6.07.05-1.59.45-2.87.89-2.84.45.02.88.56.98 1.2.1.63.63.88 1.19.54.74-.44.99-3.08.92-9.5-.06-4.9-.48-9.91-.94-11.13-.46-1.22-.8-3.95-.76-6.07.06-2.84-.27-4-1.25-4.42-.74-.31-1.75-1.67-2.26-3.02-.51-1.35-1.19-2.46-1.51-2.49-.32-.02-.4-2.08-.18-4.58.31-3.59-.03-5.54-1.6-9.22l-2.02-4.65c3.03-2.56 4.54-5.7 5.57-9.2 1.28-4.42 1.55-6.51.99-7.96-.42-1.08-1.47-2.41-2.33-2.97-.88-.55-2.49-1.02-3.61-1.05-1.11-.02-2.21-.48-2.43-1.02-.22-.53.33-1.16 1.23-1.42.9-.25 1.64-1.21 1.65-2.14.01-.92.48-3.05 1.04-4.72.86-2.55.83-3.32-.18-4.72-.67-.93-2.53-2.4-4.14-3.28-2.26-1.23-3.26-2.6-4.32-5.93-.76-2.4-1.87-5.76-2.46-7.48-.59-1.73-1.47-3.14-1.96-3.14-.48.01-1.53-.75-2.35-1.67-1.41-1.61-1.6-1.61-3.99.02-2.14 1.45-2.52 1.49-2.56.25-.02-.78-.86-1.64-1.86-1.91-1-.26-1.64-1-1.42-1.67.21-.67 1.79-1.98 3.51-2.92 1.71-.94 3.3-2.38 3.52-3.18.22-.79-.66-3.41-1.99-5.79-1.68-3.01-3.22-4.51-4.99-4.92-1.41-.31-4.02-.27-5.8.08-3.11.63-3.29.51-4.84-3.31l-1.63-3.97c4.56-4.08 5.87-5.6 5.85-6-.03-.4-.69-.72-1.47-.71-.77.01-1.9-1.07-2.5-2.42-1-2.28-1.39-2.39-5.59-1.71-2.48.4-5.96 1.79-7.74 3.09-1.77 1.29-4.19 2.35-5.39 2.35-1.2-.01-2.19-.22-2.21-.49-.02-.28.5-2.16 1.15-4.19.67-2.09 2.42-4.48 4-5.48 1.54-.98 2.78-2.33 2.75-3.02-.02-.68-.98-2.01-2.13-2.95-1.78-1.47-1.93-2.03-1-3.8.93-1.78.79-2.29-.96-3.52-1.13-.8-3.04-1.43-4.26-1.41-1.22.02-2.83 1.07-3.59 2.33l-1.37 2.27c-3.88-4.5-5.65-5.47-7.42-5.46-1.49.01-3.57.47-4.62 1.04-1.04.57-2.47 2.4-3.15 4.07-.68 1.67-1.17 3.93-1.09 5.03.1 1.22-.51 2.02-1.56 2.06-1.04.03-3.2-2.05-5.41-5.21l-3.69-5.32c4.28-4.77 5.48-6.97 5.41-7.96-.07-1.08-1.24-2.14-2.91-2.65-1.56-.48-4.33-.44-6.22.07-2.62.73-3.79.58-5.03-.63-.88-.85-1.96-1.58-2.37-1.59-.41-.02-1.56 1.03-2.56 2.32l-1.81 2.33c-4.59-4.37-6.94-5.65-8.18-5.66-1.24-.01-2.53.73-2.87 1.64-.34.9-2.39 1.97-4.56 2.36-3.58.65-3.94 1.03-3.93 4.07.01 1.88-.63 3.56-1.45 3.85-.8.29-1.93.3-2.5.01-.58-.28-.9-2.01-.73-3.86.28-2.86-.09-3.59-2.44-4.92-2.25-1.27-3.11-1.32-4.61-.25-1.56 1.1-1.96 1.02-2.62-.52-.43-1-.37-3.72.14-6.04.82-3.8.7-4.38-1.02-5.6-1.07-.74-2.28-1.35-2.69-1.34-.41.01-.7.74-.63 1.63.06.88-.57 1.6-1.39 1.6s-1.75-.48-2.07-1.07c-.33-.58-1.7-1.07-3.08-1.07-1.56 0-2.46.61-2.39 1.61.07.88-.55 1.83-1.35 2.13-.8.29-2.63-.18-4.07-1.07-1.44-.88-2.66-2.31-2.73-3.2-.06-.89-.79-1.61-1.62-1.61-.84 0-1.78.85-2.07 1.88z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>",
+      "dreads": "<defs><linearGradient id=\"grd1\" gradientUnits=\"userSpaceOnUse\" x1=\"200\" y1=\"100\" x2=\"200\" y2=\"310\"><stop offset=\"0\" stop-color=\"rgba(0,0,0,.3)\"/><stop offset=\"1\" stop-color=\"rgba(0,0,0,0)\"/></linearGradient></defs><style></style><path id=\"Short Fade\" d=\"M60 300H50c0-140 50-200 150-200s150 60 150 200h-10v-10c0-5-10-20-15-25s-5-55-15-65c-40-40-60 0-110 0s-70-40-110 0c-10 10-10 60-15 65s-15 20-15 25v10z\" fill=\"url(#grd1)\" stroke=\"none\"/><path id=\"ponytail\" fill-rule=\"evenodd\" class=\"dreads-pony\" d=\"M217.4 2.49c1.16.4 4.69 1.24 7.86 1.87 4.97.98 5.76 1.45 5.75 3.39-.01 1.28-.77 2.47-1.76 2.76-.96.28-1.42.84-1.03 1.25.4.41.29 1.53-.25 2.49-.88 1.59-1.2 1.61-3.47.25-1.78-1.07-2.38-1.14-2.08-.25.23.69.68 2.49 1 4 .48 2.27.15 2.92-1.92 3.75-2.18.87-2.36 1.29-1.4 3.25.88 1.81.68 3.03-1.02 6.25-1.25 2.37-3.33 4.51-5.09 5.25-2.61 1.09-2.99 1.76-2.99 5.25 0 2.89.42 4 1.5 4 .82 0 1.72-.45 2-1s1.85-1 3.5-1c2.67 0 3.06-.39 3.5-3.5.36-2.55 1.11-3.66 2.75-4.11 1.24-.33 2.59-.56 3-.5.41.06.75-.56.75-1.39 0-1.18.81-1.37 3.75-.87 3.39.56 3.67.44 2.97-1.25-.42-1.04-.53-2.67-.25-3.63.29-.96.98-1.52 1.53-1.25s1 .05 1-.5 1.34-.89 2.98-.75c1.65.14 3.21-.31 3.5-1 .28-.69.86-1.2 1.27-1.13.41.06 1.31.06 2 0 .69-.07 1.47-1.02 1.75-2.12.45-1.8.83-1.88 3.75-.87 2.75.96 3.37.88 4-.5.41-.9 1.65-1.63 2.75-1.63s2 .34 2.01.75c0 .41.86.75 1.9.75 1.05 0 2.29-.31 2.75-.7.46-.38 1.52-.43 2.34-.1.82.33 1.95-.03 2.5-.8.56-.77 1.57-1.51 2.25-1.65.69-.14 1.94.31 2.79 1 .85.69 1.3 2.04 1 3-.3.96-.09 1.98.46 2.25s1.68.05 2.5-.5c.82-.55 1.68-.66 1.91-.25.22.41.22 3.23-.01 6.25s-.98 5.83-1.66 6.23c-.71.42-1.8-.01-2.55-1-1.24-1.63-1.38-1.63-2.5-.02-.66.94-1.75 1.73-2.44 1.75-.69.02-2.15-.86-3.25-1.96s-2-2.45-2-3c0-.55-1.24-1.19-2.75-1.43s-4.44-.69-6.5-1c-3.34-.51-3.78-.33-4 1.68-.19 1.67-1.37 2.64-4.58 3.75-3.75 1.29-4.26 1.81-3.75 3.75.45 1.75.03 2.47-1.92 3.25-1.37.55-2.5 1.45-2.5 2s.79 2.65 1.75 4.66c1.32 2.76 1.44 3.75.5 4-.81.22-.37 1.22 1.25 2.84 1.38 1.38 3.06 2.5 3.75 2.49.69 0 2.04.9 3 2 .96 1.11 2.43 2.01 3.25 2.01.82 0 1.73.79 2.01 1.75.28.96.84 1.42 1.25 1.01.41-.4 1.27.05 1.91 1 .89 1.33.89 2.05 0 3.03-.9 1-.88 1.29.08 1.25.69-.02 2.38-.49 3.75-1.04 1.93-.77 2.73-.66 3.5.5.69 1.04.61 2.01-.25 3.15-.69.9-1.11 2.82-.93 4.25.24 1.91-.3 2.91-2 3.77-1.28.65-3.22.95-4.32.67-1.12-.28-2.66.2-3.5 1.09-1.21 1.29-1.75 1.35-2.79.33-.72-.69-1.28-2.05-1.25-3.01.02-1.12-.5-1.57-1.46-1.25-.82.28-2.18.28-3 0-.82-.28-1.49-1.29-1.47-2.25.01-.96-.21-1.97-.5-2.25-.29-.28-2.21.02-4.28.66-2.06.64-3.75 1.81-3.75 2.6s-.5 2.07-1.11 2.84c-.61.77-1.17 3.09-1.25 5.15-.08 2.06-.36 4.2-.64 4.75-.28.55-1.29.77-2.25.49-1.3-.39-1.94.25-2.5 2.5-.62 2.47-1.21 2.97-3.31 2.76-1.41-.14-2.76.09-3 .5-.24.41-1.34.75-2.44.75-1.45 0-1.85.48-1.45 1.75.31.96.76 4.79 1 8.5.44 6.65.41 6.75-2.05 6.75-1.83 0-2.5.53-2.5 2 0 1.76-.45 1.92-3.75 1.36-2.06-.36-3.86-1.03-4-1.5-.14-.47-.7-.86-1.25-.86s-.99.56-.97 1.25c.02.69-1 2.53-2.25 4.09-1.81 2.25-2.8 2.7-4.78 2.18-1.67-.43-3-.12-4 .93-.97 1.02-2.15 1.31-3.34.81-1.2-.49-1.63-1.37-1.25-2.51.39-1.15.08-1.75-.91-1.75-.82 0-1.79.56-2.15 1.25-.48.93-.93.82-1.75-.43-.61-.92-2-1.69-3.1-1.7-1.1-.02-3.69-.05-5.75-.07-3.27-.04-3.83-.41-4.34-2.8-.32-1.51-1.11-4.33-1.74-6.25-.63-1.92-1.16-3.95-1.18-4.5-.02-.55-.7-2.51-1.51-4.36-1.32-2.99-1.85-3.32-4.82-3-2.42.26-3.59-.12-4.25-1.39-.5-.96-1.92-2.26-3.16-2.89-1.24-.62-1.91-.73-1.5-.25.42.49-.03 1.68-1 2.64-1.66 1.66-1.91 1.64-5-.25-1.79-1.1-3.7-1.78-4.25-1.5-.55.28-1 1.63-1 3 0 1.6-.63 2.61-1.75 2.8-.96.17-2.54.17-3.5 0-1.32-.23-1.75-1.27-1.75-4.3 0-3.62-.22-3.96-2.25-3.54-1.3.26-3.01-.27-4.03-1.25-.98-.94-1.77-2.27-1.75-2.96.02-.69-.53-1.43-1.22-1.65-.78-.25-1.06-1.46-.75-3.18.28-1.57 1.33-3.03 2.4-3.35 1.04-.31 2.28-1.58 2.75-2.82.54-1.43 1.94-2.43 3.85-2.75 1.65-.28 3-.95 3-1.5s.68-1 1.5-1 2.29 1.11 3.25 2.47c1.74 2.46 1.76 2.46 6.75-1.35l-2.73-2.81c-1.5-1.55-2.73-3.93-2.74-5.31 0-1.37-.57-3.03-1.26-3.69-.7-.65-1.83-.99-2.52-.75s-1.95-.12-2.79-.81c-.85-.69-1.53-2.71-1.46-7.75l-4.25.62c-3.88.56-4.36.38-5.5-2-1.14-2.39-1.03-2.73 1.28-3.87 1.39-.69 2.53-1.7 2.53-2.25s-.24-1.34-.53-1.75c-.29-.41-1.66-.19-3.04.5-2.19 1.09-2.69 1-3.96-.75-.82-1.13-1.17-2.87-.81-4 .35-1.1.72-3.12.83-4.5.11-1.37.25-3.06.32-3.75s.93-1.25 1.9-1.25c1.03 0 2.29-1.26 3-3 1-2.44 1.65-2.88 3.48-2.38 1.24.35 3.15 1.53 4.25 2.64 1.75 1.76 1.83 2.28.66 4.13-1.13 1.76-1.13 2.23 0 2.86.74.42 3.14 1.3 5.34 1.97 2.2.66 4.45 1.68 5 2.27.55.58 1.15 1.72 1.33 2.53.18.82 1.08 2.3 2 3.3 1.61 1.75 1.71 1.75 2.89 0 .82-1.23.9-2.38.25-3.57-.54-.96-.97-2.87-.97-4.25 0-1.37.72-2.84 1.59-3.25.97-.46 1.36-1.43 1-2.5-.39-1.15.01-1.93 1.16-2.27.96-.29 2.2-.09 2.75.44.63.61 1.83.62 3.25.02 1.76-.73 2.52-.54 3.5.89.94 1.38 1.99 1.68 7.25.6l-4.27-1.97c-3.19-1.47-4.26-2.53-4.25-4.21.01-1.24.47-2.48 1.02-2.75s.76-1.06.46-1.75.39-2.15 1.53-3.25c1.14-1.1 2.06-2.68 2.05-3.5-.01-.82 1.21-2.07 2.72-2.76 1.51-.69 3.3-1.26 3.99-1.25.69.01 1.36 1.02 1.5 2.26.14 1.24 1.26 2.7 2.5 3.25 1.24.55 2.26 1.79 2.25 2.75 0 .96-.52 1.86-1.15 2-.87.19-.87.8 0 2.5.87 1.69 1.77 2.13 3.65 1.75 1.99-.4 2.78.07 3.86 2.25.75 1.51 2.1 3.09 3 3.5.9.41 1.48 1.31 1.28 2-.2.69-.64 2.15-.98 3.25-.52 1.67-.16 2 2.11 1.98 1.5-.01 3.29-.35 3.98-.75.76-.44 1.25-2.89 1.25-11.73l5.25-2.38c2.89-1.3 5.55-2.99 5.93-3.75.43-.87-.21-1.83-1.75-2.62-1.89-.97-2.26-1.72-1.68-3.35.6-1.68 1.3-1.98 3.5-1.5 2.16.47 2.64.28 2.25-.9-.28-.83.18-1.72 1-2 .82-.28 1.57-1.23 1.65-2.12.11-1.19.71-1.42 2.25-.89zm-62.91 51.76c1.37.69 2.6 1.98 2.75 2.87.2 1.24 1.51 1.65 5.51 1.75 2.89.07 5.26-.21 5.27-.62.02-.41-1.11-1.76-2.5-3-1.38-1.24-3.2-2.02-4.02-1.75-.82.27-2.06-.1-2.75-.83s-2.26-1.85-3.5-2.5c-1.24-.64-2.47-1.17-2.75-1.17-.28 0-.5.9-.5 2 0 1.13 1.08 2.54 2.49 3.25zm78.34-.58c.11.87.95 1.13 2.42.74 1.38-.36 2.52-.07 2.94.75.39.74.95 1 1.25.59.31-.41-.23-1.65-1.19-2.76-.96-1.1-2.24-2-2.83-2-.6.01-1.46.31-1.92.68-.46.36-.76 1.26-.67 2zM224 72c1.33 0 1.75-.42 1.27-1.25-.41-.69-.86-1.59-1-2-.15-.41-.27-1.2-.27-1.75s-.45-1-1-1-1 1.35-1 3c0 2.33.44 3 2 3zm-53.5.09c.55 0 1.58-.7 2.28-1.55.7-.84.86-1.54.36-1.54s-1.53.7-2.28 1.54c-.75.85-.91 1.55-.36 1.55z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/><path id=\"dreads\" fill-rule=\"evenodd\" class=\"dreads\" d=\"M176.78 95.02c2.48.02 4.48.76 6 2.25 1.27 1.25 2.26 1.68 2.25.98-.02-.69.65-1.25 1.47-1.25s1.5.67 1.5 1.5.89 1.5 2 1.5c1.1 0 2.68-1.12 3.5-2.5.82-1.37 2.06-2.51 2.75-2.52.69-.01 2.26.89 3.5 2 1.34 1.2 2.9 1.76 3.86 1.37.99-.41 1.95-.02 2.5 1 .49.91 1.34 1.43 1.89 1.15.55-.28 1.15.4 1.32 1.5.18 1.1.63 2 1 2 .38 0 1.57-.56 2.65-1.25 1.73-1.1 2.4-.82 5.42 2.25 3.37 3.41 3.47 3.44 4.03 1.25.32-1.24.36-2.7.08-3.25-.28-.55.29-1.44 1.25-1.97s1.3-.98.75-.98c-.55-.01-.1-.66 1-1.45 1.53-1.1 2.3-1.16 3.29-.27.72.64 1.28 1.73 1.25 2.42-.02.69.18 1.25.46 1.25s2.53-1.35 5-3 5.18-2.78 6-2.5c.82.28 1.5 1.17 1.5 2 0 .83-.45 1.72-1 2s-1 .95-1 1.5 1.13 1 2.5 1c1.38 0 2.55.56 2.62 1.25.06.69.06 1.81 0 2.5-.07.69.56 1.25 1.38 1.25.82 0 1.94.79 2.48 1.75.86 1.53 1.11 1.56 1.98.25.55-.83.78-2.29.52-3.25-.27-.96-.03-1.97.52-2.25s1-1.4 1-2.5c0-1.8.53-1.96 5.25-1.58 2.89.23 6.04.46 7 .5.96.04 1.99.87 2.29 1.83.3 1.01-.12 2.07-1 2.5-.85.41-1.54 1.42-1.54 2.25 0 .83.68 1.72 1.5 2s1.48 1.06 1.46 1.75c-.03.69.67 1.92 1.54 2.75 1.13 1.07 1.58 1.14 1.54.25-.02-.69.97-1.24 2.21-1.22 1.24.01 2.93.71 3.75 1.55 1.02 1.04 2.55 1.36 4.75.98 1.79-.31 3.25-1.01 3.25-1.56s1.46-1 3.25-1c2.26-.01 3.71.68 4.75 2.25.82 1.24 1.5 4.05 1.5 6.25 0 3.55.27 4 2.39 4 1.76 0 2.76.87 3.75 3.25.75 1.79 1.7 3.24 2.11 3.22.41-.01 1.28 1 1.93 2.25.92 1.76.92 2.56 0 3.49-.91.93-.91 1.56.01 2.75.66.85 1.67 1.54 2.25 1.54.58 0 1.51-1.12 2.06-2.5.6-1.5 1.8-2.5 3-2.5 1.33 0 2.17.83 2.5 2.5.27 1.38 1.18 2.5 2 2.5.82 0 1.61 1.01 1.75 2.25.18 1.65.98 2.32 3 2.5 1.79.16 2.92.95 3.25 2.25.33 1.33-.17 2.33-1.5 3-1.84.92-1.88 1.18-.47 3.25.83 1.24 1.44 2.7 1.33 3.25-.1.55.37 2.35 1.05 4 1.16 2.8 1.04 3.16-1.81 5.5-1.68 1.38-3.06 2.95-3.07 3.5-.01.55 1.32 2.57 2.97 4.5 1.64 1.93 3.4 3.5 3.91 3.5.51 0 1.19.34 1.51.75.32.41-.1 2.1-.92 3.75-.82 1.65-1.16 3.11-.74 3.25.42.14.65 2.84.5 6-.22 4.87-.72 6.21-3.26 8.75-1.65 1.65-3 3.45-3 4 0 .55-.45 1.22-1 1.5s-1.74-.06-2.64-.75c-.91-.69-2.93-1.14-4.5-1-1.82.16-3.04-.29-3.36-1.25-.27-.82-.27-1.95 0-2.5s1.06-.98 1.75-.96c.69.03 1.81-.53 2.5-1.25.75-.77.95-2.03.5-3.13-.5-1.24-1.4-1.66-2.75-1.3-1.1.3-4.25.07-7-.52-2.75-.59-5.56-1.47-6.25-1.96-.86-.6-.95-1.43-.3-2.63.69-1.27.48-2.17-.75-3.27-.94-.83-2.49-1.4-3.45-1.25-.96.15-1.74-.07-1.72-.48.01-.41-1.11-1.31-2.5-2s-2.64-2.23-2.78-3.42c-.14-1.2-.93-2.41-1.75-2.69-1.16-.4-1.33-.03-.75 1.67.62 1.81.12 2.58-2.85 4.44-2.41 1.51-3.82 1.89-4.25 1.15-.36-.61-1.66-1.62-2.9-2.25-1.57-.8-2.05-1.68-1.59-2.9.38-1 .27-1.43-.25-1.01-.5.41-1.47.3-2.16-.25-.69-.54-2.6-.77-4.25-.49-2.66.44-2.94.81-2.46 3.25.34 1.7.05 3.03-.75 3.48-.71.41-3.2.75-5.54.75-2.78.01-4.8-.58-5.86-1.73-1.51-1.65-1.76-1.65-4.25-.06-1.45.92-3.32 2.63-4.14 3.79-1.4 1.97-1.35 2.11.75 2.07 1.35-.03 2.25.55 2.25 1.45 0 .82-.68 1.72-1.5 2s-2.74.51-4.25.51c-1.51.01-4.27-.33-6.12-.75-1.86-.42-3.77-1.55-4.25-2.51-.62-1.23-.27-2.57 1.15-4.5 1.12-1.51 2.02-3.09 2-3.5-.01-.41-1.6-.75-3.53-.75-2.44 0-3.5.45-3.5 1.5 0 .82.34 1.5.75 1.51.41 0 .68 1.01.58 2.25-.09 1.23-.2 2.58-.25 2.99-.04.41-1.09.87-2.33 1.02-1.41.18-2.11.83-1.88 1.75.21.82.54 2.27.75 3.23.28 1.27-.52 1.99-2.87 2.63-1.79.48-4.55.6-6.14.25-1.72-.37-3.24-1.55-3.75-2.88-.47-1.24-1.31-2.47-1.86-2.75-.55-.28-1-1.85-1-3.5s-.45-3.22-1-3.5c-.67-.33-.67-1.17 0-2.5.55-1.1 1.79-1.98 2.75-1.96 1.56.04 1.59-.12.25-1.54-.82-.87-2.06-1.57-2.75-1.54-.69.02-1.7.94-2.25 2.04s-1 2.9-1 4-.45 2-1 2-.83.79-.63 1.75c.21.96-.25 2.65-1.01 3.75-.77 1.1-1.39 2.79-1.38 3.75.01.96.47 1.75 1.02 1.75s1 .68 1 1.5-1.01 1.71-2.25 1.97-3.15.57-4.25.69-2.9-.08-4-.45c-1.31-.45-2.09-1.71-2.25-3.69-.19-2.28.18-3.04 1.5-3.1 1.39-.06 1.44-.19.25-.63-.82-.31-2.08-1.06-2.78-1.67-1.03-.89-.82-1.57 1-3.34 1.83-1.79 2.03-2.47 1.02-3.5-.69-.7-1.34-2.85-1.44-4.78-.15-2.71-.83-3.84-3-5-1.54-.82-2.58-2.06-2.3-2.75.27-.69-.18-1.25-1-1.25-.82 0-1.72.45-2 1s.18 2.35 1 4c.87 1.75 1.22 3.94.83 5.25-.37 1.24-1.39 2.77-2.25 3.41-.87.64-1.92.98-2.33.75-.41-.22-1.41.38-2.21 1.34-.8.96-1.23 2.43-.96 3.25.27.82-.08 2.01-.79 2.64-.71.62-3.09 1.45-5.29 1.85-2.53.45-4.92.26-9-1.73l2.5-1.77c1.74-1.23 2.27-2.26 1.75-3.38-.49-1.06-2.03-1.61-4.5-1.61-2.67-.01-4.11.57-5 2-.81 1.3-1.95 1.82-3.25 1.5-1.1-.28-2.68-.05-3.5.5-.82.55-2.62.78-4 .5-1.43-.29-2.57-1.25-2.65-2.25-.09-.96-.2-2.33-.25-3.04-.06-.7-.78-1.71-1.6-2.23-.82-.52-2.74-.96-4.25-.96-1.51-.01-2.75-.47-2.75-1.02s-.45-1-1-1-1.22.9-1.5 2-1.29 2.06-2.25 2.14c-.96.08-2.65.17-3.75.2s-3.58-.76-5.5-1.75-4.29-1.52-5.25-1.19c-.96.33-1.73 1.39-1.71 2.35.03.96-.72 2.43-1.66 3.25-.96.84-3.71 1.52-6.29 1.56-2.53.03-5.26.43-6.09.89-1.29.72-1.26.95.25 1.69.96.47 1.75 1.76 1.75 2.86 0 1.1-.45 2.22-1 2.5-.55.28-1.45 1.63-2 3-.6 1.5-1.8 2.5-3 2.5-1.1 0-2.79.9-3.75 2.01-.97 1.11-2.98 2-4.5 2-1.51-.01-2.97-.46-3.25-1.01-.3-.6-1.21-.39-2.25.52-1.42 1.24-1.99 1.29-3 .25-.69-.7-1.03-2.06-.75-3.02.31-1.08-.17-1.99-1.25-2.37-.96-.34-3.66-1.47-6-2.5-3.09-1.37-4.43-2.63-4.9-4.63-.36-1.51-.13-3.99.5-5.5.88-2.11.86-3.27-.1-5-.69-1.24-1.7-2.56-2.25-2.93-.65-.45-.56-1.58.25-3.25.9-1.86 1.73-2.38 3-1.89.96.38 3.1.66 4.75.62 1.65-.03 3.33.45 3.73 1.07.49.75.73.62.71-.37-.02-.82.67-2.18 1.53-3 .86-.82 1.67-2.62 1.79-3.99.16-1.61.95-2.61 2.24-2.82 1.1-.19 2.33.26 2.73.99.55.99.74 1.01.75.07.01-.69-.99-1.92-2.23-2.75-2.12-1.4-2.17-1.72-.91-5.25 1.2-3.33 1.14-4.12-.5-7.11-1.83-3.34-1.83-3.36.46-5 1.26-.9 2.27-2.43 2.25-3.39-.03-.96.85-2.2 1.95-2.75 1.1-.55 3.13-1 4.5-1 1.38 0 2.72-.68 3-1.5.33-1 1.33-1.33 3-1 2.06.41 2.39.19 1.85-1.25-.36-.96-1.59-2.78-2.75-4.05-1.67-1.83-1.87-2.64-.97-4 .62-.93 2.09-1.7 3.25-1.7 1.17 0 2.35-.79 2.62-1.75.28-.96.95-1.75 1.5-1.75s1.67 1.01 2.48 2.25c.87 1.32 1.24 3.28.89 4.75-.38 1.6-.1 2.75.77 3.2.76.39 2.15-.06 3.14-1 .98-.94 1.54-2.49 1.25-3.45-.29-.96.37-3.33 1.47-5.25 1.19-2.07 1.59-3.7 1-4-.63-.31-.54-1.1.25-2.13.69-.9 2.15-2.02 3.25-2.5s2.9-1.43 4-2.12c1.1-.69 2.22-1.6 2.5-2.03.28-.42 1.29-.54 2.25-.25 1.16.35 1.75 1.54 1.75 3.53 0 2.5.33 2.92 2 2.5 1.13-.28 3.2.39 4.75 1.53 1.51 1.12 3.43 1.99 4.25 1.94.96-.07.67-.53-.8-1.29-1.27-.65-2.17-1.85-1.99-2.68.17-.83 1.21-1.61 2.3-1.75 1.09-.14 2.55-1.38 3.24-2.75.69-1.38 1.03-2.95.75-3.5-.28-.55.2-1.56 1.04-2.25.85-.69 1.53-1.81 1.5-2.5-.02-.69.75-1.24 1.71-1.23.96 0 2.26.34 2.88.75.63.4 1.3 1.58 1.5 2.62.26 1.34 1.4 2.01 3.87 2.26 2.85.3 3.69-.06 4.54-1.89.57-1.24 1.47-2.2 2-2.13.53.08 2.09.5 3.46.93 2.11.67 2.38.53 1.75-.89-.49-1.1-.24-1.84.75-2.17.82-.28 1.5-1.17 1.5-2 0-1 .67-1.33 2-1 1.33.33 2.34-.17 3.03-1.5.75-1.46 2.02-1.99 4.75-1.98zm76.05 21.02c.09.53 1.41 1.8 2.92 2.83s3.65 2.16 4.75 2.51c1.59.52 2.14.09 2.69-2.12.5-2 .22-3.12-1-4.08-.93-.73-1.58-1.74-1.44-2.25.14-.51-.65-1.1-1.75-1.32-1.1-.21-2.98.48-4.17 1.54s-2.09 2.36-2 2.89zm-104.49 2.52c-.65 1.09-.81 2.6-.36 3.44.44.83 1.3 1.16 1.91.75.61-.41 1.11-1.87 1.11-3.25 0-2 .5-2.5 2.5-2.5s2.5-.5 2.5-2.5c0-1.37-.38-2.5-.85-2.5-.46 0-1.93 1.04-3.25 2.31s-2.92 3.18-3.56 4.25zM233 117c0 .55.68 1 1.5 1s1.5.45 1.5 1 .5.89 1.12.75c.62-.14 1.52-1.26 2-2.5.63-1.62.53-2.21-.37-2.11-.69.07-2.26.3-3.5.5-1.24.2-2.25.81-2.25 1.36zm-53 5c.55 0 1-.67 1-1.5s-.45-1.5-1-1.5-1 .67-1 1.5.45 1.5 1 1.5zm99.25 1.45c.69.25 1.6.13 2.03-.25.43-.39.76-1.49.75-2.45-.02-.96-.39-1.75-.83-1.75-.44 0-1.34.9-2 2-.94 1.57-.93 2.1.05 2.45zM245.5 125c1.02.96 1.66 1.1 1.78.37.1-.62-.49-1.69-1.31-2.37-.83-.68-1.63-.85-1.78-.37-.15.48.44 1.54 1.31 2.37zm-43 4c1.38.55 2.72 1 3 1 .28 0 .11-.79-.37-1.75s-1.88-2.05-3.12-2.41c-1.61-.46-2.22-.25-2.13.75.06.78 1.25 1.86 2.62 2.41zm-62.68.47c.1.29.74.72 1.43.95.69.24 2-.44 2.92-1.5.92-1.05 1.37-1.89 1-1.86-.37.04-1.76.47-3.1.97s-2.35 1.15-2.25 1.44zM153 139c-.55 0-.75.56-.44 1.25.3.69-.15 1.81-1 2.5-1.11.88-2.14.96-3.56.25-1.33-.67-2.17-.67-2.5 0-.28.55.51 1.86 1.75 2.91s2.47 1.54 2.75 1.08c.28-.45 1.63-1.1 3-1.45 2.19-.55 2.5-1.17 2.5-5 0-2.41-.35-4.75-.78-5.21-.43-.45-.76.18-.75 1.42.02 1.24-.42 2.25-.97 2.25zm14.25 7.75c-1.42.16-2.42 1.08-2.7 2.5-.25 1.24-.02 2.7.5 3.25.53.55.73 1.79.45 2.75-.36 1.28-1.11 1.58-2.75 1.1-1.97-.57-2.09-.44-1 1 .69.91.95 2.44.59 3.4s-.59 2.09-.5 2.5c.09.41-.96 1.65-2.34 2.75-1.37 1.1-2.5 2.9-2.5 4s.45 2.22 1 2.5c.55.28 1.39 1.51 1.86 2.75.49 1.29 1.97 2.46 3.48 2.75 1.87.36 2.64.07 2.68-1 .04-.82-.51-2.01-1.23-2.62-.71-.62-1.63-2.08-2.04-3.25-.61-1.73.02-2.74 3.36-5.38 3.32-2.63 4.01-3.73 3.61-5.75-.28-1.4.21-3.6 1.12-5 .89-1.37 1.88-2.72 2.21-3 .33-.28.9-1.29 1.27-2.25.45-1.17-.15-2.58-1.82-4.25-2.26-2.26-2.35-2.67-1-4.25.83-.96 1.17-2.1.75-2.53-.41-.43-1.23-.76-1.81-.75-.58.02-1.03 1.94-1 4.28.05 3.69-.24 4.28-2.19 4.5zM278.5 143c.82 0 1.27-.45 1-1s-.95-1-1.5-1-1 .45-1 1 .68 1 1.5 1zm-75 3.5c.82.28 1.95.28 2.5 0s1-.95 1-1.5-.88-1-1.95-1c-1.07 0-2.2.45-2.5 1-.3.55.13 1.22.95 1.5zm98.36 2c.59.55 1.76.66 2.6.25 1.25-.61 1.31-1.04.29-2.29-.69-.85-1.57-1.53-1.95-1.5-.39.02-1 .6-1.36 1.29-.36.69-.17 1.7.42 2.25zM235 152c1.65 0 3-.45 3-1s-1.01-1.68-2.25-2.51c-1.24-.83-2.59-1.5-3-1.5-.41.01-.75 1.14-.75 2.51 0 2.11.47 2.5 3 2.5zm-141.4.79c1.55 1.05 1.96 1.05 2.24 0 .19-.71.07-1.85-.25-2.54S94.57 149 94.05 149s-1.27.56-1.65 1.25c-.4.72.11 1.8 1.2 2.54zm15.16-.72c.13.51.91 1.15 1.74 1.43s1.95.5 2.5.5.89-.63.75-1.4c-.14-.78-.52-1.58-.86-1.79-.33-.21-1.45-.22-2.49-.03-1.04.2-1.77.78-1.64 1.29zm77.17 4c.04.51 1.31.64 2.82.29 1.51-.35 2.97-.81 3.25-1.02.28-.22-.19-1.08-1.04-1.94-1.38-1.39-1.71-1.38-3.32.1-.98.9-1.75 2.06-1.71 2.57zm34.08 5.43c2.37 3.2 2.72 4.26 1.73 5.29-.99 1.04-.94 1.29.26 1.27.9-.01 1.8-1.44 2.25-3.54.41-1.94.5-4.08.2-4.77-.3-.69-2.19-1.98-4.2-2.87-2.31-1.03-3.57-1.21-3.42-.5.12.61 1.56 2.92 3.18 5.12zm-16.65.5c1.29 1.31 1.3 1.95.06 5-1.28 3.17-1.25 3.61.33 4.64.96.63 2.36.86 3.1.5.83-.39 1.17-1.61.87-3.14-.28-1.37-.05-3.4.49-4.5.72-1.45.55-2.9-.61-5.25-.88-1.79-2.25-3.25-3.05-3.25-.79 0-1.72 1.01-2.06 2.25-.38 1.38-.04 2.83.87 3.75zm35.14 0c.82 0 1.68-.34 1.9-.75.23-.41-.78-.81-2.23-.89-1.46-.08-2.31.25-1.91.75.41.49 1.42.89 2.24.89zm79.3 25.7c.12 1.43.86 2.31 1.95 2.33.96.01 2.24-1 2.85-2.25.6-1.25.94-2.84.75-3.53-.19-.69-.93-1.25-1.65-1.25-.72 0-1.93.54-2.7 1.2-.77.66-1.31 2.24-1.2 3.5z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>",
+      "faux-hawk": "<path d=\"M185.17 46.93c-1.3.97-2.87 2.36-3.49 3.08-.62.74-2.49 2.24-4.17 3.33-1.69 1.1-3.77 3.18-4.64 4.62-.86 1.43-2.6 3.21-3.88 3.97-1.28.76-4.32 2.88-6.77 4.69-2.48 1.8-5.35 4.43-6.36 5.87-1.02 1.42-2.86 3.33-4.11 4.25-1.24.9-2.78 1.52-3.4 1.38-.62-.15-2.47.71-4.12 1.89s-3.75 2.53-4.66 3c-.9.47-2.76 1.87-4.15 3.1-1.39 1.22-2.82 2.27-3.17 2.34-.34.07-1.72 1.14-3.06 2.37-1.34 1.21-2.59 2.23-2.76 2.26-.18.03-1.92 1.35-3.88 2.91-1.96 1.55-4.46 3.77-5.54 4.94-1.08 1.16-2.43 3.03-2.98 4.15-.96 1.9-1.22 2.04-4.54 2.41-2.98.38-4.01.82-6.48 2.76-1.98 1.55-3.23 3.03-3.84 4.55-.49 1.23-1.98 4.28-3.31 6.77-2.06 3.89-3.32 5.36-9.2 10.83-3.71 3.43-8.25 7.6-10.1 9.27-2.41 2.17-3.69 3.84-4.55 5.93-.65 1.6-1.86 4.77-2.68 7.05-.82 2.28-1.59 4.56-1.73 5.08-.13.52-1.61 2.22-3.27 3.78-2.42 2.32-3.02 3.26-3.38 5.28-.23 1.35-.43 2.86-.45 3.36-.01.49-.9 1.82-1.95 2.95-1.05 1.13-2.15 2.63-2.46 3.33-.3.69-1.03 3.61-1.59 6.46-.55 2.87-1.05 6.42-1.14 7.91-.13 2.28-.6 3.47-2.92 7.48-1.44 2.61-2.76 5.69-2.98 6.85-.22 1.18-.2 3.57.05 5.36.4 2.96.34 3.47-.58 5.85-.54 1.43-.99 3.6-1.01 4.84-.02 1.22.2 3.03.48 4 .45 1.56.39 2.06-.54 4.5-.56 1.49-1.02 3.46-1.02 4.36-.01.91.17 2.38.4 3.27.23.89.68 2.02 1.01 2.51.38.58.63 2.63.72 5.97.08 2.88-.08 6.26-.37 7.79-.36 1.87-.39 3.06-.1 3.89.24.66.26 1.6.07 2.1-.2.5-.49 2.71-.66 4.93-.19 2.53-.12 4.55.18 5.39.28.78.45 4.14.39 7.94-.08 5.04.09 7.26.77 9.57.51 1.66 1.08 4.36 1.26 6.01.19 1.64.75 3.48 1.24 4.08.51.6 1.49 1.11 2.17 1.13.69 0 2.36-.76 3.7-1.72 1.34-.95 2.7-1.73 3.02-1.72.33 0 1.17-.65 1.88-1.47.7-.81 1.23-1.97 1.17-2.55-.06-.59.83-2.28 1.96-3.77 1.14-1.5 2.16-3.2 2.27-3.79.11-.59.51-1.07.9-1.05.39.01 1.7-1.37 2.9-3.06 1.22-1.71 2.29-3.88 2.38-4.81.09-.93.49-1.82.89-1.98.4-.15 1.15-.79 1.68-1.41.57-.68 1.01-2.56 1.11-4.69.1-1.96.65-4.67 1.21-6.05.56-1.37.9-2.84.75-3.27-.14-.42.54-1.96 1.55-3.44 1.5-2.16 1.8-3.06 1.47-4.53-.22-1.02-.37-2.26-.36-2.77.02-.51.2-1.91.4-3.1.2-1.2.59-3.44.85-4.97.29-1.6 1.2-3.57 2.09-4.57.91-1.02 1.65-2.57 1.71-3.63.07-1.02-.24-2.89-.68-4.13-.44-1.26-.76-2.64-.72-3.06.04-.43.87-1.65 1.84-2.72 1.31-1.41 1.85-2.64 2.03-4.57.15-1.64.68-3.02 1.39-3.63.64-.54 1.23-1.76 1.33-2.7.1-.94-.05-2.19-.33-2.77-.33-.73 0-2.05 1.08-4.25.87-1.74 2.74-4.42 4.15-5.95 2.25-2.41 2.84-2.72 4.42-2.45 1.01.18 1.99.41 2.16.5.18.09 1.3-.15 2.51-.54 1.21-.38 2.86-.86 3.66-1.04.81-.18 2.64-.69 4.08-1.12 1.45-.44 3.5-1.17 4.56-1.63 1.66-.73 2.28-.68 4.31.35 1.48.75 3.11 1.06 4.29.81 1.05-.21 4.04-.04 6.65.4 4.23.68 5.19 1.14 7.89 3.74 2.22 2.1 4.04 3.12 6.36 3.54 2.36.44 3.89.42 5.51-.09 1.23-.39 3.29-1.38 4.57-2.2 1.7-1.1 2.67-1.36 3.65-.97.74.3 2.76.7 4.49.91 1.75.2 3.53.53 3.94.75.43.22 2.4.56 4.38.78 1.98.22 4.87.64 6.41.95 2 .4 3.75.33 6.1-.25 1.8-.44 4.56-.95 6.14-1.15 2.21-.27 3.19-.07 4.43.88.88.66 3.06 1.37 4.85 1.57 2.22.24 4.11.05 5.91-.59 1.45-.52 3.27-1.73 4.04-2.69.9-1.11 2.05-1.73 3.2-1.72 1 0 1.94.2 2.12.45.18.24 1.53.61 3.03.82 1.71.23 4.23-.01 6.85-.65 2.27-.56 4.56-1.01 5.11-.99.53.01 2.17-.86 3.61-1.93 2.26-1.7 2.86-1.88 4.58-1.34 1.09.34 2.85.57 3.91.52 1.05-.06 3.79.63 6.08 1.51 2.29.9 5.01 1.64 6.06 1.67 1.05.02 2.63-.24 3.53-.58.9-.33 2.64-1.32 3.87-2.18 1.25-.88 2.66-1.4 3.19-1.17.54.23 3.62.56 6.84.72 4.6.26 6.21.13 7.78-.65 1.67-.84 2.26-.88 3.83-.23 1.03.41 3 1.08 4.39 1.47 1.37.4 3.14.84 3.91 1.01.77.17 2.35.59 3.51.93 1.15.35 2.24.56 2.41.48.17-.09 1.11-.3 2.09-.47 1.53-.28 2.08.01 4.21 2.19 1.33 1.38 3.07 3.82 3.87 5.43.99 2.01 1.28 3.21.93 3.89-.28.53-.46 1.68-.39 2.54.07.86.61 1.98 1.21 2.47.68.57 1.15 1.83 1.25 3.34.11 1.79.59 2.93 1.82 4.24.92 1 1.69 2.14 1.72 2.54.02.4-.33 1.68-.81 2.84-.48 1.16-.86 2.9-.83 3.86.02 1.01.69 2.48 1.55 3.45.85.97 1.67 2.86 1.89 4.37.21 1.49.5 3.65.66 4.82.15 1.15.27 2.52.26 3.02 0 .49-.22 1.71-.48 2.7-.39 1.44-.13 2.34 1.28 4.52.97 1.5 1.61 3.07 1.43 3.49-.17.42.11 1.92.63 3.33.52 1.41.94 4.22.95 6.24 0 2.22.37 4.19.94 4.92.52.67 1.28 1.35 1.69 1.53.41.17.8 1.13.84 2.12.05.98 1.08 3.32 2.3 5.17 1.22 1.86 2.57 3.37 2.98 3.36.43-.01.85.51.94 1.14.09.64 1.13 2.49 2.31 4.13 1.19 1.61 2.11 3.45 2.02 4.08-.09.63.47 1.87 1.24 2.75.78.87 1.71 1.57 2.06 1.55.35-.02 1.85.78 3.34 1.76 1.51.95 3.41 1.68 4.2 1.63.8-.05 1.94-.62 2.53-1.26.57-.63 1.24-2.52 1.46-4.2.22-1.66.89-4.38 1.47-6.02.77-2.28.97-4.48.86-9.49-.07-3.77.11-7.1.42-7.83.33-.8.39-2.8.17-5.32-.2-2.23-.52-4.48-.75-5-.21-.53-.19-1.45.07-2.07.31-.78.28-1.98-.11-3.9-.32-1.57-.51-4.96-.43-7.83.08-3.33.34-5.36.75-5.89.35-.44.83-1.53 1.06-2.41.23-.88.41-2.47.38-3.56-.02-1.09-.52-3.14-1.12-4.54-1.01-2.35-1.06-2.72-.54-4.47.31-1.04.53-2.87.5-4.04-.03-1.18-.52-3.36-1.09-4.84-.96-2.44-1.01-2.97-.61-6 .23-1.86.24-4.33 0-5.54-.23-1.19-1.57-4.3-3.03-6.88-2.32-3.95-2.79-5.13-2.94-7.47-.11-1.53-.65-5.16-1.22-8.08-.59-2.93-1.35-5.89-1.66-6.58-.31-.69-1.4-2.1-2.42-3.13-1.04-1.03-1.91-2.31-1.94-2.83-.02-.52-.25-2.1-.51-3.51-.4-2.2-.97-3-3.89-5.58-1.93-1.68-3.61-3.49-3.71-4.02-.11-.55-.7-1.65-1.34-2.46-.64-.81-1.67-2.97-2.33-4.8-.78-2.24-1.91-4.06-3.35-5.4-1.22-1.16-2.63-3.25-3.24-4.82-.58-1.54-1.87-3.53-2.83-4.42-.96-.89-2.66-2.03-3.77-2.52-1.11-.51-2.4-1.71-2.89-2.68-.48-.98-1.86-2.57-3.06-3.54-1.21-.99-2.98-1.8-3.94-1.79-.95-.01-2.17-.46-2.69-1.01-.53-.55-1.44-2.05-2.03-3.33-.58-1.29-2.72-3.99-4.74-6.03-2.03-2.06-5.34-5.62-7.37-7.91-2.03-2.32-4.3-4.5-5.03-4.81-.75-.31-2.86-2.35-4.71-4.58a31.17 31.17 0 00-7.77-6.86c-2.41-1.52-5.5-3.2-6.87-3.71-1.38-.51-3.64-1.46-5.02-2.12-1.38-.65-3.34-2.34-4.36-3.77-1.01-1.44-2.16-2.65-2.55-2.68-.4-.03-1.83-2.03-3.18-4.48-1.34-2.47-3.19-5.22-4.13-6.08-.94-.87-3.32-1.63-5.34-1.69-3.6-.07-3.7-.14-6.67-5.19-2.37-4.2-3.26-5.19-4.62-5.01-1.34.18-2.14-.71-4.05-4.6-1.92-4.07-2.64-4.9-4.33-4.9-1.4.02-2.44.92-3.37 2.87-1.35 2.75-1.37 2.76-2.08.47-.4-1.27-1.98-3.47-3.52-4.86l-2.76-2.51-4.82 5.56c-4.32-3.67-5.38-3.83-7.64-2.84-1.58.68-3.69.94-4.7.56-1.23-.43-2.61-.07-4.19 1.12z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>",
+      "hair": "<path d=\"M185 76.42c-2.48.71-5.63 1.74-7 2.3-1.38.56-3.85 2.13-5.5 3.48-1.65 1.36-5.7 4.34-9 6.64s-8.25 5.77-11 7.71c-3.51 2.48-6.04 3.51-8.5 3.47-1.93-.03-5.3.57-7.5 1.34-2.2.78-8.95 2.18-15 3.12-6.05.95-13.93 2.39-17.5 3.21-3.58.82-8.53 2.52-11 3.78-2.5 1.27-6.18 4.45-8.3 7.16-2.39 3.07-4.54 7.46-5.81 11.87-1.1 3.85-3.33 11.05-4.95 16-1.62 4.95-3.85 13.72-4.95 19.5-1.29 6.71-2.87 11.76-4.37 14-1.29 1.92-6.25 8-11.01 13.5-5.96 6.87-9.96 12.66-12.81 18.5-3.02 6.22-4.25 10.11-4.57 14.5-.3 4.21.35 9.44 2.2 17.5 2.18 9.54 2.45 12.27 1.62 16-.55 2.47-1.91 6.86-3.02 9.75-1.12 2.89-2.31 7.61-2.65 10.5-.33 2.89-.12 7.72.49 10.75.75 3.73 2.31 7.04 4.87 10.29 2.07 2.63 4.21 4.95 4.76 5.15.55.2 3.47-.46 6.5-1.47 3.02-1.01 6.42-2.88 7.55-4.15 1.12-1.28 3.08-5.02 4.34-8.32 1.26-3.3 2.93-8.93 3.71-12.5.88-4.04 2.45-7.77 4.16-9.84 1.51-1.84 3.5-4.54 4.42-6 1.09-1.71 2.8-10.34 4.79-24.16 1.71-11.83 3.56-23.3 4.12-25.5.55-2.2 1.42-5.13 1.93-6.5.51-1.38 3.53-4.78 6.7-7.56 3.18-2.78 9.83-7.8 14.78-11.15 6.91-4.68 10.16-6.24 14-6.75 3.19-.42 7.71-.09 12.5.91 4.12.87 13.57 3.81 21 6.53 7.42 2.73 17.77 5.9 23 7.06 5.22 1.16 10.4 2.27 11.5 2.47 1.1.2 4.14 2.19 6.75 4.43 3.82 3.27 5.08 5.18 6.43 9.81.93 3.16 2.5 6.54 3.5 7.5s2.61 1.76 3.57 1.77c.96 0 5.8-1.97 10.75-4.4 4.95-2.42 12.61-6.59 17.02-9.26s12.29-8.09 17.5-12.04c6.1-4.63 10.1-8.46 11.23-10.75 1.32-2.7 2.54-3.71 5-4.15 1.79-.32 5.95-.09 9.25.5s8.92 2.52 12.5 4.29c4.02 1.98 9.02 5.7 13.11 9.75 5.37 5.31 6.92 7.57 8.22 12.04.88 3.02 2.28 9.1 3.12 13.5.84 4.4 2.45 14.97 3.59 23.5 1.31 9.87 2.71 16.59 3.84 18.5.98 1.65 2.08 6.04 2.45 9.75.37 3.71 2.03 10.46 3.7 15 1.66 4.54 4.11 9.82 5.43 11.75 1.32 1.92 3.98 4.4 5.92 5.5 3.08 1.75 3.99 1.85 7.32.8 3.05-.96 4.64-2.5 8.05-7.75 2.34-3.6 4.7-8.58 5.25-11.05.55-2.48 1.67-5.85 2.5-7.5.97-1.94 1.5-5.91 1.5-11.25-.01-7.47-.34-8.89-3.5-15-2.44-4.71-3.49-8.04-3.46-11 .03-2.34.7-6.05 1.49-8.25s1.45-6.93 1.47-10.5c.02-3.58.68-9.2 1.48-12.5.8-3.3 1.47-7.58 1.5-9.5.04-2.67-.72-4.26-3.21-6.71-1.8-1.76-7.09-5.81-11.76-9-6.74-4.6-9.56-7.33-13.71-13.29-2.88-4.13-5.89-9.3-6.69-11.5-.81-2.2-1.7-5.13-1.98-6.5-.28-1.38-3.4-6.78-6.93-12-3.53-5.23-8.64-14-11.36-19.5-2.72-5.5-6.17-11.8-7.67-14-1.51-2.2-4.86-5.74-7.45-7.88-2.6-2.13-6.66-4.83-9.02-6-4.03-1.98-4.78-2.04-11.75-.87-6.87 1.15-7.82 1.09-12.2-.77-2.61-1.12-6.33-2.02-8.25-2.01-1.93.01-5.3-.47-7.5-1.06-2.2-.6-7.83-2.8-12.5-4.9-4.68-2.09-12.1-4.96-16.5-6.38s-11.26-3.27-15.25-4.11c-3.99-.83-8.49-1.49-10-1.45-1.51.03-4.78.64-7.25 1.35z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"5\"/>",
+      "high": "<path d=\"M60 310H50v-10C50 110 40 90 60 90h280c20 0 10 20 10 210v10h-10v-20c0-5-10-20-15-25s-5-55-15-65-60 0-110 0-100-10-110 0-10 60-15 65-15 20-15 25v20z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>",
+      "juice": "<path d=\"M60 310H50s-.19-5 0-10C60 40-10 145 200 80c34.77-10.76 43.79-21.21 65 0 5 5 5 45 5 45s3.04-26.26 10-25c110 20 60-20 70 200 .23 4.99 0 10 0 10h-10v-20c0-5-10-20-15-25s-5-65-15-75-60 10-110 10-100-20-110-10-10 70-15 75-15 20-15 25v20z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>",
+      "messy-short": "<path d=\"M60 310H50v-10-65h-5l10-25-15 5 20-30H45l25-25-15-5 30-17.95L70 130l32.5-7.95L90 115l35-5-7.5-12.45L155 100l-15-15 40 7.55L175 75l30 15-5-20 25 20 35-10-15 15h30l-15 10 40 2.55-15 7.45 35 5-17.5 7.55L340 145l-17.5 5 27.5 20-15 10 25 35h-12.5l7.5 20h-5v75h-10v-20c0-5-10-20-15-25s-5-65.3-15-75.3l-6.33 11s-4.34-8.7-4.34-9c0-.29-11.66 12.67-11.66 12.67L285 189.7l-21 20.67.33-18-26.66 24.33 3.33-25-30.33 22 .33-20.33-27.33 28L187.5 195 166 213.7l1-15.66-23.33 19.33 4-23.33L123 208.37l2-16.67-23 21.67.33-21.67-12.66 8.34L90 190c-10 10-10 70-15 75s-15 20-15 25v20z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>",
+      "messy": "<path d=\"M150.74 72.13c-.03.43 3.16 2.66 7.19 5.01l7.25 4.23c-2.73 1.64-5.17 2.7-7.19 3.42-2.02.72-5.44 1.68-7.62 2.13-2.17.46-8.51 2.16-14.1 3.78-5.58 1.62-13.19 3.82-16.92 4.89-3.72 1.06-8.92 2.51-11.56 3.21-2.63.7-7.71 1.98-11.28 2.84-3.57.85-8.51 2.19-11 2.97-2.48.77-5.22 1.7-6.09 2.05-.93.38-1.52 1-1.41 1.5.1.47 1.67 1.32 3.56 1.92 1.86.6 4.47 1.49 5.8 1.98s2.4 1.21 2.39 1.6c-.01.38-1.65 2.29-3.66 4.23-2 1.94-5.6 5.05-8 6.91-2.4 1.86-5.64 4.41-7.21 5.67-1.57 1.27-4.28 3.68-6 5.36-1.73 1.69-4.32 4.59-5.75 6.45-1.43 1.86-4.77 7.64-7.43 12.83-2.66 5.2-4.83 9.83-4.83 10.29 0 .47-.26.91-.58.99-.31.08-.76 1.08-.98 2.23-.38 1.92-.29 2.14 1.14 2.68 1.25.48 1.55.94 1.55 2.42 0 1.01-.37 5.64-.82 10.3-.45 4.65-1.23 11-1.72 14.1l-1.73 10.71c-.45 2.8-1.07 8.38-1.37 12.41-.3 4.03-1 10.42-1.55 14.2-.91 6.34-.92 6.95-.08 7.9.56.63 1.16 3 1.55 6.1.35 2.79.64 7.62.64 10.72.01 3.1.26 8.56.57 12.12.3 3.57.92 8.14 1.37 10.16.45 2.01.96 5.38 1.14 7.47.3 3.71.36 3.83 2.28 4.65 1.09.47 1.97 1.1 1.97 1.41 0 .31 1.08 1.33 2.4 2.27 1.57 1.13 3.08 1.71 4.37 1.71 1.32 0 2.38-.43 3.19-1.28.67-.71 2.67-4.21 4.45-7.77 1.78-3.57 3.67-7.12 4.2-7.9.53-.78 2.11-3.57 3.51-6.2 1.4-2.64 3.22-6.96 4.04-9.59.82-2.64 1.73-6.19 2.02-7.9.29-1.7.94-8.18 1.45-14.38.5-6.2 1.42-13.82 2.05-16.92.62-3.1 1.8-7.66 2.63-10.13 1.49-4.43 1.54-4.49 4.05-5.28 1.39-.44 6.21-.96 10.71-1.16l8.18-.35c1.44-7.84 2.03-9.5 2.82-10.13.82-.65 1.83-.81 3.67-.59 1.39.16 4.95.9 7.89 1.64 2.95.73 7.9 2.53 11 4 3.1 1.46 6.78 2.79 8.18 2.95 2.48.29 2.55.26 3.12-1.61.47-1.53.91-1.94 2.25-2.08.93-.1 3.2.38 5.06 1.05 1.86.68 6.69 2.91 10.72 4.96 4.03 2.04 9.87 5.39 12.97 7.44 3.1 2.05 6.53 4.49 7.62 5.42 1.08.93 3.62 2.87 5.64 4.31 2.01 1.44 4.11 2.63 4.65 2.64.65.01.99-.41.99-1.25.01-.7-1.26-4.38-2.82-8.18-1.55-3.8-2.66-7.03-2.45-7.19.21-.15.97-.28 1.69-.28.73 0 3.22.51 5.55 1.13 2.33.62 5.56 1.65 7.19 2.29 1.63.64 3.6 1.08 4.37.99 1.35-.17 1.42-.37 1.59-4.41.09-2.33.48-4.56.84-4.96.37-.4 1.82-.72 3.21-.71 1.4.01 5.2.5 8.46 1.08 3.26.59 7.83 1.83 10.15 2.76 2.33.93 7.15 3.02 10.72 4.64 3.57 1.63 7.88 3.47 9.59 4.1 1.7.62 3.35 1.35 3.66 1.63.31.28 1.46.5 2.54.51 1.93 0 1.97-.05 1.61-1.85-.2-1.01-1.62-4.12-3.15-6.92a794.03 794.03 0 00-5.14-9.16c-1.29-2.25-2.34-4.22-2.34-4.37 0-.16 1.2-.44 2.68-.64 1.47-.19 2.99-.64 3.37-.98.39-.35.83-2.61.99-5.01l.29-4.37c3.28-.57 7.15-.57 10.72-.37 3.56.2 7.21.56 8.1.79 1.23.32 2.58 1.81 5.5 6.07 2.14 3.1 4.33 6.59 4.87 7.76s1.3 2.12 1.69 2.12c.42-.01.7-.76.7-1.85-.01-1.01.33-2.97.74-4.37.42-1.39 1.88-4.74 3.26-7.43 2.12-4.18 2.64-4.82 3.48-4.38.54.29 3.14 2.69 5.78 5.33 2.64 2.63 5.9 6.5 7.25 8.6 1.35 2.09 3.63 6.4 5.07 9.58 1.44 3.18 3.12 7.63 3.72 9.87.61 2.25 1.48 6 1.93 8.32.46 2.33 1.25 9.31 1.75 15.51.51 6.21 1.16 12.68 1.45 14.39.29 1.7 1.2 5.26 2.02 7.89.82 2.64 2.64 6.95 4.04 9.59 1.4 2.64 2.98 5.43 3.51 6.2.53.78 2.42 4.33 4.2 7.9 1.78 3.57 3.78 7.06 4.45 7.77.81.86 1.87 1.28 3.19 1.28 1.3.01 2.8-.58 4.37-1.7 1.32-.94 2.4-1.96 2.4-2.27 0-.31.89-.95 1.97-1.41 1.93-.83 1.99-.95 2.29-4.66.17-2.09.68-5.45 1.13-7.47.45-2.02 1.07-6.58 1.38-10.15.3-3.57.55-9.03.56-12.13 0-3.1.29-7.92.64-10.71.39-3.11.99-5.48 1.55-6.11.84-.95.84-1.56-.08-7.89-.55-3.78-1.24-10.17-1.54-14.2-.31-4.04-.92-9.62-1.38-12.41-.45-2.79-1.23-7.62-1.72-10.72-.5-3.1-1.27-9.45-1.72-14.1-.45-4.65-.82-9.28-.82-10.29 0-1.48.29-1.95 1.55-2.43 1.42-.54 1.51-.75 1.14-2.67-.23-1.15-.67-2.16-.99-2.23-.32-.08-.58-.53-.58-.99 0-.47-2.25-5.23-5-10.58s-6.75-12.23-8.88-15.3c-2.14-3.06-5.84-8.39-8.23-11.84-2.39-3.45-5.47-8.18-6.83-10.5-1.37-2.33-2.81-5.12-3.21-6.21-.63-1.72-.56-2.45.49-5.78.66-2.09 1.22-4.5 1.23-5.36.02-.85-.3-1.83-.7-2.18-.4-.34-2.76-1.4-5.25-2.35-2.48-.95-6.41-2.6-8.74-3.67-2.32-1.06-5.05-2.6-6.06-3.42l-1.83-1.49c1.84-5.78 2.25-8.62 2.25-11.42 0-3.8-.13-4.37-.98-4.35-.55.01-2.01.84-3.25 1.86-1.24 1.02-4.28 3.27-6.77 5.01-2.48 1.75-6.92 4.32-9.87 5.73-2.94 1.41-6.88 3.1-8.74 3.76-1.86.67-4.65 1.55-6.2 1.98-2.58.7-2.97.67-4.51-.3-.93-.59-2.71-2.12-3.95-3.41-1.24-1.28-2.96-2.7-3.81-3.14-.85-.44-2.25-.79-3.1-.79-1.04.01-2.3.74-3.81 2.21l-2.25 2.19c-9.18-3.78-14.96-5.79-18.76-6.9-4.79-1.4-8.03-2.02-10.57-2.02-2.55 0-3.67.22-3.68.71 0 .38 1.03 1.72 2.3 2.96 1.27 1.24 2.51 2.63 2.76 3.1.35.66-.36.56-3.29-.47-2.05-.72-8.68-2.55-14.73-4.06-6.05-1.51-15.06-3.39-20.02-4.17-4.97-.79-10.55-1.72-12.41-2.08-1.86-.36-5.16-.87-7.33-1.14-2.17-.27-5.25-.65-6.84-.84-2.22-.27-2.9-.18-2.95.42z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>",
+      "middle-part": "<path d=\"M60.7 303.6l-10.18 2.73s-10.34-6.75-10.47-26.25A410.642 410.642 0 0138.08 249c-.2-9.59-.03-18.34.42-26.31.51-7.92 1.31-15.08 2.36-21.56 1.11-6.48 2.45-12.31 3.96-17.56 3.18-10.58 6.91-18.91 10.54-25.28 3.71-6.48 7.2-10.94 9.89-13.58 5.38-5.37 13.13-11.13 22.17-18.43 8.94-7.4 19.07-16.18 29.29-27.17 10.68-10.98 22.51-16.62 32.85-19.55 10.38-2.64 19.25-2.91 23.85-3.12 9.2-.27 25.61 16.69 25.61 16.69s20.62-16.33 29.93-15.73c4.67.37 13.77.98 23.87 3.86 10.17 3.13 21.54 8.82 31.02 19.4 9.59 10.67 19.73 19.38 28.92 26.77 9.43 7.35 17.63 13.2 23.25 18.58 2.81 2.65 6.42 7.2 10.14 13.75 3.66 6.44 7.34 14.82 10.33 25.34 1.41 5.23 2.64 11.02 3.61 17.43.92 6.41 1.59 13.49 1.95 21.29.34 7.85.39 16.46.12 25.88-.3 9.46-.94 19.64-2.06 30.47-.22 19.42-10.69 26.22-10.69 26.22l-10.23-2.65s1.72-11.23 2.17-15.18c.38-4.04-8.03-16.21-12.48-20.05-2.27-1.9-5.66-13.36-10.28-26.07-5.23-13.61-11.69-28.76-17.29-33.79-5.66-5.23-19.79-7.41-32.54-8.4-12.76-1.12-24.1-.86-24.1-.86s-7.29-9.1-8.8-10.64c-.76-.77-.1.39 3.66 5.55 3.78 5.08 10.69 13.88 22.36 27.8-10.33.43-26.38-4.73-39.78-10.31-13.24-5.86-23.75-11.93-23.75-11.93s-9.95 6.06-22.6 11.86c-12.77 5.47-28.2 10.48-38.45 9.98 10.34-13.69 16.44-22.35 19.77-27.36 3.32-5.09 3.9-6.25 3.21-5.48-1.39 1.52-7.89 10.52-7.89 10.52s-11.14-.28-23.52.79c-12.34.91-25.92 2.97-31.15 8.08-5.19 4.93-10.81 19.84-15.45 33.28-4.28 12.63-7.6 24.1-9.92 26.03-4.6 3.93-13.44 16.38-13.16 20.48.32 4.03 1.51 15.56 1.51 15.56z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>",
+      "parted": "<path d=\"M61.7 299.46l-10.79-1.23s-10.55-7.47-9.99-21.33c.2-6.62.55-13.25 1.03-19.82.48-6.75 1.1-13.35 1.87-19.76.77-6.5 1.71-12.75 2.79-18.74 1.12-6.04 2.39-11.8 3.81-17.28 2.95-11.1 6.5-21.14 10.55-30.24 4.14-9.39 8.72-17.95 13.64-25.73 4.93-8.16 10.17-15.52 15.66-22.06 5.47-6.82 11.21-12.68 17.19-17.5 5.99-4.91 12.29-8.62 18.85-11.06 6.62-2.37 13.57-3.37 20.77-2.99l3.58 10.85s-.75-13.55 5.88-19a176.95 176.95 0 0129.09-2.68c9.7.09 19.24.91 28.5 2.37 9.29 1.54 18.27 3.62 26.81 6.14 8.53 2.51 16.59 5.39 24.08 8.55 7.45 3.07 14.32 6.39 20.5 9.9 6.15 3.4 11.62 7 16.32 10.78 9.32 7.24 15.62 15.38 18.16 24.57 9.94 8.58 17.34 13.01 22.88 16.87 5.51 3.74 9.18 7.07 11.66 13.24 2.47 6.14 3.76 15.25 4.44 30.69.33 7.78.49 17.19.55 28.61.02 5.72.01 11.94-.02 18.7-.04 6.74-.1 14-.17 21.81-.22 17.63-10.22 27.27-10.22 27.27l-9.83.91.08-16.17c.03-4.17-9.91-15.03-14.94-18.34-2.52-1.66-3.75-13.28-5.58-25.67-1.82-12.71-4.24-26.18-9.3-29.97-2.53-1.93-8.29-2.15-16.16-1.32-7.91.76-17.95 2.52-29.02 4.63-11.09 1.98-23.17 4.25-35.09 6.18-11.91 1.75-23.62 3.16-33.98 3.69-15.47.5-24.85-4.38-30.68-10.75-5.77-6.56-8.03-14.6-9.36-20.07-.19 5.46-12.88 10.55-26.66 15.16-13.56 4.08-28.05 7.46-32.89 11.64-4.8 4.01-9.64 16.87-13.62 28.51-3.71 10.96-6.61 20.92-8.83 22.4-4.44 2.92-13.2 12.13-12.93 15.54.29 3.31 1.37 12.7 1.37 12.7z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>",
+      "short-bald": "<path d=\"M60 310H50v-10c0-140 50-200 150-200s150 60 150 200v10h-10v-20c0-5-10-20-15-25s-15-55-15-65c0-56.57-60-95-110-95S90 143.43 90 200c0 10-10 60-15 65s-15 20-15 25v20z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>",
+      "short-fade": "<defs><linearGradient id=\"shortfade\" gradientUnits=\"userSpaceOnUse\" x1=\"200\" y1=\"100\" x2=\"200\" y2=\"310\"><stop offset=\"0\" stop-color=\"rgba(0,0,0,.25)\"/><stop offset=\"1\" stop-color=\"rgba(0,0,0,0)\"/></linearGradient></defs><style></style><g id=\"short fade\"><path id=\"Short Fade\" d=\"M60 310H50v-10c0-140 50-200 150-200s150 60 150 200v10h-10v-20c0-5-10-20-15-25s-5-55-15-65c-40-40-60 0-110 0s-70-40-110 0c-10 10-10 60-15 65s-15 20-15 25v20z\" fill=\"url(#shortfade)\" stroke=\"none\"/></g>",
+      "short": "<path d=\"M60 310H50v-10c0-140 50-200 150-200s150 60 150 200v10h-10v-20c0-5-10-20-15-25s-5-50-15-60-60-5-110-5-100-5-110 5-10 55-15 60-15 20-15 25v20z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>",
+      "short2": "<path d=\"M60 310H50v-10c0-140 50-200 150-200s150 60 150 200v10h-10v-20c0-5-10-20-15-25s-5-55-15-65c-40-40-60 0-110 0s-70-40-110 0c-10 10-10 60-15 65s-15 20-15 25v20z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>",
+      "short3": "<path d=\"M178.27 84.63c-1.7.39-3.73.99-4.51 1.33-.78.35-3.17 1-5.31 1.44-2.14.44-4.7 1.45-5.67 2.23-.98.79-3.05 1.7-4.62 2.03-1.55.33-5.18 1.33-8.06 2.23-2.87.91-6.09 2.38-7.12 3.25-1.05.89-3.02 2.03-4.39 2.55-1.38.51-3.14.78-3.92.59-.77-.19-2.85.21-4.62.88-1.77.68-4.02 1.43-5 1.68-.98.24-2.91 1.09-4.3 1.87-1.39.79-2.84 1.44-3.23 1.45-.39.01-1.77.69-3.05 1.5-1.3.83-2.51 1.51-2.71 1.51-.2 0-1.9.86-3.78 1.9-1.89 1.05-4.22 2.62-5.17 3.48-.96.87-2.05 2.33-2.43 3.24-.66 1.58-.91 1.66-4.45 1.52-3.15-.13-4.16.11-6.4 1.52-1.79 1.13-2.81 2.3-3.14 3.63-.27 1.08-1.22 3.74-2.11 5.91-1.39 3.4-2.42 4.63-7.51 9.03-3.22 2.8-7.19 6.22-8.82 7.58-2.13 1.79-3.18 3.26-3.73 5.21-.43 1.5-1.2 4.5-1.72 6.67s-.99 4.35-1.07 4.85c-.07.5-1.41 2.01-2.97 3.34-2.3 2.01-2.83 2.88-2.97 4.87-.1 1.33-.15 2.83-.1 3.33.04.5-.78 1.73-1.82 2.74-1.04 1-2.11 2.37-2.38 3.04-.28.67-.83 3.54-1.22 6.37-.38 2.84-.69 6.39-.68 7.89.01 2.3-.47 3.45-2.99 7.3-1.6 2.51-3.1 5.53-3.32 6.7-.24 1.17-.11 3.62.26 5.45.63 3.04.57 3.56-.54 5.93-.65 1.42-1.18 3.61-1.18 4.86.02 1.25.35 3.09.75 4.08.62 1.62.56 2.13-.61 4.57-.72 1.5-1.29 3.48-1.28 4.4 0 .92.27 2.43.59 3.33.33.92.95 2.07 1.4 2.58.53.58.9 2.67 1.07 6.06.15 2.92-.01 6.34-.37 7.89-.43 1.89-.45 3.1-.06 3.94.31.67.37 1.63.12 2.13s-.59 2.76-.77 5.01c-.2 2.55-.07 4.62.32 5.46.38.78.65 4.2.64 8.05.01 5.12.27 7.38 1.12 9.71.64 1.67 1.34 4.41 1.58 6.08s.89 3.53 1.45 4.13c.57.59 1.66 1.08 2.41 1.07.77 0 2.61-.83 4.11-1.83 1.49-1 3.01-1.82 3.37-1.82.36 0 1.31-.69 2.13-1.52.8-.84 1.43-2.01 1.39-2.59-.04-.59 1.01-2.31 2.34-3.81 1.34-1.51 2.55-3.23 2.7-3.82.14-.59.62-1.06 1.06-1.05.43.01 1.95-1.37 3.38-3.06s2.72-3.83 2.85-4.75c.14-.92.62-1.81 1.07-1.96.45-.14 1.31-.77 1.92-1.37.66-.66 1.21-2.51 1.38-4.62.16-1.92.83-4.61 1.47-5.94.64-1.35 1.03-2.79.87-3.21-.16-.42.61-1.93 1.73-3.35 1.62-2.08 1.95-2.97 1.59-4.43-.24-1-.42-2.24-.41-2.74.02-.5.18-1.87.38-3.04.19-1.17.56-3.36.81-4.87.26-1.55 1.17-3.46 2.1-4.42.93-.95 1.65-2.46 1.67-3.5.03-1-.4-2.85-.93-4.09-.53-1.25-.95-2.62-.92-3.04.02-.42.82-1.58 1.78-2.58 1.3-1.34 1.78-2.52 1.84-4.41.04-1.6.5-2.93 1.19-3.5.62-.5 1.15-1.66 1.18-2.58.02-.92-.23-2.14-.57-2.72-.42-.73-.19-2 .74-4.09.75-1.67 2.41-4.2 3.73-5.62 2.07-2.24 2.63-2.54 4.29-2.2 1.05.2 2.07.46 2.26.56.19.1 1.31-.1 2.5-.43a66 66 0 013.61-.89c.8-.15 2.59-.58 4.01-.95 1.41-.39 3.39-1.03 4.41-1.45 1.6-.66 2.22-.59 4.35.45 1.54.75 3.2 1.1 4.34.89 1.03-.19 4.01.05 6.63.51 4.22.76 5.2 1.23 8.04 3.82 2.33 2.1 4.18 3.14 6.46 3.61 2.31.47 3.8.46 5.34-.01 1.16-.37 3.09-1.32 4.28-2.13 1.58-1.06 2.5-1.31 3.47-.92.73.3 2.7.73 4.39.95 1.7.22 3.42.57 3.84.79.42.22 2.33.59 4.24.82 1.91.24 4.7.69 6.19 1.01 1.93.4 3.62.35 5.85-.22 1.71-.44 4.35-.97 5.85-1.16 2.13-.28 3.08-.08 4.29.89.86.69 2.96 1.41 4.69 1.62 2.13.25 3.93.05 5.67-.61 1.39-.54 3.15-1.8 3.89-2.8.86-1.16 1.98-1.81 3.1-1.81.96 0 1.88.2 2.05.45.17.25 1.48.62 2.92.82 1.66.23 4.12-.03 6.68-.75 2.22-.6 4.48-1.1 5.01-1.1.53.01 2.16-.92 3.61-2.07 2.28-1.82 2.89-2.01 4.57-1.48 1.06.33 2.79.54 3.83.46 1.06-.07 3.73.6 5.97 1.49 2.23.9 4.91 1.64 5.95 1.64 1.03 0 2.65-.31 3.56-.69.92-.38 2.73-1.46 4.03-2.41 1.32-.96 2.77-1.54 3.31-1.31.51.22 3.63.48 6.89.59 4.69.15 6.34-.03 8.03-.9 1.81-.93 2.42-.99 4-.35 1.01.41 3 1.06 4.41 1.44 1.4.38 3.2.81 4 .97.79.15 2.42.55 3.61.89 1.19.33 2.31.52 2.51.42.18-.1 1.2-.35 2.26-.56 1.65-.33 2.21-.04 4.29 2.2 1.3 1.42 2.97 3.95 3.72 5.62.92 2.1 1.15 3.36.72 4.09-.33.58-.59 1.81-.57 2.72.02.92.54 2.08 1.17 2.58.7.57 1.15 1.9 1.19 3.5.04 1.89.53 3.07 1.82 4.4.97 1 1.77 2.17 1.79 2.58.02.42-.4 1.79-.94 3.04-.53 1.24-.96 3.09-.94 4.09.02 1.04.73 2.54 1.67 3.49.92.96 1.81 2.87 2.08 4.42.25 1.5.61 3.69.8 4.85.19 1.17.35 2.54.37 3.04.01.5-.19 1.73-.43 2.73-.36 1.46-.05 2.35 1.58 4.42 1.12 1.43 1.88 2.93 1.71 3.35-.15.42.23 1.85.87 3.2.64 1.33 1.29 4 1.44 5.93.16 2.1.71 3.94 1.38 4.6.61.6 1.47 1.22 1.91 1.37.46.15.94 1.03 1.07 1.95.13.91 1.42 3.05 2.85 4.74 1.42 1.68 2.96 3.06 3.39 3.05.44-.01.92.46 1.06 1.04.15.59 1.37 2.31 2.71 3.81 1.34 1.51 2.4 3.22 2.35 3.81-.04.58.6 1.74 1.42 2.59.84.83 1.8 1.52 2.15 1.52.34 0 1.86.82 3.37 1.82s3.38 1.83 4.15 1.84c.76.02 1.86-.46 2.44-1.05.56-.6 1.23-2.45 1.47-4.12s.96-4.41 1.59-6.08c.87-2.32 1.14-4.58 1.14-9.7 0-3.84.27-7.26.64-8.04.4-.84.53-2.91.34-5.46-.18-2.25-.52-4.51-.77-5.01s-.2-1.46.12-2.13c.39-.83.37-2.04-.07-3.93-.36-1.55-.51-4.97-.36-7.9.17-3.38.54-5.47 1.08-6.06.44-.5 1.07-1.66 1.39-2.58.33-.9.59-2.54.59-3.63-.01-1.09-.59-3.07-1.32-4.4-1.22-2.24-1.27-2.59-.56-4.41.43-1.08.77-2.92.77-4.09s-.55-3.28-1.21-4.7c-1.12-2.36-1.16-2.88-.54-5.93.38-1.83.5-4.28.27-5.45-.22-1.17-1.72-4.18-3.32-6.69-2.52-3.84-3-4.99-2.99-7.29.01-1.51-.3-5.05-.68-7.89-.39-2.84-.94-5.7-1.21-6.37-.28-.67-1.35-2.03-2.39-3.04-1.04-1.01-1.86-2.24-1.82-2.74.04-.5.01-1.99-.08-3.33-.13-2.07-.64-2.85-3.49-5.31-1.85-1.59-3.4-3.3-3.42-3.8-.02-.5-.48-1.53-1.03-2.28-.56-.75-1.29-2.73-1.65-4.39-.42-2.01-1.29-3.65-2.58-4.86-1.1-1.03-2.18-2.87-2.49-4.24-.31-1.34-1.26-3.04-2.1-3.8-.85-.76-2.44-1.71-3.55-2.12-1.09-.42-2.22-1.41-2.52-2.22-.29-.8-1.42-2.1-2.51-2.88-1.09-.78-2.85-1.41-3.9-1.4-1.05.02-2.29-.32-2.74-.76-.45-.43-1.09-1.59-1.42-2.59-.34-1.01-2.05-3.05-3.8-4.55-1.76-1.5-4.63-4.03-6.37-5.64-1.74-1.6-3.8-3.06-4.59-3.25-.78-.19-2.75-1.53-4.37-2.98-1.97-1.76-4.46-3.16-7.6-4.25-2.56-.87-5.94-1.82-7.51-2.09-1.56-.27-4.13-.78-5.71-1.13-1.56-.36-3.67-1.33-4.67-2.15-.99-.84-2.2-1.52-2.7-1.53-.48-.01-1.95-1.14-3.24-2.51-1.3-1.39-3.24-2.89-4.32-3.33-1.09-.46-4.09-.82-6.74-.81-4.72.01-4.83-.03-8.18-2.74-2.72-2.2-3.84-2.72-5.69-2.63-1.85.09-2.85-.38-5.14-2.4-2.36-2.08-3.31-2.51-5.67-2.55-1.95-.03-3.44.38-4.82 1.33-1.98 1.38-2 1.38-2.9.17-.49-.66-2.62-1.84-4.73-2.62l-3.82-1.42-6.72 2.53c-6.04-2.25-7.52-2.42-10.61-2.11-2.14.22-5.05.15-6.46-.16-1.71-.37-3.59-.33-5.66.15z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>",
+      "spike": "<path d=\"M60 310H50v-10c0-65-5-145-5-150 0-10 5-20 5-20l10 10 6-20 14 10 5-20 15 10 5-20 15 10 8-22 12 12 8-20 12 16 10-21 10 21 10-21 10 21 10-21 10 21 10-21 10 21 12-16 8 20 12-12 8 24.37L290 100l10 20 12-9.96 8 19.96 14-10 6 20 10-10s5 10 5 20c0 5-5 85-5 150v10h-10v-20c0-5-10-20-15-25s-5-55-15-65-60 0-110 0-100-10-110 0-10 60-15 65-15 20-15 25v20z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>",
+      "spike2": "<path d=\"M60 310H50v-35l-2-11 2-9-2-11 2-9-2-11 2-9-2-15 7-10-3-15.63L65 165l-1-17 16-3v-21h20l4-20 20 4 12-20 20 12 12-20 16 16 16-20 16 20 16-16 12 20 20-12 12 20 20-4 4 20h20v21l16 3-1 17 13 9.04-3 15.96 7 10-2 15 2 9-2 11 2 9-2 11 2 9-2 11v35h-10v-20c0-5-10-20-15-25s-5-50-15-60-60-5-110-5-100-5-110 5-10 55-15 60-15 20-15 25v20z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"4\"/>",
+      "spike3": "<path d=\"M59.99 309.97l-9.99.02s-1.98-4.71-4.04-9.48l-10.6-24.48-8.66-11.07 1.65-9.05-7.84-11.2 3.59-9.06-6.17-11.15 5.2-8.9-3.58-14.75 17.6-9.39-3.32-14.5 25.03-8.7.75-14.9 21.98-3.91 1.47-18.31 21.51-3.02 4.96-19.14 18.68.03 12.26-22.85 17.27 9.82 11.33-24.4 13.86 17.48 13.2-24.51 15.63 24.47 12.3-17.59 13.77 24.45 16.76-9.92 14.31 22.84 19.14-.12 5.99 18.93 21.94 2.75 1.86 17.9 21.99 3.44.81 14.49 24.54 7.65-3.1 14.55 17.26 8.86-3.27 14.66 5.29 8.76-5.85 11.28 3.78 9.07-7.58 11.5 1.84 9.27-8.62 11.57-10.78 26.06c-2.15 5.19-4.22 10.36-4.22 10.36l-10.03-.1s-.79-15.25.11-20.4c.94-5.15-10.68-20.44-18.68-25.35-7.86-4.87-5.4-54.81-19.55-64.07-40.62-38.86-63.64 1.89-101.31 2.51-37.75.06-61.8-40.78-101.89-.55-14.3 9.72-11.99 59.64-19.91 64.54-8.01 4.91-19.57 19.04-18.66 23.92.87 4.84-.01 19.69-.01 19.69z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"5\"/>",
+      "spike4": "<path d=\"M60.24 310h-9.98s-.07-4.66-.15-9.25c-.13-7.33-.35-14.71-.63-22-.27-7.13-.61-14.16-.97-20.97-.36-6.66-.75-13.11-1.15-19.21-.4-5.99-.82-11.65-1.23-16.87-.82-10.14-1.64-18.6-2.28-24.6-.66-5.8-1.11-9.4-1.14-10.19-.28-6.19 4.6-16.43 4.6-16.43l10.34-1.07 6.77-19.05 14.5-3.03 6.87-18.83 15.24-2.24 7.59-17.19 14.65-.88 11.11-15.77L145 94.35l10.35-10.28 9.9 3.53 11.34-8.05 7.93 5.52 10.19-6.93 8.77 6.13 9.09-6.13 9.76 6.92 8.13-5.51 10.79 8.02 9.87-3.53 9.66 10.2 10.42-1.95 10.35 17.32 8.88-3.62 11.75 19.55 11.52-.07 9.1 20.54 13.83 2.61 6.05 18.75 9.89.68s4.51 10.05 4.18 16.3c-.04.8-.5 4.45-1.17 10.35-.64 6.13-1.45 14.79-2.26 25.2-.4 5.36-.79 11.19-1.17 17.36-.37 6.28-.73 12.92-1.05 19.77-.32 6.98-.61 14.18-.84 21.45-.23 7.4-.39 14.87-.48 22.25l-.1 9.27h-9.98s.25-12.6.34-16.86c.11-4.27-9.33-15.45-14.07-18.99-2.37-1.82-3.08-14.23-4.38-27.82-1.35-14.27-3.37-29.86-8.11-35.85-9.64-12.96-18.21-20.72-26.42-24.83-8.27-4.12-16.12-3.99-24.39-1.96-8.35 2.37-17.13 6.82-27.2 10.64-10.13 4.15-21.53 7.6-35 7.52-13.21.16-24.36-3.22-34.3-7.31-9.9-3.76-18.58-8.15-26.95-10.45-8.34-1.94-16.37-1.96-24.99 2.28-8.55 4.24-17.56 12.12-27.68 25.16-4.92 6.01-7.23 21.43-8.74 35.49-1.35 13.37-2.03 25.59-4.36 27.4-4.68 3.5-13.9 14.55-13.75 18.78.14 4.23.54 16.8.54 16.8z\" fill=\"$[hairColor]\" stroke=\"#000\" stroke-width=\"5\"/>"
+    },
+    "head": {
+      "head1": "<path class=\"head\" d=\"M200 100c100 0 150 60 150 200 0 70-50 200-150 200S50 370 50 300c0-140 50-200 150-200z\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"faceShave\" d=\"M200 410c30 0 50 10 50 10 30 0 90-15 90-120h10c0 70-50 200-150 200S50 370 50 300h10c0 105 60 120 90 120 0 0 20-10 50-10z\" fill=\"$[faceShave]\"/><path class=\"headShave\" d=\"M60 300H50c0-140 50-200 150-200s150 60 150 200h-10v-10c0-5-10-20-15-25s-5-55-15-65c-40-40-60 0-110 0s-70-40-110 0c-10 10-10 60-15 65s-15 20-15 25v10z\" fill=\"$[headShave]\"/>",
+      "head2": "<path class=\"head\" d=\"M200 100c100 0 150 60 150 200 0 70-30 120-40 130l-60 60s-20 10-50 10-50-10-50-10l-60-60c-10-10-40-60-40-130 0-140 50-200 150-200z\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"faceShave\" d=\"M200 410c30 0 50 10 50 10 30 0 90-15 90-120h10c0 70-30 120-40 130l-60 60s-20 10-50 10-50-10-50-10l-60-60c-10-10-40-60-40-130h10c0 105 60 120 90 120 0 0 20-10 50-10z\" fill=\"$[faceShave]\"/><path class=\"headShave\" d=\"M60 300H50c0-140 50-200 150-200s150 60 150 200h-10v-10c0-5-10-20-15-25s-5-55-15-65c-40-40-60 0-110 0s-70-40-110 0c-10 10-10 60-15 65s-15 20-15 25v10z\" fill=\"$[headShave]\"/>",
+      "head3": "<path d=\"M200 100c100 0 150 60 150 200 0 20-20 130-20 130l-80 50c-20 20-40 20-50 20s-30 0-50-20l-80-50S50 320 50 300c0-140 50-200 150-200z\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"faceShave\" d=\"M200 410c30 0 50 10 50 10 30 0 90-15 90-120h10c0 20-20 130-20 130l-80 50c-20 20-40 20-50 20s-30 0-50-20l-80-50S50 320 50 300h10c0 105 60 120 90 120 0 0 20-10 50-10z\" fill=\"$[faceShave]\"/><path class=\"headShave\" d=\"M60 300H50c0-140 50-200 150-200s150 60 150 200h-10v-10c0-5-10-20-15-25s-5-55-15-65c-40-40-60 0-110 0s-70-40-110 0c-10 10-10 60-15 65s-15 20-15 25v10z\" fill=\"$[headShave]\"/>",
+      "head4": "<path class=\"head\" d=\"M200 100c100 0 150 60 150 200 0 70-10 90-30 130-10 20-60 50-70 60-20 20-20 10-50 10s-30 10-50-10c-10-10-60-40-70-60-20-40-30-60-30-130 0-140 50-200 150-200z\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"faceShave\" d=\"M200 410c30 0 50 10 50 10 30 0 90-15 90-120h10c0 70-10 90-30 130-10 20-60 50-70 60-20 20-20 10-50 10s-30 10-50-10c-10-10-60-40-70-60-20-40-30-60-30-130h10c0 105 60 120 90 120 0 0 20-10 50-10z\" fill=\"$[faceShave]\"/><path class=\"headShave\" d=\"M60 300H50c0-140 50-200 150-200s150 60 150 200h-10v-10c0-5-10-20-15-25s-5-55-15-65c-40-40-60 0-110 0s-70-40-110 0c-10 10-10 60-15 65s-15 20-15 25v10z\" fill=\"$[headShave]\"/>",
+      "head5": "<path class=\"head\" d=\"M200 100c100 0 150 60 150 200 0 50-.51 71.54-10 100-10 30-80 70-90 80s-20 20-50 20-40-10-50-20-80-50-90-80c-9.49-28.46-10-50-10-100 0-140 50-200 150-200z\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"faceShave\" d=\"M200 410c30 0 50 10 50 10 30 0 90-15 90-120h10c0 50-.51 71.54-10 100-10 30-80 70-90 80s-20 20-50 20-40-10-50-20-80-50-90-80c-9.49-28.46-10-50-10-100h10c0 105 60 120 90 120 0 0 20-10 50-10z\" fill=\"$[faceShave]\"/><path class=\"headShave\" d=\"M60 300H50c0-140 50-200 150-200s150 60 150 200h-10v-10c0-5-10-20-15-25s-5-55-15-65c-40-40-60 0-110 0s-70-40-110 0c-10 10-10 60-15 65s-15 20-15 25v10z\" fill=\"$[headShave]\"/>",
+      "head6": "<path class=\"head\" d=\"M200 100c100 0 150 60 150 200 0 70-30 150-40 160s-60 40-110 40-100-30-110-40-40-90-40-160c0-140 50-200 150-200z\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"faceShave\" d=\"M200 410c30 0 50 10 50 10 30 0 90-15 90-120h10c0 70-30 150-40 160s-60 40-110 40-100-30-110-40-40-90-40-160h10c0 105 60 120 90 120 0 0 20-10 50-10z\" fill=\"$[faceShave]\"/><path class=\"headShave\" d=\"M60 300H50c0-140 50-200 150-200s150 60 150 200h-10v-10c0-5-10-20-15-25s-5-55-15-65c-40-40-60 0-110 0s-70-40-110 0c-10 10-10 60-15 65s-15 20-15 25v10z\" fill=\"$[headShave]\"/>",
+      "head7": "<path class=\"head\" d=\"M200 100c100 0 150 60 150 200 0 20-20 120-25 130-4.47 8.94-105 70-105 70h-40s-98.29-56.58-105-70c-5-10-25-110-25-130 0-140 50-200 150-200z\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"faceShave\" d=\"M200 410c30 0 50 10 50 10 30 0 90-15 90-120h10c0 20-20 120-25 130-4.47 8.94-105 70-105 70h-40s-98.29-56.58-105-70c-5-10-25-110-25-130h10c0 105 60 120 90 120 0 0 20-10 50-10z\" fill=\"$[faceShave]\"/><path class=\"headShave\" d=\"M60 300H50c0-140 50-200 150-200s150 60 150 200h-10v-10c0-5-10-20-15-25s-5-55-15-65c-40-40-60 0-110 0s-70-40-110 0c-10 10-10 60-15 65s-15 20-15 25v10z\" fill=\"$[headShave]\"/>",
+      "head8": "<path class=\"head\" d=\"M200 100c100 0 150 60 150 200 0 20-5 100-25 130-10 20-45 50-85 55-5 5-15 15-40 15s-35-10-40-15c-35-5-75-35-85-55-20-30-25-110-25-130 0-140 50-200 150-200z\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"faceShave\" d=\"M200 410c30 0 50 10 50 10 30 0 90-15 90-120h10c0 20-5 100-25 130-10 20-45 50-85 55-5 5-15 15-40 15s-35-10-40-15c-35-5-75-35-85-55-20-30-25-110-25-130h10c0 105 60 120 90 120 0 0 20-10 50-10z\" fill=\"$[faceShave]\"/><path class=\"headShave\" d=\"M60 300H50c0-140 50-200 150-200s150 60 150 200h-10v-10c0-5-10-20-15-25s-5-55-15-65c-40-40-60 0-110 0s-70-40-110 0c-10 10-10 60-15 65s-15 20-15 25v10z\" fill=\"$[headShave]\"/>"
+    },
+    "jersey": {
+      "football": "<path class=\"football\" d=\"M100 500s70 90 100 90 100-90 100-90 30 10 60 10c0 0 30 10 30 40s10 60 10 60H0s10-30 10-60 30-40 30-40c30 0 60-10 60-10\" fill=\"$[primary]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"shoulderpads\" d=\"M370 560s-61 7.89-70-10M30 560s61 7.89 70-10\" fill=\"none\" stroke=\"#000\" stroke-width=\"3\"/><path class=\"collar-outline\" d=\"M100 500s70 90 100 90 100-90 100-90\" fill=\"none\" stroke=\"#000\" stroke-width=\"16\"/><path class=\"collar-accent\" d=\"M100 500s70 90 100 90 100-90 100-90\" fill=\"none\" stroke=\"$[accent]\" stroke-width=\"12\"/><path class=\"collar-secondary\" d=\"M100 500s70 90 100 90 100-90 100-90\" fill=\"none\" stroke=\"$[secondary]\" stroke-width=\"6\"/>",
+      "football2": "<path class=\"football\" d=\"M100 500s70 90 100 90 100-90 100-90 30 10 60 10c0 0 30 10 30 40s10 60 10 60H0s10-30 10-60 30-40 30-40c30 0 60-10 60-10\" fill=\"$[primary]\" stroke=\"#000\" stroke-width=\"6\"/><path d=\"M66.529 600l-52.124-68.378c4.715-8.977 12.286-14.717 17.973-18.009L66.529 600zm302.331-85.648c5.772 3.546 13.009 9.463 17.343 18.479L335 600l33.86-85.648z\" fill=\"$[secondary]\"/><path class=\"football\" d=\"M100 500s70 90 100 90 100-90 100-90 30 10 60 10c0 0 30 10 30 40s10 60 10 60H0s10-30 10-60 30-40 30-40c30 0 60-10 60-10\" fill-opacity=\"0\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"shoulderpads\" d=\"M370 560s-61 7.89-70-10M30 560s61 7.89 70-10\" fill=\"none\" stroke=\"#000\" stroke-width=\"3\"/><path class=\"collar-outline\" d=\"M100 500s70 90 100 90 100-90 100-90\" fill=\"none\" stroke=\"#000\" stroke-width=\"16\"/><path class=\"collar-accent\" d=\"M100 500s70 90 100 90 100-90 100-90\" fill=\"none\" stroke=\"$[accent]\" stroke-width=\"12\"/><path class=\"collar-secondary\" d=\"M100 500s70 90 100 90 100-90 100-90\" fill=\"none\" stroke=\"$[secondary]\" stroke-width=\"6\"/>",
+      "football3": "<path class=\"football\" d=\"M100 500s70 90 100 90 100-90 100-90 30 10 60 10c0 0 30 10 30 40s10 60 10 60H0s10-30 10-60 30-40 30-40c30 0 60-10 60-10\" fill=\"$[primary]\" stroke=\"#000\" stroke-width=\"6\"/><g fill=\"$[accent]\"><path d=\"M45.63 510h12v63h-12zM343.63 510h12v63h-12z\"/></g><g fill=\"$[secondary]\"><path d=\"M57.63 510h12v63h-12zM40 510h5.63v63h-12v-60.09C37.353 510.883 40 510 40 510zM331.63 510h12v63h-12zM360 510s3.259 1.086 7.63 3.618V573h-12v-63H360z\"/></g><path class=\"football\" d=\"M100 500s70 90 100 90 100-90 100-90 30 10 60 10c0 0 30 10 30 40s10 60 10 60H0s10-30 10-60 30-40 30-40c30 0 60-10 60-10\" fill-opacity=\"0\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"shoulderpads\" d=\"M370 560s-61 7.89-70-10M30 560s61 7.89 70-10\" fill=\"none\" stroke=\"#000\" stroke-width=\"3\"/><path class=\"collar-outline\" d=\"M100 500s70 90 100 90 100-90 100-90\" fill=\"none\" stroke=\"#000\" stroke-width=\"16\"/><path class=\"collar-accent\" d=\"M100 500s70 90 100 90 100-90 100-90\" fill=\"none\" stroke=\"$[accent]\" stroke-width=\"12\"/><path class=\"collar-secondary\" d=\"M100 500s70 90 100 90 100-90 100-90\" fill=\"none\" stroke=\"$[secondary]\" stroke-width=\"6\"/>",
+      "jersey": "<path d=\"M80 610s10-30 10-90l20-10s10 80 90 80 90-80 90-80l20 10c0 60 10 90 10 90H80z\" fill=\"$[primary]\" stroke=\"#000\" stroke-width=\"6\"/>",
+      "jersey2": "<path class=\"jersey\" d=\"M80 610s10-30 10-90l20-10s10 80 90 80 90-80 90-80l20 10c0 60 10 90 10 90H80z\" fill=\"$[primary]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"outline\" d=\"M90 520c0 60-10 90-10 90m230-90c0 60 10 90 10 90M110 510s10 80 90 80 90-80 90-80\" fill=\"none\" stroke=\"#000\" stroke-width=\"16\"/><path class=\"accent\" d=\"M90 520c0 60-10 90-10 90m230-90c0 60 10 90 10 90M110 510s10 80 90 80 90-80 90-80\" fill=\"none\" stroke=\"$[accent]\" stroke-width=\"12\"/><path class=\"secondary\" d=\"M90 520c0 60-10 90-10 90m230-90c0 60 10 90 10 90M110 510s10 80 90 80 90-80 90-80\" fill=\"none\" stroke=\"$[secondary]\" stroke-width=\"6\"/>",
+      "jersey3": "<path class=\"primary\" d=\"M80 610s10-30 10-90l20-10s10 80 90 80 90-80 90-80l20 10c0 60 10 90 10 90H80z\" fill=\"$[primary]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"secondary\" d=\"M85 575v25h230v-25h-65s-20 15-50 15-50-15-50-15H85z\" fill=\"$[secondary]\"/><path class=\"outline\" d=\"M90 520c0 60-10 90-10 90m230-90c0 60 10 90 10 90M110 510s10 80 90 80 90-80 90-80\" fill=\"none\" stroke=\"#000\" stroke-width=\"16\"/><path class=\"stripe-primary\" d=\"M90 520c0 60-10 90-10 90m230-90c0 60 10 90 10 90M110 510s10 80 90 80 90-80 90-80\" fill=\"none\" stroke=\"$[primary]\" stroke-width=\"12\"/><path class=\"stripe-accent\" d=\"M90 520c0 60-10 90-10 90m230-90c0 60 10 90 10 90M110 510s10 80 90 80 90-80 90-80\" fill=\"none\" stroke=\"$[accent]\" stroke-width=\"6\"/>",
+      "jersey4": "<path class=\"jersey\" d=\"M80 610s10-30 10-90l20-10s10 80 90 80 90-80 90-80l20 10c0 60 10 90 10 90H80z\" fill=\"$[primary]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"outline\" d=\"M90 520c0 60-10 90-10 90m230-90c0 60 10 90 10 90M110 510s10 80 90 80 90-80 90-80\" fill=\"none\" stroke=\"#000\" stroke-width=\"16\"/><path class=\"stripe-accent\" d=\"M90 520c0 60-10 90-10 90m230-90c0 60 10 90 10 90m-210-98s15 78 90 78 90-78 90-78\" fill=\"none\" stroke=\"$[accent]\" stroke-width=\"8\"/><path class=\"stripe-primary\" d=\"M86 522c0 60-10 88-10 88m238-88c0 60 10 88 10 88M114 510s11 76 86 76 86-76 86-76\" fill=\"none\" stroke=\"$[primary]\" stroke-width=\"4\"/><path class=\"stripe-secondary\" d=\"M94 518c0 60-10 92-10 92m222-92c0 60 10 92 10 92m-210-96s12 80 94 80 94-80 94-80\" fill=\"none\" stroke=\"$[secondary]\" stroke-width=\"4\"/>",
+      "jersey5": "<path class=\"jersey\" d=\"M80 610s10-30 10-90l20-10s10 80 90 80 90-80 90-80l20 10c0 60 10 90 10 90H80z\" fill=\"$[primary]\" stroke=\"#000\" stroke-width=\"6\"/><path class=\"pinstripes\" d=\"M95 610v-92.45M105 610v-97.95m10 2.95v95m10-60v62.05M135 565v45m10-35v35m10-30v30m10-25v25m10-20v20m10-20v20m10-20v20m110 0v-92.45M295 610v-97.95M285 515v95m-10-60v62.05M265 565v45m-10-35v35m-10-30v30m-10-25v25m-10-20v20m-10-20v20m-10-20v20\" fill=\"none\" stroke=\"$[accent]\" stroke-width=\"2\"/><path class=\"outline\" d=\"M90 520c0 60-10 90-10 90m230-90c0 60 10 90 10 90M110 510s10 80 90 80 90-80 90-80\" fill=\"none\" stroke=\"#000\" stroke-width=\"16\"/><path class=\"stripe-accent\" d=\"M90 520c0 60-10 90-10 90m230-90c0 60 10 90 10 90m-210-98s15 78 90 78 90-78 90-78\" fill=\"none\" stroke=\"$[accent]\" stroke-width=\"8\"/><path class=\"stripe-primary\" d=\"M86 522c0 60-10 88-10 88m238-88c0 60 10 88 10 88M114 510s11 76 86 76 86-76 86-76\" fill=\"none\" stroke=\"$[primary]\" stroke-width=\"4\"/><path class=\"stripe-secondary\" d=\"M94 518c0 60-10 92-10 92m222-92c0 60 10 92 10 92m-210-96s12 80 94 80 94-80 94-80\" fill=\"none\" stroke=\"$[secondary]\" stroke-width=\"4\"/>"
+    },
+    "miscLine": {
+      "chin1": "<path d=\"M180 465s10-5 20-5 20 5 20 5\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>",
+      "chin2": "<path d=\"M200 467.37V480\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>",
+      "forehead1": "<path d=\"M200 270v-15l5-5-5 5-5-5\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>",
+      "forehead2": "<path d=\"M170 235s15 0 30 5c15-5 30-5 30-5m-75-15s35 0 45 5c10-5 45-5 45-5\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>",
+      "forehead3": "<path d=\"M170 235s15 0 30 5c15-5 30-5 30-5\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>",
+      "forehead4": "<path d=\"M155 220s35 0 45 5c10-5 45-5 45-5\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>",
+      "forehead5": "<g fill=\"none\" stroke=\"#000\" stroke-width=\"2\"><path d=\"M200 270v-15l5-5-5 5-5-5M170 235s15 0 30 5c15-5 30-5 30-5M155 220s35 0 45 5c10-5 45-5 45-5\"/></g>",
+      "none": ""
+    },
+    "mouth": {
+      "angry": "<style></style><path id=\"angry\" d=\"M40 9C50 9 65-1 70 4s10 15 5 20-25 0-35 0-30 5-35 0S5 9 10 4s20 5 30 5z\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"5\"/>",
+      "closed": "<style></style><path id=\"closed\" d=\"M170 440l10-10h40l10 10\" fill=\"none\" stroke=\"#000\" stroke-width=\"5\"/>",
+      "mouth": "<style></style><path id=\"mouth\" d=\"M32 3c10 0 15 0 25 5 5 5 5 5 0 10s-15 0-25 0-20 5-25 0-5-5 0-10c10-5 15-5 25-5z\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"5\"/>",
+      "side": "<style></style><path id=\"side\" d=\"M1 22l60-10L51 2\" fill=\"none\" stroke=\"#000\" stroke-width=\"5\"/>",
+      "smile-closed": "<style></style><path id=\"smile-closed\" d=\"M170 430s10 10 30 10 30-10 30-10\" fill=\"none\" stroke=\"#000\" stroke-width=\"5\"/>",
+      "smile": "<style></style><path id=\"smile\" d=\"M170 430s10 20 30 20 30-20 30-20h-60z\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"5\"/>",
+      "smile2": "<style></style><path id=\"smile2\" d=\"M11 8S4.33 28 31 28 51 8 51 8 41 4.37 31 4.37 11 8 11 8zm50-5L51 8M1 3l10 5\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"5\"/>",
+      "smile3": "<style></style><path id=\"smile3\" d=\"M5 3s13.33 20 40 20S85 3 85 3 65 5.22 45 5.22 5 3 5 3z\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"5\"/>",
+      "straight": "<style></style><path id=\"straight\" d=\"M180 430h40\" fill=\"none\" stroke=\"#000\" stroke-width=\"5\"/>"
+    },
+    "nose": {
+      "honker": "<path d=\"M50 50s-20 60 9 55c0 0 29 5 9-55\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"5\"/>",
+      "nose1": "<path d=\"M170 390s10-10 20 0 10 10 20 0 20 0 20 0\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"5\"/>",
+      "nose2": "<path class=\"nose\" d=\"M28 1l20 45s-5 20-25 20S3 46 3 46\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"5\"/>",
+      "nose3": "<path class=\"nose\" d=\"M175 380l25 20 25-20\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"5\"/>",
+      "nose4": "<path class=\"nose\" d=\"M11 1S6 31 21 41L1 51\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"5\"/>",
+      "nose5": "<path class=\"nose\" d=\"M175 370c-20 0-5 25 5 15 5-5 15 10 20 10s15-15 20-10c10 10 25-15 5-15\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"5\"/>",
+      "nose6": "<path class=\"nose\" d=\"M190 325s-5 20-5 45c-20-5-15 15-15 20 20 0 15 10 30 10s10-10 30-10c0-5 5-25-15-20 0-25-5-45-5-45\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"5\"/>",
+      "nose7": "<path class=\"nose\" d=\"M180 380s10-5 20-5 20 5 20 5m-20-5v-40\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"5\"/>",
+      "nose8": "<path class=\"nose\" d=\"M186.89 385.17s-4.71-14.11 14.11-14.11 14.11 14.11 14.11 14.11M201 371.06v-18.82\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"5\"/>",
+      "pinocchio": "<path d=\"M40 40s50-30 0 30\" fill=\"$[skinColor]\" stroke=\"#000\" stroke-width=\"5\"/>"
+    },
+    "smileLine": {
+      "line1": "<path class=\"shp0\" d=\"M9 2s-12.5 8.95-4 34\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>",
+      "line2": "<path class=\"shp0\" d=\"M17 2L2 12l5 15\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>",
+      "line3": "<path class=\"shp0\" d=\"M12.33 4.32s-10 3.29-10 13.18 10 13.18 10 13.18\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>",
+      "line4": "<path class=\"shp0\" d=\"M0 20l6-10-6-9\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"/>",
+      "none": ""
+    }
+  };
 
   const addWrapper = svgString => `<g>${svgString}</g>`;
 
   const addTransform = (element, newTransform) => {
     const oldTransform = element.getAttribute("transform");
-    element.setAttribute(
-      "transform",
-      `${oldTransform ? `${oldTransform} ` : ""}${newTransform}`
-    );
+    element.setAttribute("transform", `${oldTransform ? `${oldTransform} ` : ""}${newTransform}`);
   };
 
   const rotateCentered = (element, angle) => {
     const bbox = element.getBBox();
     const cx = bbox.x + bbox.width / 2;
     const cy = bbox.y + bbox.height / 2;
-
     addTransform(element, `rotate(${angle} ${cx} ${cy})`);
   };
 
   const scaleStrokeWidthAndChildren = (element, factor) => {
     const strokeWidth = element.getAttribute("stroke-width");
+
     if (strokeWidth) {
-      element.setAttribute("stroke-width", strokeWidth / factor);
+      element.setAttribute("stroke-width", String(parseFloat(strokeWidth) / factor));
     }
+
     const children = element.childNodes;
+
     for (let i = 0; i < children.length; i++) {
       scaleStrokeWidthAndChildren(children[i], factor);
     }
-  };
-
-  // Scale relative to the center of bounding box of element e, like in Raphael.
+  }; // Scale relative to the center of bounding box of element e, like in Raphael.
   // Set x and y to 1 and this does nothing. Higher = bigger, lower = smaller.
+
+
   const scaleCentered = (element, x, y) => {
     const bbox = element.getBBox();
     const cx = bbox.x + bbox.width / 2;
     const cy = bbox.y + bbox.height / 2;
-    const tx = (cx * (1 - x)) / x;
-    const ty = (cy * (1 - y)) / y;
+    const tx = cx * (1 - x) / x;
+    const ty = cy * (1 - y) / y;
+    addTransform(element, `scale(${x} ${y}) translate(${tx} ${ty})`); // Keep apparent stroke width constant, similar to how Raphael does it (I think)
 
-    addTransform(element, `scale(${x} ${y}) translate(${tx} ${ty})`);
-
-    // Keep apparent stroke width constant, similar to how Raphael does it (I think)
-    if (
-      Math.abs(x) !== 1 ||
-      Math.abs(y) !== 1 ||
-      Math.abs(x) + Math.abs(y) !== 2
-    ) {
+    if (Math.abs(x) !== 1 || Math.abs(y) !== 1 || Math.abs(x) + Math.abs(y) !== 2) {
       const factor = (Math.abs(x) + Math.abs(y)) / 2;
       scaleStrokeWidthAndChildren(element, factor);
     }
-  };
+  }; // Translate element such that its center is at (x, y). Specifying xAlign and yAlign can instead make (x, y) the left/right and top/bottom.
 
-  // Translate element such that its center is at (x, y). Specifying xAlign and yAlign can instead make (x, y) the left/right and top/bottom.
-  const translate = (element, x, y, xAlign = "center", yAlign = "center") => {
+
+  const translate = function (element, x, y) {
+    let xAlign = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : "center";
+    let yAlign = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : "center";
     const bbox = element.getBBox();
     let cx;
     let cy;
+
     if (xAlign === "left") {
       cx = bbox.x;
     } else if (xAlign === "right") {
@@ -88,6 +247,7 @@ var faces = (function (exports) {
     } else {
       cx = bbox.x + bbox.width / 2;
     }
+
     if (yAlign === "top") {
       cy = bbox.y;
     } else if (yAlign === "bottom") {
@@ -97,237 +257,233 @@ var faces = (function (exports) {
     }
 
     addTransform(element, `translate(${x - cx} ${y - cy})`);
-  };
+  }; // Defines the range of fat/skinny, relative to the original width of the default head.
 
-  // Defines the range of fat/skinny, relative to the original width of the default head.
+
   const fatScale = fatness => 0.8 + 0.2 * fatness;
 
   const drawFeature = (svg, face, info) => {
     const feature = face[info.name];
+
+    if (!feature || !svgs[info.name]) {
+      return;
+    } // @ts-ignore
+
+
     let featureSVGString = svgs[info.name][feature.id];
 
-    if (feature.shave) {
-      featureSVGString = featureSVGString.replace("$[faceShave]", feature.shave);
-    }
+    if (!featureSVGString) {
+      return;
+    } // @ts-ignore
+
 
     if (feature.shave) {
+      // @ts-ignore
+      featureSVGString = featureSVGString.replace("$[faceShave]", feature.shave);
+    } // @ts-ignore
+
+
+    if (feature.shave) {
+      // @ts-ignore
       featureSVGString = featureSVGString.replace("$[headShave]", feature.shave);
     }
 
     featureSVGString = featureSVGString.replace("$[skinColor]", face.body.color);
-    featureSVGString = featureSVGString.replace("$[hairColor]", face.hair.color);
-    featureSVGString = featureSVGString.replace(
-      /\$\[primary\]/g,
-      face.teamColors[0]
-    );
-    featureSVGString = featureSVGString.replace(
-      /\$\[secondary\]/g,
-      face.teamColors[1]
-    );
-    featureSVGString = featureSVGString.replace(
-      /\$\[accent\]/g,
-      face.teamColors[2]
-    );
+    featureSVGString = featureSVGString.replace(/\$\[hairColor\]/g, face.hair.color);
+    featureSVGString = featureSVGString.replace(/\$\[primary\]/g, face.teamColors[0]);
+    featureSVGString = featureSVGString.replace(/\$\[secondary\]/g, face.teamColors[1]);
+    featureSVGString = featureSVGString.replace(/\$\[accent\]/g, face.teamColors[2]);
 
     for (let i = 0; i < info.positions.length; i++) {
       svg.insertAdjacentHTML("beforeend", addWrapper(featureSVGString));
+      const position = info.positions[i];
 
-      if (info.positions[i] !== null) {
+      if (position !== null) {
         // Special case, for the pinocchio nose it should not be centered but should stick out to the left or right
         let xAlign;
+
         if (feature.id === "nose4" || feature.id === "pinocchio") {
+          // @ts-ignore
           xAlign = feature.flip ? "right" : "left";
         } else {
           xAlign = "center";
         }
 
-        translate(
-          svg.lastChild,
-          info.positions[i][0],
-          info.positions[i][1],
-          xAlign
-        );
+        translate(svg.lastChild, position[0], position[1], xAlign);
       }
 
       if (feature.hasOwnProperty("angle")) {
+        // @ts-ignore
         rotateCentered(svg.lastChild, (i === 0 ? 1 : -1) * feature.angle);
-      }
+      } // Flip if feature.flip is specified or if this is the second position (for eyes and eyebrows). Scale if feature.size is specified.
+      // @ts-ignore
 
-      // Flip if feature.flip is specified or if this is the second position (for eyes and eyebrows). Scale if feature.size is specified.
-      const scale = feature.hasOwnProperty("size") ? feature.size : 1;
+
+      const scale = feature.hasOwnProperty("size") ? feature.size : 1; // @ts-ignore
+
       if (feature.flip || i === 1) {
+        // @ts-ignore
         scaleCentered(svg.lastChild, -scale, scale);
       } else if (scale !== 1) {
+        // @ts-ignore
         scaleCentered(svg.lastChild, scale, scale);
       }
 
       if (info.scaleFatness && info.positions[0] !== null) {
         // Scale individual feature relative to the edge of the head. If fatness is 1, then there are 47 pixels on each side. If fatness is 0, then there are 78 pixels on each side.
-        const distance = (78 - 47) * (1 - face.fatness);
+        const distance = (78 - 47) * (1 - face.fatness); // @ts-ignore
+
         translate(svg.lastChild, distance, 0, "left", "top");
       }
     }
 
-    if (
-      info.scaleFatness &&
-      info.positions.length === 1 &&
-      info.positions[0] === null
-    ) {
+    if (info.scaleFatness && info.positions.length === 1 && info.positions[0] === null) {
+      // @ts-ignore
       scaleCentered(svg.lastChild, fatScale(face.fatness), 1);
     }
   };
 
   const display = (container, face, overrides) => {
     override(face, overrides);
+    const containerElement = typeof container === "string" ? document.getElementById(container) : container;
 
-    if (typeof container === "string") {
-      container = document.getElementById(container);
+    if (!containerElement) {
+      throw new Error("container not found");
     }
-    container.innerHTML = "";
 
+    containerElement.innerHTML = "";
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.setAttribute("version", "1.2");
     svg.setAttribute("baseProfile", "tiny");
     svg.setAttribute("width", "100%");
     svg.setAttribute("height", "100%");
     svg.setAttribute("viewBox", "0 0 400 600");
-    svg.setAttribute("preserveAspectRatio", "xMinYMin meet");
+    svg.setAttribute("preserveAspectRatio", "xMinYMin meet"); // Needs to be in the DOM here so getBBox will work
 
-    // Needs to be in the DOM here so getBBox will work
-    container.appendChild(svg);
+    containerElement.appendChild(svg);
+    const featureInfos = [{
+      name: "body",
+      positions: [null]
+    }, {
+      name: "jersey",
+      positions: [null]
+    }, {
+      name: "ear",
+      positions: [[55, 325], [345, 325]],
+      scaleFatness: true
+    }, {
+      name: "head",
+      positions: [null],
+      // Meaning it just gets placed into the SVG with no translation
+      scaleFatness: true
+    }, {
+      name: "eyeLine",
+      positions: [null]
+    }, {
+      name: "smileLine",
+      positions: [[150, 435], [250, 435]]
+    }, {
+      name: "miscLine",
+      positions: [null]
+    }, {
+      name: "facialHair",
+      positions: [null],
+      scaleFatness: true
+    }, {
+      name: "eye",
+      positions: [[140, 310], [260, 310]]
+    }, {
+      name: "eyebrow",
+      positions: [[140, 265], [260, 265]]
+    }, {
+      name: "mouth",
+      positions: [[200, 440]]
+    }, {
+      name: "nose",
+      positions: [[200, 370]]
+    }, {
+      name: "hair",
+      positions: [null],
+      scaleFatness: true
+    }, {
+      name: "glasses",
+      positions: [null],
+      scaleFatness: true
+    }, {
+      name: "accessories",
+      positions: [null],
+      scaleFatness: true
+    }];
 
-    const featureInfos = [
-      {
-        name: "body",
-        positions: [null]
-      },
-      {
-        name: "jersey",
-        positions: [null]
-      },
-      {
-        name: "ear",
-        positions: [[55, 325], [345, 325]],
-        scaleFatness: true
-      },
-      {
-        name: "head",
-        positions: [null], // Meaning it just gets placed into the SVG with no translation
-        scaleFatness: true
-      },
-      {
-        name: "eyeLine",
-        positions: [null]
-      },
-      {
-        name: "smileLine",
-        positions: [[150, 435], [250, 435]]
-      },
-      {
-        name: "miscLine",
-        positions: [null]
-      },
-      {
-        name: "facialHair",
-        positions: [null],
-        scaleFatness: true
-      },
-      {
-        name: "eye",
-        positions: [[140, 310], [260, 310]]
-      },
-      {
-        name: "eyebrow",
-        positions: [[140, 265], [260, 265]]
-      },
-      {
-        name: "mouth",
-        positions: [[200, 440]]
-      },
-      {
-        name: "nose",
-        positions: [[200, 370]]
-      },
-      {
-        name: "hair",
-        positions: [null],
-        scaleFatness: true
-      },
-      {
-        name: "glasses",
-        positions: [null],
-        scaleFatness: true
-      },
-      {
-        name: "accessories",
-        positions: [null],
-        scaleFatness: true
-      }
-    ];
-
-    for (const info of featureInfos) {
+    for (var _i = 0, _featureInfos = featureInfos; _i < _featureInfos.length; _i++) {
+      const info = _featureInfos[_i];
       drawFeature(svg, face, info);
     }
   };
 
   // THIS IS A GENERATED FILE, DO NOT EDIT BY HAND!
   // See tools/process-svgs.js
-
-  var svgsIndex = {"accessories":["headband-high","headband","none"],"body":["body"],"ear":["ear1","ear2","ear3"],"eye":["eye1","eye2","eye3","eye4","eye5","eye6","eye7","eye8","eye9"],"eyeLine":["line1","line2","line3","line4","line5","line6","none"],"eyebrow":["eyebrow1","eyebrow10","eyebrow11","eyebrow12","eyebrow2","eyebrow3","eyebrow4","eyebrow5","eyebrow6","eyebrow7","eyebrow8","eyebrow9"],"facialHair":["beard1","beard2","fullgoatee","goatee-thin","goatee1-stache","goatee1","goatee2","goatee3","goatee4","goatee5","goatee6","goatee7","goatee8","handlebar","honest-abe-stache","honest-abe","mustache-thin","mustache1","none","soul-stache","soul"],"glasses":["facemask","glasses1-primary","glasses1-secondary","glasses2-black","glasses2-primary","glasses2-secondary","none"],"hair":["afro","bald","cornrows","crop","high","juice","messy-short","middle-part","parted","short-fade","short","short2","spike","spike2"],"head":["head1","head2","head3","head4","head5","head6","head7","head8"],"jersey":["football","jersey","jersey2","jersey3","jersey4","jersey5"],"miscLine":["chin1","chin2","forehead1","forehead2","forehead3","forehead4","forehead5","none"],"mouth":["angry","closed","mouth","side","smile-closed","smile","smile2","smile3","straight"],"nose":["honker","nose1","nose2","nose3","nose4","nose5","nose6","nose7","nose8","pinocchio"],"smileLine":["line1","line2","line3","line4","none"]};
+  var svgsIndex = {
+    "accessories": ["headband-high", "headband", "none"],
+    "body": ["body"],
+    "ear": ["ear1", "ear2", "ear3"],
+    "eye": ["eye1", "eye2", "eye3", "eye4", "eye5", "eye6", "eye7", "eye8", "eye9"],
+    "eyeLine": ["line1", "line2", "line3", "line4", "line5", "line6", "none"],
+    "eyebrow": ["eyebrow1", "eyebrow10", "eyebrow11", "eyebrow12", "eyebrow2", "eyebrow3", "eyebrow4", "eyebrow5", "eyebrow6", "eyebrow7", "eyebrow8", "eyebrow9"],
+    "facialHair": ["beard1", "beard2", "fullgoatee", "goatee-thin", "goatee1-stache", "goatee1", "goatee2", "goatee3", "goatee4", "goatee5", "goatee6", "goatee7", "goatee8", "handlebar", "honest-abe-stache", "honest-abe", "mustache-thin", "mustache1", "none", "soul-stache", "soul"],
+    "glasses": ["facemask", "glasses1-primary", "glasses1-secondary", "glasses2-black", "glasses2-primary", "glasses2-secondary", "none"],
+    "hair": ["afro", "bald", "cornrows", "crop-fade", "crop", "curly", "dreads", "faux-hawk", "hair", "high", "juice", "messy-short", "messy", "middle-part", "parted", "short-bald", "short-fade", "short", "short2", "short3", "spike", "spike2", "spike3", "spike4"],
+    "head": ["head1", "head2", "head3", "head4", "head5", "head6", "head7", "head8"],
+    "jersey": ["football", "football2", "football3", "jersey", "jersey2", "jersey3", "jersey4", "jersey5"],
+    "miscLine": ["chin1", "chin2", "forehead1", "forehead2", "forehead3", "forehead4", "forehead5", "none"],
+    "mouth": ["angry", "closed", "mouth", "side", "smile-closed", "smile", "smile2", "smile3", "straight"],
+    "nose": ["honker", "nose1", "nose2", "nose3", "nose4", "nose5", "nose6", "nose7", "nose8", "pinocchio"],
+    "smileLine": ["line1", "line2", "line3", "line4", "none"]
+  };
 
   const getID = type => {
+    // @ts-ignore
     return svgsIndex[type][Math.floor(Math.random() * svgsIndex[type].length)];
   };
 
-  const colors = [
-    {
-      skin: "#f2d6cb",
-      hair: [
-        "#272421",
-        "#3D2314",
-        "#5A3825",
-        "#CC9966",
-        "#2C1608",
-        "#B55239",
-        "#e9c67b",
-        "#D7BF91"
-      ]
-    },
-    {
-      skin: "#ddb7a0",
-      hair: [
-        "#272421",
-        "#3D2314",
-        "#5A3825",
-        "#CC9966",
-        "#2C1608",
-        "#B55239",
-        "#e9c67b",
-        "#D7BF91"
-      ]
-    },
-    { skin: "#ce967d", hair: ["#272421", "#423125"] },
-    { skin: "#bb876f", hair: ["#272421"] },
-    { skin: "#aa816f", hair: ["#272421"] },
-    { skin: "#a67358", hair: ["#272421"] },
-    { skin: "#ad6453", hair: ["#272421"] },
-    { skin: "#74453d", hair: ["#272421"] },
-    { skin: "#5c3937", hair: ["#272421"] }
-  ];
-
+  const colors = [{
+    skin: "#f2d6cb",
+    hair: ["#272421", "#3D2314", "#5A3825", "#CC9966", "#2C1608", "#B55239", "#e9c67b", "#D7BF91"]
+  }, {
+    skin: "#ddb7a0",
+    hair: ["#272421", "#3D2314", "#5A3825", "#CC9966", "#2C1608", "#e9c67b", "#D7BF91"]
+  }, {
+    skin: "#ce967d",
+    hair: ["#272421", "#423125"]
+  }, {
+    skin: "#bb876f",
+    hair: ["#272421"]
+  }, {
+    skin: "#aa816f",
+    hair: ["#272421"]
+  }, {
+    skin: "#a67358",
+    hair: ["#272421"]
+  }, {
+    skin: "#ad6453",
+    hair: ["#272421"]
+  }, {
+    skin: "#74453d",
+    hair: ["#272421"]
+  }, {
+    skin: "#5c3937",
+    hair: ["#272421"]
+  }];
   const defaultTeamColors = ["#0d435e", "#f0494a", "#cccccc"];
 
   const roundTwoDecimals = x => Math.round(x * 100) / 100;
 
   const generate = overrides => {
     const eyeAngle = Math.round(Math.random() * 25 - 10);
-
     const palette = colors[Math.floor(Math.random() * colors.length)];
     const skinColor = palette.skin;
-    const hairColor =
-      palette.hair[Math.floor(Math.random() * palette.hair.length)];
+    const hairColor = palette.hair[Math.floor(Math.random() * palette.hair.length)];
     const isFlipped = Math.random() < 0.5;
-
     const face = {
       fatness: roundTwoDecimals(Math.random()),
       teamColors: defaultTeamColors,
@@ -344,9 +500,7 @@ var faces = (function (exports) {
       },
       head: {
         id: getID("head"),
-        shave: `rgba(0,0,0,${
-        Math.random() < 0.25 ? roundTwoDecimals(Math.random() / 5) : 0
-      })`
+        shave: `rgba(0,0,0,${Math.random() < 0.25 ? roundTwoDecimals(Math.random() / 5) : 0})`
       },
       eyeLine: {
         id: Math.random() < 0.75 ? getID("eyeLine") : "none"
@@ -361,14 +515,18 @@ var faces = (function (exports) {
       facialHair: {
         id: Math.random() < 0.5 ? getID("facialHair") : "none"
       },
-      eye: { id: getID("eye"), angle: eyeAngle },
+      eye: {
+        id: getID("eye"),
+        angle: eyeAngle
+      },
       eyebrow: {
         id: getID("eyebrow"),
         angle: Math.round(Math.random() * 35 - 15)
       },
       hair: {
         id: getID("hair"),
-        color: hairColor
+        color: hairColor,
+        flip: isFlipped
       },
       mouth: {
         id: getID("mouth"),
@@ -386,9 +544,7 @@ var faces = (function (exports) {
         id: Math.random() < 0.2 ? getID("accessories") : "none"
       }
     };
-
     override(face, overrides);
-
     return face;
   };
 
