@@ -1,17 +1,18 @@
 blockquote {
-    border-left: 5px solid #aaa;
-    margin-left: 1.5em;
-    padding-left: 5px;
+  color: #444;
+  border-left: 5px solid #aaa;
+  margin-left: -15px;
+  padding-left: 10px;
 }
 
 ol#comments li p {
-    font-size: 100%;
+  font-size: 100%;
 }
 
 #commentlist li ul {
-    border-left: 1px solid #ddd;
-    font-size: 110%;
-    list-style-type: none;
+  border-left: 1px solid #ddd;
+  font-size: 110%;
+  list-style-type: none;
 }
 
 img {
@@ -98,7 +99,7 @@ div#wrapper {
   background-color: #4c22c8;
   color: #fff;
   margin: 0 auto;
-  padding-top: 5px;
+  padding-top: 7px;
   max-width: 638px;
 }
 
@@ -229,6 +230,13 @@ ul, ol {
 /* RESPONSIVE STUFF! DESKTOP FIRST, FUCK MOBILE FIRST!! */
 
 @media (max-width: 767px) {
+  blockquote {
+    color: #444;
+    border-left: 5px solid #aaa;
+    margin-left: 5px;
+    padding-left: 5px;
+  }
+
   pre {
     margin: 0 -0.5em;
   }
