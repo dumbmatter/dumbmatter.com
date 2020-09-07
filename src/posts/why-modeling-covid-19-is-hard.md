@@ -24,3 +24,5 @@ Now imagine a slightly different scenario. It doesn't spread to 2 new people eve
 Models involving exponential growth are incredibly sensitive to their parameters. This is not the fault of the people who make the models, it's the fault of math and reality. So if you have a model with many uncertain parameters that govern exponential growth, expect your projections to be wrong. Very wrong.
 
 Does that mean modeling should not be done in cases like this? Definitely not. Models can still help us understand the range of possible outcomes, even if that range is wide. We just need to be careful about how we interpret the results.
+
+*Update, September 2020:* At this point it's pretty clear that the IHME model kind of sucks. What I wrote above is still true about the fundamental challenge of modeling, particularly in the early days of a pandemic. But now you're probably better off looking at more competent models like [covid19-projections.com](https://covid19-projections.com/). Their projections have been much more accurate than the IHME's.
