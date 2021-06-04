@@ -5,27 +5,33 @@ title: Projects
 
 <h2 style="padding-top: 0">Big Online Projects</h2>
 
-<a href="https://basketball-gm.com/"><img src="/files/icons/basketballgm.png" width="16" height="16" alt="" /> Basketball GM</a> - Basketball simulation video game. It's written entirely in client-side JavaScript and you can play it right in your web browser.
+<a href="https://basketball-gm.com/"><img src="https://play.basketball-gm.com/ico/logo.png" width="16" height="16" alt="" /> Basketball GM</a> - Basketball simulation video game. It's written entirely in client-side JavaScript and you can play it right in your web browser.
 
-<a href="http://www.avatic.com/"><img src="/files/icons/avatic.png" width="16" height="16" alt="" /> Avatic</a> - Various web stuff I made before starting grad school. Largely defunct or abandoned.
+<a href="https://football-gm.com/"><img src="https://play.football-gm.com/ico/logo.png" width="16" height="16" alt="" /> Football GM</a> - Similer to Basketball GM.
+
+<a href="https://hockey.zengm.com/"><img src="https://hockey.zengm.com/ico/logo.png" width="16" height="16" alt="" /> ZenGM Hockey</a> - Similer to Basketball GM and Football GM.
+
+<a href="http://www.avatic.com/"><img src="/files/icons/avatic.png" width="16" height="16" alt="" /> Avatic</a> - Various web stuff I made back in the early 2000s. Largely defunct or abandoned.
 
 <h2>Mini Online Projects</h2>
+
+<a href="/facesjs/">faces.js</a> - A JavaScript library that generates and displays cartoon faces as SVGs, somewhat reminiscent of how the Nintendo Wii generates random Miis. It used to be quite ugly, but after getting help from some more artistically talented contributors, now it's pretty good looking. I wrote it for Basketball GM, but now it's used in several other video games and other projects as well.
+
+<a href="/screw/">Screw</a> - Alter the pitch and tempo of MP3s.
 
 <a href="/csv-sql-live/">CSV SQL Live</a> - Run SQL queries on CSV files in your web browser.
 
 <a href="/sas7bdat/">SAS7BDAT Web Viewer</a> - Open SAS files in your web browser. Because you always wanted to do that, right?
 
-<a href="/screw/">Screw</a> - Alter the pitch and tempo of MP3s.
+<a href="https://github.com/dumbmatter/fakeIndexedDB">fakeIndexedDB</a> - A pure JS in-memory implementation of the IndexedDB API.
 
-<a href="https://github.com/dumbmatter/fakeIndexedDB">fakeIndexedDB</a> -  A pure JS in-memory implementation of the IndexedDB API.
+<a href="https://github.com/dumbmatter/promise-worker-bi">promise-worker-bi</a> - Promise-based messaging for Web Workers and Shared Workers.
 
 <a href="/vote-and-die/">Vote and Die</a> - Are you more likely to cast a meaningful vote or die in an accident on your way to the polling both? Find out!
 
 <a href="/flockas/">Flockas</a> - No description would suffice.
 
 <a href="/barbconq/">Barbarian Conquest</a> - Minigame built on a partial web-based port of Civilization 4. I built this mainly to play around with TypeScript, but it's not horrible.
-
-<a href="/facesjs/">faces.js</a> - A JavaScript library that generates and displays cartoon faces as SVGs, somewhat reminiscent of how the Nintendo Wii generates random Miis. I wrote it for Basketball GM, probably nobody else uses it.
 
 <a href="/hrv-interactive/">Interactive HRV Figures</a> - Reproduce results from <a href="http://www.ncbi.nlm.nih.gov/pubmed/24680646">one of my papers</a> in your web browser.
 
