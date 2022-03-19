@@ -619,9 +619,9 @@ metalsmith-pagination@^1.4.0:
     to-function "^2.0.5"
     xtend "^4.0.0"
 
-"metalsmith-permalinks@git://github.com/arccoza/metalsmith-permalinks.git#be003e106b042ed6691dfca8d8d85d9fbef8b0da":
+metalsmith-permalinks@arccoza/metalsmith-permalinks#be003e106b042ed6691dfca8d8d85d9fbef8b0da:
   version "0.5.0"
-  resolved "git://github.com/arccoza/metalsmith-permalinks.git#be003e106b042ed6691dfca8d8d85d9fbef8b0da"
+  resolved "https://codeload.github.com/arccoza/metalsmith-permalinks/tar.gz/be003e106b042ed6691dfca8d8d85d9fbef8b0da"
   dependencies:
     debug "~0.7.4"
     moment "^2.5.1"
