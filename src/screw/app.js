@@ -22496,12 +22496,35 @@ var App = function (_React$Component) {
 
     (0, _createClass3.default)(App, [{
         key: 'play',
-        value: function play() {
-            if (this.state.action !== 'play') {
-                this.audioPlayer.play();
-                this.setState({ action: 'play' });
+        value: function () {
+            var ref = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee() {
+                return _regenerator2.default.wrap(function _callee$(_context) {
+                    while (1) {
+                        switch (_context.prev = _context.next) {
+                            case 0:
+                                _context.next = 2;
+                                return this.audioPlayer.context.resume();
+
+                            case 2:
+                                if (this.state.action !== 'play') {
+                                    this.audioPlayer.play();
+                                    this.setState({ action: 'play' });
+                                }
+
+                            case 3:
+                            case 'end':
+                                return _context.stop();
+                        }
+                    }
+                }, _callee, this);
+            }));
+
+            function play() {
+                return ref.apply(this, arguments);
             }
-        }
+
+            return play;
+        }()
     }, {
         key: 'pause',
         value: function pause() {
@@ -22540,35 +22563,35 @@ var App = function (_React$Component) {
                 var reader = new FileReader();
                 reader.readAsArrayBuffer(file);
                 reader.onload = function () {
-                    var ref = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee(event) {
+                    var ref = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee2(event) {
                         var buffer;
-                        return _regenerator2.default.wrap(function _callee$(_context) {
+                        return _regenerator2.default.wrap(function _callee2$(_context2) {
                             while (1) {
-                                switch (_context.prev = _context.next) {
+                                switch (_context2.prev = _context2.next) {
                                     case 0:
                                         _this2.emitter.emit('status', 'Playing file...');
 
                                         buffer = void 0;
-                                        _context.prev = 2;
-                                        _context.next = 5;
+                                        _context2.prev = 2;
+                                        _context2.next = 5;
                                         return _this2.audioPlayer.decodeAudioData(event.target.result);
 
                                     case 5:
-                                        buffer = _context.sent;
-                                        _context.next = 12;
+                                        buffer = _context2.sent;
+                                        _context2.next = 12;
                                         break;
 
                                     case 8:
-                                        _context.prev = 8;
-                                        _context.t0 = _context['catch'](2);
+                                        _context2.prev = 8;
+                                        _context2.t0 = _context2['catch'](2);
 
                                         _this2.emitter.emit('state', {
                                             error: {
-                                                message: _context.t0.message,
+                                                message: _context2.t0.message,
                                                 type: 'Decoding error'
                                             }
                                         });
-                                        return _context.abrupt('return');
+                                        return _context2.abrupt('return');
 
                                     case 12:
 
@@ -22577,10 +22600,10 @@ var App = function (_React$Component) {
 
                                     case 14:
                                     case 'end':
-                                        return _context.stop();
+                                        return _context2.stop();
                                 }
                             }
-                        }, _callee, _this2, [[2, 8]]);
+                        }, _callee2, _this2, [[2, 8]]);
                     }));
                     return function (_x) {
                         return ref.apply(this, arguments);
