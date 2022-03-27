@@ -965,14 +965,6 @@
     initializeSelectOptions();
     initializeFormValues();
     listenForChanges();
-
-    // Reload when something changes
-    const socket = new WebSocket("ws://localhost:3001/");
-    socket.addEventListener("message", (event) => {
-      if (event.data === "reload") {
-        location.reload();
-      }
-    });
   </script>
 
   <script
