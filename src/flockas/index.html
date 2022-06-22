@@ -76,16 +76,19 @@ $("#remove").click(remove);
 $("#pause").click(pause);
 </script>
 
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-23918822-2']);
-  _gaq.push(['_trackPageview']);
+<script>
+if (location.host.indexOf("dumbmatter.com") >= 0) {
+  var s = document.createElement("script");
+  s.async = true;
+  s.src = "https://www.googletagmanager.com/gtag/js?id=G-LCGWE7V81F";
+  s.type = "text/javascript";
+  document.head.appendChild(s);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LCGWE7V81F');
+}
 </script>
   </body>
 </html>

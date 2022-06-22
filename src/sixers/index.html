@@ -590,5 +590,18 @@ h2.categorizer {
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
   <script src="ui.js"></script>
+  <script>
+  if (location.host.indexOf("dumbmatter.com") >= 0) {
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-LCGWE7V81F";
+    s.type = "text/javascript";
+    document.head.appendChild(s);
 
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LCGWE7V81F');
+  }
+  </script>
 </html>
