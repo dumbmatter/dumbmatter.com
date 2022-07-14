@@ -11,11 +11,13 @@ title: Projects
 
 <a href="https://hockey.zengm.com/"><img src="https://hockey.zengm.com/ico/logo.png" width="16" height="16" alt="" /> ZenGM Hockey</a> - Similer to Basketball GM and Football GM.
 
+<a href="https://baseball.zengm.com/"><img src="https://baseball.zengm.com/ico/logo.png" width="16" height="16" alt="" /> ZenGM Baseball</a> - Similer to Basketball GM, Football GM, and ZenGM Hockey.
+
 <a href="http://www.avatic.com/"><img src="/files/icons/avatic.png" width="16" height="16" alt="" /> Avatic</a> - Various web stuff I made back in the early 2000s. Largely defunct or abandoned.
 
 <h2>Mini Online Projects</h2>
 
-<a href="/facesjs/">faces.js</a> - A JavaScript library that generates and displays cartoon faces as SVGs, somewhat reminiscent of how the Nintendo Wii generates random Miis. It used to be quite ugly, but after getting help from some more artistically talented contributors, now it's pretty good looking. I wrote it for Basketball GM, but now it's used in several other video games and other projects as well.
+<a href="https://zengm.com/facesjs/">faces.js</a> - A JavaScript library that generates and displays cartoon faces as SVGs, somewhat reminiscent of how the Nintendo Wii generates random Miis. It used to be quite ugly, but after getting help from some more artistically talented contributors, now it's pretty good looking. I wrote it for Basketball GM, but now it's used in several other video games and other projects as well.
 
 <a href="/screw/">Screw</a> - Alter the pitch and tempo of MP3s.
 
