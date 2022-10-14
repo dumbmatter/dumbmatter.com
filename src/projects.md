@@ -37,6 +37,19 @@ title: Projects
 
 <a href="/hrv-interactive/">Interactive HRV Figures</a> - Reproduce results from <a href="http://www.ncbi.nlm.nih.gov/pubmed/24680646">one of my papers</a> in your web browser.
 
+<h2>Presentations</h2>
+
+<ol>
+<li>
+<p>
+<a href="/files/presentations/2022-pwa-summit.pdf">Challenges in storing large amounts of client-side data</a><br />
+Scheff JD<br />
+<a href="https://pwasummit.org/"><em>PWA Summit</em> 2022</a><br />
+<span class="publinks"><a href="https://www.youtube.com/watch?v=m-2lLWI_csE&start=496&end=1801">Video</a> | <a href="/files/presentations/2022-pwa-summit.pdf">Slides (PDF)</a></span>
+</p>
+</li>
+</ol>
+
 <h2>My Favorite Academic Publications</h2>
 
 <ol>
