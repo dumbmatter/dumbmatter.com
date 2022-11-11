@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "build": "node index.js",
+    "deploy": "yarn build && node deploy.js",
     "start": "http-server build"
   },
   "author": "Jeremy Scheff <jdscheff@gmail.com>",
