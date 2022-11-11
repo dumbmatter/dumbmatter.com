@@ -1,6 +1,12 @@
   </div>
 
   <script>
+    const setBarWidth = () => {
+      document.documentElement.style.setProperty('--bar-width', `${window.innerWidth}px`);
+    }
+    window.addEventListener("resize", setBarWidth);
+    setBarWidth();
+
     const bars = document.getElementById("top").children;
 
     const colorMap = {
@@ -10,7 +16,7 @@
       4: 1,
       5: 2,
     };
-    const getDuration = () => 1500 + Math.random() * 3500;
+    const getDuration = () => (1500 + Math.random() * 3500) * window.innerWidth / 750;
     function makeBubble(bar, i) {
       const bubble = document.createElement("div");
 
