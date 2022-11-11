@@ -3,7 +3,7 @@ layout: page.html
 title: Projects
 ---
 
-<h2 style="padding-top: 0">Big Online Projects</h2>
+## Big Online Projects
 
 <a href="https://basketball-gm.com/"><img src="https://play.basketball-gm.com/ico/logo.png" width="16" height="16" alt="" /> Basketball GM</a> - Basketball simulation video game. It's written entirely in client-side JavaScript and you can play it right in your web browser.
 
@@ -15,7 +15,9 @@ title: Projects
 
 <a href="http://www.avatic.com/"><img src="/files/icons/avatic.png" width="16" height="16" alt="" /> Avatic</a> - Various web stuff I made back in the early 2000s. Largely defunct or abandoned.
 
-<h2>Mini Online Projects</h2>
+## Mini Online Projects
+
+<a href="https://zengm.com/universal-draft-lottery-simulator/">The Universal Draft Lottery Simulator</a> - This is my draft lottery simulation code from Basketball GM, extracted into a standalone app. It can be fun to play around with different lottery settings, and people running fantasy sports leagues might find it useful for making a custom lottery.
 
 <a href="https://zengm.com/facesjs/">faces.js</a> - A JavaScript library that generates and displays cartoon faces as SVGs, somewhat reminiscent of how the Nintendo Wii generates random Miis. It used to be quite ugly, but after getting help from some more artistically talented contributors, now it's pretty good looking. I wrote it for Basketball GM, but now it's used in several other video games and other projects as well.
 
@@ -37,7 +39,7 @@ title: Projects
 
 <a href="/hrv-interactive/">Interactive HRV Figures</a> - Reproduce results from <a href="http://www.ncbi.nlm.nih.gov/pubmed/24680646">one of my papers</a> in your web browser.
 
-<h2>Presentations</h2>
+## Presentations
 
 <ol>
 <li>
@@ -50,7 +52,7 @@ Scheff JD<br />
 </li>
 </ol>
 
-<h2>My Favorite Academic Publications</h2>
+## My Favorite Academic Publications
 
 <ol>
 <li>
@@ -82,7 +84,7 @@ Scheff JD, Calvano SE, Lowry SF, Androulakis IP<br />
 
 </ol>
 
-<h2>My Other Academic Publications</h2>
+## My Other Academic Publications
 
 <ol>
 <li>
