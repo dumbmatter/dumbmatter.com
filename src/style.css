@@ -46,7 +46,7 @@ pre code {
 
 body {
   background-color: #fafafa;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Ubuntu, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 18px;
   margin: 0 0 0.5rem 0;
 }
@@ -69,7 +69,7 @@ span.publinks {
 
 h1, h2, h3, h4 {
   color: #d44911;
-  font-family: 'Lato', serif;
+  font-family: 'Lato';
   font-weight: normal;
   line-height: 140%;
 }
@@ -149,7 +149,7 @@ hr {
   float: left;
 }
 .name a {
-  font-family: 'Lato', serif;
+  font-family: 'Lato';
   font-size: 22px;
   font-weight: Bold;
 }
