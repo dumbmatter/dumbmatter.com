@@ -61,6 +61,8 @@ a:hover {
 
 p, ol, ul {
   line-height: var(--line-height);
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 span.publinks {
@@ -69,19 +71,24 @@ span.publinks {
 
 h1, h2, h3, h4 {
   color: #d44911;
-  font-family: 'Lato';
+  font-family: 'Lato', sans-serif;
   font-weight: normal;
   line-height: 140%;
 }
 h1 {
-  font-size: 120%;
-  margin: 16px 0;
+  font-size: 28px;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 h2 {
-  font-size: 100%;
+  font-size: 22px;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 h3 {
-  font-size: 100%;
+  font-size: 18px;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 h1 a {
   color: #d44911;
@@ -149,9 +156,9 @@ hr {
   float: left;
 }
 .name a {
-  font-family: 'Lato';
+  font-family: 'Lato', sans-serif;
   font-size: 22px;
-  font-weight: Bold;
+  font-weight: bold;
 }
 .name-subtitle {
   line-height: 100%;
@@ -180,6 +187,7 @@ ul, ol {
 }
 
 .post-title {
+  font-size: 22px;
   margin-bottom: 0;
 }
 
@@ -206,7 +214,6 @@ ul, ol {
 }
 .post-tags {
   font-size: 16px;
-  margin: 0;
 }
 
 .find-me-on {
@@ -298,10 +305,6 @@ ul, ol {
   }
   .post-date-year {
     font-size: inherit;
-  }
-
-  .post-tags {
-    font-size: 16px;
   }
 
   .find-me-on {
