@@ -18,8 +18,10 @@
 {{#each pagination.files}}
   <div class="post">
     <h1 class="post-title"><a href="/{{path}}/">{{title}}</a></h1>
-    {{> date}}
-    {{> tag-list}}
+    <div class="post-date-tag-wrapper">
+      {{> date}}
+      {{> tag-list}}
+    </div>
 
     {{{teaser}}}
 

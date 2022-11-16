@@ -194,11 +194,18 @@ ul, ol {
 .post {
   position: relative;
 }
+.post-date-tag-wrapper {
+  font-size: 16px;
+  margin-bottom: 1rem;
+  line-height: var(--line-height);
+  margin-top: .25rem;
+}
 .post-date {
   left: -60px;
+  line-height: 1.17;
   position: absolute;
   text-align: center;
-  top: 4px;
+  top: 5px;
   width: 60px;
 }
 .post-date-month {
@@ -212,8 +219,8 @@ ul, ol {
 .post-date-year {
   font-size: 12px;
 }
-.post-tags {
-  font-size: 16px;
+.post-date-2 {
+  display: none;
 }
 
 .find-me-on {
@@ -278,33 +285,17 @@ ul, ol {
     margin-left: -20px;
   }
 
+  .post-date-tag-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .post-date {
-    left: inherit;
-    position: inherit;
-    text-align: inherit;
-    top: inherit;
-    width: inherit;
-    font-size: 16px;
-    line-height: var(--line-height);
+    display: none;
   }
-  .post-date-month {
-    font-size: inherit;
-    float: left;
-  }
-  .post-date-month::after {
-    content: "\00a0"; /* Unicode non-breaking space */
-  }
-  .post-date-day {
-    font-size: inherit;
-    margin-bottom: inherit;
-    margin-top: inherit;
-    float: left;
-  }
-  .post-date-day::after {
-    content: ",\00a0";
-  }
-  .post-date-year {
-    font-size: inherit;
+  .post-date-2 {
+    display: block;
+    padding-right: 2rem;
+    margin-right: auto;
   }
 
   .find-me-on {
