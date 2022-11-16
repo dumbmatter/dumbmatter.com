@@ -12,12 +12,12 @@ blockquote {
 }
 
 ol#comments li p {
-  font-size: 100%;
+  font-size: 1rem;
 }
 
 #commentlist li ul {
   border-left: 1px solid #ddd;
-  font-size: 110%;
+  font-size: 1.125rem;
   list-style-type: none;
 }
 
@@ -35,7 +35,7 @@ pre {
   color: #002b36;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
-  font-size: 85%;
+  font-size: 0.875rem;
   overflow: auto;
   padding: 1em;
   margin: 1em -1em;
@@ -46,8 +46,8 @@ pre code {
 
 body {
   background-color: #fafafa;
-  font-family: Ubuntu, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 18px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.125rem;
   margin: 0 0 0.5rem 0;
 }
 
@@ -66,7 +66,7 @@ p, ol, ul {
 }
 
 span.publinks {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 h1, h2, h3, h4 {
@@ -76,17 +76,17 @@ h1, h2, h3, h4 {
   line-height: 140%;
 }
 h1 {
-  font-size: 28px;
+  font-size: 1.75rem;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
 h2 {
-  font-size: 22px;
+  font-size: 1.375rem;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
 h3 {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
@@ -157,7 +157,7 @@ hr {
 }
 .name a {
   font-family: 'Lato', sans-serif;
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: bold;
 }
 .name-subtitle {
@@ -165,7 +165,7 @@ hr {
   margin: 3px 0 0 0;
 }
 .menu {
-  font-size: 18px;
+  font-size: 1.125rem;
   float: right;
   margin-top: 29px;
   margin-bottom: 0.5rem;
@@ -187,7 +187,7 @@ ul, ol {
 }
 
 .post-title {
-  font-size: 22px;
+  font-size: 1.375rem;
   margin-bottom: 0;
 }
 
@@ -195,7 +195,7 @@ ul, ol {
   position: relative;
 }
 .post-date-tag-wrapper {
-  font-size: 16px;
+  font-size: 1rem;
   margin-bottom: 1rem;
   line-height: var(--line-height);
   margin-top: .25rem;
@@ -209,15 +209,15 @@ ul, ol {
   width: 60px;
 }
 .post-date-month {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .post-date-day {
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: -4px;
   margin-top: -4px;
 }
 .post-date-year {
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .post-date-2 {
   display: none;
