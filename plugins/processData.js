@@ -1,6 +1,7 @@
 const path = require('path');
 
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const monthsLong = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 const plugin = (options) => {
     return (files, metalsmith, done) => {
@@ -15,7 +16,9 @@ const plugin = (options) => {
                 file.dateParts = {
                     year: dateParts[0],
                     month: months[parseInt(dateParts[1]) - 1],
+                    monthLong: monthsLong[parseInt(dateParts[1]) - 1],
                     day: dateParts[2],
+                    dayInt: parseInt(dateParts[2]),
                 };
             }
 
