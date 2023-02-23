@@ -11,7 +11,7 @@ But can a fancy Markov chain actually be scary? I mean it's just predicting the 
 
 <!--more-->
 
-Technically yes, it is just predicting the next word. And yes, that means it is pretty different than a human. But if you have a sufficiently complex system that is "just predicting the next word", that [may still be capable of incredible things](https://news.ycombinator.com/item?id=34797185), and it may defy our expectations of how a fancy Markov chain is supposed to work. In fact we're probably already at the point where we can't say how LLMs are "supposed to work", to some extent we have to just study them as we do natural phenomena.
+Technically yes, it is just predicting the next word. And yes, that means it is pretty different than a human. But if you have a sufficiently complex system that is "just predicting the next word", that [may still be capable of incredible things](https://news.ycombinator.com/item?id=34797185), and it may defy our expectations of how a fancy Markov chain is supposed to work. In fact we're probably already at the point where [we can't say how LLMs are "supposed to work"](https://www.lesswrong.com/posts/sbaQv8zmRncpmLNKv/the-idea-that-chatgpt-is-simply-predicting-the-next-word-is), to some extent we have to just study them as we do natural phenomena.
 
 The worrying thing is, well, the same worrying thing so many scifi stories are about. If [the singularity](https://en.wikipedia.org/wiki/Technological_singularity) does indeed come, how will we pitiful humans fare? The field of "AI safety" exists basically to give us the best chance possible. And I'm no expert in that field, but people who are seem pessimistic.
 
