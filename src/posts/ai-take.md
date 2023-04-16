@@ -39,6 +39,6 @@ So far, it seems that the path to better AI is mostly throwing more data and com
 
 3. Our current AI models (such as LLMs) stop scaling with more data and computing power, for some reason.
 
-I'd guess #1 is not very likely (we already train AI models on their own output, at least to some extent), #2 is not very likely (Moore's law may be dead, but even if there was no technological progress, OpenAI is a drop in the bucket of the world's GDP), and #3 feels less and less likely as scaling AI models continues to produce amazing results.
+I'd guess #1 is not very likely (we already train AI models on their own output, at least to some extent), #2 is not very likely (Moore's law may be dead, but even if there was no technological progress, OpenAI is a drop in the bucket of the world's GDP), and #3 feels less and less likely as [scaling AI models continues to produce amazing results](http://www.incompleteideas.net/IncIdeas/BitterLesson.html).
 
 That's not really an optimistic take. But hey, I'm no expert. I'm not the guy to ask about this stuff. I'm mostly writing this blog post just so I have something to look back on later and see how smart/stupid I look. So check back here in a couple decades, if we aren't extinct!
