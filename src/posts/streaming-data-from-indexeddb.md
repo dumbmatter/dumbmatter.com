@@ -5,7 +5,7 @@ tags: Programming
 title: Streaming data from IndexedDB to a file with the File System Access API
 ---
 
-I was playing around with this for use in [my video games](https://zengm.com/) but ended up not using any of it, at least for now. It's annoying when you learn a bunch of stuff and it ends up not being useful! So I figured I might as well write a blog post about it.
+I was playing around with this for use in [my video games](https://zengm.com/) which store a ton of data in IndexedDB (too much to read into memory at once) and thought maybe some other people might be interested in it too, since I haven't seen any other discussion of this topic.
 
 The goal here is to move data from IndexedDB to a file without reading all of the data into memory at once. If you are able to read your data into memory, you can create a `blob` and use `URL.createObjectURL` to download it to a file - but that's old news. This is about streaming.
 
