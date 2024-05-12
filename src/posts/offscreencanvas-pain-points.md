@@ -5,7 +5,7 @@ tags: Programming
 title: OffscreenCanvas pain points
 ---
 
-I am working on a side project that makes heavy use of the [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) and I cam across [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas) which seemed to have some compelling features. Wouldn't it be nice for performance to do all of my rendering in a web worker? Well I gave it a try, but wound up not going forward with it due to several reasons:
+I am working on a side project that makes heavy use of the [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) and I came across [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas) which seemed to have some compelling features. Wouldn't it be nice for performance to do all of my rendering in a web worker? Well I gave it a try, but wound up not going forward with it due to several reasons:
 
 <!--more-->
 
