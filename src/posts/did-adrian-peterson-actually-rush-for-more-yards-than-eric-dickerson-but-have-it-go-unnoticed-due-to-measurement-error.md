@@ -5,7 +5,7 @@ tags: Football, Programming, Sports, Statistics
 title: Did Adrian Peterson actually rush for more yards than Eric Dickerson but have it go unnoticed due to measurement error?
 ---
 
-<p>Despite miraculously recovering from ACL surgery and successfully leading his team for the playoffs, Adrian Peterson tragically missed the all time rushing record by 9 yards.</p>
+<p>Despite miraculously recovering from ACL surgery and successfully leading his team to the playoffs, Adrian Peterson tragically missed the all time rushing record by 9 yards.</p>
 
 <p><em>...or did he?</em></p>
 
