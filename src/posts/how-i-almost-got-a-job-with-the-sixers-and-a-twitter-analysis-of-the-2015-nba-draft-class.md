@@ -1,7 +1,7 @@
 ---
 date: 2017-01-24
 layout: post.html
-tags: Basketball, Basketball GM, NBA, Sixers, Twitter
+tags: Basketball, NBA, Sixers, Twitter, ZenGM
 title: How I almost got a job with the Sixers, and a Twitter analysis of the 2015 NBA draft class
 ---
 
