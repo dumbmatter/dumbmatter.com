@@ -19,7 +19,7 @@ const mySpawn = (command, args) => {
 };
 
 const deploy = async () => {
-	const target = `dh_yb52xg@forward.dreamhost.com:/home/dh_yb52xg/${DOMAIN}`;
+	const target = `dh_yb52xg@dumbmatter.com:/home/dh_yb52xg/${DOMAIN}`;
 
 	// Copy "files" separately, because we never want to delete from those folders
 	const copyAndKeep = ["files"];
