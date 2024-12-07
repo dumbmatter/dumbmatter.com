@@ -9,6 +9,8 @@ Conspiracy theory time! This one is actually mostly true.
 
 Population counts from the census are used to determine how many electoral votes each state gets. In 2020, there were some weird results. Turns out those were mistakes. [The Census Bureau even admitted it a couple years ago.](https://www.census.gov/library/stories/2022/05/2020-census-undercount-overcount-rates-by-state.html) In terms of electoral votes, [the net impact of the mistakes was](https://www.heritage.org/election-integrity/commentary/census-errors-will-distort-elections-funding-next-decade):
 
+<!--more-->
+
 <style>
 .census-red::marker {
     color: red;
