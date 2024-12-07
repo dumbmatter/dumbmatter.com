@@ -81,7 +81,9 @@ As you can probably guess based on what I wrote in some of the sections above, I
 
 Today I am less sure. I think I still support universal healthcare, but the devil is in the details, and I don't have a lot of confidence that it would go well if we tried implementing it right now. I guess probably a lot of people agree with me on that, since it has basically disappeared as a political issue.
 
-**Verdict: I may have been wrong in 2004. At a minimum, I was wrong about how difficult it would be.**
+I also suspect that universal healthcare would be, at best, more of a minor improvement, rather than a cure to all the problems of our healthcare system. Yes we spend a lot of money, but there is a decent argument that [we spend that money because we're rich, not becuase we're particularly inefficient at healthcare spending](https://randomcriticalanalysis.com/why-conventional-wisdom-on-health-care-is-wrong-a-primer/). Additionally, at least some of the money we spend is not really "waste", it's going to the development of better drugs and medical devices. Without the US spending so much money, would medical progress slow down? Would that be worth saving some money? I don't know, it's all very messy.
+
+**Verdict: I was overconfident in my opinion in 2004, or maybe just flat out wrong.**
 
 ## China
 
