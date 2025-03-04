@@ -81,7 +81,7 @@ As you can probably guess based on what I wrote in some of the sections above, I
 
 Today I am less sure. I think I still support universal healthcare, but the devil is in the details, and I don't have a lot of confidence that it would go well if we tried implementing it right now. I guess probably a lot of people agree with me on that, since it has basically disappeared as a political issue.
 
-I also suspect that universal healthcare would be, at best, more of a minor improvement, rather than a cure to all the problems of our healthcare system. Yes we spend a lot of money, but there is a decent argument that [we spend that money because we're rich, not becuase we're particularly inefficient at healthcare spending](https://randomcriticalanalysis.com/why-conventional-wisdom-on-health-care-is-wrong-a-primer/). Additionally, at least some of the money we spend is not really "waste", it's going to the development of better drugs and medical devices. Without the US spending so much money, would medical progress slow down? Would that be worth saving some money? I don't know, it's all very messy.
+I also suspect that universal healthcare would be, at best, more of a minor improvement, rather than a cure to all the problems of our healthcare system. Yes we spend a lot of money, but there is a decent argument that [we spend that money because we're rich, not because we're particularly inefficient at healthcare spending](https://randomcriticalanalysis.com/why-conventional-wisdom-on-health-care-is-wrong-a-primer/). Additionally, at least some of the money we spend is not really "waste", it's going to the development of better drugs and medical devices. Without the US spending so much money, would medical progress slow down? Would that be worth saving some money? I don't know, it's all very messy.
 
 **Verdict: I was overconfident in my opinion in 2004, or maybe just flat out wrong.**
 
@@ -115,7 +115,7 @@ Here in 2024, many racial divisions seem worse than in 2004, they don't seem to 
 
 Marijuana was very common in 2004, but at least in my circles, other drugs weren't. So in terms of "drug legalization" I was mostly thinking about "marijuana legalization". And I was very in favor of it. It seemed ridiculous that such a common and harmless (or at least less harmful than alcohol) drug could put you in prison.
 
-Now, marijuana is legal in many places. But it's also not very relevant when people talk about drugs today. Becuase today they're talking about meth and opiods and other drugs that are much more harmful than marijuana. This is a much bigger issue than marijuana legalization. And a much more difficult one. Because while people do advicate for decriminalization and harm reduction, that only gets you so far. Taking those actions alone seems to lead to the horrific scenes you see in many cities, where some streets are filled with homeless drug addicts whose lives are slipping away. When you look at those places, it's hard to see what harm is being reduced. 2004-style "just legalize it" policy won't cut it.
+Now, marijuana is legal in many places. But it's also not very relevant when people talk about drugs today. Because today they're talking about meth and opiods and other drugs that are much more harmful than marijuana. This is a much bigger issue than marijuana legalization. And a much more difficult one. Because while people do advocate for decriminalization and harm reduction, that only gets you so far. Taking those actions alone seems to lead to the horrific scenes you see in many cities, where some streets are filled with homeless drug addicts whose lives are slipping away. When you look at those places, it's hard to see what harm is being reduced. 2004-style "just legalize it" policy won't cut it.
 
 **Verdict: I was right in 2004, but the situation has changed.**
 
@@ -147,7 +147,7 @@ I've always been very pro-choice. You probably can't find anyone more pro-choice
 
 I'm kind of sneaking this one on the list, because AI was not a political issue back in 2004. I was a big scifi nerd, so I was aware of how AI could be both extremely valuable and extremely dangerous. But it seemed like a distant possibility, one that would remain in the realm of scifi for my lifetime.
 
-Neural networks were seen as an old-fashioned obsolete technology. I thought we'd get to AI through neuroscience - learning about the human brain, and eventually simulating it. Instead, there has been incredible progress in neural networks, to the point where it's kind of scary to think about what will happen if there are just one or two more breakthroughs in AI. That makes AI one of my biggest political concerns today, in stark contrast to 2004.
+Artificial neural networks were seen as an old-fashioned obsolete technology. I thought we'd get to AI through neuroscience - learning about the human brain, and eventually simulating it. Instead, there has been incredible progress in artificial neural networks, to the point where it's kind of scary to think about what will happen if there are just one or two more breakthroughs in AI. That makes AI one of my biggest political concerns today, in stark contrast to 2004.
 
 **Verdict: I was wrong in 2004, and the problem is much worse now.**
 
@@ -159,7 +159,7 @@ My fundamental take-home message from this is that the political world does not 
 
 In reality, politics often evolves in weird, unexpected ways. For a lot of issues it's not that the good guys won or the bad guys won, it's something else. Maybe the world changed and it just doesn't matter anymore. Maybe there was some third option that nobody was thinking about. Or maybe the issue is still unresolved, but nobody cares anymore and we're all arguing about different stuff.
 
-In 2004 I would have said I'm part of the left wing of the Democratic party, and soon the whole party would come to agree with us, and soon after that the whole country. It's like the last chapter of The Jungle where it talks about how the socialists keep winning more votes in every election and soon socialism will sweep over the whole nation! That's not quite how it played out. Predicting things is hard, especially about the future.
+In 2004 I would have said I'm part of the left wing of the Democratic party, and soon the whole party would come to agree with us, and soon after that the whole country. Turns out it as more like the aftermath of the last chapter of The Jungle where it talks about how the socialists keep winning more votes in every election and soon socialism will sweep over the whole nation! That's not quite how it played out. Predicting things is hard, especially about the future.
 
 It's a lot more difficult to say where I stand politically these days. I feel pretty alienated from both parties. The Democrats have gotten kind of crazy on everything related to race/gender, which is a lot of things! And the Republicans have become pretty radical in their anti-intellectualism, to the point where many are lost in dumb conspiracy theories. That's just a quick summary - don't worry, I have plenty more grievences with both parties!
 
