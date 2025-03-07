@@ -43,7 +43,7 @@ This is all very bothersome to me, but it's not on the radar for many people.
 
 ## Gay rights
 
-I was in favor of gay marriage before it was cool. It's weird to think about it now, but in 2004 gay marriage was very unpopular. Even Obama opposed in when he ran for president in 2008 and 2012. Okay, Obama was probably lying and a lot of people knew that at the time. But he still felt that he couldn't publicly come out in favor of gay marriage because it was too unpopular, even with Democrats.
+I was in favor of gay marriage before it was cool. It's weird to think about it now, but in 2004 gay marriage was very unpopular. Even Obama opposed it when he ran for president in 2008 and 2012. Okay, Obama was probably lying and a lot of people knew that at the time. But he still felt that he couldn't publicly come out in favor of gay marriage because it was too unpopular, even with Democrats.
 
 So thinking back to 2004... I know some people who were opposed to gay marriage back then who would be very embarrassed of that fact today. But I was in favor of gay marriage, and generally in favor of gay rights and equality and all that good stuff.
 
