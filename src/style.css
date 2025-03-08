@@ -221,6 +221,7 @@ hr {
   display: flex;
   margin-bottom: 0.5rem;
   margin-top: 3px;
+  font-size: 1.125rem;
 }
 
 .name a {
@@ -252,9 +253,9 @@ hr {
 }
 
 .menu {
-  font-size: 1.125rem;
   margin-left: auto;
 }
+
 .header-background a {
   color: #ff8757;
 }
@@ -316,6 +317,17 @@ ul, ol {
   margin-top: 0;
 }
 
+/* For legacy blog posts */
+.dark img.dark-invert {
+  filter: invert(100%);
+}
+
+.project-with-icon {
+  text-indent: -21px;
+}
+.project-icon {
+  margin-right: 5px;
+}
 
 /* RESPONSIVE STUFF! DESKTOP FIRST, FUCK MOBILE FIRST!! */
 
@@ -396,9 +408,8 @@ ul, ol {
   body, #commentlist li ul {
     font-size: 1rem;
   }
-}
 
-/* For legacy blog posts */
-.dark img.dark-invert {
-  filter: invert(100%);
+  .project-with-icon {
+    text-indent: inherit;
+  }
 }

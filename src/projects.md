@@ -5,15 +5,15 @@ title: Projects
 
 ## Big Online Projects
 
-<a href="https://basketball-gm.com/"><img src="https://play.basketball-gm.com/ico/logo.png" width="16" height="16" alt="" /> Basketball GM</a> - Basketball simulation video game. It's written entirely in client-side JavaScript and you can play it right in your web browser.
+<p class="project-with-icon"><a href="https://basketball-gm.com/"><img src="https://play.basketball-gm.com/ico/logo.png" width="16" height="16" alt="" class="project-icon">Basketball GM</a> - Basketball simulation video game. It's written entirely in client-side JavaScript and you can play it right in your web browser.</p>
 
-<a href="https://football-gm.com/"><img src="https://play.football-gm.com/ico/logo.png" width="16" height="16" alt="" /> Football GM</a> - Similer to Basketball GM.
+<p class="project-with-icon"><a href="https://football-gm.com/"><img src="https://play.football-gm.com/ico/logo.png" width="16" height="16" alt="" class="project-icon">Football GM</a> - Similer to Basketball GM.</p>
 
-<a href="https://hockey.zengm.com/"><img src="https://hockey.zengm.com/ico/logo.png" width="16" height="16" alt="" /> ZenGM Hockey</a> - Similer to Basketball GM and Football GM.
+<p class="project-with-icon"><a href="https://hockey.zengm.com/"><img src="https://hockey.zengm.com/ico/logo.png" width="16" height="16" alt="" class="project-icon">ZenGM Hockey</a> - Similer to Basketball GM and Football GM.</p>
 
-<a href="https://baseball.zengm.com/"><img src="https://baseball.zengm.com/ico/logo.png" width="16" height="16" alt="" /> ZenGM Baseball</a> - Similer to Basketball GM, Football GM, and ZenGM Hockey.
+<p class="project-with-icon"><a href="https://baseball.zengm.com/"><img src="https://baseball.zengm.com/ico/logo.png" width="16" height="16" alt="" class="project-icon">ZenGM Baseball</a> - Similer to Basketball GM, Football GM, and ZenGM Hockey.</p>
 
-<a href="http://www.avatic.com/"><img src="/files/icons/avatic.png" width="16" height="16" alt="" /> Avatic</a> - Various web stuff I made back in the early 2000s. Largely defunct or abandoned.
+<p class="project-with-icon"><a href="http://www.avatic.com/"><img src="/files/icons/avatic.png" width="16" height="16" alt=""  class="project-icon" />Avatic</a> - Various web stuff I made back in the early 2000s. Largely defunct or abandoned.</p>
 
 ## Mini Online Projects
 
