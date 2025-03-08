@@ -16,4 +16,4 @@ The topic was client side storage in web apps, which was of course motivated by 
 
 If you're interested in more, [here are my slides](/files/presentations/2022-pwa-summit.pdf) and here is a video of my presentation:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tEOzwbvmTpA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe style="aspect-ratio: 16 / 9; width: 100% !important; max-width: 560px" src="https://www.youtube.com/embed/tEOzwbvmTpA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -19,7 +19,7 @@ title: Did Adrian Peterson actually rush for more yards than Eric Dickerson but 
 
 <p>Based on that assumption, I took the actual rushing totals and added a random error for each carry to come up with one realization of what true unrounded yardage total could have led to the total in the record books. I repeated this a lot of times, for both Peterson and Dickerson. In other words, I calculated the distributions of real rushing totals that could, through accumulated rounding errors, end up reported as 2097 yards for Peterson and 2105 yards for Dickerson. Here's what it looks like:</p>
 
-<p><img src="/files/adrian_peterson.png" class="img-responsive"></p>
+<p><img src="/files/adrian_peterson.png" class="img-responsive dark-invert"></p>
 
 <p>Clearly, these two distributions overlap significantly. If they didn't overlap, that would mean that one player's rushing total was always higher than the other's. Instead, it means that it is possible that Peterson actually outrushed Dickerson.</p>
 

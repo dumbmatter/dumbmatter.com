@@ -13,7 +13,7 @@ Look it up on [Google Images](https://www.google.com/search?q=dunning+kruger&tbm
 
 <!--more-->
 
-[<img src="/files/dunning-kruger-1.png" class="img-responsive">](/files/dunning-kruger-1.png)
+[<img src="/files/dunning-kruger-1.png" class="img-responsive dark-invert">](/files/dunning-kruger-1.png)
 
 The basic idea is that incompetent people so irrationally overinflate their abilities that they think they are just as good or even better than experts.
 
@@ -21,7 +21,7 @@ And some of these figures are quite condescending. "Mt. Stupid", haha, imagine a
 
 But before being too condescending, we should take a look at the evidence behind the Dunning-Kruger effect. In the [original paper](https://doi.org/10.1037%2F0022-3514.77.6.1121) as well as [follow-up publications](https://doi.org/10.1037%2F0022-3514.90.1.60), the data looks like this:
 
-<img src="/files/dunning-kruger-2.png" class="img-responsive">
+<img src="/files/dunning-kruger-2.png" class="img-responsive dark-invert">
 
 That's Figure 1 from the original Dunning-Kruger paper, and others are similar.
 

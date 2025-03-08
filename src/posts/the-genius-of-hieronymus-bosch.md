@@ -19,7 +19,7 @@ title: The genius of Hieronymus Bosch
 
 <p>Except Hieronymus Bosch. I can hardly listen to Atheist anymore because the sound is so inferior to the true masters of technical death metal. But let's pause, as I've gone too far without even sharing some of their music. Play this one in the background as you continue to read.</p>
 
-<iframe width="420" height="315" src="http://www.youtube.com/embed/S4CkrhQ_FNs" frameborder="0" allowfullscreen></iframe>
+<iframe style="aspect-ratio: 4 / 3; width: 100% !important; max-width: 420px" src="http://www.youtube.com/embed/S4CkrhQ_FNs" frameborder="0" allowfullscreen></iframe>
 
 <p>Now as I said, you often see Hieronymus Bosch compared to other technical death metal bands like Atheist and <a href="http://www.metal-archives.com/bands/Lethargy/2945">Lethargy</a>. But no. Hieronymus Bosch has something different, something particularly special and rare.</p>
 
@@ -39,7 +39,7 @@ title: The genius of Hieronymus Bosch
 
 <p>But back on topic, it's innately obvious to me that there is something special in Hieronymus Bosch that I haven't been able to find in any other similar band. The song I posted above was from their first album. A decade later, they released their second album, which I think was equally incredibly and even more complex. Here's a sample.</p>
 
-<iframe width="420" height="315" src="http://www.youtube.com/embed/Bt-600rmdvs" frameborder="0" allowfullscreen></iframe>
+<iframe style="aspect-ratio: 4 / 3; width: 100% !important; max-width: 420px" src="http://www.youtube.com/embed/Bt-600rmdvs" frameborder="0" allowfullscreen></iframe>
 
 <p>By the way, you have no idea how hard it is for me to select these characteristic Hieronymus Bosch tracks. All three of their albums are packed wall to wall with goodness. <a href="http://www.youtube.com/watch?v=WZN0KB2hbA0">Straight killer, no filler.</a></p>
 
@@ -47,7 +47,7 @@ title: The genius of Hieronymus Bosch
 
 <p>Fortunately, there was no decade between their second and third albums, or their final masterpiece may never have been made. Here's a randomly selected track, as there are too many classics to choose from.</p>
 
-<iframe width="420" height="315" src="http://www.youtube.com/embed/o6URrXvyais" frameborder="0" allowfullscreen></iframe>
+<iframe style="aspect-ratio: 4 / 3; width: 100% !important; max-width: 420px" src="http://www.youtube.com/embed/o6URrXvyais" frameborder="0" allowfullscreen></iframe>
 
 <p>Each of their songs seems like a frantic yet coordinated movement between somehow exhibiting harmonious discord. Each song is as content-packed as the last. A lesser band could have stretched each song into multiple songs, or even each album into multiple album by adding some filler tracks. But if Hieronymus Bosch did that, they wouldn't have that magical essence at their core.</p>
 

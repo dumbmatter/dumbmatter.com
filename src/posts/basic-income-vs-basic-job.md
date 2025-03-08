@@ -38,7 +38,7 @@ title: Basic income vs. basic job
 
 <p>I could definitely quibble more, but somebody could quibble with my changes too, so I don't want to go too crazy. The above changes seem reasonable enough to me. So <a href="https://gist.github.com/dumbmatter/7457890">here's my modified code</a>. Now I'm going to try to run it. This will be interesting not only to see the results,  but to see if I could make these changes without introducing a syntax error!</p>
 
-<img src="/files/basic-income-basic-job.png" class="img-responsive">
+<img src="/files/basic-income-basic-job.png" class="img-responsive dark-invert">
 
 <p>Lower is better on these plots, so it looks like basic income wins! At least, if you agree with my completely unbiased assessment...</p>
 
