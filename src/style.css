@@ -129,7 +129,7 @@ hr {
   border-color: #fff;
 }
 
-.header {
+.header-background {
   background-color: #4c22c8;
   color: #fff;
   padding-top: 7px;
@@ -214,9 +214,15 @@ hr {
   animation-name: move-bubble;
 }
 
-.name {
-  float: left;
+.header {
+  position: relative;
 }
+.header-bottom {
+  display: flex;
+  margin-bottom: 0.5rem;
+  margin-top: 3px;
+}
+
 .name a {
   font-family: 'Lato', sans-serif;
   font-size: 1.375rem;
@@ -224,17 +230,32 @@ hr {
 }
 .name-subtitle {
   line-height: 100%;
-  margin: 3px 0 0 0;
 }
+
+#theme-switch {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  border: none;
+  margin: 2px 0 0 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  cursor: pointer;
+
+  filter: invert(0.65);
+}
+#theme-switch:hover {
+	filter: invert(0.8);
+}
+
 .menu {
   font-size: 1.125rem;
-  float: right;
-  margin-top: 29px;
-  margin-bottom: 0.5rem;
-  text-align: right;
-  vertical-align: bottom;
+  margin-left: auto;
 }
-.header a {
+.header-background a {
   color: #ff8757;
 }
 
@@ -318,15 +339,19 @@ ul, ol {
     display: none;
   }
 
+  .header-bottom {
+    display: block;
+  }
+
   .name {
-    float: inherit;
-    padding-left: 0;
+    text-align: center;
+  }
+  .name-subtitle {
+    margin-left: 0;
     text-align: center;
   }
   .menu {
-    float: inherit;
     margin-top: 7px;
-    padding-right: 0;
     text-align: center;
   }
 }

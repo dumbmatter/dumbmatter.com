@@ -11,18 +11,77 @@
   <link rel="alternate" type="application/rss+xml" title="{{site.title}}" href="http://dumbmatter.com/feed/" />
 </head>
 <body>
-  <div class="header">
+  <div class="header-background">
     <div class="wrapper">
-      <div>
+      <div class="header">
+        <button id="theme-switch">
+          <img src="/files/icons/moon-fill.svg" width="18" height="18" id="theme-switch-dark" alt="Switch to dark mode">
+          <img src="/files/icons/sun-fill.svg" width="18" height="18" id="theme-switch-light" alt="Switch to light mode">
+        </button>
+        <script>
+function getTheme() {
+    try {
+        var local = localStorage.getItem("theme");
+        if (local === "dark" || local === "light") {
+            return local;
+        }
+        return matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    } catch (err) {
+        return "light";
+    }
+}
+function setTheme(theme, noSave) {
+    theme = theme === "light" ? "light" : "dark";
+    const element = document.getElementsByTagName("html")[0];
+    element.classList.add(theme);
+    element.classList.remove(theme === "light" ? "dark" : "light");
+    document.documentElement.style.colorScheme = theme;
+    if (!noSave) {
+        localStorage.setItem("theme", theme);
+    }
+}
+
+setTheme(getTheme(), true);
+
+const themeSwitch = document.getElementById("theme-switch");
+const darkIcon = document.getElementById("theme-switch-dark");
+const lightIcon = document.getElementById("theme-switch-light");
+
+function updateIcon(theme) {
+  if (theme === "dark") {
+    darkIcon.style.display = "none";
+    lightIcon.style.display = "inline";
+    themeSwitch.title = "Switch to light mode";
+  } else {
+    darkIcon.style.display = "inline";
+    lightIcon.style.display = "none";
+    themeSwitch.title = "Switch to dark mode";
+  }
+}
+
+updateIcon(getTheme());
+
+themeSwitch.addEventListener("click", function (event) {
+  var newTheme = getTheme() === "light" ? "dark" : "light";
+
+  setTheme(newTheme);
+  updateIcon(newTheme);
+  if (window.onNewTheme) {
+    window.onNewTheme(newTheme);
+  }
+});
+        </script>
         <div class="name">
           <a href="/">{{site.title}}</a><br>
-          <p class="name-subtitle">{{site.description}}</p>
         </div>
-        <div class="menu">
-          <a href="/">Blog</a> (<a href="/feed/">RSS</a>) | 
-          <a href="/about-me/">About Me</a></li> | 
-          <a href="/projects/">Projects</a> | 
-          <a href="mailto:jdscheff@gmail.com">Email Me</a>
+        <div class="header-bottom">
+          <div class="name-subtitle">{{site.description}}</div>
+          <div class="menu">
+            <a href="/">Blog</a> (<a href="/feed/">RSS</a>) | 
+            <a href="/about-me/">About Me</a></li> | 
+            <a href="/projects/">Projects</a> | 
+            <a href="mailto:jdscheff@gmail.com">Email Me</a>
+          </div>
         </div>
       </div>
     </div>
