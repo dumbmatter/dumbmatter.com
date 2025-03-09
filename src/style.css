@@ -305,9 +305,6 @@ ul, ol {
 }
 
 .find-me-on {
-  -moz-column-width: 200px;
-  -moz-columns: 200px;
-  -webkit-columns: 200px;
   columns: 200px;
 }
 .find-me-on p {
@@ -392,9 +389,6 @@ ul, ol {
   }
 
   .find-me-on {
-    -moz-column-width: inherit;
-    -moz-columns: inherit;
-    -webkit-columns: inherit;
     columns: inherit;
   }
   .find-me-on p {
