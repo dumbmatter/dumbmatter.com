@@ -19,10 +19,15 @@ ol#comments li p {
   font-size: 1rem;
 }
 
-#commentlist li ul {
-  border-left: 1px solid #ddd;
+#commentlist li {
+  border-left: 5px solid #aaa;
+  margin-left: -15px;
+  padding-left: 10px;
   font-size: 1.125rem;
   list-style-type: none;
+}
+.dark #commentlist li {
+  border-color: #888;
 }
 
 img {
@@ -304,13 +309,6 @@ ul, ol {
   display: none;
 }
 
-.find-me-on {
-  columns: 200px;
-}
-.find-me-on p {
-  margin-top: 0;
-}
-
 /* For legacy blog posts */
 .dark img.dark-invert {
   filter: invert(100%);
@@ -356,7 +354,7 @@ ul, ol {
     text-align: center;
   }
   .menu {
-    margin-top: 7px;
+    margin-top: 5px;
     text-align: center;
   }
 }
@@ -365,6 +363,10 @@ ul, ol {
   blockquote {
     margin-left: 5px;
     padding-left: 5px;
+  }
+
+  #commentlist li {
+    margin-left: -19px;
   }
 
   pre {
@@ -388,14 +390,7 @@ ul, ol {
     margin-right: auto;
   }
 
-  .find-me-on {
-    columns: inherit;
-  }
-  .find-me-on p {
-    margin-top: inherit;
-  }
-
-  body, #commentlist li ul {
+  body, #commentlist li {
     font-size: 1rem;
   }
 
