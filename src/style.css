@@ -220,7 +220,7 @@ hr {
 .header-bottom {
   display: flex;
   margin-bottom: 0.5rem;
-  margin-top: 3px;
+  margin-top: 2px;
   font-size: 1.125rem;
 }
 
@@ -228,9 +228,6 @@ hr {
   font-family: 'Lato', sans-serif;
   font-size: 1.375rem;
   font-weight: bold;
-}
-.name-subtitle {
-  line-height: 100%;
 }
 
 #theme-switch {
@@ -359,7 +356,6 @@ ul, ol {
     text-align: center;
   }
   .name-subtitle {
-    margin-left: 0;
     text-align: center;
   }
   .menu {
