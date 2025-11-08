@@ -1,7 +1,7 @@
 const Metalsmith  = require('metalsmith');
 const brokenLinkChecker = require('metalsmith-broken-link-checker')
 const cleanCss = require('metalsmith-clean-css');
-const collections = require('metalsmith-collections');
+const collections = require('@metalsmith/collections');
 const feed = require('metalsmith-feed');
 const layouts = require('metalsmith-layouts');
 const markdown = require('@metalsmith/markdown');
@@ -14,7 +14,7 @@ Metalsmith(__dirname)
     .metadata({
         site: {
             description: 'Online home of Jeremy Scheff',
-            url: 'http://dumbmatter.com/',
+            url: 'https://dumbmatter.com/',
             title: 'dumbmatter.com',
         },
     })
