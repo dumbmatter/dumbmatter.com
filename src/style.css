@@ -391,9 +391,6 @@ ul, ol {
     margin-right: auto;
   }
 
-  body, #commentlist li {
-    font-size: 1rem;
-  }
 
   .project-with-icon {
     text-indent: inherit;
