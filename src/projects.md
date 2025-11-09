@@ -29,6 +29,8 @@ title: Projects
 
 <a href="https://github.com/dumbmatter/fakeIndexedDB">fakeIndexedDB</a> - A pure JS in-memory implementation of the IndexedDB API.
 
+<a href="https://github.com/zengm-games/json-web-streams">json-web-streams</a> - Streaming JSON parser built on top of the Web Streams API.
+
 <a href="https://github.com/dumbmatter/promise-worker-bi">promise-worker-bi</a> - Promise-based messaging for Web Workers and Shared Workers.
 
 <a href="/vote-and-die/">Vote and Die</a> - Are you more likely to cast a meaningful vote or die in an accident on your way to the polling both? Find out!
@@ -86,7 +88,7 @@ Scheff JD, Calvano SE, Lowry SF, Androulakis IP<br />
 
 ## My Other Academic Publications
 
-<ol>
+<ol start="4">
 <li>
 <p>
 <a href="/files/papers/2019-cdw.pdf">A late binding, distributed, NoSQL warehouse for integrating patient data from clinical trials</a><br />
