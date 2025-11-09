@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <title>Jeremy Scheff's resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#theme-switch {
+  position: absolute;
+  top: 9px;
+  right: -0.5rem;
+
+  border: none;
+  padding: 0.5rem;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  cursor: pointer;
+  filter: invert(0.4);
+
+  &:hover {
+    filter: invert(0.1);
+  }
+}
+.dark #theme-switch {
+  filter: invert(0.6);
+
+  &:hover {
+    filter: invert(0.9);
+  }
+}
+
+:root {
+  --bg: #eee;
+  --bg-accent: #ccc;
+  --text: #222;
+  --text-secondary: #444;
+  --link: #00e;
+  --link-secondary: #33e;
+}
+.dark {
+  --bg: #222;
+  --bg-accent: #444;
+  --text: #eee;
+  --text-secondary: #ccc;
+  --link: #9e9eff;
+  --link-secondary: #9e9edd;
+}
+
+body {
+  color: var(--text);
+  background-color: var(--bg);
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-size: 18px;
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+}
+
+h1, h2 {
+  font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+h1 {
+  line-height: 1.25;
+}
+h2 {
+  background-color: var(--bg-accent);
+  margin: 2rem -0.5rem 1rem -0.5rem;
+  padding: 0 0.5rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  container-type: inline-size;
+  container-name: wrapper;
+}
+
+@container wrapper (min-width: 800px) {
+  h2 {
+    border-radius: 0.5rem;
+  }
+}
+
+.top {
+  text-align: center;
+}
+.contact {
+  margin: 0.5rem 0;
+}
+
+.entries {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.entry-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.25rem 0;
+}
+
+.entry-employer {
+  font-weight: bold;
+  text-wrap: balance;
+}
+.entry-link {
+  font-weight: normal;
+}
+.entry-title {
+  text-wrap: balance;
+}
+.entry-date {
+  text-align: right;
+  white-space: nowrap;
+}
+.entry-description {
+  color: var(--text-secondary);
+
+  a {
+    color: var(--link-secondary);
+  }
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media print {
+  #theme-switch {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    {{> theme-switch}}
+    <div class="top">
+      <h1>Jeremy Scheff</h1>
+
+      <div class="contact"><a href="mailto:jdscheff@gmail.com">jdscheff@gmail.com</a> • <a href="https://dumbmatter.com/">dumbmatter.com</a> • <a href="https://github.com/dumbmatter">GitHub</a></div>
+
+      <p>Video game developer with a background in web development and mathematical biology.</p>
+    </div>
+
+    <h2>Work experience</h2>
+
+    <div class="entries">
+      <div class="entry">
+        <div class="entry-employer">ZenGM<span class="entry-link">, <a href="https://zengm.com/">zengm.com</a></span></div>
+        <div class="entry-row">
+          <div class="entry-title">Self-employed video game developer</div>
+          <div class="entry-date">2021-present (full time)<br>2008-2021 (part time)</div>
+        </div>
+        <div class="entry-description">
+          <p>Developed a series of web-based sports management simulation video games, most notably <a href="https://basketball-gm.com/">Basketball GM</a>. Tens of thousands of active users collectively spend over 10,000 hours per day playing ZenGM games.</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-employer">Covance</div>
+        <div class="entry-row">
+          <div class="entry-title">Senior Data Scientist<br>Data Scientist</div>
+          <div class="entry-date">2018-2021<br>2014-2018</div>
+        </div>
+        <div class="entry-description">
+          <p>Worked on a clinical trial data warehouse and ETL system, first as a developer and later as the project lead. Devised novel anomaly detection algorithms for clinical trial data.</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-employer">Biotechnology HPC Software Applications Institute</div>
+        <div class="entry-row">
+          <div class="entry-title">Research Scientist</div>
+          <div class="entry-date">2013-2014</div>
+        </div>
+        <div class="entry-description">
+          <p>Created a mathematical model of the heat shock response (<a href="https://doi.org/10.1016/j.bpj.2015.06.027">doi:10.1016/j.bpj.2015.06.027</a>). Initiated an <i>in vitro</i> experimental project on cell type heterogeneity in the heat shock response in collaboration with the US Army Center for Environmental Health Research (USACEHR).</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-employer">Avatic<span class="entry-link">, <a href="https://avatic.com/">avatic.com</a></span></div>
+        <div class="entry-row">
+          <div class="entry-title">Web Developer</div>
+          <div class="entry-date">2000-2008</div>
+        </div>
+        <div class="entry-description">
+          <p>Side hustle during high school and college. Developed <a href="http://www.aardvarktopsitesphp.com/">open source web statistics software</a> with hundreds of thousands of users (2000-2008). Made a SaaS version of that software which was (according to Alexa) one of the top 20,000 most popular websites (2006-2007). Created a web-based multiplayer video game that had over 80,000 registered users (2006-2007). Freelance web development and SEO (2000-2008).</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Education</h2>
+
+    <div class="entries">
+      <div class="entry">
+        <div class="entry-employer">Rutgers University</div>
+        <div class="entry-row">
+          <div class="entry-title">PhD in Biomedical Engineering</div>
+          <div class="entry-date">2008-2013</div>
+        </div>
+        <div class="entry-description">
+          <p>GPA: 3.88. Studied computational systems biology of inflammation. Developed, synthesized, and analyzed mathematical models and high throughput data. Recipient of the Rutgers School of Engineering Outstanding Graduate Student Award. My favorite publication from my PhD was <a href="https://doi.org/10.1016/j.mbs.2014.03.010">doi:10.1016/j.mbs.2014.03.010</a> and several more are available on <a href="https://dumbmatter.com/projects/">my website</a>.</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-employer">Rutgers University</div>
+        <div class="entry-row">
+          <div class="entry-title">BS in Biomedical Engineering<br>Minor in Math</div>
+          <div class="entry-date">2004-2008</div>
+        </div>
+        <div class="entry-description">
+          <p>GPA: 3.91 (overall), 3.97 (BME major), 4.00 (Math minor)</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Open source</h2>
+
+    <ul>
+      <li><a href="https://github.com/dumbmatter/fakeIndexedDB">fake-indexeddb</a> - A pure JS in-memory implementation of the IndexedDB API</li>
+      <li><a href="https://github.com/zengm-games/facesjs">facesjs</a> - A JavaScript library for generating vector-based cartoon faces</li>
+      <li><a href="https://github.com/zengm-games/json-web-streams">json-web-streams</a> - Streaming JSON parser built on top of the Web Streams API </li>
+      <li>...and <a href="https://github.com/dumbmatter">much more</a>!</li>
+    </ul>
+
+    <h2>Technical skills</h2>
+
+    <ul>
+      <li><b>Current:</b> Full-stack TypeScript/JavaScript, IndexedDB, SQL</li>
+      <li><b>A little rusty:</b> Python, PHP, Perl, MATLAB, CouchDB, Hadoop, HBase, GTK+</li>
+    </ul>
+  </div>
+</body>
+</html>
