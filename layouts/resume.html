@@ -41,6 +41,7 @@ h1, h2, h3, h4, h5, h6 {
   background: transparent;
   cursor: pointer;
   filter: invert(0.4);
+  transition: filter 0.2s ease;
 
   &:hover {
     filter: invert(0.1);
@@ -76,18 +77,20 @@ body {
   background-color: var(--bg);
   font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-size: 18px;
-  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  padding: 2rem 0.5rem 1rem 0.5rem;
 }
 
 h1, h2 {
   font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
 }
 h1 {
+  font-size: 36px;
   line-height: 1.25;
 }
 h2 {
   background-color: var(--bg-accent);
-  margin: 2rem -0.5rem 1rem -0.5rem;
+  font-size: 24px;
+  margin: 2.5rem -0.5rem 1rem -0.5rem;
   padding: 0 0.5rem;
 }
 
@@ -124,7 +127,7 @@ a {
 .entries {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .entry-row {
@@ -179,7 +182,7 @@ ul {
 
       <div class="contact"><a href="mailto:jdscheff@gmail.com">jdscheff@gmail.com</a> • <a href="https://dumbmatter.com/">dumbmatter.com</a> • <a href="https://github.com/dumbmatter">GitHub</a></div>
 
-      <p>Video game developer with a background in web development and mathematical biology.</p>
+      <p>Video game developer with a background in web development and mathematical biology</p>
     </div>
 
     <h2>Work experience</h2>
@@ -268,7 +271,7 @@ ul {
     <h2>Technical skills</h2>
 
     <ul>
-      <li><b>Current:</b> Full-stack TypeScript/JavaScript, IndexedDB, SQL</li>
+      <li><b>Current:</b> Full-stack TypeScript/JavaScript, React, IndexedDB, SQL</li>
       <li><b>A little rusty:</b> Python, PHP, Perl, MATLAB, CouchDB, Hadoop, HBase, GTK+</li>
     </ul>
   </div>
