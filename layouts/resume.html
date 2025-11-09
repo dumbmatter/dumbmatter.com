@@ -41,14 +41,14 @@ h1, h2, h3, h4, h5, h6 {
   background: transparent;
   cursor: pointer;
   filter: invert(0.5);
-  transition: filter 0.2s ease;
+  transition: filter 0.3s ease;
 
   &:hover {
     filter: invert(0.1);
   }
 }
 .dark #theme-switch {
-  filter: invert(0.45);
+  filter: invert(0.65);
 
   &:hover {
     filter: invert(0.9);
@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 
 :root {
   --bg: #eee;
-  --bg-accent: #d5d5d5;
+  --bg-accent: #ddd;
   --text: #222;
   --text-secondary: #444;
   --link: #00e;
@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .dark {
   --bg: #222;
-  --bg-accent: #3c3c3c;
+  --bg-accent: #333;
   --text: #eee;
   --text-secondary: #ccc;
   --link: #9e9eff;
@@ -88,9 +88,10 @@ h1 {
   line-height: 1.25;
 }
 h2 {
+  border-left: 6px solid var(--link);
   background-color: var(--bg-accent);
   font-size: 24px;
-  margin: 2.5rem -0.5rem 1rem -0.5rem;
+  margin: 2.5rem -0.5rem 1rem -15px;
   padding: 0 0.5rem;
 }
 
@@ -109,12 +110,6 @@ a {
   position: relative;
   container-type: inline-size;
   container-name: wrapper;
-}
-
-@container wrapper (min-width: 800px) {
-  h2 {
-    border-radius: 0.5rem;
-  }
 }
 
 .top {
