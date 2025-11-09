@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow: visible;
   background: transparent;
   cursor: pointer;
-  filter: invert(0.65);
+  filter: invert(0.5);
   transition: filter 0.2s ease;
 
   &:hover {
@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .dark #theme-switch {
-  filter: invert(0.4);
+  filter: invert(0.45);
 
   &:hover {
     filter: invert(0.9);
@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 
 :root {
   --bg: #eee;
-  --bg-accent: #ccc;
+  --bg-accent: #d5d5d5;
   --text: #222;
   --text-secondary: #444;
   --link: #00e;
@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .dark {
   --bg: #222;
-  --bg-accent: #444;
+  --bg-accent: #3c3c3c;
   --text: #eee;
   --text-secondary: #ccc;
   --link: #9e9eff;
@@ -147,6 +147,7 @@ a {
   text-wrap: balance;
 }
 .entry-date {
+  color: var(--text-secondary);
   text-align: right;
   white-space: nowrap;
 }
@@ -157,6 +158,19 @@ a {
     color: var(--link-secondary);
   }
 }
+
+.undergrad-long {
+  display: none;
+}
+@container wrapper (min-width: 600px) {
+  .undergrad-long {
+    display: inline;
+  }
+  .undergrad-short {
+    display: none;
+  }
+}
+
 
 ul {
   list-style: none;
@@ -188,7 +202,7 @@ ul {
     <h2>Work experience</h2>
 
     <div class="entries">
-      <div class="entry">
+      <div>
         <div class="entry-employer">ZenGM<span class="entry-link">, <a href="https://zengm.com/">zengm.com</a></span></div>
         <div class="entry-row">
           <div class="entry-title">Self-employed video game developer</div>
@@ -199,7 +213,7 @@ ul {
         </div>
       </div>
 
-      <div class="entry">
+      <div>
         <div class="entry-employer">Covance</div>
         <div class="entry-row">
           <div class="entry-title">Senior Data Scientist<br>Data Scientist</div>
@@ -210,7 +224,7 @@ ul {
         </div>
       </div>
 
-      <div class="entry">
+      <div>
         <div class="entry-employer">Biotechnology HPC Software Applications Institute</div>
         <div class="entry-row">
           <div class="entry-title">Research Scientist</div>
@@ -221,14 +235,14 @@ ul {
         </div>
       </div>
 
-      <div class="entry">
+      <div>
         <div class="entry-employer">Avatic<span class="entry-link">, <a href="https://avatic.com/">avatic.com</a></span></div>
         <div class="entry-row">
           <div class="entry-title">Web Developer</div>
           <div class="entry-date">2000-2008</div>
         </div>
         <div class="entry-description">
-          <p>Side hustle during high school and college. Developed <a href="http://www.aardvarktopsitesphp.com/">open source web statistics software</a> with hundreds of thousands of users (2000-2008). Made a SaaS version of that software which was (according to Alexa) one of the top 20,000 most popular websites (2006-2007). Created a web-based multiplayer video game that had over 80,000 registered users (2006-2007). Freelance web development and SEO (2000-2008).</p>
+          <p>Side hustle during high school and college. Developed <a href="http://www.aardvarktopsitesphp.com/">open source web statistics software</a> with hundreds of thousands of users (2000-2008). Made a SaaS version of that software which was (according to Alexa) one of the top 20,000 most popular websites (2006-2007). Created a web-based multiplayer video game that had over 80,000 registered users (2006-2007).</p>
         </div>
       </div>
     </div>
@@ -236,7 +250,7 @@ ul {
     <h2>Education</h2>
 
     <div class="entries">
-      <div class="entry">
+      <div>
         <div class="entry-employer">Rutgers University</div>
         <div class="entry-row">
           <div class="entry-title">PhD in Biomedical Engineering</div>
@@ -247,10 +261,12 @@ ul {
         </div>
       </div>
 
-      <div class="entry">
+      <div>
         <div class="entry-employer">Rutgers University</div>
         <div class="entry-row">
-          <div class="entry-title">BS in Biomedical Engineering<br>Minor in Math</div>
+          <div class="entry-title">
+            BS in Biomedical Engineering<span class="undergrad-long">, minor in Math</span><span class="undergrad-short"><br>Minor in Math</span>
+          </div>
           <div class="entry-date">2004-2008</div>
         </div>
         <div class="entry-description">
@@ -259,13 +275,6 @@ ul {
       </div>
     </div>
 
-    <h2>Technical skills</h2>
-
-    <ul>
-      <li><b>Current:</b> Full-stack TypeScript/JavaScript, React, IndexedDB, SQL</li>
-      <li><b>A little rusty:</b> Python, PHP, Perl, MATLAB, CouchDB, Hadoop, HBase, GTK+</li>
-    </ul>
-
     <h2>Open source</h2>
 
     <ul>
@@ -273,6 +282,13 @@ ul {
       <li><a href="https://github.com/zengm-games/facesjs">facesjs</a> - A JavaScript library for generating vector-based cartoon faces</li>
       <li><a href="https://github.com/zengm-games/json-web-streams">json-web-streams</a> - Streaming JSON parser built on top of the Web Streams API </li>
       <li>...and <a href="https://github.com/dumbmatter">much more</a>!</li>
+    </ul>
+
+    <h2>Technical skills</h2>
+
+    <ul>
+      <li><b>Current:</b> Full-stack TypeScript/JavaScript, React, IndexedDB, SQL</li>
+      <li><b>A little rusty:</b> Python, PHP, Perl, MATLAB, CouchDB, Hadoop, HBase, GTK+</li>
     </ul>
   </div>
 </body>
