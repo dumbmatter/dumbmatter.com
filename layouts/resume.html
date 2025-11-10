@@ -91,7 +91,7 @@ h2 {
   border-left: 6px solid var(--link);
   background-color: var(--bg-accent);
   font-size: 24px;
-  margin: 2.5rem -0.5rem 1rem -15px;
+  margin: 2.5rem -0.5rem 1rem -14px;
   padding: 0 0.5rem;
 }
 
@@ -136,10 +136,13 @@ a {
   gap: 1.5rem;
 }
 
+.entry-header {
+  margin-bottom: 0.5rem;
+}
+
 .entry-row {
   display: flex;
   justify-content: space-between;
-  margin: 0.25rem 0;
 }
 
 .entry-employer {
@@ -157,7 +160,7 @@ a {
   text-align: right;
   white-space: nowrap;
 }
-.entry-description {
+.entry-description, .entry-subtitle {
   color: var(--text-secondary);
 
   a {
@@ -177,13 +180,25 @@ a {
   }
 }
 
+.zengm-long {
+  display: none;
+}
+@container wrapper (min-width: 700px) {
+  .zengm-long {
+    display: inline;
+  }
+  .zengm-short {
+    display: none;
+  }
+}
+
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 7px;
 }
 
 @media print {
@@ -208,46 +223,54 @@ ul {
 
     <div class="entries">
       <div>
-        <div class="entry-employer">ZenGM<span class="entry-link">, <a href="https://zengm.com/">zengm.com</a></span></div>
-        <div class="entry-row">
-          <div class="entry-title">Self-employed video game developer</div>
-          <div class="entry-date">2021-present (full time)<br>2008-2021 (part time)</div>
+        <div class="entry-header">
+          <div class="entry-employer">ZenGM<span class="entry-link">, <a href="https://zengm.com/">zengm.com</a></span></div>
+          <div class="entry-row">
+            <div class="entry-title">Self-employed video game developer</div>
+            <div class="entry-date"><span class="zengm-long">2008-2021 (part time), </span>2021-present (full time)<span class="zengm-short"><br>2008-2021 (part time)</span></div>
+          </div>
         </div>
         <div class="entry-description">
-          <p>Developed a series of web-based sports management simulation video games, most notably <a href="https://basketball-gm.com/">Basketball GM</a>. Tens of thousands of active users collectively spend over 10,000 hours per day playing ZenGM games.</p>
+          Developed a series of web-based sports management simulation video games, most notably <a href="https://basketball-gm.com/">Basketball GM</a>. Tens of thousands of active users collectively spend over 10,000 hours per day playing ZenGM games.
         </div>
       </div>
 
       <div>
-        <div class="entry-employer">Covance</div>
-        <div class="entry-row">
-          <div class="entry-title">Senior Data Scientist<br>Data Scientist</div>
-          <div class="entry-date">2018-2021<br>2014-2018</div>
+        <div class="entry-header">
+          <div class="entry-employer">Covance</div>
+          <div class="entry-row">
+            <div class="entry-title">Senior Data Scientist<br>Data Scientist</div>
+            <div class="entry-date">2018-2021<br>2014-2018</div>
+          </div>
         </div>
         <div class="entry-description">
-          <p>Worked on a clinical trial data warehouse and ETL system, first as a developer and later as the project lead. Devised novel anomaly detection algorithms for clinical trial data.</p>
+          Worked on a clinical trial data warehouse and ETL system, first as a developer and later as the project lead. Devised novel anomaly detection algorithms for clinical trial data.
         </div>
       </div>
 
       <div>
-        <div class="entry-employer">Biotechnology HPC Software Applications Institute</div>
-        <div class="entry-row">
-          <div class="entry-title">Research Scientist</div>
-          <div class="entry-date">2013-2014</div>
+        <div class="entry-header">
+          <div class="entry-employer">Biotechnology HPC Software Applications Institute</div>
+          <div class="entry-row">
+            <div class="entry-title">Research Scientist</div>
+            <div class="entry-date">2013-2014</div>
+          </div>
         </div>
         <div class="entry-description">
-          <p>Created a mathematical model of the heat shock response (<a href="https://doi.org/10.1016/j.bpj.2015.06.027">doi:10.1016/j.bpj.2015.06.027</a>). Initiated an <i>in vitro</i> experimental project on cell type heterogeneity in the heat shock response in collaboration with the US Army Center for Environmental Health Research (USACEHR).</p>
+          Created a mathematical model of the heat shock response (<a href="https://doi.org/10.1016/j.bpj.2015.06.027">doi:10.1016/j.bpj.2015.06.027</a>). Initiated an <i>in vitro</i> experimental project on cell type heterogeneity in the heat shock response.
         </div>
       </div>
 
       <div>
-        <div class="entry-employer">Avatic<span class="entry-link">, <a href="https://avatic.com/">avatic.com</a></span></div>
-        <div class="entry-row">
-          <div class="entry-title">Web Developer</div>
-          <div class="entry-date">2000-2008</div>
+        <div class="entry-header">
+          <div class="entry-employer">Avatic<span class="entry-link">, <a href="https://avatic.com/">avatic.com</a></span></div>
+          <div class="entry-row">
+            <div class="entry-title">Web Developer</div>
+            <div class="entry-date">2000-2008</div>
+          </div>
         </div>
         <div class="entry-description">
-          <p>Side hustle during high school and college. Developed <a href="http://www.aardvarktopsitesphp.com/">open source web statistics software</a> with hundreds of thousands of users (2000-2008). Made a SaaS version of that software which was (according to Alexa) one of the top 20,000 most popular websites (2006-2007). Created a web-based multiplayer video game that had over 80,000 registered users (2006-2007).</p>
+          Side hustle during high school and college. Developed <a href="http://www.aardvarktopsitesphp.com/">open source web statistics software</a> with hundreds of thousands of users, with both downloadable and SaaS versions (2000-2008). Created a web-based multiplayer video game that had over 80,000 registered users (2006-2007).
         </div>
       </div>
     </div>
@@ -256,26 +279,29 @@ ul {
 
     <div class="entries">
       <div>
-        <div class="entry-employer">Rutgers University</div>
-        <div class="entry-row">
-          <div class="entry-title">PhD in Biomedical Engineering</div>
-          <div class="entry-date">2008-2013</div>
+        <div class="entry-header">
+          <div class="entry-employer">Rutgers University</div>
+          <div class="entry-row">
+            <div class="entry-title">PhD in Biomedical Engineering</div>
+            <div class="entry-date">2008-2013</div>
+          </div>
+          <div class="entry-subtitle">GPA: 3.88, Rutgers School of Engineering Outstanding Graduate Student Award</div>
         </div>
         <div class="entry-description">
-          <p>GPA: 3.88. Studied computational systems biology of inflammation. Developed, synthesized, and analyzed mathematical models and high throughput data. Recipient of the Rutgers School of Engineering Outstanding Graduate Student Award. My favorite publication from my PhD was <a href="https://doi.org/10.1016/j.mbs.2014.03.010">doi:10.1016/j.mbs.2014.03.010</a> and several more are available on <a href="https://dumbmatter.com/projects/">my website</a>.</p>
+          Studied computational systems biology of inflammation. Developed, synthesized, and analyzed mathematical models and high throughput data. My favorite publication from my PhD was <a href="https://doi.org/10.1016/j.mbs.2014.03.010">doi:10.1016/j.mbs.2014.03.010</a> and several more are available on <a href="https://dumbmatter.com/projects/">my website</a>.
         </div>
       </div>
 
       <div>
-        <div class="entry-employer">Rutgers University</div>
-        <div class="entry-row">
-          <div class="entry-title">
-            BS in Biomedical Engineering<span class="undergrad-long">, minor in Math</span><span class="undergrad-short"><br>Minor in Math</span>
+        <div class="entry-header">
+          <div class="entry-employer">Rutgers University</div>
+          <div class="entry-row">
+            <div class="entry-title">
+              BS in Biomedical Engineering<span class="undergrad-long">, minor in Math</span><span class="undergrad-short"><br>Minor in Math</span>
+            </div>
+            <div class="entry-date">2004-2008</div>
           </div>
-          <div class="entry-date">2004-2008</div>
-        </div>
-        <div class="entry-description">
-          <p>GPA: 3.91 (overall), 3.97 (BME major), 4.00 (Math minor)</p>
+          <div class="entry-subtitle">GPA: 3.91 (overall), 3.97 (BME major), 4.00 (Math minor)</div>
         </div>
       </div>
     </div>
