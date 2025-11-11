@@ -62,6 +62,7 @@ h1, h2, h3, h4, h5, h6 {
   --text-secondary: #3c3c3c;
   --link: #00e;
   --link-secondary: #33e;
+  --body-padding-x: 0.5rem;
 }
 .dark {
   --bg: #222;
@@ -72,12 +73,17 @@ h1, h2, h3, h4, h5, h6 {
   --link-secondary: #9e9edd;
 }
 
+html {
+  container-type: inline-size;
+  container-name: html;
+}
+
 body {
   color: var(--text);
   background-color: var(--bg);
   font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-size: 18px;
-  padding: 2rem 0.5rem 1rem 0.5rem;
+  padding: 2rem var(--body-padding-x) 2rem var(--body-padding-x);
 }
 
 h1, h2 {
@@ -88,11 +94,19 @@ h1 {
   line-height: 1.25;
 }
 h2 {
-  border-left: 6px solid var(--link);
   background-color: var(--bg-accent);
   font-size: 24px;
-  margin: 2.5rem -14px 1rem -14px;
-  padding: 0 0.5rem;
+  margin: 2.5rem calc(-1*var(--body-padding-x)) 1rem calc(-1*var(--body-padding-x));
+  padding-left: var(--body-padding-x);
+}
+
+@container html (min-width: calc(800px + 14px + 14px)) {
+  /* This shows the accent border only when it won't trigger a horizontal scroll bar */
+  h2 {
+    border-left: unset;
+    border-left: 6px solid var(--link);
+    margin: 2.5rem -14px 1rem -14px;
+  }
 }
 
 a {
@@ -145,11 +159,11 @@ a {
 .entries {
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
+  gap: 2rem;
 }
 
 .entry-header {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .entry-row {
