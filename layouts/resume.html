@@ -234,25 +234,39 @@ ul {
     display: none;
   }
 
-  body {
-    padding: 0;
-    font-size: 16px;
+  html {
+    font-size: 14px;
   }
 
-  h1 {
-    font-size: 32px;
+  body {
+    padding: 0;
   }
 
   h2 {
-    font-size: 22px;
+    background-color: inherit;
+    border-bottom: 1px solid var(--text);
+    border-left: inherit;
+    break-after: avoid-page;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .entry {
     break-inside: avoid;
   }
 
+  /* idk why this is needed */
+  .zengm-long {
+    display: inline;
+  }
+  .zengm-short {
+    display: none;
+  }
+
   @page {
-    margin: 0.85in 1in;
+    margin: 1in;
   }
 }
   </style>
