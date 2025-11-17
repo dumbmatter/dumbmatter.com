@@ -32,10 +32,10 @@ h1, h2, h3, h4, h5, h6 {
 #theme-switch {
   position: absolute;
   top: 9px;
-  right: -0.5rem;
+  right: calc(-0.5rem * 16/18);
 
   border: none;
-  padding: 0.5rem;
+  padding: calc(0.5rem * 16/18);
   width: auto;
   overflow: visible;
   background: transparent;
@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
   --text-secondary: #3c3c3c;
   --link: #00e;
   --link-secondary: #33e;
-  --body-padding-x: 0.5rem;
+  --body-padding-x: calc(0.5rem * 16/18);
 }
 .dark {
   --bg: #222;
@@ -76,27 +76,27 @@ h1, h2, h3, h4, h5, h6 {
 html {
   container-type: inline-size;
   container-name: html;
+  font-size: 18px;
 }
 
 body {
   color: var(--text);
   background-color: var(--bg);
   font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  font-size: 18px;
-  padding: 2rem var(--body-padding-x) 2rem var(--body-padding-x);
+  padding: calc(2rem * 16/18) var(--body-padding-x) calc(2rem * 16/18) var(--body-padding-x);
 }
 
 h1, h2 {
   font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
 }
 h1 {
-  font-size: 36px;
+  font-size: 2rem;
   line-height: 1.25;
 }
 h2 {
   background-color: var(--bg-accent);
-  font-size: 24px;
-  margin: 2.5rem calc(-1*var(--body-padding-x)) 1rem calc(-1*var(--body-padding-x));
+  font-size: calc(1rem * 4/3);
+  margin: calc(2.5rem * 16/18) calc(-1*var(--body-padding-x)) calc(1rem * 16/18) calc(-1*var(--body-padding-x));
   padding-left: var(--body-padding-x);
 }
 
@@ -104,7 +104,8 @@ h2 {
   /* This shows the accent border only when it won't trigger a horizontal scroll bar */
   h2 {
     border-left: 6px solid var(--link);
-    margin: 2.5rem -14px 1rem -14px;
+    margin-left: -14px;
+    margin-right: -14px;
   }
 }
 
@@ -129,7 +130,7 @@ a {
   text-align: center;
 }
 .contact {
-  margin: 0.5rem 0;
+  margin: calc(0.5rem * 16/18) 0;
 
   a {
     color: var(--link);
@@ -158,13 +159,13 @@ a {
 .entries {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: calc(2rem * 16/18);
 }
 
 .entry {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: calc(0.5rem * 16/18);
 }
 
 .entry-row {
@@ -225,7 +226,7 @@ ul {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: calc(0.5rem * 16/18);
 }
 
 @media print {
