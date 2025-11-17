@@ -65,13 +65,16 @@ h1, h2, h3, h4, h5, h6 {
   --spacing-multiplier: calc(16 / 18);
   --body-padding-x: calc(0.5rem * var(--spacing-multiplier));
 }
-.dark {
-  --bg: #222;
-  --bg-accent: #333;
-  --text: #eee;
-  --text-secondary: #d5d5d5;
-  --link: #9e9eff;
-  --link-secondary: #9e9edd;
+
+@media not print {
+  .dark {
+    --bg: #222;
+    --bg-accent: #333;
+    --text: #eee;
+    --text-secondary: #d5d5d5;
+    --link: #9e9eff;
+    --link-secondary: #9e9edd;
+  }
 }
 
 html {
