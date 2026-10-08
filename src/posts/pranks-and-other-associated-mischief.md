@@ -49,7 +49,7 @@ But ultimately nothing came of it, there was no further punishment or anything.
 
 Back in the old days email was incredibly insecure. Did you know you can just claim that you are any email address, and that will appear in the "Sender" field? Well these days it's not so simple, various things like SPF and DKIM have been added to email which makes it much more difficult to do these days. But back in the 2000s, it was trivial.
 
-Freshmen engineers had to take an expository writing class. I was one of the rare engineers who APed out of it (I was not a good writer, but I was incredible at multiple choice tests, which somehow got me a 5 on the AP test), so I got some joy out of watching them all suffer. They would all wait until the last minute to write their essays and then scramble to finish before the deadline.
+At Rutgers, freshmen engineers had to take an expository writing class. I was one of the rare engineers who APed out of it (I was not a good writer, but I was incredible at multiple choice tests, which somehow got me a 5 on the AP test), so I got some joy out of watching them all suffer. They would all wait until the last minute to write their essays and then scramble to finish before the deadline.
 
 Then one night, a few hours before an assignment was due, they were all miserably writing and complaining... and their professor sent an email saying there was an extension of a couple days. Jubilation! Everyone was so happy!
 
@@ -75,11 +75,11 @@ I had another friend who was kind of homophobic, which I didn't like. I decided 
 
 I did not at the time consider that it was pretty bad to put some random gay guy in a situation like that. In retrospect, that was not cool and I feel bad about it. But it did at least have some elements of a good prank.
 
-## Dummpster diving donuts
+## Dumpster diving donuts
 
 This is another one that I am not entirely proud of.
 
-A friend got a tip that the local Dunkin' Donuts would put a giant trash bag of the day's unsold donuts out on the curb every night at a specific time.
+A friend learned that the local Dunkin' Donuts put a giant trash bag of the day's unsold donuts out on the curb every night at a specific time.
 
 One night we went and snatched the bag.
 

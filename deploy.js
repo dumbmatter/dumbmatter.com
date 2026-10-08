@@ -1,4 +1,5 @@
-const { spawn } = require("child_process");
+const { spawn } = require("node:child_process");
+const { setTimeout } = require("node:timers/promises");
 
 const DOMAIN = "dumbmatter.com";
 const BUILD_FOLDER = "./build";
