@@ -7,9 +7,9 @@ title: My obituary for programming
 
 I know, I'm late to this.
 
-I was very slow to use AI coding agents. It seems like a lot of programmers never actually liked programming and were thrilled to have a machine do it for them. But I like programming! That's the fun part! Even for programmers who like programming, I know a lot of people feel like they have to use AI to keep up with the competition, especially in a tough job market. But [my business](https://zengm.com/) is actually having one of its best years ever. So I figured, if I like programming, why not keep programming?
+I was very slow to use AI coding agents. It seems like a lot of programmers never actually liked programming and are thrilled to have a machine do it for them. But I like programming! That's the fun part! Even for programmers who like programming, I know a lot of people feel like they have to use AI to keep up with the competition, especially in a tough job market. But [my business](https://zengm.com/) is actually having one of its best years ever. So I figured, if I like programming, why not keep programming?
 
-I wasn't blind to what was going on around me, though. A lot of slop and hype, but a lot of real stuff too. Engineers I have respected for years saying they no longer write code. Non-programmers accomplishing truly impressive things that previously would have been far beyond their grasp. And skilled programmers accomplishing truly incredible feats.
+I wasn't blind to what was going on around me, though. A lot of slop and hype, but a lot of real stuff too. Engineers I have respected for years saying they no longer write code. Non-programmers accomplishing things that previously would have been far beyond their grasp. And skilled programmers accomplishing truly incredible feats.
 
 I couldn't avoid it forever. Eventually I tried it.
 

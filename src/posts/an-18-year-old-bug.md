@@ -13,7 +13,7 @@ Eventually I even added a nifty UI to view the stats. Check it out, in all its e
 
 <!--more-->
 
-<img src="/files/click-manager.png" class="img-responsive">
+<p><img src="/files/click-manager.png" class="img-responsive"></p>
 
 Anyway, point is, someone emailed me about a bug in Click Manager. That absolutely made my day, to learn that somebody was still using my old script.
 
