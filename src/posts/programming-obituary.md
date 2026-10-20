@@ -49,4 +49,4 @@ It's addictive and meaningless. It's a good friend, a trusted colleague, a [slav
 
 It will obsolete us. Us programmers now, us humans next?
 
-We are truly in [The Age of Wonders and Terrors](https://scottaaronson.blog/?p=10062).
+We are truly in [the age of wonders and terrors](https://scottaaronson.blog/?p=10062).
