@@ -27,7 +27,7 @@ I like programming, right?
 
 I've been fascinated with computers as long as I can remember. We have these incredible machines that can do absurdly complex calculations for us, but only if we are clever enough to give them the exact right instructions. With a little practice at writing those instructions, I was able to do things that would have been completely infeasible for even the smartest pre-computer genius. It was a real life superpower.
 
-It was also fun. I liked crossword puzzles and sudoku and things like that. But programming was even better. It was a puzzle, but the scope was limited only by your imagination. It was a game, but you were creating real things with real value.
+It was also fun. I liked crossword puzzles and Sudoku and things like that. But programming was even better. It was a puzzle, but the scope was limited only by your imagination. It was a game, but you were creating real things with real value.
 
 And oh, what value! That I did not foresee as a high schooler during the dot-com bust. Programming seemed dead as a career, but still a worthy hobby.
 
@@ -37,7 +37,7 @@ What a time to be a nerd. Money, status, power. A constant deluge of emails and 
 
 We had a good run.
 
-Programming is not the first field to be lost to technological progress. Of course, that has long been our speciality. We revel in doing it to ourselves.
+Programming is not the first field to be lost to technological progress. Of course, that has long been our specialty. We revel in doing it to ourselves.
 
 What do we have now? It's no longer solving little logic puzzles. More like being plugged into the Matrix, gaining new abilities without truly understanding, accomplishing great things with little effort.
 
